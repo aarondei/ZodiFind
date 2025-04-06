@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashbg">
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:text="UNLOCK YOUR \nDESTINY"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textFontWeight="950"
+        android:fontFamily="@font/inter"
+
+        android:layout_marginTop="100dp"
+        />
+
+    <Button
+        android:id="@+id/getstartedBtn"
+        android:layout_width="301dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="600dp"
+        android:layout_centerHorizontal="true"
+
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@drawable/darkblue_btn"
+        />
+
+</RelativeLayout>

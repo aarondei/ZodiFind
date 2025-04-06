@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ZodiFind</string>
+    <string name="signup">Not a member? <u>Sign up</u></string>
+    <string name="login">Already have an account? <u>Login</u>"</string>
+    <string name="tagline"><i>Unlock your destiny</i></string>
+    <string name="ulWestern"><u>Western</u></string>
+</resources>

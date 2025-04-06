@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingsbg">
+
+    <!-- settings -->
+    <TextView
+        android:id="@+id/txtSettings"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Settings"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/hammersmith"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/leftarrow"
+
+        android:layout_toLeftOf="@id/txtSettings"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="80dp"
+        />
+    <!-- pic -->
+    <ImageView
+        android:id="@+id/imgPic"
+
+        android:layout_below="@+id/txtSettings"
+
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/profileicon"
+        />
+
+    <!-- name -->
+    <TextView
+        android:id="@+id/txtName"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Jane Doe"
+        android:textSize="23sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/hammersmith"
+
+        android:layout_toRightOf="@+id/imgPic"
+        android:layout_below="@+id/txtSettings"
+
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <!-- bday -->
+    <TextView
+        android:id="@+id/txtBirthday"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="August 10, 2003"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/hammersmith"
+
+        android:layout_toRightOf="@+id/imgPic"
+        android:layout_below="@+id/txtName"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <!-- border -->
+    <ImageView
+        android:id="@+id/border"
+
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+
+        android:background="@drawable/border3"
+        android:backgroundTint="@color/white"
+        android:alpha="0.1"
+
+        android:layout_marginTop="35dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_below="@id/txtBirthday"
+        />
+
+    <!-- Account Banner  -->
+    <TextView
+        android:id="@+id/txtAccount"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Account"
+        android:textSize="19sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+
+        android:layout_below="@+id/imgPic"
+
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <!-- Edit profile  -->
+    <TextView
+        android:id="@+id/txtEditProfile"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Edit Profile"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+
+        android:layout_below="@+id/border"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+    <!-- change pass  -->
+    <TextView
+        android:id="@+id/txtChangePassword"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Change Password"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+
+        android:layout_below="@+id/txtEditProfile"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <!-- border -->
+    <ImageView
+        android:id="@+id/border2"
+
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+
+        android:background="@drawable/border3"
+        android:backgroundTint="@color/white"
+        android:alpha="0.1"
+
+        android:layout_marginTop="35dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_below="@id/txtChangePassword"
+        />
+
+    <!-- General Banner  -->
+    <TextView
+        android:id="@+id/txtGeneral"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="General"
+        android:textSize="19sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+
+        android:layout_below="@+id/txtChangePassword"
+
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <!-- about  -->
+    <TextView
+        android:id="@+id/txtAbout"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="About"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+
+        android:layout_below="@+id/border2"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+    <!-- help  -->
+    <TextView
+        android:id="@+id/txtHelp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Help"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+
+        android:layout_below="@+id/txtAbout"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <!-- developers  -->
+    <TextView
+        android:id="@+id/txtDevelopers"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Developers"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+
+        android:layout_below="@+id/txtHelp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <!-- log out  -->
+    <TextView
+        android:id="@+id/txtLogOut"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@id/zodifind"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+
+
+        android:layout_marginBottom="20dp"
+
+
+        android:text="Log Out"
+        android:textStyle="italic"
+        android:textColor="@color/red"
+        android:textSize="15sp" />
+
+    <!-- app name  -->
+    <TextView
+        android:id="@+id/zodifind"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+
+
+        android:layout_marginBottom="30dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+
+        android:fontFamily="@font/righteous"
+        />
+
+</RelativeLayout>
