@@ -18,7 +18,7 @@ class LoginActivity : Activity() {
         val edittext_username = findViewById<EditText>(R.id.edittext_username)
         val edittext_pass = findViewById<EditText>(R.id.edittext_pass)
 
-        val btnSave =  findViewById<Button>(R.id.loginBtn)
+        val btnSave =  findViewById<Button>(R.id.btnLogin)
         btnSave.setOnClickListener(){
             if(edittext_username.text.isNullOrEmpty() || edittext_pass.text.isNullOrEmpty()){
                 Toast.makeText(this, "Username and Password must not be empty", Toast.LENGTH_LONG).show()

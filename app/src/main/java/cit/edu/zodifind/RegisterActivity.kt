@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import cit.edu.zodifind.R
 
 class RegisterActivity : Activity() {
     @SuppressLint("MissingInflatedId")
@@ -22,11 +21,11 @@ class RegisterActivity : Activity() {
             startActivity(intent)
         }
 
-        val btnCreate =  findViewById<Button>(R.id.signup_button)
+        val btnCreate =  findViewById<Button>(R.id.btnSignup)
 
-        val createUser = findViewById<EditText>(R.id.create_user)
-        val enterEmail = findViewById<EditText>(R.id.the_email)
-        val createPass = findViewById<EditText>(R.id.create_pass)
+        val createUser = findViewById<EditText>(R.id.etCreateUsername)
+        val enterEmail = findViewById<EditText>(R.id.etCreateEmail)
+        val createPass = findViewById<EditText>(R.id.etCreatePassword)
 
         btnCreate.setOnClickListener(){
             if(createUser.text.isNullOrEmpty() || createPass.text.isNullOrEmpty() || enterEmail.text.isNullOrEmpty()){
