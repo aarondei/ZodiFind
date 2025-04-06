@@ -21,22 +21,39 @@ class RegisterActivity : Activity() {
             startActivity(intent)
         }
 
-        val btnCreate =  findViewById<Button>(R.id.btnSignup)
-
         val createUser = findViewById<EditText>(R.id.etCreateUsername)
         val enterEmail = findViewById<EditText>(R.id.etCreateEmail)
         val createPass = findViewById<EditText>(R.id.etCreatePassword)
+        val confirmPass = findViewById<EditText>(R.id.etCreateConfirmPassword)
 
+        val btnCreate =  findViewById<Button>(R.id.btnSignup)
         btnCreate.setOnClickListener(){
-            if(createUser.text.isNullOrEmpty() || createPass.text.isNullOrEmpty() || enterEmail.text.isNullOrEmpty()){
+
+            if (createUser.text.isNullOrEmpty() || createPass.text.isNullOrEmpty() || enterEmail.text.isNullOrEmpty() || confirmPass.text.isNullOrEmpty()){
+                // EMPTY FIELDS
+
                 Toast.makeText(this, "All fields must not be empty", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
-            } else if(createUser.length() in 1..7|| createUser.length() in 1..7){
-                Toast.makeText(this, "Username and password must contain 8 or more characters", Toast.LENGTH_LONG).show()
+
+            } else if (createUser.length() in 1..7|| createPass.length() in 1..7){
+                //  MIN REQUIREMENT 8 CHARACTERS
+
+                Toast.makeText(this, "Username and password must contain at least 8 characters", Toast.LENGTH_LONG).show()
+                return@setOnClickListener;
+
+            } else if (createPass.text != confirmPass.text) {
+                //  CONFIRM PASSWORD MISMATCH
+
+                Toast.makeText(this, "Confirm password again", Toast.LENGTH_LONG).show()
+                return@setOnClickListener;
+
             } else {
+                // SUCCESSFUL REGISTRATION
+
                 Toast.makeText(this, "You have successfully created an account!", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, WesternHomeActivity:: class.java)
+                val intent = Intent(this, LoginActivity:: class.java)
                 intent.putExtra("username", createUser.text.toString())
+
                 startActivity(intent)
             }
         }

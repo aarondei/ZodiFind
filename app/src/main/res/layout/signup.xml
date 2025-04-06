@@ -43,7 +43,7 @@
         android:layout_marginBottom="15dp"
 
         android:background="@drawable/border"
-        android:backgroundTint="@color/transparent"
+        android:backgroundTint="@color/transparentWhite"
 
         android:textSize="15dp"
         android:textColor="@color/white"
@@ -77,7 +77,7 @@
         android:layout_marginBottom="15dp"
 
         android:background="@drawable/border"
-        android:backgroundTint="@color/transparent"
+        android:backgroundTint="@color/transparentWhite"
 
         android:textSize="15dp"
         android:textColor="@color/white"
@@ -112,7 +112,7 @@
         android:layout_marginBottom="15dp"
 
         android:background="@drawable/border"
-        android:backgroundTint="@color/transparent"
+        android:backgroundTint="@color/transparentWhite"
 
         android:textSize="15dp"
         android:textColor="@color/white"
@@ -149,7 +149,7 @@
         android:layout_marginBottom="15dp"
 
         android:background="@drawable/border"
-        android:backgroundTint="@color/transparent"
+        android:backgroundTint="@color/transparentWhite"
 
         android:textSize="15dp"
         android:textColor="@color/white"
