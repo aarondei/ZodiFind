@@ -35,16 +35,34 @@ class RegisterActivity : Activity() {
                 Toast.makeText(this, "All fields must not be empty", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
 
-            } else if (createUser.length() in 1..7|| createPass.length() in 1..7){
-                //  MIN REQUIREMENT 8 CHARACTERS
+            } else if (createUser.length() in 1..4){
+                //  MIN USERNAME REQUIREMENT 5 CHARACTERS
 
-                Toast.makeText(this, "Username and password must contain at least 8 characters", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Username must contain at least 5 characters", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
 
-            } else if (createPass.text != confirmPass.text) {
+            } else if( createPass.length() in 1..7){
+                //  MIN PASSWORD REQUIREMENT 5 CHARACTERS
+
+                Toast.makeText(this, "Password must contain at least 8 characters", Toast.LENGTH_LONG).show()
+                return@setOnClickListener;
+        } else if (createPass.text.toString() != confirmPass.text.toString()) {
                 //  CONFIRM PASSWORD MISMATCH
 
                 Toast.makeText(this, "Confirm password again", Toast.LENGTH_LONG).show()
+                return@setOnClickListener;
+
+            } else if (Regex("[&=<>+,]").containsMatchIn(createUser.text.toString()) ||
+                createUser.text.toString().contains("..")) {
+                //INVALID CHARACTERS IN USERNAME
+
+                Toast.makeText(this, "Username contains invalid characters", Toast.LENGTH_LONG).show()
+                return@setOnClickListener;
+
+            } else if (!enterEmail.text.toString().contains("@")) {
+                //  EMAIL VALIDATION
+
+                Toast.makeText(this, "Please enter a valid email", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
 
             } else {
@@ -53,6 +71,7 @@ class RegisterActivity : Activity() {
                 Toast.makeText(this, "You have successfully created an account!", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, LoginActivity:: class.java)
                 intent.putExtra("username", createUser.text.toString())
+                intent.putExtra("password", createPass.text.toString())
 
                 startActivity(intent)
             }

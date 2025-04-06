@@ -12,6 +12,14 @@ class SettingsActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
 
+        val txtName = findViewById<TextView>(R.id.txtName)
+
+        intent?.let {
+            it.getStringExtra("username")?.let{username ->
+                txtName.text = username
+            }
+        }
+
         val toDeveloper = findViewById<TextView>(R.id.txtDevelopers)
         toDeveloper.setOnClickListener(){
             val intent = Intent(this, DeveloperActivity:: class.java)
@@ -21,6 +29,7 @@ class SettingsActivity : Activity() {
         val btnBack = findViewById<ImageView>(R.id.back)
         btnBack.setOnClickListener(){
             val intent = Intent(this, ProfileActivity:: class.java)
+            intent.putExtra("username", txtName.text.toString())
             startActivity(intent)
         }
     }
