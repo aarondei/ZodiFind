@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/landingbg">
@@ -49,16 +50,30 @@
             android:text="Chinese"/>
     </RelativeLayout>
 
-    <!-- zodiac -->
-    <Button
-        android:id="@+id/btnZodiac"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_below="@+id/tabs"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+<!--    &lt;!&ndash; zodiac &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/btnZodiac"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:layout_below="@+id/tabs"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="30dp"-->
 
-        android:background="@drawable/westernwheel"
+<!--        android:background="@drawable/westernwheel"-->
+<!--        />-->
+
+    <cit.edu.zodifind.wheel_of_fortune.WheelOfFortuneView
+        android:id="@+id/wheel"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+
+        android:layout_weight="1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="1.5dp"
+
+        android:layout_below="@id/tabs"
+        android:layout_marginTop="10dp"
         />
 
     <!--    navigation buttons-->
