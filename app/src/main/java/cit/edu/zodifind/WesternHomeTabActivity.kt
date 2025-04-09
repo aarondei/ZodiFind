@@ -5,13 +5,12 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
-import cit.edu.zodifind.R
 
-class WesternHomeActivity : Activity() {
+class WesternHomeTabActivity : Activity() {
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.landingtab1)
+        setContentView(R.layout.home_western_tab)
 
         var user:String? = null
 

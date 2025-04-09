@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WheelOfFortuneView">
+        <!--        text-->
+        <attr name="fontFamily" format="string" />
+
+        <!--        stroke-->
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeColor" format="color" />
+
+        <attr name="fixedWheelBitmapSize" format="boolean"/>
+    </declare-styleable>
+</resources>

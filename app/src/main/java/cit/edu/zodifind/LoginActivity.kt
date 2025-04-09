@@ -41,13 +41,13 @@ class LoginActivity : Activity() {
                 //ADMIN CREDENTIALS
 
                     Toast.makeText(this, "Developer Mode", Toast.LENGTH_LONG).show()
-                   val intent = Intent(this, WesternHomeActivity:: class.java)
+                   val intent = Intent(this, WesternHomeTabActivity:: class.java)
                     startActivity(intent)
                 } else if(edittext_username.text.toString() == user && edittext_pass.text.toString() == pass){
                     //USER VALIDATIONS
 
                 Toast.makeText(this, "Welcome, $user !", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, WesternHomeActivity:: class.java)
+                val intent = Intent(this, WesternHomeTabActivity:: class.java)
                 intent.putExtra("username", edittext_username.text.toString())
                 startActivity(intent)
             } else {

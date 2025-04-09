@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ZodiFind"
         tools:targetApi="31">
         <activity
-            android:name=".WesternHomeActivity"
+            android:name=".WesternHomeTabActivity"
             android:exported="false" />
         <activity
             android:name=".SettingsActivity"

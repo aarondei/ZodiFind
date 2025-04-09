@@ -13,7 +13,7 @@ class RegisterActivity : Activity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.signup)
+        setContentView(R.layout.register)
 
         val toRegister = findViewById<TextView>(R.id.toLogin)
         toRegister.setOnClickListener(){
