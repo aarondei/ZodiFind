@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import cit.edu.zodifind.wheelFragments.WheelFragment
 
 class WesternHomeTabActivity : Activity() {
     @SuppressLint("WrongViewCast")
@@ -12,21 +13,22 @@ class WesternHomeTabActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_western_tab)
 
-        var user:String? = null
+        var user: String? = null
 
         intent?.let {
-            it.getStringExtra("username")?.let{username ->
-              user  = username;
+            it.getStringExtra("username")?.let { username ->
+                user = username;
             }
         }
 
         val btnProfile = findViewById<ImageView>(R.id.profilebtn)
 
-        btnProfile.setOnClickListener(){
+        btnProfile.setOnClickListener() {
             val intent = Intent(this, ProfileActivity::class.java)
             intent.putExtra("username", user)
             startActivity(intent)
 
         }
+
     }
 }
