@@ -7,9 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
     <color name="transparentWhite">#4DFFFFFF</color>
     <color name="transparentBlack">#4D000000</color>
-    <color name="raisin"> #1E1E24</color>
-    <color name="darkblue">#99090C32</color>
+
+    <color name="darkBlue">#99090C32</color>
     <color name="red">#FF0000</color>
+
+    <color name="raisinBlack"> #1E1E24</color>
+    <color name="midnightBlue">#090C32</color>
 </resources>
