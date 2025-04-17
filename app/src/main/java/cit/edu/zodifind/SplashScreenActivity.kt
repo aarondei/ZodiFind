@@ -8,7 +8,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import android.widget.Button
+import android.widget.RelativeLayout
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : Activity() {
@@ -22,9 +22,9 @@ class SplashScreenActivity : Activity() {
         surfaceView = findViewById(R.id.svGalaxy)
         playBackgroundVideo()
 
-        val btnGetStarted = findViewById<Button>(R.id.btnGetStarted)
+        val rlSplashScreenLayout = findViewById<RelativeLayout>(R.id.rlSplashScreenLayout)
 
-        btnGetStarted.setOnClickListener(){
+        rlSplashScreenLayout.setOnClickListener(){
             val intent = Intent(this, LoginActivity:: class.java)
             startActivity(intent)
             finish()
