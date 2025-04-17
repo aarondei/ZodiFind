@@ -16,7 +16,7 @@
             android:name=".CalendarActivity"
             android:exported="false" />
         <activity
-            android:name=".WesternHomeActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".SettingsActivity"
@@ -31,7 +31,7 @@
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".RegistrationActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"

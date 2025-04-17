@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import cit.edu.zodifind.R
 
 class ProfileActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,13 +29,13 @@ class ProfileActivity : Activity() {
 
         val toHome = findViewById<ImageView>(R.id.wheelbtn)
         toHome.setOnClickListener(){
-            val intent = Intent(this, WesternHomeActivity:: class.java)
+            val intent = Intent(this, HomeActivity:: class.java)
             startActivity(intent)
         }
 
         val btnBack = findViewById<ImageView>(R.id.back)
         btnBack.setOnClickListener(){
-            val intent = Intent(this, WesternHomeActivity:: class.java)
+            val intent = Intent(this, HomeActivity:: class.java)
             startActivity(intent)
 
         }

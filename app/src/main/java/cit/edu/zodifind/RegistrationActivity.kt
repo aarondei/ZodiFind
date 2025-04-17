@@ -9,11 +9,11 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
-class RegisterActivity : Activity() {
+class RegistrationActivity : Activity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.signup)
+        setContentView(R.layout.registration)
 
         val toRegister = findViewById<TextView>(R.id.toLogin)
         toRegister.setOnClickListener(){
