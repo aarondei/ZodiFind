@@ -74,6 +74,7 @@ class RegistrationActivity : Activity() {
                 intent.putExtra("password", createPass.text.toString())
 
                 startActivity(intent)
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
             }
         }
     }
