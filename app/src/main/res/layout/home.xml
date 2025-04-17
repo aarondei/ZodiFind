@@ -27,27 +27,6 @@
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true">
 
-        <TextView
-            android:id="@+id/tab1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:fontFamily="@font/hammersmith"
-            android:text="@string/ulWestern"/>
-
-        <TextView
-            android:id="@+id/tab2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:layout_toRightOf="@id/tab1"
-            android:layout_marginLeft="50dp"
-            android:fontFamily="@font/hammersmith"
-            android:text="Chinese"/>
-    </RelativeLayout>
 
     <!-- zodiac -->
     <Button
