@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 class LoginActivity : Activity() {
+    @Suppress("DEPRECATION")
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +51,7 @@ class LoginActivity : Activity() {
                 val intent = Intent(this, WesternHomeActivity:: class.java)
                 intent.putExtra("username", edittext_username.text.toString())
                 startActivity(intent)
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
             } else {
                 //ERROR
 
@@ -61,6 +63,7 @@ class LoginActivity : Activity() {
         toRegister.setOnClickListener(){
             val intent = Intent(this, RegisterActivity:: class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
     }
 }

@@ -15,6 +15,7 @@ class SplashScreenActivity : Activity() {
 
     private lateinit var surfaceView: SurfaceView
     private lateinit var mediaPlayer: MediaPlayer
+    @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splashscreen)

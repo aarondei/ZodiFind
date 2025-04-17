@@ -8,6 +8,7 @@ import android.widget.TextView
 import cit.edu.zodifind.R
 
 class SettingsActivity : Activity() {
+    @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
@@ -31,6 +32,7 @@ class SettingsActivity : Activity() {
             val intent = Intent(this, ProfileActivity:: class.java)
             intent.putExtra("username", txtName.text.toString())
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
     }
 }

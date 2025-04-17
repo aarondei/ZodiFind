@@ -8,6 +8,7 @@ import android.widget.TextView
 import cit.edu.zodifind.R
 
 class ProfileActivity : Activity() {
+    @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile)
@@ -25,19 +26,20 @@ class ProfileActivity : Activity() {
             val intent = Intent(this, SettingsActivity:: class.java)
             intent.putExtra("username", txtName.text.toString())
             startActivity(intent)
-
         }
 
         val toHome = findViewById<ImageView>(R.id.wheelbtn)
         toHome.setOnClickListener(){
             val intent = Intent(this, WesternHomeActivity:: class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
         val btnBack = findViewById<ImageView>(R.id.back)
         btnBack.setOnClickListener(){
             val intent = Intent(this, WesternHomeActivity:: class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
 
         }
     }
