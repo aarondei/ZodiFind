@@ -8,6 +8,7 @@ import android.widget.ImageView
 import cit.edu.zodifind.R
 
 class WesternHomeActivity : Activity() {
+    @Suppress("DEPRECATION")
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,12 +29,14 @@ class WesternHomeActivity : Activity() {
             val intent = Intent(this, ProfileActivity::class.java)
             intent.putExtra("username", user)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
 
         }
 
         btnCalendar.setOnClickListener(){
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
 
         }
     }

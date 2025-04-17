@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 class RegisterActivity : Activity() {
+    @Suppress("DEPRECATION")
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,6 +75,7 @@ class RegisterActivity : Activity() {
                 intent.putExtra("password", createPass.text.toString())
 
                 startActivity(intent)
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
             }
         }
     }
