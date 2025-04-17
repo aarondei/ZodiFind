@@ -8,7 +8,7 @@ import android.widget.ImageView
 import cit.edu.zodifind.R
 
 class WesternHomeActivity : Activity() {
-    @SuppressLint("WrongViewCast")
+    @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.landingtab1)
@@ -22,10 +22,17 @@ class WesternHomeActivity : Activity() {
         }
 
         val btnProfile = findViewById<ImageView>(R.id.profilebtn)
+        val btnCalendar = findViewById<ImageView>(R.id.btnCalendar)
 
         btnProfile.setOnClickListener(){
             val intent = Intent(this, ProfileActivity::class.java)
             intent.putExtra("username", user)
+            startActivity(intent)
+
+        }
+
+        btnCalendar.setOnClickListener(){
+            val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
 
         }
