@@ -10,59 +10,63 @@ import android.widget.TextView
 import android.widget.Toast
 
 class LoginActivity : Activity() {
+
+    private var createdUser: String? = null
+    private var createdPassword: String? = null
+
     @Suppress("DEPRECATION")
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        val edittext_username = findViewById<EditText>(R.id.etUsername)
-        val edittext_pass = findViewById<EditText>(R.id.etPassword)
+        val etUsername = findViewById<EditText>(R.id.etUsername)
+        val etPassword = findViewById<EditText>(R.id.etPassword)
 
         //created account
-        var user:String? = null
-        var pass:String? = null
-
         intent?.let {
             it.getStringExtra("username")?.let{username ->
-                user  = username;
+                createdUser = username;
             }
 
             it.getStringExtra("password")?.let{password ->
-                pass  = password;
+                createdPassword = password;
             }
         }
 
-        val btnSave =  findViewById<Button>(R.id.btnLogin)
+        val btnSave = findViewById<Button>(R.id.btnLogin)
         btnSave.setOnClickListener(){
-            if(edittext_username.text.isNullOrEmpty() || edittext_pass.text.isNullOrEmpty()){
-                Toast.makeText(this, "Username and Password must not be empty", Toast.LENGTH_LONG).show()
+            if (etUsername.text.isNullOrEmpty() || etPassword.text.isNullOrEmpty()) {
+                Toast.makeText(this, "Fields must not be empty", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
-            } else if(edittext_username.text.contentEquals("admin", true) && edittext_pass.text.contentEquals("1234", true)){
+
+            } else if (etUsername.text.contentEquals("admin", true) && etPassword.text.contentEquals("1234", true)) {
                 //ADMIN CREDENTIALS
 
-                    Toast.makeText(this, "Developer Mode", Toast.LENGTH_LONG).show()
-                   val intent = Intent(this, HomeActivity:: class.java)
-                    startActivity(intent)
-                } else if(edittext_username.text.toString() == user && edittext_pass.text.toString() == pass){
-                    //USER VALIDATIONS
+                Toast.makeText(this, "Developer Mode", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, HomeActivity:: class.java))
 
-                Toast.makeText(this, "Welcome, $user !", Toast.LENGTH_LONG).show()
+            } else if(etUsername.text.toString() == createdUser && etPassword.text.toString() == createdPassword){
+                //USER VALIDATION
+
+                Toast.makeText(this, "Welcome, $createdUser !", Toast.LENGTH_LONG).show()
+
                 val intent = Intent(this, HomeActivity:: class.java)
-                intent.putExtra("username", edittext_username.text.toString())
+                intent.putExtra("username", etUsername.text.toString())
                 startActivity(intent)
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+
             } else {
                 //ERROR
 
-                    Toast.makeText(this, "Invalid!", Toast.LENGTH_LONG).show()
-                }
+                Toast.makeText(this, "Invalid input", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
             }
+        }
 
-        val toRegister = findViewById<TextView>(R.id.tvSignUp)
-        toRegister.setOnClickListener(){
-            val intent = Intent(this, RegistrationActivity:: class.java)
-            startActivity(intent)
+        val tvRegister = findViewById<TextView>(R.id.tvRegister)
+        tvRegister.setOnClickListener(){
+            startActivity(Intent(this, RegistrationActivity:: class.java))
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
     }

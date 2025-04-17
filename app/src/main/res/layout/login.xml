@@ -66,7 +66,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/mainLogo"
         app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
-        app:layout_constraintVertical_bias="0.693"
+        app:layout_constraintVertical_bias="0.805"
         tools:ignore="RtlSymmetry" />
 
     <EditText
@@ -94,7 +94,7 @@
 
         app:layout_constraintStart_toStartOf="@+id/mainLogo"
         app:layout_constraintTop_toBottomOf="@+id/mainLogo"
-        app:layout_constraintVertical_bias="0.397"
+        app:layout_constraintVertical_bias="0.361"
         tools:ignore="RtlSymmetry" />
 
     <Button
@@ -111,17 +111,17 @@
 
 
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvSignUp"
+        app:layout_constraintBottom_toTopOf="@+id/tvRegister"
         app:layout_constraintEnd_toEndOf="@+id/mainLogo"
         app:layout_constraintHeight_percent="0.070"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
 
         app:layout_constraintStart_toStartOf="@+id/mainLogo"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.89" />
 
     <TextView
-        android:id="@+id/tvSignUp"
+        android:id="@+id/tvRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -139,6 +139,6 @@
         app:layout_constraintStart_toStartOf="@+id/mainLogo"
 
         app:layout_constraintTop_toBottomOf="@+id/inputBarrier"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
