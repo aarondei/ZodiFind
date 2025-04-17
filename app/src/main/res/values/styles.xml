@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomCalendarTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorAccent">#FFA500</item>
+        <item name="android:dateTextAppearance">@style/CustomDateText</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="CustomDateText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>
