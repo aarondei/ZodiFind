@@ -16,8 +16,8 @@ class LoginActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        val edittext_username = findViewById<EditText>(R.id.edittext_username)
-        val edittext_pass = findViewById<EditText>(R.id.edittext_pass)
+        val edittext_username = findViewById<EditText>(R.id.etUsername)
+        val edittext_pass = findViewById<EditText>(R.id.etPassword)
 
         //created account
         var user:String? = null
@@ -59,7 +59,7 @@ class LoginActivity : Activity() {
                 }
             }
 
-        val toRegister = findViewById<TextView>(R.id.toSignUp)
+        val toRegister = findViewById<TextView>(R.id.tvSignUp)
         toRegister.setOnClickListener(){
             val intent = Intent(this, RegistrationActivity:: class.java)
             startActivity(intent)

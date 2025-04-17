@@ -5,14 +5,15 @@
     android:id="@+id/constraintLayoutSplashScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/raisinBlack"
+    android:background="@color/midnightBlue"
     >
 
-    <!-- BACKGROUND -->
+    <!-- BACKGROUND VID -->
     <VideoView
         android:id="@+id/vvGalaxy"
         android:layout_width="0dp"
         android:layout_height="0dp"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,11 +27,13 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/transparentBlack"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
+        android:background="@color/transparentBlack"
         />
 
     <!-- LOGO -->
@@ -41,15 +44,15 @@
 
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/zodifind_mainlogo_glow"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
         app:layout_constraintVertical_bias="0.443"
+        app:layout_constraintWidth_percent="0.75"
 
-        app:layout_constraintWidth_percent="0.75" />
+        android:src="@drawable/zodifind_mainlogo_glow"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
