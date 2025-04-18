@@ -1,7 +1,10 @@
 package cit.edu.zodifind.helpers
 
+import android.os.Build
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
 import cit.edu.zodifind.R
+import java.time.LocalDate
 import java.util.Date
 
 @Suppress("DEPRECATION")
@@ -23,26 +26,29 @@ enum class ZodiacSign(val icon: Int, val representation: String, val startDate: 
         return "$startDate - $endDate"
     }
 
-    fun parseDate(date: Date): ZodiacSign {
+    companion object { // makes this method static
 
-        val month = date.month +1
-        val day = date.date
+        @RequiresApi(Build.VERSION_CODES.O)
+        fun parseDate(date: LocalDate): ZodiacSign {
 
-        return when {
-            month == 3 && day >= 21 || month == 4 && day <= 19 -> ARIES
-            month == 4 && day >= 20 || month == 5 && day <= 20 -> TAURUS
-            month == 5 && day >= 21 || month == 6 && day <= 20 -> GEMINI
-            month == 6 && day >= 21 || month == 7 && day <= 22 -> CANCER
-            month == 7 && day >= 23 || month == 8 && day <= 22 -> LEO
-            month == 8 && day >= 23 || month == 9 && day <= 22 -> VIRGO
-            month == 9 && day >= 23 || month == 10 && day <= 22 -> LIBRA
-            month == 10 && day >= 23 || month == 11 && day <= 21 -> SCORPIO
-            month == 11 && day >= 22 || month == 12 && day <= 21 -> SAGITTARIUS
-            month == 12 && day >= 22 || month == 1 && day <= 19 -> CAPRICORN
-            month == 1 && day >= 20 || month == 2 && day <= 18 -> AQUARIUS
-            month == 2 && day >= 19 || month == 3 && day <= 20 -> PISCES
-            else -> ARIES
+            val month = date.monthValue
+            val day = date.dayOfMonth
+
+            return when {
+                month == 3 && day >= 21 || month == 4 && day <= 19 -> ARIES
+                month == 4 && day >= 20 || month == 5 && day <= 20 -> TAURUS
+                month == 5 && day >= 21 || month == 6 && day <= 20 -> GEMINI
+                month == 6 && day >= 21 || month == 7 && day <= 22 -> CANCER
+                month == 7 && day >= 23 || month == 8 && day <= 22 -> LEO
+                month == 8 && day >= 23 || month == 9 && day <= 22 -> VIRGO
+                month == 9 && day >= 23 || month == 10 && day <= 22 -> LIBRA
+                month == 10 && day >= 23 || month == 11 && day <= 21 -> SCORPIO
+                month == 11 && day >= 22 || month == 12 && day <= 21 -> SAGITTARIUS
+                month == 12 && day >= 22 || month == 1 && day <= 19 -> CAPRICORN
+                month == 1 && day >= 20 || month == 2 && day <= 18 -> AQUARIUS
+                month == 2 && day >= 19 || month == 3 && day <= 20 -> PISCES
+                else -> ARIES
+            }
         }
     }
-
 }

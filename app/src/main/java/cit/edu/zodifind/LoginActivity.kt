@@ -47,7 +47,7 @@ class LoginActivity : Activity() {
                 startActivity(Intent(this, HomeActivity:: class.java))
 
             } else if(etUsername.text.toString() == createdUser && etPassword.text.toString() == createdPassword){
-                //USER VALIDATION
+                //SUCCESS
 
                 Toast.makeText(this, "Welcome, $createdUser !", Toast.LENGTH_LONG).show()
 
