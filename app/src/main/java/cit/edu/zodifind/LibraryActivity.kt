@@ -13,18 +13,5 @@ class LibraryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.library)
 
-        //nav bar intents
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-
-        bottomNav.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.nav_home -> startActivity(Intent(this, HomeActivity::class.java))
-                R.id.nav_library -> startActivity(Intent(this, LibraryActivity::class.java))
-                R.id.nav_finder -> startActivity(Intent(this, CalculatorActivity::class.java))
-                R.id.nav_calendar -> startActivity(Intent(this, CalendarActivity::class.java))
-            }
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            true
-        }
     }
 }
