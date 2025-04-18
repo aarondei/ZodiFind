@@ -21,7 +21,7 @@ class VerificationFirstActivity : AppCompatActivity() {
         tvHello.text = "Hello, ${app.currentUser?.name ?: "User"}"
 
         // to import DatePicker
-        if (savedInstanceState == null) {
+        if (savedInstanceState == null) { // loads the fragment only once
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainer, DatePickerFragment())
                 .commit()

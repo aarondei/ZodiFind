@@ -1,6 +1,10 @@
 package cit.edu.zodifind
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,13 +20,34 @@ class VerificationSecondActivity : AppCompatActivity() {
 
         val app = application as ZodiFindApplication
 
-        // TODO REMOVE THIS AS IT CAN NOW ACCESS DATA
-        Toast.makeText(this, "Birthdate: ${app.currentUser?.birthdate} and Sign: ${app.currentUser?.zodiacSign?.name}", Toast.LENGTH_LONG).show()
+        if (savedInstanceState == null) { // loads the fragment only once
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, RotatingStarFragment())
+                .commit()
+        }
 
+        val tvZodiacLabel = findViewById<TextView>(R.id.tvZodiacLabel)
+        tvZodiacLabel.text = app.currentUser?.zodiacSign?.name
 
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, RotatingStarFragment())
-            .commit()
+        correctTVLabel(tvZodiacLabel.text.toString())
 
+        val btnStart = findViewById<Button>(R.id.btnStart)
+        btnStart.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun correctTVLabel(word: String): Unit {
+
+        if (word.isNotEmpty()) {
+
+            val first = word[0].lowercaseChar()
+
+            if (first in listOf('a', 'e', 'i', 'o', 'u')) {
+                val tvLabel = findViewById<TextView>(R.id.tvLabel)
+                tvLabel.text = "${tvLabel.text}N"
+            }
+        }
     }
 }

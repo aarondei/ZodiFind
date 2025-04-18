@@ -1,12 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.RotatingStarFragment">
 
-    <cit.edu.zodifind.fragments.RotatingStarView
-        android:id="@+id/rotatingView"
+<!--    initial-->
+    <ImageView
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:id="@+id/zodiacContainer" />
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"/>
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:src="@drawable/glowing_innercircle"
+        android:id="@+id/innerCircle" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:src="@drawable/glowing_ellipse_left"
+        android:id="@+id/ellipseLeft" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:src="@drawable/glowing_ellipse_right"
+        android:id="@+id/ellipseRight" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:src="@drawable/glowing_star"
+        android:id="@+id/star" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:src="@drawable/glowing_star_inverted"
+        android:id="@+id/invertedStar" />
 
 </FrameLayout>
