@@ -11,7 +11,7 @@ import java.time.LocalDate
 
 
 class DatePickerViewModel(application: Application) : AndroidViewModel(application) {
-    val selectedDate = MutableLiveData<LocalDate>()
+    val selectedDate = MutableLiveData<LocalDate>() // viewmodel's reference
     val app = application as ZodiFindApplication
 
     @RequiresApi(Build.VERSION_CODES.O)

@@ -23,6 +23,7 @@ class LoginActivity : Activity() {
         val etUsername = findViewById<EditText>(R.id.etName)
         val etPassword = findViewById<EditText>(R.id.etPassword)
 
+        // fill from current user from registration
         etUsername.setText(app.currentUser?.username ?: "")
         etPassword.setText(app.currentUser?.password ?: "")
 

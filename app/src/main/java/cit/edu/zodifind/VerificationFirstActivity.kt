@@ -17,7 +17,6 @@ class VerificationFirstActivity : AppCompatActivity() {
 
         val app = application as ZodiFindApplication
 
-        // TODO user's name
         val tvHello = findViewById<TextView>(R.id.tvHello)
         tvHello.text = "Hello, ${app.currentUser?.name ?: "User"}"
 
