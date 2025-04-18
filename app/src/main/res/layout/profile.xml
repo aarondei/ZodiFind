@@ -2,8 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/profilebg">
+    android:background="@drawable/calculatorbg">
 
+    <!--    nav bar-->
+    <include layout="@layout/bottom_nav" />
 
     <TextView
         android:id="@+id/zodifind"
@@ -73,79 +75,14 @@
         android:textColor="@color/white"
         />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/pfrectangle"
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:src="@drawable/pfrectangle"-->
 
-        android:layout_marginTop="350dp"
-        />
-
-    <!--    navigation buttons-->
-    <ImageView
-        android:id="@+id/base"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/navbar"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/base"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-
-        <ImageView
-            android:id="@+id/scrollbtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/scroll"
-
-            />
-
-        <ImageView
-            android:id="@+id/starbtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/star"
-
-            />
-
-        <ImageView
-            android:id="@+id/wheelbtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/wheel"
-
-            />
-
-        <ImageView
-            android:id="@+id/calendarbtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/calendar"
-
-            />
-
-        <ImageView
-            android:id="@+id/profilebtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/profilebutton"
-
-            />
-
-    </LinearLayout>
+<!--        android:layout_marginTop="350dp"-->
+<!--        />-->
 
 </RelativeLayout>
 

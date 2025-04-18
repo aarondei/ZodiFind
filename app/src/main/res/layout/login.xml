@@ -98,13 +98,17 @@
         app:layout_constraintVertical_bias="0.361"
         tools:ignore="RtlSymmetry" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="55dp"
 
-        android:background="@drawable/darkblue_btn"
+        style="@style/RoundedButton"
+        app:backgroundTint="@color/midnightBlue"
         android:fontFamily="@font/josefinsans_light"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/white"
+
         android:text="Log In"
         android:textAllCaps="false"
 

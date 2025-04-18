@@ -158,9 +158,9 @@
         app:layout_constraintWidth_percent="0.70"
         tools:ignore="RtlSymmetry" />
 
-    <!-- LOG IN HYPERLINK -->
-
-    <Button
+  
+    <!-- SIGN UP BUTTON -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -168,6 +168,11 @@
         android:background="@drawable/darkblue_btn"
         android:fontFamily="@font/josefinsans_light"
         android:shadowColor="@color/black"
+        app:strokeWidth="1dp"                                                                                      
+        app:strokeColor="@color/white"                                               
+        style="@style/RoundedButton"
+        app:backgroundTint="@color/midnightBlue"                                               
+                                                       
         android:text="Register"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -182,6 +187,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword"
         app:layout_constraintVertical_bias="0.359"
         app:layout_constraintWidth_percent="0.70" />
+
 
     <TextView
         android:id="@+id/tvLogin"

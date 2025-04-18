@@ -5,6 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/calendarbg">
 
+    <!--    nav bar-->
+    <include layout="@layout/bottom_nav" />
+
     <TextView
         android:id="@+id/tvZodiacSeason"
         android:layout_width="wrap_content"
