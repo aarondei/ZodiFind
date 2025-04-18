@@ -8,8 +8,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import cit.edu.zodifind.data.CurrentUser
+import cit.edu.zodifind.data.User
 
 class RegistrationActivity : Activity() {
+
+    private lateinit var newUser: User
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,6 +61,9 @@ class RegistrationActivity : Activity() {
                 // SUCCESSFUL REGISTRATION
 
                 Toast.makeText(this, "Account successfully created", Toast.LENGTH_LONG).show()
+
+                newUser = User(etName.text.toString(), etUsername.text.toString(), etPassword.text.toString())
+                CurrentUser.user = newUser
 
                 val intent = Intent(this, LoginActivity:: class.java)
                 intent.putExtra("username", etUsername.text.toString())

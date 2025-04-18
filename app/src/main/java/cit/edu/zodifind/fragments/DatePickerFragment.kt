@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.text.TextStyle
@@ -21,13 +20,11 @@ import androidx.compose.ui.unit.dp
 import cit.edu.zodifind.R
 import com.commandiron.wheel_picker_compose.WheelDatePicker
 import com.commandiron.wheel_picker_compose.core.WheelPickerDefaults
-import java.time.LocalDate
-import java.time.LocalDateTime
 
-class DatePicker : Fragment() {
+class DatePickerFragment : Fragment() {
 
     companion object {
-        fun newInstance() = DatePicker()
+        fun newInstance() = DatePickerFragment()
     }
 
     private val viewModel: DatePickerViewModel by viewModels()

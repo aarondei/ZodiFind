@@ -78,7 +78,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
-        android:name="cit.edu.zodifind.fragments.DatePicker"
+        android:name="cit.edu.zodifind.fragments.DatePickerFragment"
         android:layout_width="300dp"
         android:layout_height="150dp"
 

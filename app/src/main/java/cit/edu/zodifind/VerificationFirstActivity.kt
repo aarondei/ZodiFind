@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import cit.edu.zodifind.fragments.DatePicker
+import cit.edu.zodifind.fragments.DatePickerFragment
 
 class VerificationFirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,13 +18,13 @@ class VerificationFirstActivity : AppCompatActivity() {
         // to import DatePicker
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, DatePicker())
+                .replace(R.id.fragmentContainer, DatePickerFragment())
                 .commit()
         }
 
         val btnProceed = findViewById<Button>(R.id.btnProceed)
         btnProceed.setOnClickListener(){
-            startActivity(Intent(this, VerificationFirstActivity:: class.java))
+            startActivity(Intent(this, VerificationSecondActivity:: class.java))
         }
     }
 }
