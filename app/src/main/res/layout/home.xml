@@ -2,10 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/landingbg">
 
 <!--    nav bar-->
-    <include layout="@layout/bottom_nav" />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav_fragment_container" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottom_nav_fragment_container"
+        android:name="cit.edu.zodifind.fragments.BottomNavFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
 
 <!--    header-->
 
@@ -17,172 +30,5 @@
         />
 
 </RelativeLayout>
-    <!-- title -->
-<!--    <TextView-->
-<!--        android:id="@+id/title"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/app_name"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="50sp"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:textStyle="bold"-->
-<!--        android:fontFamily="@font/righteous"-->
-<!--        />-->
-
-
-
-<!--    &lt;!&ndash; tabs&ndash;&gt;-->
-<!--    <RelativeLayout-->
-<!--        android:id="@+id/tabs"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/title"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:layout_centerHorizontal="true">-->
-
-
-
-<!--    &lt;!&ndash; zodiac &ndash;&gt;-->
-<!--    <Button-->
-<!--        android:id="@+id/btnZodiac"-->
-<!--        android:layout_width="250dp"-->
-<!--        android:layout_height="250dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="30dp"-->
-
-<!--        android:background="@drawable/westernwheel"-->
-<!--        />-->
-
-
-<!--    </RelativeLayout>-->
-
-
-    <!--    navigation buttons-->
-<!--<ImageView-->
-<!--    android:id="@+id/base"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="55dp"-->
-<!--    android:layout_centerHorizontal="true"-->
-<!--    android:layout_alignParentBottom="true"-->
-<!--    android:background="@drawable/navbar"-->
-<!--    />-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignBottom="@id/base"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:gravity="center"-->
-<!--       >-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/scrollbtn"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:src="@drawable/scroll"-->
-
-<!--            />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/starbtn"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:src="@drawable/star"-->
-
-<!--            />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/wheelbtn"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:src="@drawable/wheel"-->
-
-<!--            />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/btnCalendar"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:src="@drawable/calendar"-->
-
-<!--            />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/profilebtn"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:src="@drawable/profilebutton"-->
-
-<!--            />-->
-
-<!--    </LinearLayout>-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/scrollbtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:src="@drawable/scroll"-->
-<!--        android:layout_alignBottom="@id/base"-->
-<!--        android:layout_alignStart="@id/base"-->
-<!--        android:layout_marginLeft="20dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/starbtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:src="@drawable/star"-->
-<!--        android:layout_alignBottom="@id/base"-->
-<!--        android:layout_toRightOf="@id/scrollbtn"-->
-<!--        android:layout_marginLeft="40dp"-->
-<!--        android:layout_marginBottom="7dp"-->
-<!--        />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/wheelbtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:src="@drawable/wheel"-->
-<!--        android:layout_alignBottom="@id/base"-->
-<!--       android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginLeft="40dp"-->
-<!--        android:layout_marginBottom="7dp"-->
-<!--        />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/calendarbtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:src="@drawable/calendar"-->
-<!--        android:layout_alignBottom="@id/base"-->
-<!--        android:layout_toRightOf="@id/wheelbtn"-->
-<!--        android:layout_marginLeft="30dp"-->
-<!--        android:layout_marginBottom="9dp"-->
-<!--        />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/profilebtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:src="@drawable/profilebutton"-->
-<!--        android:layout_alignBottom="@id/base"-->
-<!--        android:layout_toRightOf="@id/calendarbtn"-->
-<!--        android:layout_marginLeft="40dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        />-->
-
 
 
