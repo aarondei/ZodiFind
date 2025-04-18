@@ -15,67 +15,61 @@ class RegistrationActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registration)
 
-        val toRegister = findViewById<TextView>(R.id.toLogin)
-        toRegister.setOnClickListener(){
-            val intent = Intent(this, LoginActivity:: class.java)
-            startActivity(intent)
-        }
+        val etName = findViewById<EditText>(R.id.etName)
+        val etUsername = findViewById<EditText>(R.id.etUsername)
+        val etPassword = findViewById<EditText>(R.id.etPassword)
+        val etConfirmPassword = findViewById<EditText>(R.id.etConfirmPassword)
 
-        val createUser = findViewById<EditText>(R.id.etCreateUsername)
-        val enterEmail = findViewById<EditText>(R.id.etCreateEmail)
-        val createPass = findViewById<EditText>(R.id.etCreatePassword)
-        val confirmPass = findViewById<EditText>(R.id.etCreateConfirmPassword)
+        val btnRegister =  findViewById<Button>(R.id.btnRegister)
+        btnRegister.setOnClickListener(){
 
-        val btnCreate =  findViewById<Button>(R.id.btnSignup)
-        btnCreate.setOnClickListener(){
-
-            if (createUser.text.isNullOrEmpty() || createPass.text.isNullOrEmpty() || enterEmail.text.isNullOrEmpty() || confirmPass.text.isNullOrEmpty()){
+            if (etName.text.isNullOrEmpty() || etUsername.text.isNullOrEmpty() || etPassword.text.isNullOrEmpty() || etConfirmPassword.text.isNullOrEmpty()) {
                 // EMPTY FIELDS
 
-                Toast.makeText(this, "All fields must not be empty", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Fields must not be empty", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
 
-            } else if (createUser.length() in 1..4){
+            } else if (etUsername.text.length in 1..4){
                 //  MIN USERNAME REQUIREMENT 5 CHARACTERS
 
                 Toast.makeText(this, "Username must contain at least 5 characters", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
 
-            } else if( createPass.length() in 1..7){
+            } else if (etPassword.text.length in 1..7){
                 //  MIN PASSWORD REQUIREMENT 5 CHARACTERS
 
                 Toast.makeText(this, "Password must contain at least 8 characters", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
-        } else if (createPass.text.toString() != confirmPass.text.toString()) {
+
+            } else if (etPassword.text.toString() != etConfirmPassword.text.toString()) {
                 //  CONFIRM PASSWORD MISMATCH
 
                 Toast.makeText(this, "Confirm password again", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
 
-            } else if (Regex("[&=<>+,]").containsMatchIn(createUser.text.toString()) ||
-                createUser.text.toString().contains("..")) {
+            } else if (Regex("[&=<>+,]").containsMatchIn(etUsername.text.toString()) || etUsername.text.toString().contains("..")) {
                 //INVALID CHARACTERS IN USERNAME
 
-                Toast.makeText(this, "Username contains invalid characters", Toast.LENGTH_LONG).show()
-                return@setOnClickListener;
-
-            } else if (!enterEmail.text.toString().contains("@")) {
-                //  EMAIL VALIDATION
-
-                Toast.makeText(this, "Please enter a valid email", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Username must not contain invalid characters", Toast.LENGTH_LONG).show()
                 return@setOnClickListener;
 
             } else {
                 // SUCCESSFUL REGISTRATION
 
-                Toast.makeText(this, "You have successfully created an account!", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, LoginActivity:: class.java)
-                intent.putExtra("username", createUser.text.toString())
-                intent.putExtra("password", createPass.text.toString())
+                Toast.makeText(this, "Account successfully created", Toast.LENGTH_LONG).show()
 
+                val intent = Intent(this, LoginActivity:: class.java)
+                intent.putExtra("username", etUsername.text.toString())
+                intent.putExtra("password", etPassword.text.toString())
                 startActivity(intent)
+
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
             }
+        }
+
+        val tvLogin = findViewById<TextView>(R.id.tvLogin)
+        tvLogin.setOnClickListener(){
+            startActivity(Intent(this, LoginActivity:: class.java))
         }
     }
 }

@@ -20,7 +20,7 @@ class LoginActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        val etUsername = findViewById<EditText>(R.id.etUsername)
+        val etUsername = findViewById<EditText>(R.id.etName)
         val etPassword = findViewById<EditText>(R.id.etPassword)
 
         //created account
