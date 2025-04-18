@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class HomeActivity : Activity() {
@@ -22,22 +23,19 @@ class HomeActivity : Activity() {
             }
         }
 
-        val btnProfile = findViewById<ImageView>(R.id.profilebtn)
-        val btnCalendar = findViewById<ImageView>(R.id.btnCalendar)
 
-        btnProfile.setOnClickListener(){
-            val intent = Intent(this, ProfileActivity::class.java)
-            intent.putExtra("username", user)
-            startActivity(intent)
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+//nav bar intents
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
 
-        }
-
-        btnCalendar.setOnClickListener(){
-            val intent = Intent(this, CalendarActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
-
+        bottomNav.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.nav_home -> startActivity(Intent(this, HomeActivity::class.java))
+                R.id.nav_library -> startActivity(Intent(this, LibraryActivity::class.java))
+                R.id.nav_finder -> startActivity(Intent(this, CalculatorActivity::class.java))
+                R.id.nav_calendar -> startActivity(Intent(this, CalendarActivity::class.java))
+            }
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            true
         }
     }
 }
