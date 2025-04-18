@@ -67,8 +67,6 @@
         app:layout_constraintWidth_percent="0.70"
         tools:ignore="RtlSymmetry" />
 
-
-    <!-- SIGN UP BUTTON -->
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="0dp"
