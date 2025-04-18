@@ -37,6 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.102"
+        app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintWidth_percent="0.475" />
 
@@ -45,16 +46,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:background="@drawable/border"
-
+        android:background="@drawable/border_input_field"
         android:backgroundTint="@color/transparentWhite"
         android:fontFamily="@font/josefinsans_regular"
 
         android:hint="name"
         android:paddingStart="25dp"
-
         android:textColor="@color/white"
-
         android:textColorHint="@color/white"
         android:textSize="16sp"
 
@@ -62,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.070"
 
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
         app:layout_constraintVertical_bias="0.786"
@@ -76,7 +74,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:background="@drawable/border"
+        android:background="@drawable/border_input_field"
 
         android:backgroundTint="@color/transparentWhite"
         android:fontFamily="@font/josefinsans_regular"
@@ -93,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.070"
 
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
         app:layout_constraintVertical_bias="0.875"
@@ -105,7 +103,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:background="@drawable/border"
+        android:background="@drawable/border_input_field"
 
         android:backgroundTint="@color/transparentWhite"
         android:fontFamily="@font/josefinsans_regular"
@@ -121,7 +119,7 @@
         app:layout_constraintBottom_toTopOf="@id/etConfirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.070"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoBarrier"
@@ -134,7 +132,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:background="@drawable/border"
+        android:background="@drawable/border_input_field"
 
         android:backgroundTint="@color/transparentWhite"
         android:fontFamily="@font/josefinsans_regular"
@@ -147,10 +145,11 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="16sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.070"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
@@ -158,20 +157,16 @@
         app:layout_constraintWidth_percent="0.70"
         tools:ignore="RtlSymmetry" />
 
-  
-    <!-- SIGN UP BUTTON -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:background="@drawable/darkblue_btn"
-        android:fontFamily="@font/josefinsans_light"
-        android:shadowColor="@color/black"
-        app:strokeWidth="1dp"                                                                                      
-        app:strokeColor="@color/white"                                               
         style="@style/RoundedButton"
-        app:backgroundTint="@color/midnightBlue"                                               
+        app:backgroundTint="@color/midnightBlue"
+        android:fontFamily="@font/josefinsans_light"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/white"
                                                        
         android:text="Register"
         android:textAllCaps="false"
@@ -180,14 +175,13 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.070"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword"
         app:layout_constraintVertical_bias="0.359"
         app:layout_constraintWidth_percent="0.70" />
-
 
     <TextView
         android:id="@+id/tvLogin"

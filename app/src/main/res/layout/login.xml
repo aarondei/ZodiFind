@@ -32,7 +32,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="parent"
 
@@ -47,7 +47,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:background="@drawable/border"
+        android:background="@drawable/border_input_field"
 
         android:backgroundTint="@color/transparentWhite"
         android:fontFamily="@font/josefinsans_regular"
@@ -75,7 +75,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:background="@drawable/border"
+        android:background="@drawable/border_input_field"
 
         android:backgroundTint="@color/transparentWhite"
         android:fontFamily="@font/josefinsans_regular"
@@ -101,7 +101,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="0dp"
 
         style="@style/RoundedButton"
         app:backgroundTint="@color/midnightBlue"
@@ -111,14 +111,12 @@
 
         android:text="Log In"
         android:textAllCaps="false"
-
         android:textColor="@color/white"
-
-
         android:textSize="20sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/mainLogo"
-        app:layout_constraintHeight_percent="0.070"
+        app:layout_constraintHeight_percent="0.075"
         app:layout_constraintHorizontal_bias="0.0"
 
         app:layout_constraintStart_toStartOf="@+id/mainLogo"
