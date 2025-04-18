@@ -1,198 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="850dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
     android:background="@drawable/loginbg"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
-    <!-- LOGO -->
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/logoBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="mainLogo" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/inputBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="etName, etUsername, etPassword, etConfirmPassword" />
+
     <ImageView
         android:id="@+id/mainLogo"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-
-        android:src="@drawable/zodifind_symbollogo_glow"
-        />
-
-    <!-- USERNAME LABEL -->
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        android:text="Username"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/josefinsans_regular"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zodifind_mainlogo_glow_notagline"
 
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="10dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
 
-    <!-- USERNAME FIELD -->
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102"
+
+        app:layout_constraintWidth_percent="0.475" />
+
     <EditText
-        android:id="@+id/etCreateUsername"
-        android:layout_width="277dp"
-        android:layout_height="40dp"
-
-        android:layout_gravity="center"
-        android:layout_marginBottom="15dp"
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
         android:background="@drawable/border"
+
         android:backgroundTint="@color/transparentWhite"
-
-        android:textSize="15dp"
-        android:textColor="@color/white"
-
-        android:paddingLeft="20dp"
-        android:fontFamily="@font/josefinsans_regular"
-        />
-
-    <!-- EMAIL LABEL -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="E-mail"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
         android:fontFamily="@font/josefinsans_regular"
 
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="10dp"
-        />
+        android:hint="name"
+        android:paddingStart="25dp"
 
-    <!-- EMAIL FIELD -->
-    <EditText
-        android:id="@+id/etCreateEmail"
-        android:layout_width="277dp"
-        android:layout_height="40dp"
-
-        android:layout_gravity="center"
-        android:layout_marginBottom="15dp"
-
-        android:background="@drawable/border"
-        android:backgroundTint="@color/transparentWhite"
-
-        android:textSize="15dp"
         android:textColor="@color/white"
 
-        android:paddingLeft="20dp"
-        android:fontFamily="@font/josefinsans_regular"
-        />
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
 
-    <!-- PASSWORD LABEL -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/etUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.070"
 
-        android:text="Password"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/josefinsans_regular"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
+        app:layout_constraintVertical_bias="0.786"
+        app:layout_constraintWidth_percent="0.70"
+        tools:ignore="RtlSymmetry" />
 
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="10dp"
-        />
-
-    <!-- PASSWORD FIELD -->
-    <EditText
-        android:id="@+id/etCreatePassword"
-
-        android:layout_width="277dp"
-        android:layout_height="40dp"
-
-        android:layout_gravity="center"
-        android:layout_marginBottom="15dp"
-
-        android:background="@drawable/border"
-        android:backgroundTint="@color/transparentWhite"
-
-        android:textSize="15dp"
-        android:textColor="@color/white"
-
-        android:paddingLeft="20dp"
-        android:fontFamily="@font/josefinsans_regular"
-
-        android:inputType="textPassword"
-
-        />
-
-    <!-- CONFIRM PASSWORD LABEL -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Confirm Password"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/josefinsans_regular"
-
-        android:layout_marginLeft="70dp"
-        android:layout_marginBottom="10dp"
-        />
-
-    <!-- CONFIRM PASSWORD FIELD -->
-    <EditText
-        android:id="@+id/etCreateConfirmPassword"
-        android:layout_width="277dp"
-        android:layout_height="40dp"
-
-        android:layout_gravity="center"
-        android:layout_marginBottom="15dp"
-
-        android:background="@drawable/border"
-        android:backgroundTint="@color/transparentWhite"
-
-        android:textSize="15dp"
-        android:textColor="@color/white"
-
-        android:paddingLeft="20dp"
-        android:fontFamily="@font/josefinsans_regular"
-
-        android:inputType="textPassword"
-        />
 
     <!-- SIGN UP BUTTON -->
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@drawable/border"
+
+        android:backgroundTint="@color/transparentWhite"
+        android:fontFamily="@font/josefinsans_regular"
+
+        android:hint="username"
+        android:paddingStart="25dp"
+
+        android:textColor="@color/white"
+
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.070"
+
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
+        app:layout_constraintVertical_bias="0.875"
+        app:layout_constraintWidth_percent="0.70"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@drawable/border"
+
+        android:backgroundTint="@color/transparentWhite"
+        android:fontFamily="@font/josefinsans_regular"
+
+        android:hint="password"
+        android:inputType="textPassword"
+
+        android:paddingStart="25dp"
+
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/etConfirmPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.070"
+        app:layout_constraintHorizontal_bias="0.504"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoBarrier"
+        app:layout_constraintVertical_bias="0.928"
+        app:layout_constraintWidth_percent="0.70"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@drawable/border"
+
+        android:backgroundTint="@color/transparentWhite"
+        android:fontFamily="@font/josefinsans_regular"
+
+        android:hint="confirm password"
+        android:inputType="textPassword"
+
+        android:paddingStart="25dp"
+
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.070"
+        app:layout_constraintHorizontal_bias="0.495"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
+        app:layout_constraintVertical_bias="0.582"
+        app:layout_constraintWidth_percent="0.70"
+        tools:ignore="RtlSymmetry" />
+
+  
+    <!-- SIGN UP BUTTON -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSignup"
-        android:layout_width="247dp"
-        android:layout_height="50dp"
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"
-
-
-        android:shadowColor="@color/black"
-        android:text="Sign Up"
-        style="@style/RoundedButton"
-        app:backgroundTint="@color/midnightBlue"
+        android:background="@drawable/darkblue_btn"
         android:fontFamily="@font/josefinsans_light"
-        app:strokeWidth="1dp"
-        app:strokeColor="@color/white"
-        />
+        android:shadowColor="@color/black"
+        app:strokeWidth="1dp"                                                                                      
+        app:strokeColor="@color/white"                                               
+        style="@style/RoundedButton"
+        app:backgroundTint="@color/midnightBlue"                                               
+                                                       
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
 
-    <!-- LOG IN HYPERLINK -->
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.070"
+        app:layout_constraintHorizontal_bias="0.504"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword"
+        app:layout_constraintVertical_bias="0.359"
+        app:layout_constraintWidth_percent="0.70" />
+
+
     <TextView
-        android:id="@+id/toLogin"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvLogin"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        android:text="@string/login"
-        android:textColor="@color/white"
-        android:textSize="12sp"
         android:fontFamily="@font/josefinsans_light"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="@color/white"
 
-        android:layout_gravity="center"
-        />
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btnRegister"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/btnRegister"
 
-</LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+        app:layout_constraintVertical_bias="0.101" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
