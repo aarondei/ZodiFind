@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.DatePickerFragment">
+    tools:context=".fragments.DatePicker">
 
-    <TextView
+    <androidx.compose.ui.platform.ComposeView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/composeDatePicker"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Enter a date:" />
-
-    
+        android:layout_height="wrap_content"
+        />
 
 </FrameLayout>

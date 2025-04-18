@@ -4,4 +4,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/verificationbg">
 
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:name="cit.edu.zodifind.fragments.DatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,5 @@
     <string name="login">Already have an account? <u>Log in</u>"</string>
     <string name="tagline"><i>Unlock your destiny</i></string>
     <string name="ulWestern"><u>Western</u></string>
+    <string name="title_activity_verification">VerificationActivity</string>
 </resources>
