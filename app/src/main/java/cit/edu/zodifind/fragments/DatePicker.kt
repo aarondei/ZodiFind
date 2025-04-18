@@ -13,6 +13,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import cit.edu.zodifind.R
@@ -51,18 +54,21 @@ class DatePicker : Fragment() {
             WheelDatePicker(
 
                 textColor = Color.White,
+                size = DpSize(300.dp, 150.dp),
+                rowCount = 3,
 
-                maxDate = LocalDate.now(),
-
+                textStyle = TextStyle(
+                    fontFamily = FontFamily(Font(R.font.josefinsans_regular))
+                ),
                 selectorProperties = WheelPickerDefaults.selectorProperties(
                     enabled = true,
                     shape = RoundedCornerShape(75.dp),
                     color = Color.White.copy(alpha = 0.2f),
-                    border = BorderStroke(2.dp, Color.White)
+                    border = BorderStroke(2.dp, Color.White),
                 ),
 
                 onSnappedDate = { date ->
-                    viewModel.selectedDate.value = date
+                    viewModel.setDate(date)
                 }
             )
         }
