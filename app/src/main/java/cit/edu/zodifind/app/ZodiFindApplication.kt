@@ -6,5 +6,6 @@ import cit.edu.zodifind.data.User
 class ZodiFindApplication : Application() {
 
     var currentUser: User? = null
+    val registeredUsers = mutableListOf<User>()
 
 }

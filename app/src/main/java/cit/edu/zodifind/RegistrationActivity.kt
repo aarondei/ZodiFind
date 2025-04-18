@@ -13,13 +13,14 @@ import cit.edu.zodifind.data.User
 
 class RegistrationActivity : Activity() {
 
-    val app = application as ZodiFindApplication
     private lateinit var newUser: User
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registration)
+
+        val app = application as ZodiFindApplication
 
         val etName = findViewById<EditText>(R.id.etName)
         val etUsername = findViewById<EditText>(R.id.etUsername)
@@ -66,6 +67,7 @@ class RegistrationActivity : Activity() {
 
                 newUser = User(etName.text.toString(), etUsername.text.toString(), etPassword.text.toString())
                 app.currentUser = newUser
+                app.registeredUsers.add(newUser)
 
                 val intent = Intent(this, LoginActivity:: class.java)
                 intent.putExtra("username", etUsername.text.toString())
