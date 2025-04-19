@@ -30,6 +30,7 @@ class VerificationFirstActivity : AppCompatActivity() {
         val btnProceed = findViewById<Button>(R.id.btnProceed)
         btnProceed.setOnClickListener(){
             startActivity(Intent(this, VerificationSecondActivity:: class.java))
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
     }
 }
