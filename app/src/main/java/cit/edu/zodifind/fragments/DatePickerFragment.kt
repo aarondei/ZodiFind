@@ -33,11 +33,13 @@ class DatePickerFragment : Fragment() {
     }
 
     private val viewModel: DatePickerViewModel by viewModels()
+    private var mode: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Use the ViewModel
+        // check what activity it is loaded at
+        mode = arguments?.getString("MODE")
     }
 
     override fun onCreateView(
@@ -70,7 +72,10 @@ class DatePickerFragment : Fragment() {
                 ),
 
                 onSnappedDate = { date ->
-                    viewModel.setDate(date)
+                    when (mode) {
+                        "USER" -> viewModel.setUserData(date)
+                        "OBJECT" -> viewModel.setObjectData(date)
+                    }
                 }
             )
         }

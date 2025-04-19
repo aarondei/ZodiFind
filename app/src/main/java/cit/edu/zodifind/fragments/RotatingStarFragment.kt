@@ -33,9 +33,6 @@ class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
     ): View {
         val view = inflater.inflate(R.layout.fragment_rotatingstar, container, false)
 
-        // TODO MIGHT NEED THIS
-        //val app = requireActivity().application as ZodiFindApplication
-
         innerCircle = view.findViewById(R.id.innerCircle)
         ellipseLeft = view.findViewById(R.id.ellipseLeft)
         ellipseRight = view.findViewById(R.id.ellipseRight)

@@ -29,6 +29,7 @@ class ZodiacListFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerZodiac)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        // TODO MODULARIZE
         val zodiacList = listOf(
             ZodiacItem("ARIES", "MAR 21 - APR 19", R.drawable.aries_icon),
             ZodiacItem("TAURUS", "APR 20 - MAY 20", R.drawable.taurus_icon),

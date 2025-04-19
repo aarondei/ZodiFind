@@ -16,7 +16,6 @@ import cit.edu.zodifind.fragments.DatePickerViewModel
 
 class VerificationFirstActivity : AppCompatActivity() {
 
-    private val viewModel: DatePickerViewModel by viewModels()
     @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,10 +27,15 @@ class VerificationFirstActivity : AppCompatActivity() {
         val tvHello = findViewById<TextView>(R.id.tvHello)
         tvHello.text = "Hello, ${app.currentUser?.name ?: "User"},"
 
+        val fragment = DatePickerFragment()
+        fragment.arguments = Bundle().apply {
+            putString("MODE", "USER")
+        }
+
         // to import DatePicker
         if (savedInstanceState == null) { // loads the fragment only once
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, DatePickerFragment())
+                .replace(R.id.fragmentContainer, fragment)
                 .commit()
         }
 
@@ -42,8 +46,6 @@ class VerificationFirstActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
-        viewModel.snappedDate.observe(this@VerificationFirstActivity) { date -> // TODO FIX OR DELETE
-            viewModel.setUserData(date)
-        }
+
     }
 }

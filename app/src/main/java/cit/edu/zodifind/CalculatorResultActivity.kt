@@ -25,9 +25,9 @@ class CalculatorResultActivity : AppCompatActivity() {
                 .commit()
         }
 
+        // set zodiac name
         val tvZodiacLabel = findViewById<TextView>(R.id.tvZodiacLabel)
         tvZodiacLabel.text = CapturedBirthdate.capturedDate?.let { ZodiacSign.parseDate(it).name }
-
         correctTVLabel(tvZodiacLabel.text.toString())
 
         val btnAgain = findViewById<Button>(R.id.btnAgain)

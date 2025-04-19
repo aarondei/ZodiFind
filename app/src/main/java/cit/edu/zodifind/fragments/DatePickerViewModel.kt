@@ -13,16 +13,9 @@ import java.time.LocalDate
 
 
 class DatePickerViewModel(application: Application) : AndroidViewModel(application) {
-    val snappedDate = MutableLiveData<LocalDate>() // TODO DELETE IF NO USE ANYMORE
+    val snappedDate = MutableLiveData<LocalDate>()
     val app = application as ZodiFindApplication
 
-    // TODO FIX TRANSFERRING OF DATA
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun setDate(date: LocalDate) {
-
-        snappedDate.value = date
-    }
     fun setObjectData(date: LocalDate) {
 
         snappedDate.value = date
@@ -31,8 +24,6 @@ class DatePickerViewModel(application: Application) : AndroidViewModel(applicati
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun setUserData(date: LocalDate) {
-
-        Log.d("DATE", "${snappedDate.value}")
 
         snappedDate.value = date
         CapturedBirthdate.capturedDate = date
