@@ -40,7 +40,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacItem>, private val contex
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ZodiacViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_zodiac, parent, false)
+            .inflate(R.layout.cardview_library_item_zodiac, parent, false)
         return ZodiacViewHolder(view)
     }
 

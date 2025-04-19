@@ -20,7 +20,7 @@
         app:constraint_referenced_ids="tvLabel, tvZodiacLabel" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/headerStartGuide"
+        android:id="@+id/headerStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintGuide_begin="0dp"
@@ -39,7 +39,7 @@
         app:layout_constraintHeight_percent="0.50"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerStartGuide"
+        app:layout_constraintTop_toBottomOf="@+id/headerStart"
         app:layout_constraintVertical_bias="0" />
 
     <TextView

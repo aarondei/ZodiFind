@@ -22,7 +22,7 @@ class SplashScreenActivity : Activity() {
 
         val constraintLayoutSplashScreen = findViewById<ConstraintLayout>(R.id.constraintLayoutSplashScreen)
         constraintLayoutSplashScreen.setOnClickListener(){
-            val intent = Intent(this, LoginActivity:: class.java)
+            val intent = Intent(this, LibraryActivity:: class.java) //TODO SET TO NORMAL AGAIN
             startActivity(intent)
             finish()
         }
