@@ -7,6 +7,60 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.04"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.96"
+        android:orientation="horizontal" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.06"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.94"
+        android:orientation="vertical" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.055"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerSymmetricalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.11"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerEndGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.22"
+        android:orientation="horizontal" />
+
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/logoBarrier"
         android:layout_width="wrap_content"
@@ -23,13 +77,13 @@
         android:scaleType="fitCenter"
         android:src="@drawable/zodifind_mainlogo_glow_notagline"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/logoGuide"
 
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toTopOf="@id/MarginTop"
+        app:layout_constraintVertical_bias="0.5"
         app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintHeight_percent="0.25"
@@ -59,11 +113,11 @@
         android:textSize="16sp"
 
         app:layout_constraintBottom_toTopOf="@id/etUsername"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHeight_percent="0.070"
 
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@+id/logoGuide"
         app:layout_constraintVertical_bias="0.786"
         app:layout_constraintWidth_percent="0.70"
@@ -88,11 +142,11 @@
         android:textSize="16sp"
 
         app:layout_constraintBottom_toTopOf="@id/etPassword"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHeight_percent="0.070"
 
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@+id/logoGuide"
         app:layout_constraintVertical_bias="0.875"
         app:layout_constraintWidth_percent="0.70"
@@ -117,11 +171,11 @@
         android:textColorHint="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/etConfirmPassword"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHeight_percent="0.070"
         app:layout_constraintHorizontal_bias="0.5"
 
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@+id/logoGuide"
         app:layout_constraintVertical_bias="0.928"
         app:layout_constraintWidth_percent="0.70"
@@ -147,11 +201,11 @@
         android:textSize="16sp"
 
         app:layout_constraintBottom_toTopOf="@id/fieldGuide"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHeight_percent="0.070"
         app:layout_constraintHorizontal_bias="0.5"
 
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@+id/logoGuide"
         app:layout_constraintVertical_bias="1"
         app:layout_constraintWidth_percent="0.70"
@@ -189,12 +243,12 @@
         android:textColor="@color/white"
         android:textSize="20sp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHeight_percent="0.075"
         app:layout_constraintHorizontal_bias="0.5"
 
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toTopOf="@+id/buttonGuide"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent="0.70" />
@@ -211,7 +265,7 @@
 
         android:textSize="12sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
         app:layout_constraintEnd_toEndOf="@id/btnRegister"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/btnRegister"

@@ -7,12 +7,60 @@
 
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.04"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.96"
+        android:orientation="horizontal" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.06"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.94"
+        android:orientation="vertical" />
+
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/headerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.055"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerSymmetricalStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintGuide_begin="0dp"
         app:layout_constraintGuide_percent="0.11"
         android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerEndGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.22"
+        android:orientation="horizontal" />
+
+
 
     <TextView
         android:id="@+id/tvHello"
@@ -27,12 +75,11 @@
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/tvTagline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1" />
-
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvTagline"
@@ -46,24 +93,15 @@
         android:textSize="18sp"
 
         app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1"
-        />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/headerEndGuide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintGuide_begin="0dp"
-        app:layout_constraintGuide_percent="0.27"
-        android:orientation="horizontal" />
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toTopOf="@id/MarginTop"
+        app:layout_constraintVertical_bias="0.99" />
 
     <TextView
         android:id="@+id/tvInstruction"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         android:fontFamily="@font/josefinsans_regular"
@@ -73,9 +111,9 @@
         android:textSize="16sp"
 
         app:layout_constraintBottom_toTopOf="@id/fragmentContainer"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@+id/headerEndGuide"
 
         app:layout_constraintVertical_bias="1.0" />
@@ -87,9 +125,9 @@
         android:layout_height="0dp"
 
         app:layout_constraintBottom_toTopOf="@id/buttonGuide"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHeight_percent="0.25"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/headerEndGuide"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -117,12 +155,12 @@
         android:textColor="@color/white"
         android:textSize="20sp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHeight_percent="0.075"
         app:layout_constraintHorizontal_bias="0.5"
 
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toTopOf="@+id/buttonGuide"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent="0.70" />
