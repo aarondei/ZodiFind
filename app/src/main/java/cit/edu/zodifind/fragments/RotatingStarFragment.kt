@@ -38,9 +38,9 @@ class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
 
         app.currentUser?.zodiacSign?.icon?.let { zodiacContainer.setImageResource(it) }
 
-        startRotation(innerCircle, 10000f)
-        startRotation(ellipseLeft, 12000f)
-        startCounterRotation(ellipseRight, 12000f)
+        //startRotation(innerCircle, 10000f)
+        //startRotation(ellipseLeft, 12000f)
+        //startCounterRotation(ellipseRight, 12000f)
         startRotation(star, 15000f)
         startCounterRotation(invertedStar, 15000f)
 

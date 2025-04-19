@@ -14,17 +14,10 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="mainLogo" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/inputBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="etName, etUsername, etPassword, etConfirmPassword" />
-
     <ImageView
         android:id="@+id/mainLogo"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
 
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
@@ -39,7 +32,16 @@
         app:layout_constraintVertical_bias="0.102"
         app:layout_constraintHorizontal_bias="0.5"
 
+        app:layout_constraintHeight_percent="0.25"
         app:layout_constraintWidth_percent="0.475" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/logoGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.325"
+        android:orientation="horizontal" />
 
     <EditText
         android:id="@+id/etName"
@@ -62,7 +64,7 @@
 
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
+        app:layout_constraintTop_toBottomOf="@+id/logoGuide"
         app:layout_constraintVertical_bias="0.786"
         app:layout_constraintWidth_percent="0.70"
         tools:ignore="RtlSymmetry" />
@@ -91,7 +93,7 @@
 
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
+        app:layout_constraintTop_toBottomOf="@+id/logoGuide"
         app:layout_constraintVertical_bias="0.875"
         app:layout_constraintWidth_percent="0.70"
         tools:ignore="RtlSymmetry" />
@@ -120,7 +122,7 @@
         app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoBarrier"
+        app:layout_constraintTop_toBottomOf="@+id/logoGuide"
         app:layout_constraintVertical_bias="0.928"
         app:layout_constraintWidth_percent="0.70"
         tools:ignore="RtlSymmetry" />
@@ -144,16 +146,32 @@
         android:textColorHint="@color/white"
         android:textSize="16sp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fieldGuide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.070"
         app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoBarrier"
-        app:layout_constraintVertical_bias="0.582"
+        app:layout_constraintTop_toBottomOf="@+id/logoGuide"
+        app:layout_constraintVertical_bias="1"
         app:layout_constraintWidth_percent="0.70"
         tools:ignore="RtlSymmetry" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fieldGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.72"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttonGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.80"
+        android:orientation="horizontal" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegister"
@@ -177,8 +195,8 @@
         app:layout_constraintHorizontal_bias="0.5"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword"
-        app:layout_constraintVertical_bias="0.359"
+        app:layout_constraintTop_toTopOf="@+id/buttonGuide"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent="0.70" />
 
     <TextView

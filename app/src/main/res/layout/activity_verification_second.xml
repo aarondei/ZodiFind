@@ -19,6 +19,14 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="tvLabel, tvZodiacLabel" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerStartGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.11"
+        android:orientation="horizontal" />
+
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainer"
@@ -26,16 +34,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:layout_margin="20dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.50"
 
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintTop_toBottomOf="@+id/headerStartGuide"
+        app:layout_constraintVertical_bias="0" />
 
     <TextView
         android:id="@+id/tvLabel"
@@ -54,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragmentBarrier"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvZodiacLabel"
@@ -68,12 +73,20 @@
 
         android:textColor="@color/dandelion"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonGuide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragmentBarrier"
-        app:layout_constraintVertical_bias="0.183" />
+        app:layout_constraintVertical_bias="0.205" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttonGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.83"
+        android:orientation="horizontal" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnStart"
@@ -94,9 +107,9 @@
         app:layout_constraintHeight_percent="0.075"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labelBarrier"
+        app:layout_constraintTop_toTopOf="@+id/buttonGuide"
 
-        app:layout_constraintVertical_bias="0.434"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent="0.70"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />

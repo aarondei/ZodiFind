@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
 
         android:fontFamily="@font/cinzel_black"
-        android:text="User."
+        android:text="User,"
         android:textAlignment="center"
         android:textAllCaps="true"
 
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
 
         android:fontFamily="@font/josefinsans_regular"
-        android:text="Enter your birthdate:"
+        android:text="Enter a birthdate:"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -129,6 +129,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragmentBarrier"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.6"
         app:layout_constraintWidth_percent="0.70" />
 

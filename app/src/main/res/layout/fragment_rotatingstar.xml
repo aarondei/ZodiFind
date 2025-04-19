@@ -7,10 +7,11 @@
 
 <!--    initial-->
     <ImageView
-        android:layout_width="135dp"
-        android:layout_height="135dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="fitCenter"
         android:layout_gravity="center"
+        android:translationY="5dp"
         android:id="@+id/zodiacContainer" />
 
     <ImageView
