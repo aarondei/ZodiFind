@@ -2,14 +2,22 @@ package cit.edu.zodifind
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.app.ZodiFindApplication
 import cit.edu.zodifind.fragments.DatePickerFragment
+import cit.edu.zodifind.fragments.DatePickerViewModel
 
 class VerificationFirstActivity : AppCompatActivity() {
+
+    private val viewModel: DatePickerViewModel by viewModels()
+    @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +26,7 @@ class VerificationFirstActivity : AppCompatActivity() {
         val app = application as ZodiFindApplication
 
         val tvHello = findViewById<TextView>(R.id.tvHello)
-        tvHello.text = "Hello, ${app.currentUser?.name ?: "User"}"
+        tvHello.text = "Hello, ${app.currentUser?.name ?: "User"},"
 
         // to import DatePicker
         if (savedInstanceState == null) { // loads the fragment only once
@@ -29,8 +37,13 @@ class VerificationFirstActivity : AppCompatActivity() {
 
         val btnProceed = findViewById<Button>(R.id.btnProceed)
         btnProceed.setOnClickListener(){
-            startActivity(Intent(this, VerificationSecondActivity:: class.java))
+
+            startActivity(Intent(this, VerificationSecondActivity::class.java))
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+        }
+
+        viewModel.snappedDate.observe(this) { date ->
+            viewModel.setUserData(date)
         }
     }
 }

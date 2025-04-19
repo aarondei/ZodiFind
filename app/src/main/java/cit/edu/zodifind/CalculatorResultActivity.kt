@@ -2,22 +2,22 @@ package cit.edu.zodifind
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import cit.edu.zodifind.app.ZodiFindApplication
+import cit.edu.zodifind.data.CapturedBirthdate
 import cit.edu.zodifind.fragments.RotatingStarFragment
+import cit.edu.zodifind.helpers.ZodiacSign
 
-class ResultActivity : AppCompatActivity() {
+class CalculatorResultActivity : AppCompatActivity() {
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.result)
-
-        val app = application as ZodiFindApplication
+        setContentView(R.layout.calculator_result)
 
         if (savedInstanceState == null) { // loads the fragment only once
             supportFragmentManager.beginTransaction()
@@ -26,7 +26,7 @@ class ResultActivity : AppCompatActivity() {
         }
 
         val tvZodiacLabel = findViewById<TextView>(R.id.tvZodiacLabel)
-        tvZodiacLabel.text = app.currentUser?.zodiacSign?.name
+        tvZodiacLabel.text = CapturedBirthdate.capturedDate?.let { ZodiacSign.parseDate(it).name }
 
         correctTVLabel(tvZodiacLabel.text.toString())
 
@@ -36,9 +36,10 @@ class ResultActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
-        val btnRead = findViewById<Button>(R.id.btnRead)
+        val btnRead = findViewById<Button>(R.id.btnRead) // TODO UPDATE INTENT
         btnRead.setOnClickListener {
             startActivity(Intent(this, LibraryActivity::class.java))
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
     }
 

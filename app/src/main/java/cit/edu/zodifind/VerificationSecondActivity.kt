@@ -26,6 +26,7 @@ class VerificationSecondActivity : AppCompatActivity() {
                 .commit()
         }
 
+        // set zodiac name
         val tvZodiacLabel = findViewById<TextView>(R.id.tvZodiacLabel)
         tvZodiacLabel.text = app.currentUser?.zodiacSign?.name
 

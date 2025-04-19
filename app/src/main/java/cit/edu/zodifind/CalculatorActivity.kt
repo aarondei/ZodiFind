@@ -1,17 +1,20 @@
 package cit.edu.zodifind
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import cit.edu.zodifind.app.ZodiFindApplication
 import cit.edu.zodifind.fragments.DatePickerFragment
+import cit.edu.zodifind.fragments.DatePickerViewModel
 
 class CalculatorActivity : AppCompatActivity() {
+
+    private val viewModel: DatePickerViewModel by viewModels()
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calculator)
@@ -19,7 +22,7 @@ class CalculatorActivity : AppCompatActivity() {
         val app = application as ZodiFindApplication
 
         val tvHello = findViewById<TextView>(R.id.tvHello)
-        tvHello.text = "${app.currentUser?.name ?: "User"}."
+        tvHello.text = "${app.currentUser?.name ?: "User"},"
 
         // to import DatePicker
         if (savedInstanceState == null) { // loads the fragment only once
@@ -30,8 +33,15 @@ class CalculatorActivity : AppCompatActivity() {
 
         val btnProceed = findViewById<Button>(R.id.btnProceed)
         btnProceed.setOnClickListener(){
-            startActivity(Intent(this, ResultActivity:: class.java))
+            startActivity(Intent(this, CalculatorResultActivity:: class.java))
 
+        }
+
+        viewModel.snappedDate.observe(this) { date ->
+
+            if (date != null) {
+                viewModel.setObjectData(date)
+            }
         }
     }
 }
