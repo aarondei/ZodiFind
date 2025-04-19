@@ -16,6 +16,7 @@ class DatePickerViewModel(application: Application) : AndroidViewModel(applicati
     val snappedDate = MutableLiveData<LocalDate>() // TODO DELETE IF NO USE ANYMORE
     val app = application as ZodiFindApplication
 
+    // TODO FIX TRANSFERRING OF DATA
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun setDate(date: LocalDate) {

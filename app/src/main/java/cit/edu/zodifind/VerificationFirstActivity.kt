@@ -42,7 +42,7 @@ class VerificationFirstActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
-        viewModel.snappedDate.observe(this) { date ->
+        viewModel.snappedDate.observe(this@VerificationFirstActivity) { date -> // TODO FIX OR DELETE
             viewModel.setUserData(date)
         }
     }

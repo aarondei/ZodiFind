@@ -37,11 +37,8 @@ class CalculatorActivity : AppCompatActivity() {
 
         }
 
-        viewModel.snappedDate.observe(this) { date ->
-
-            if (date != null) {
-                viewModel.setObjectData(date)
-            }
+        viewModel.snappedDate.observe(this@CalculatorActivity) { date -> // TODO FIX OR DELETE
+            viewModel.setObjectData(date)
         }
     }
 }
