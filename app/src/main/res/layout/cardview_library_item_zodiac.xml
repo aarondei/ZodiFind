@@ -5,17 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="12dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="6dp"
-    android:backgroundTint="@color/midnightBlue"
-    style="@style/RoundedButton">
+    app:cardCornerRadius="25dp"
+    android:background="@android:color/transparent"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="6dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
-        android:gravity="center_vertical">
+        android:padding="25dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/cardview">
 
         <ImageView
             android:id="@+id/imageZodiac"
@@ -29,6 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginStart="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -36,8 +38,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="AQUARIUS"
-                android:fontFamily="@font/cinzel_medium"
-                android:textSize="20sp"
+                android:fontFamily="@font/cinzel_bold"
+                android:textSize="22sp"
                 android:textColor="#FFA500"
                 android:textStyle="bold"/>
 
@@ -48,7 +50,7 @@
                 android:text="JAN 20 - FEB 18"
                 android:fontFamily="@font/josefinsans_light"
                 android:textColor="#ffffff"
-                android:textSize="14sp"/>
+                android:textSize="12sp"/>
 
         </LinearLayout>
     </LinearLayout>

@@ -17,7 +17,7 @@
             android:name=".LibBirthdateActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultActivity"
+            android:name=".CalculatorResultActivity"
             android:exported="false" />
         <activity
             android:name=".VerificationSecondActivity"

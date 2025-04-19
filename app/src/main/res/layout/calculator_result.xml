@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/verificationbg">
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/MarginTop"
@@ -62,107 +62,131 @@
 
 
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/fragmentBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="fragmentContainer" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labelBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvLabel, tvZodiacLabel" />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:name="cit.edu.zodifind.fragments.RotatingStarFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHeight_percent="0.50"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toTopOf="@+id/headerSymmetricalStart"
+        app:layout_constraintVertical_bias="0" />
+
     <TextView
-        android:id="@+id/tvHello"
+        android:id="@+id/tvLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        android:fontFamily="@font/cinzel_black"
-        android:text="Hello, User"
+        android:fontFamily="@font/cinzel_regular"
+        android:text="You are a"
         android:textAlignment="center"
         android:textAllCaps="true"
 
         android:textColor="@color/white"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvTagline"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvZodiacLabel"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentBarrier"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tvTagline"
+        android:id="@+id/tvZodiacLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        android:fontFamily="@font/josefinsans_regular"
-        android:text="Ready to unlock your destiny?"
+        android:fontFamily="@font/cinzel_bold"
+        android:text="SIGN"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textAllCaps="true"
 
-        app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toTopOf="@id/MarginTop"
-        app:layout_constraintVertical_bias="0.99" />
-
-    <TextView
-        android:id="@+id/tvInstruction"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:fontFamily="@font/josefinsans_regular"
-        android:text="Enter your birthdate:"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-
-        app:layout_constraintBottom_toTopOf="@id/fragmentContainer"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@+id/headerEndGuide"
-
-        app:layout_constraintVertical_bias="1.0" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainer"
-        android:name="cit.edu.zodifind.fragments.DatePickerFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
+        android:textColor="@color/dandelion"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/buttonGuide"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@id/headerEndGuide"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentBarrier"
+        app:layout_constraintVertical_bias="0.328" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/buttonGuide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintGuide_begin="0dp"
-        app:layout_constraintGuide_percent="0.83"
+        app:layout_constraintGuide_percent="0.775"
         android:orientation="horizontal" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnProceed"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
+        android:id="@+id/btnRead"
         style="@style/RoundedButton"
-        app:backgroundTint="@color/midnightBlue"
-        android:fontFamily="@font/josefinsans_light"
-        app:strokeWidth="1dp"
-        app:strokeColor="@color/white"
+        android:layout_width="0dp"
 
-        android:text="Proceed"
+        android:layout_height="0dp"
+        android:fontFamily="@font/josefinsans_light"
+        android:text="Read More"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="20sp"
 
-        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+        android:textSize="20sp"
+        app:backgroundTint="@color/midnightBlue"
+        app:layout_constraintBottom_toBottomOf="@id/btnAgain"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
+
         app:layout_constraintHeight_percent="0.075"
         app:layout_constraintHorizontal_bias="0.5"
-
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toTopOf="@+id/buttonGuide"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.70" />
+
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent="0.70"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgain"
+        style="@style/RoundedButton"
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+        android:fontFamily="@font/josefinsans_light"
+        android:text="Try Again"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+
+        android:textSize="20sp"
+        app:backgroundTint="@color/midnightBlue"
+        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@+id/btnRead"
+
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent="0.70"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

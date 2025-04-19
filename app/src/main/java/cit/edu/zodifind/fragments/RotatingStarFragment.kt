@@ -2,6 +2,7 @@ package cit.edu.zodifind.fragments
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,10 +10,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
+import androidx.fragment.app.activityViewModels
 import cit.edu.zodifind.R
-import cit.edu.zodifind.app.ZodiFindApplication
+import cit.edu.zodifind.data.CapturedBirthdate
+import cit.edu.zodifind.helpers.ZodiacSign
 
 class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
+
 
     private lateinit var innerCircle: ImageView
     private lateinit var ellipseLeft: ImageView
@@ -21,13 +26,12 @@ class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
     private lateinit var invertedStar: ImageView
     private lateinit var zodiacContainer: ImageView
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val view = inflater.inflate(R.layout.fragment_rotatingstar, container, false)
-
-        val app = requireActivity().application as ZodiFindApplication
 
         innerCircle = view.findViewById(R.id.innerCircle)
         ellipseLeft = view.findViewById(R.id.ellipseLeft)
@@ -36,11 +40,10 @@ class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
         invertedStar = view.findViewById(R.id.invertedStar)
         zodiacContainer = view.findViewById(R.id.zodiacContainer)
 
-        app.currentUser?.zodiacSign?.icon?.let { zodiacContainer.setImageResource(it) }
+        // set zodiac icon
+        val date = CapturedBirthdate.capturedDate
+        date?.let { ZodiacSign.parseDate(it).icon }?.let { zodiacContainer.setImageResource(it) }
 
-        startRotation(innerCircle, 10000f)
-        startRotation(ellipseLeft, 12000f)
-        startCounterRotation(ellipseRight, 12000f)
         startRotation(star, 15000f)
         startCounterRotation(invertedStar, 15000f)
 

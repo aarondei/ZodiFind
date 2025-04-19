@@ -10,6 +10,7 @@
 
     <color name="transparentWhite">#4DFFFFFF</color>
     <color name="transparentBlack">#4D000000</color>
+    <color name="transparentMidnightBlue">#40090C32</color>
 
     <color name="darkBlue">#99090C32</color>
     <color name="red">#FF0000</color>

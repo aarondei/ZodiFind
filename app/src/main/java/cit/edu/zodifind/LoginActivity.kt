@@ -45,7 +45,7 @@ class LoginActivity : Activity() {
 
                 Toast.makeText(this, "Developer Mode", Toast.LENGTH_LONG).show()
 
-                app.currentUser = User("Admin", "admin", "1234")
+                app.currentUser = User("Admin", "admin", "1234") // TODO DELETE THIS AFTER
                 startActivity(Intent(this, VerificationFirstActivity:: class.java))
             } else {
                 // if not empty, check if already registered

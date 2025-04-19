@@ -2,14 +2,21 @@ package cit.edu.zodifind
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.app.ZodiFindApplication
 import cit.edu.zodifind.fragments.DatePickerFragment
+import cit.edu.zodifind.fragments.DatePickerViewModel
 
 class VerificationFirstActivity : AppCompatActivity() {
+
+    @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,19 +25,27 @@ class VerificationFirstActivity : AppCompatActivity() {
         val app = application as ZodiFindApplication
 
         val tvHello = findViewById<TextView>(R.id.tvHello)
-        tvHello.text = "Hello, ${app.currentUser?.name ?: "User"}"
+        tvHello.text = "Hello, ${app.currentUser?.name ?: "User"},"
+
+        val fragment = DatePickerFragment()
+        fragment.arguments = Bundle().apply {
+            putString("MODE", "USER")
+        }
 
         // to import DatePicker
         if (savedInstanceState == null) { // loads the fragment only once
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, DatePickerFragment())
+                .replace(R.id.fragmentContainer, fragment)
                 .commit()
         }
 
         val btnProceed = findViewById<Button>(R.id.btnProceed)
         btnProceed.setOnClickListener(){
-            startActivity(Intent(this, VerificationSecondActivity:: class.java))
+
+            startActivity(Intent(this, VerificationSecondActivity::class.java))
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
+
+
     }
 }
