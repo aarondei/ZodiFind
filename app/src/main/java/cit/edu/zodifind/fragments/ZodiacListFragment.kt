@@ -20,7 +20,6 @@ class ZodiacListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout
         return inflater.inflate(R.layout.fragment_zodiac_list, container, false)
     }
 
@@ -45,21 +44,17 @@ class ZodiacListFragment : Fragment() {
             ZodiacItem("PISCES", "FEB 19 - MAR 20", R.drawable.pisces_icon)
         )
 
-        zodiacAdapter = ZodiacAdapter(zodiacList)
+        zodiacAdapter = ZodiacAdapter(zodiacList, requireContext()) // Pass requireContext()
         recyclerView.adapter = zodiacAdapter
 
-        val recyclerZodiac = view.findViewById<RecyclerView>(R.id.recyclerZodiac)
+        recyclerView.overScrollMode = RecyclerView.OVER_SCROLL_ALWAYS
 
-
-        recyclerZodiac.overScrollMode = RecyclerView.OVER_SCROLL_ALWAYS
-
-
-        recyclerZodiac.setPadding(
-            recyclerZodiac.paddingLeft,
-            recyclerZodiac.paddingTop,
-            recyclerZodiac.paddingRight,
+        recyclerView.setPadding(
+            recyclerView.paddingLeft,
+            recyclerView.paddingTop,
+            recyclerView.paddingRight,
             resources.getDimensionPixelSize(R.dimen.overscroll_bottom_padding)
         )
-        recyclerZodiac.clipToPadding = false
+        recyclerView.clipToPadding = false
     }
 }

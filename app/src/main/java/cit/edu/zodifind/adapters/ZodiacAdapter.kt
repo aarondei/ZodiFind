@@ -9,13 +9,33 @@ import androidx.recyclerview.widget.RecyclerView
 import cit.edu.zodifind.R
 import cit.edu.zodifind.data.ZodiacItem
 
-class ZodiacAdapter(private val zodiacList: List<ZodiacItem>) :
+import android.content.Context
+import android.content.Intent
+import cit.edu.zodifind.LibBirthdateActivity
+
+class ZodiacAdapter(private val zodiacList: List<ZodiacItem>, private val context: Context) :
     RecyclerView.Adapter<ZodiacAdapter.ZodiacViewHolder>() {
 
-    inner class ZodiacViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ZodiacViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         val imageZodiac: ImageView = itemView.findViewById(R.id.imageZodiac)
         val tvZodiacName: TextView = itemView.findViewById(R.id.tvZodiacName)
         val tvZodiacDate: TextView = itemView.findViewById(R.id.tvZodiacDate)
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(view: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION && view != null) {
+                val selectedZodiac = zodiacList[position]
+                val intent = Intent(context, LibBirthdateActivity::class.java) // Replace ZodiacDetailActivity
+                intent.putExtra("zodiac_name", selectedZodiac.name)
+                intent.putExtra("zodiac_date", selectedZodiac.dateRange)
+                intent.putExtra("zodiac_image", selectedZodiac.imageResId)
+                context.startActivity(intent)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ZodiacViewHolder {
