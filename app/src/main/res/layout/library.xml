@@ -78,7 +78,7 @@
     <View
         android:id="@+id/line"
         android:layout_width="0dp"
-        android:layout_height="0.5dp"
+        android:layout_height="0.75dp"
         android:background="@android:color/white"
 
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
