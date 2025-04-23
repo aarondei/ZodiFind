@@ -4,26 +4,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/calculatorbg">
 
-    <!--    nav bar-->
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_nav_fragment_container" />
 
-    <!--    nav bar-->
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_nav_fragment_container" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/bottom_nav_fragment_container"
-        android:name="cit.edu.zodifind.fragments.BottomNavFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
 
     <TextView
         android:id="@+id/zodifind"
@@ -101,6 +83,13 @@
 
 <!--        android:layout_marginTop="350dp"-->
 <!--        />-->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottom_nav_fragment_container"
+        android:name="cit.edu.zodifind.fragments.BottomNavFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
 

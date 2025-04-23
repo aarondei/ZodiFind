@@ -7,13 +7,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import cit.edu.zodifind.R
-import cit.edu.zodifind.data.ZodiacItem
 
 import android.content.Context
 import android.content.Intent
-import cit.edu.zodifind.LibBirthdateActivity
+import cit.edu.zodifind.LibraryFocusedItemActivity
+import cit.edu.zodifind.helpers.ZodiacSign
 
-class ZodiacAdapter(private val zodiacList: List<ZodiacItem>, private val context: Context) :
+class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val context: Context) :
     RecyclerView.Adapter<ZodiacAdapter.ZodiacViewHolder>() {
 
     inner class ZodiacViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
@@ -29,10 +29,8 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacItem>, private val contex
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION && view != null) {
                 val selectedZodiac = zodiacList[position]
-                val intent = Intent(context, LibBirthdateActivity::class.java) // Replace ZodiacDetailActivity
-                intent.putExtra("zodiac_name", selectedZodiac.name)
-                intent.putExtra("zodiac_date", selectedZodiac.dateRange)
-                intent.putExtra("zodiac_image", selectedZodiac.imageResId)
+                val intent = Intent(context, LibraryFocusedItemActivity::class.java)
+                intent.putExtra("zodiac", selectedZodiac)
                 context.startActivity(intent)
             }
         }
@@ -46,9 +44,9 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacItem>, private val contex
 
     override fun onBindViewHolder(holder: ZodiacViewHolder, position: Int) {
         val item = zodiacList[position]
-        holder.imageZodiac.setImageResource(item.imageResId)
+        holder.imageZodiac.setImageResource(item.icon)
         holder.tvZodiacName.text = item.name
-        holder.tvZodiacDate.text = item.dateRange
+        holder.tvZodiacDate.text = item.concatStartEndDates()
     }
 
     override fun getItemCount(): Int = zodiacList.size

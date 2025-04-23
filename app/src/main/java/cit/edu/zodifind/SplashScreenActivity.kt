@@ -22,7 +22,7 @@ class SplashScreenActivity : Activity() {
 
         val constraintLayoutSplashScreen = findViewById<ConstraintLayout>(R.id.constraintLayoutSplashScreen)
         constraintLayoutSplashScreen.setOnClickListener(){
-            val intent = Intent(this, CalculatorActivity:: class.java) // TODO REVERT BACK AFTER TEST
+            val intent = Intent(this, HomeActivity:: class.java) // TODO REVERT BACK AFTER TEST
             startActivity(intent)
             finish()
         }
