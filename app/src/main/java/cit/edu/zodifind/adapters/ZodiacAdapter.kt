@@ -44,7 +44,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
 
     override fun onBindViewHolder(holder: ZodiacViewHolder, position: Int) {
         val item = zodiacList[position]
-        holder.imageZodiac.setImageResource(item.icon)
+        holder.imageZodiac.setImageResource(item.starIcon)
         holder.tvZodiacName.text = item.name
         holder.tvZodiacDate.text = item.concatStartEndDates()
     }
