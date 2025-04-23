@@ -102,7 +102,7 @@
         android:layout_marginTop="7dp"/>
 
     <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/recyclerViewBarrier"
+        android:id="@+id/navbarBarrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"

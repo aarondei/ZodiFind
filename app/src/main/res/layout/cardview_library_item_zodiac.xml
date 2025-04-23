@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="AQUARIUS"
                 android:fontFamily="@font/cinzel_bold"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 android:textColor="#FFA500"
                 android:textStyle="bold"/>
 
@@ -50,7 +50,7 @@
                 android:text="JAN 20 - FEB 18"
                 android:fontFamily="@font/josefinsans_light"
                 android:textColor="#ffffff"
-                android:textSize="12sp"/>
+                android:textSize="11sp"/>
 
         </LinearLayout>
     </LinearLayout>

@@ -87,7 +87,7 @@
         app:layout_constraintHeight_percent="0.50"
 
         app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toTopOf="@+id/headerSymmetricalStart"
+        app:layout_constraintTop_toTopOf="@+id/headerStart"
         app:layout_constraintVertical_bias="0" />
 
     <TextView
@@ -133,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintGuide_begin="0dp"
-        app:layout_constraintGuide_percent="0.775"
+        app:layout_constraintGuide_percent="0.71"
         android:orientation="horizontal" />
 
     <com.google.android.material.button.MaterialButton
@@ -158,7 +158,7 @@
         app:layout_constraintTop_toTopOf="@+id/buttonGuide"
 
         app:layout_constraintVertical_bias="0"
-        app:layout_constraintWidth_percent="0.70"
+        app:layout_constraintWidth_percent="0.7"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
 
@@ -175,7 +175,7 @@
 
         android:textSize="20sp"
         app:backgroundTint="@color/midnightBlue"
-        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_fragment_container"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
 
         app:layout_constraintHeight_percent="0.075"
@@ -187,6 +187,23 @@
         app:layout_constraintWidth_percent="0.70"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/navbarBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="btnAgain" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottom_nav_fragment_container"
+        android:name="cit.edu.zodifind.fragments.BottomNavFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
