@@ -90,7 +90,7 @@
 
         app:layout_constraintStart_toEndOf="@id/marginStart"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintTop_toBottomOf="@id/headerSymmetricalStart"
+        app:layout_constraintTop_toBottomOf="@id/headerStart"
         app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
         />
 
@@ -101,7 +101,7 @@
 
         app:layout_constraintStart_toEndOf="@id/marginStart"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintTop_toBottomOf="@id/headerSymmetricalStart"
+        app:layout_constraintTop_toTopOf="@id/imgProfile"
         app:layout_constraintHorizontal_bias="0.65"
 
         />
