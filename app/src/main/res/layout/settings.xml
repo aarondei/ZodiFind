@@ -66,6 +66,14 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="205dp" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GeneralSectionGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="385dp" />
+
+<!-- views -->
     <ImageView
         android:id="@+id/profilepic"
 
@@ -162,6 +170,178 @@
         app:layout_constraintTop_toBottomOf="@id/tvAccount"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.025"
+        />
+
+    <TextView
+        android:id="@+id/tvEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.080"
+        app:layout_constraintHorizontal_bias="0.08"
+        />
+
+    <TextView
+        android:id="@+id/tvChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Change Password"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/tvEditProfile"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.030"
+        app:layout_constraintHorizontal_bias="0.1"
+        />
+
+    <TextView
+        android:id="@+id/tvGeneral"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="General"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/GeneralSectionGuide"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintEnd_toStartOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGeneral"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.025"
+        />
+
+    <ImageView
+        android:id="@+id/imgAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_about"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintEnd_toStartOf="@id/marginEnd"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0.16"
+        />
+
+    <ImageView
+        android:id="@+id/imgFaq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_faq"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/imgAbout"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintEnd_toStartOf="@id/marginEnd"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0.16"
+        />
+
+    <ImageView
+        android:id="@+id/imgDeveloper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_developer"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/imgFaq"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintEnd_toStartOf="@id/marginEnd"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintVertical_bias="0.20"
+        />
+
+    <TextView
+        android:id="@+id/tvCopyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/zd_copyright"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@id/imgDeveloper"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="3"
+        />
+
+    <TextView
+        android:id="@+id/tvAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="About"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toEndOf="@id/imgAbout"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.1"
+        />
+
+    <TextView
+        android:id="@+id/tvFaq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="FAQ"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/tvAbout"
+        app:layout_constraintTop_toBottomOf="@id/tvAbout"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.18"
+        app:layout_constraintHorizontal_bias="0"
+        />
+
+    <TextView
+        android:id="@+id/tvDeveloper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Developer"
+        android:textColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/tvFaq"
+        app:layout_constraintTop_toBottomOf="@id/tvFaq"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.20"
+        app:layout_constraintHorizontal_bias="0"
         />
 
 
