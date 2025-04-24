@@ -1,279 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/settingsbg">
-
-    <!-- settings -->
-    <TextView
-        android:id="@+id/txtSettings"
-
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:text="Settings"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/hammersmith"
-
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        />
-
-    <ImageView
-        android:id="@+id/back"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.04"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/leftarrow"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.96"
+        android:orientation="horizontal" />
 
-        android:layout_toLeftOf="@id/txtSettings"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="80dp"
-        />
-    <!-- pic -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.06"
+        android:orientation="vertical" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.94"
+        android:orientation="vertical" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.055"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerSymmetricalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.11"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerEndGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22161423" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/AccountSectionGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="205dp" />
+
     <ImageView
-        android:id="@+id/imgPic"
+        android:id="@+id/profilepic"
 
-        android:layout_below="@+id/txtSettings"
-
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-
-        android:layout_marginTop="27dp"
-        android:layout_marginLeft="50dp"
         android:src="@drawable/profileicon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
+        app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
+        app:layout_constraintEnd_toStartOf="@id/marginEnd"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHorizontal_bias="0"
         />
 
-    <!-- name -->
+        <TextView
+            android:id="@+id/tvName"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Jane Doe"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/cinzel_bold"
+
+            app:layout_constraintStart_toEndOf="@id/profilepic"
+            app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
+            app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
+            app:layout_constraintEnd_toStartOf="@id/marginEnd"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintVertical_bias="0"
+            />
+
     <TextView
-        android:id="@+id/txtName"
+        android:id="@+id/tvBirth"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Jane Doe"
-        android:textSize="23sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/hammersmith"
-
-        android:layout_toRightOf="@+id/imgPic"
-        android:layout_below="@+id/txtSettings"
-
-        android:layout_marginTop="27dp"
-        android:layout_marginLeft="30dp"
-        />
-
-    <!-- bday -->
-    <TextView
-        android:id="@+id/txtBirthday"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="August 10, 2003"
+        android:text="April 10"
         android:textSize="15sp"
         android:textColor="@color/white"
-        android:fontFamily="@font/hammersmith"
+        android:fontFamily="@font/josefinsans_regular"
 
-        android:layout_toRightOf="@+id/imgPic"
-        android:layout_below="@+id/txtName"
-
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
+        app:layout_constraintEnd_toStartOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0"
         />
 
-    <!-- border -->
-    <ImageView
-        android:id="@+id/border"
-
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-
-        android:background="@drawable/border3"
-        android:backgroundTint="@color/white"
-        android:alpha="0.1"
-
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"
-
-        android:layout_below="@id/txtBirthday"
-        />
-
-    <!-- Account Banner  -->
     <TextView
-        android:id="@+id/txtAccount"
+        android:id="@+id/tvAccount"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:text="Account"
-        android:textSize="19sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-
-        android:layout_below="@+id/imgPic"
-
-        android:layout_marginTop="36dp"
-        android:layout_marginLeft="50dp"
-        />
-
-    <!-- Edit profile  -->
-    <TextView
-        android:id="@+id/txtEditProfile"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Edit Profile"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-
-        android:layout_below="@+id/border"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        />
-    <!-- change pass  -->
-    <TextView
-        android:id="@+id/txtChangePassword"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Change Password"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-
-        android:layout_below="@+id/txtEditProfile"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        />
-
-    <!-- border -->
-    <ImageView
-        android:id="@+id/border2"
-
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-
-        android:background="@drawable/border3"
-        android:backgroundTint="@color/white"
-        android:alpha="0.1"
-
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"
-
-        android:layout_below="@id/txtChangePassword"
-        />
-
-    <!-- General Banner  -->
-    <TextView
-        android:id="@+id/txtGeneral"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="General"
-        android:textSize="19sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-
-        android:layout_below="@+id/txtChangePassword"
-
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="50dp"
-        />
-
-    <!-- about  -->
-    <TextView
-        android:id="@+id/txtAbout"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="About"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-
-        android:layout_below="@+id/border2"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        />
-    <!-- help  -->
-    <TextView
-        android:id="@+id/txtHelp"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Help"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-
-        android:layout_below="@+id/txtAbout"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        />
-
-    <!-- developers  -->
-    <TextView
-        android:id="@+id/txtDevelopers"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Developers"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-
-        android:layout_below="@+id/txtHelp"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        />
-
-    <!-- log out  -->
-    <TextView
-        android:id="@+id/txtLogOut"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_above="@id/zodifind"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="50dp"
-
-
-        android:layout_marginBottom="20dp"
-
-
-        android:text="Log Out"
-        android:textStyle="italic"
-        android:textColor="@color/red"
-        android:textSize="15sp" />
-
-    <!-- app name  -->
-    <TextView
-        android:id="@+id/zodifind"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="@string/app_name"
-        android:textColor="@color/white"
         android:textSize="30sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
 
-
-        android:layout_marginBottom="30dp"
-
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-
-        android:fontFamily="@font/righteous"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/AccountSectionGuide"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintEnd_toStartOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0"
         />
 
-</RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+
+        app:layout_constraintBottom_toTopOf="@id/AccountSectionGuide"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/headerEndGuide"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAccount"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.025"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
