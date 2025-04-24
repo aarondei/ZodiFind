@@ -9,8 +9,11 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentContainerView
 import cit.edu.zodifind.R
 import cit.edu.zodifind.helpers.ZodiacSign
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class LibraryFocusedItemFragment : Fragment() {
+
+    //private lateinit var TabLayoutView: Linear
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -21,6 +24,7 @@ class LibraryFocusedItemFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //TabLayoutView = view.findViewById(R.id.tab_layout)
 
         val tvZodiacFocusedItemName = view.findViewById<TextView>(R.id.tvZodiacFocusedItemName)
         val tvZodiacFocusedItemTitle = view.findViewById<TextView>(R.id.tvZodiacFocusedItemTitle)

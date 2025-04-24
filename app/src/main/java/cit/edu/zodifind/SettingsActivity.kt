@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import cit.edu.zodifind.R
 
 class SettingsActivity : Activity() {
     @Suppress("DEPRECATION")
@@ -13,24 +12,24 @@ class SettingsActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
 
-        val txtName = findViewById<TextView>(R.id.txtName)
+        val tvName = findViewById<TextView>(R.id.tvName)
 
         intent?.let {
             it.getStringExtra("username")?.let{username ->
-                txtName.text = username
+                tvName.text = username
             }
         }
 
-        val toDeveloper = findViewById<TextView>(R.id.txtDevelopers)
-        toDeveloper.setOnClickListener(){
+        val tvDeveloper = findViewById<TextView>(R.id.tvDeveloper)
+        tvDeveloper.setOnClickListener(){
             val intent = Intent(this, DeveloperActivity:: class.java)
             startActivity(intent)
         }
 
-        val btnBack = findViewById<ImageView>(R.id.back)
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener(){
             val intent = Intent(this, ProfileActivity:: class.java)
-            intent.putExtra("username", txtName.text.toString())
+            intent.putExtra("username", tvName.text.toString())
             startActivity(intent)
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }

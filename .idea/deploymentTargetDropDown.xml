@@ -2,19 +2,7 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="StarSync.app">
-        <State />
-      </entry>
-      <entry key="StarSync.app.androidTest">
-        <State />
-      </entry>
-      <entry key="StarSync.app.main">
-        <State />
-      </entry>
-      <entry key="StarSync.app.unitTest">
-        <State />
-      </entry>
-      <entry key="app">
+      <entry key="SplashScreenActivity">
         <State />
       </entry>
     </value>
