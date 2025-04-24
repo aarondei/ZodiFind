@@ -17,7 +17,6 @@ import cit.edu.zodifind.helpers.ZodiacSign
 
 class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
 
-
     private lateinit var innerCircle: ImageView
     private lateinit var ellipseLeft: ImageView
     private lateinit var ellipseRight: ImageView

@@ -25,7 +25,7 @@
             android:id="@+id/imageZodiac"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/aquarius_cons"
+            android:src="@drawable/aquarius_icon"
             android:contentDescription="Zodiac Image"
             android:layout_marginEnd="16dp"/>
 

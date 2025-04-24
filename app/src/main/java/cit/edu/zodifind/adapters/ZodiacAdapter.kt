@@ -30,7 +30,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
             if (position != RecyclerView.NO_POSITION && view != null) {
                 val selectedZodiac = zodiacList[position]
                 val intent = Intent(context, LibraryFocusedItemActivity::class.java)
-                intent.putExtra("zodiac", selectedZodiac)
+                intent.putExtra("zodiac", selectedZodiac.name)
                 context.startActivity(intent)
             }
         }
@@ -44,7 +44,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
 
     override fun onBindViewHolder(holder: ZodiacViewHolder, position: Int) {
         val item = zodiacList[position]
-        holder.imageZodiac.setImageResource(item.starIcon)
+        holder.imageZodiac.setImageResource(item.symbolIcon)
         holder.tvZodiacName.text = item.name
         holder.tvZodiacDate.text = item.concatStartEndDates()
     }
