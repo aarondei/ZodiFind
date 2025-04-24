@@ -13,8 +13,7 @@ import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.activityViewModels
 import cit.edu.zodifind.R
-import cit.edu.zodifind.data.CapturedBirthdate
-import cit.edu.zodifind.helpers.ZodiacSign
+import cit.edu.zodifind.data.CapturedZodiacTempObject
 
 class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
 
@@ -37,7 +36,7 @@ class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
         zodiacContainer = view.findViewById(R.id.zodiacContainer)
 
         // set zodiac icon
-        val icon = CapturedBirthdate.capturedSign
+        val icon = CapturedZodiacTempObject.capturedSign
         if (icon != null) {
             zodiacContainer.setImageResource(icon.symbolIcon)
         }
