@@ -18,5 +18,4 @@ class LibraryActivity : AppCompatActivity() {
             .replace(R.id.fragment_container, ZodiacListFragment())
             .commit()
     }
-
-    }
+}

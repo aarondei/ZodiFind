@@ -2,22 +2,27 @@ package cit.edu.zodifind
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import cit.edu.zodifind.fragments.LibraryFocusedItemBirthdateFragment
+import cit.edu.zodifind.fragments.LibraryFocusedItemFragment
 import cit.edu.zodifind.helpers.ZodiacSign
 
 class LibraryFocusedItemActivity : AppCompatActivity() {
+
+    private lateinit var key: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.library_focuseditem)
 
-        val zodiacName = intent.getStringExtra("zodiac")
-        val zodiac = ZodiacSign.valueOf(zodiacName!!)
+        intent?.let {
+            key = it.getStringExtra("zodiac").toString()
+        }
 
-        // TODO fill up the fields using "zodiac"
-
+        val fragment = LibraryFocusedItemFragment()
+        val bundle = Bundle()
+        bundle.putString("key", key)
+        fragment.arguments = bundle
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, LibraryFocusedItemBirthdateFragment())
+            .replace(R.id.libraryFocusedItemFragment, fragment)
             .commit()
     }
 }

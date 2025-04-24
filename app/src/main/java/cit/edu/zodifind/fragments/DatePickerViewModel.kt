@@ -2,7 +2,6 @@ package cit.edu.zodifind.fragments
 
 import android.app.Application
 import android.os.Build
-import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
@@ -16,17 +15,18 @@ class DatePickerViewModel(application: Application) : AndroidViewModel(applicati
     val snappedDate = MutableLiveData<LocalDate>()
     val app = application as ZodiFindApplication
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun setObjectData(date: LocalDate) {
 
         snappedDate.value = date
-        CapturedBirthdate.capturedDate = date
+        CapturedBirthdate.capturedSign = ZodiacSign.parseDate(date)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun setUserData(date: LocalDate) {
 
         snappedDate.value = date
-        CapturedBirthdate.capturedDate = date
+        CapturedBirthdate.capturedSign = ZodiacSign.parseDate(date)
         app.currentUser?.birthdate = date
         app.currentUser?.zodiacSign = ZodiacSign.parseDate(date)
     }
