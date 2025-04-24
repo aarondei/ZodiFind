@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.activityViewModels
 import cit.edu.zodifind.R
 import cit.edu.zodifind.data.CapturedBirthdate
 import cit.edu.zodifind.helpers.ZodiacSign
@@ -40,7 +41,6 @@ class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
         if (icon != null) {
             zodiacContainer.setImageResource(icon.symbolIcon)
         }
-
         startRotation(star, 15000f)
         startCounterRotation(invertedStar, 15000f)
 

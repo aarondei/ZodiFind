@@ -1,95 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/calculatorbg">
 
 
 
 
-    <TextView
-        android:id="@+id/zodifind"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:fontFamily="@font/righteous"
-        />
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/leftarrow"
-
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        />
-
-
-    <ImageView
-        android:id="@+id/pfp"
-        android:layout_below="@+id/zodifind"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/profileicon"
-        />
-
-    <ImageView
-        android:id="@+id/settings"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/settingslogo"
-        android:layout_marginTop="20dp"
-        android:paddingRight="10dp"
-        android:layout_alignParentEnd="true"
-        />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_below="@+id/pfp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="30dp"
-        android:text="Jane Doe"
-        android:textColor="@color/white"
-        />
-
-    <TextView
-        android:id="@+id/bday"
-        android:layout_below="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textSize="15dp"
-        android:text="April 10, 2003"
-        android:textColor="@color/white"
-        />
-
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:src="@drawable/pfrectangle"-->
-
-<!--        android:layout_marginTop="350dp"-->
-<!--        />-->
+    <!--    nav bar-->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav_fragment_container" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/bottom_nav_fragment_container"
         android:name="cit.edu.zodifind.fragments.BottomNavFragment"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</RelativeLayout>
-
+</androidx.constraintlayout.widget.ConstraintLayout>

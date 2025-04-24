@@ -14,10 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
-        android:paddingTop="18dp"
-        android:paddingBottom="18dp"
+        android:padding="25dp"
         android:gravity="center_vertical"
         android:background="@drawable/cardview">
 
