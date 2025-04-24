@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/MarginTop"
@@ -60,26 +59,26 @@
         app:layout_constraintGuide_percent="0.22"
         android:orientation="horizontal" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainer"
-        android:name="cit.edu.zodifind.fragments.RotatingStarFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/fragmentContainer"-->
+<!--        android:name="cit.edu.zodifind.fragments.RotatingStarFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
 
-        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHeight_percent="0.4"
+<!--        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/marginEnd"-->
+<!--        app:layout_constraintHeight_percent="0.4"-->
 
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toTopOf="@+id/MarginTop"
-        app:layout_constraintVertical_bias="0" />
+<!--        app:layout_constraintStart_toStartOf="@id/marginStart"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/MarginTop"-->
+<!--        app:layout_constraintVertical_bias="0" />-->
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/fragmentBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="fragmentContainer" />
+<!--    <androidx.constraintlayout.widget.Barrier-->
+<!--        android:id="@+id/fragmentBarrier"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:barrierDirection="bottom"-->
+<!--        app:constraint_referenced_ids="fragmentContainer" />-->
 
 
     <TextView
@@ -92,7 +91,7 @@
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentBarrier"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="ZODIAC" />
 
     <TextView
@@ -180,15 +179,5 @@
             android:fontFamily="@font/josefinsans_light"
             android:textSize="16sp" />
     </LinearLayout>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/bottom_nav_fragment_container"
-        android:name="cit.edu.zodifind.fragments.BottomNavFragment"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
