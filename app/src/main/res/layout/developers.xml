@@ -4,185 +4,185 @@
     android:layout_height="match_parent"
     android:background="@drawable/developersbg">
 
-    <!-- transparent container -->
-    <ImageView
-        android:id="@+id/border"
-
-        android:layout_width="500dp"
-        android:layout_height="400dp"
-        android:background="@drawable/border2"
-        android:backgroundTint="@color/white"
-        android:alpha="0.0"
-        />
-
-    <!-- meet us banner -->
-    <TextView
-        android:id="@+id/txtMeetUs"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Meet Us"
-        android:textSize="50sp"
-        android:textColor="@color/white"
-
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/righteous"
-        />
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/leftarrow"
-
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
-        />
-
-    <!-- vj pic -->
-    <ImageView
-        android:id="@+id/imgPicOne"
-
-        android:layout_below="@+id/txtMeetUs"
-
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="50dp"
-        android:src="@drawable/profileicon"
-        />
-
-    <!-- vj name -->
-    <TextView
-        android:id="@+id/txtNameOne"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Venice Juarez"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-
-        android:layout_toRightOf="@+id/imgPicOne"
-        android:layout_below="@+id/txtMeetUs"
-
-        android:layout_marginTop="55dp"
-        android:layout_marginLeft="50dp"
-        />
-
-    <!-- vj bio -->
-    <TextView
-        android:id="@+id/txtBioOne"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Tech-savvy and design-driven, she loves coding and creating sleek UIs."
-        android:textSize="13sp"
-        android:textColor="@color/white"
-
-        android:layout_toRightOf="@+id/imgPicOne"
-        android:layout_below="@+id/txtNameOne"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="53dp"
-        android:layout_marginRight="48dp"
-        />
-
-    <!-- vj details -->
-    <TextView
-        android:id="@+id/txtDetailsOne"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="August 9  •  Leo"
-        android:textSize="12sp"
-        android:textColor="@color/white"
-
-        android:layout_toRightOf="@+id/imgPicOne"
-        android:layout_below="@+id/txtBioOne"
-
-        android:layout_marginTop="18dp"
-        android:layout_marginLeft="53dp"
-        />
-
-    <!-- Developer 2 -->
-
-    <!-- aaron pic -->
-    <ImageView
-        android:id="@+id/imgPicTwo"
-
-        android:layout_below="@+id/border"
-
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-
-        android:layout_marginTop="70dp"
-        android:layout_marginRight="50dp"
-        android:layout_alignParentEnd="true"
-
-        android:src="@drawable/profileicon"
-        />
-
-    <!-- aaron name -->
-    <TextView
-        android:id="@+id/txtNameTwo"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Aaron Jatayna"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-
-        android:layout_toLeftOf="@+id/imgPicTwo"
-        android:layout_below="@+id/border"
-
-        android:layout_marginTop="80dp"
-        android:layout_marginRight="45dp"
-        />
-
-    <!-- aaron bio -->
-    <TextView
-        android:id="@+id/txtBioTwo"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Logic-lover who enjoys coding
-challenges and debugging puzzles."
-        android:textSize="13sp"
-        android:textColor="@color/white"
-        android:textAlignment="viewEnd"
-
-        android:layout_toLeftOf="@+id/imgPicTwo"
-        android:layout_below="@+id/txtNameTwo"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="48dp"
-        android:layout_marginLeft="48dp"
-        />
-
-    <!-- aaron details -->
-    <TextView
-        android:id="@+id/txtDetailsTwo"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="December 9  •  Sagittarius"
-        android:textSize="12sp"
-        android:textColor="@color/white"
-
-        android:layout_toLeftOf="@+id/imgPicTwo"
-        android:layout_below="@+id/txtBioTwo"
-
-        android:layout_marginTop="18dp"
-        android:layout_marginRight="48dp"
-        />
-
 </RelativeLayout>
+<!--    &lt;!&ndash; transparent container &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/border"-->
+
+<!--        android:layout_width="500dp"-->
+<!--        android:layout_height="400dp"-->
+<!--        android:background="@drawable/border2"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:alpha="0.0"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; meet us banner &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtMeetUs"-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="Meet Us"-->
+<!--        android:textSize="50sp"-->
+<!--        android:textColor="@color/white"-->
+
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:fontFamily="@font/righteous"-->
+<!--        />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/back"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/back"-->
+
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; vj pic &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/imgPicOne"-->
+
+<!--        android:layout_below="@+id/txtMeetUs"-->
+
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:src="@drawable/profileicon"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; vj name &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtNameOne"-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="Venice Juarez"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textColor="@color/white"-->
+
+<!--        android:layout_toRightOf="@+id/imgPicOne"-->
+<!--        android:layout_below="@+id/txtMeetUs"-->
+
+<!--        android:layout_marginTop="55dp"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; vj bio &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtBioOne"-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="Tech-savvy and design-driven, she loves coding and creating sleek UIs."-->
+<!--        android:textSize="13sp"-->
+<!--        android:textColor="@color/white"-->
+
+<!--        android:layout_toRightOf="@+id/imgPicOne"-->
+<!--        android:layout_below="@+id/txtNameOne"-->
+
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginLeft="53dp"-->
+<!--        android:layout_marginRight="48dp"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; vj details &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtDetailsOne"-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="August 9  •  Leo"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textColor="@color/white"-->
+
+<!--        android:layout_toRightOf="@+id/imgPicOne"-->
+<!--        android:layout_below="@+id/txtBioOne"-->
+
+<!--        android:layout_marginTop="18dp"-->
+<!--        android:layout_marginLeft="53dp"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; Developer 2 &ndash;&gt;-->
+
+<!--    &lt;!&ndash; aaron pic &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/imgPicTwo"-->
+
+<!--        android:layout_below="@+id/border"-->
+
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginRight="50dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+
+<!--        android:src="@drawable/profileicon"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; aaron name &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtNameTwo"-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="Aaron Jatayna"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textColor="@color/white"-->
+
+<!--        android:layout_toLeftOf="@+id/imgPicTwo"-->
+<!--        android:layout_below="@+id/border"-->
+
+<!--        android:layout_marginTop="80dp"-->
+<!--        android:layout_marginRight="45dp"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; aaron bio &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtBioTwo"-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="Logic-lover who enjoys coding-->
+<!--challenges and debugging puzzles."-->
+<!--        android:textSize="13sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textAlignment="viewEnd"-->
+
+<!--        android:layout_toLeftOf="@+id/imgPicTwo"-->
+<!--        android:layout_below="@+id/txtNameTwo"-->
+
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginRight="48dp"-->
+<!--        android:layout_marginLeft="48dp"-->
+<!--        />-->
+
+<!--    &lt;!&ndash; aaron details &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtDetailsTwo"-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="December 9  •  Sagittarius"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textColor="@color/white"-->
+
+<!--        android:layout_toLeftOf="@+id/imgPicTwo"-->
+<!--        android:layout_below="@+id/txtBioTwo"-->
+
+<!--        android:layout_marginTop="18dp"-->
+<!--        android:layout_marginRight="48dp"-->
+<!--        />-->
+
