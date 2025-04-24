@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import cit.edu.zodifind.app.ZodiFindApplication
 import cit.edu.zodifind.data.CapturedBirthdate
 import cit.edu.zodifind.fragments.RotatingStarFragment
 import cit.edu.zodifind.helpers.ZodiacSign
@@ -27,7 +26,7 @@ class CalculatorResultActivity : AppCompatActivity() {
 
         // set zodiac name
         val tvZodiacLabel = findViewById<TextView>(R.id.tvZodiacLabel)
-        tvZodiacLabel.text = CapturedBirthdate.capturedDate?.let { ZodiacSign.parseDate(it).name }
+        tvZodiacLabel.text = CapturedBirthdate.capturedSign?.name
         correctTVLabel(tvZodiacLabel.text.toString())
 
         val btnAgain = findViewById<Button>(R.id.btnAgain)

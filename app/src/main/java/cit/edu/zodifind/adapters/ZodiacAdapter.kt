@@ -11,6 +11,7 @@ import cit.edu.zodifind.R
 import android.content.Context
 import android.content.Intent
 import cit.edu.zodifind.LibraryFocusedItemActivity
+import cit.edu.zodifind.data.CapturedBirthdate
 import cit.edu.zodifind.helpers.ZodiacSign
 
 class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val context: Context) :
@@ -28,9 +29,12 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
         override fun onClick(view: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION && view != null) {
-                val selectedZodiac = zodiacList[position]
+                val selectedZodiac = zodiacList[position] // TODO CLEAN
                 val intent = Intent(context, LibraryFocusedItemActivity::class.java)
                 intent.putExtra("zodiac", selectedZodiac.name)
+
+                CapturedBirthdate.capturedSign = selectedZodiac
+
                 context.startActivity(intent)
             }
         }

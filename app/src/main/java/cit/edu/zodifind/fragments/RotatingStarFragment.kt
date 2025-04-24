@@ -31,16 +31,15 @@ class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
     ): View {
         val view = inflater.inflate(R.layout.fragment_rotatingstar, container, false)
 
-        innerCircle = view.findViewById(R.id.innerCircle)
-        ellipseLeft = view.findViewById(R.id.ellipseLeft)
-        ellipseRight = view.findViewById(R.id.ellipseRight)
         star = view.findViewById(R.id.star)
         invertedStar = view.findViewById(R.id.invertedStar)
         zodiacContainer = view.findViewById(R.id.zodiacContainer)
 
         // set zodiac icon
-        val date = CapturedBirthdate.capturedDate
-        date?.let { ZodiacSign.parseDate(it).symbolIcon }?.let { zodiacContainer.setImageResource(it) }
+        val icon = CapturedBirthdate.capturedSign
+        if (icon != null) {
+            zodiacContainer.setImageResource(icon.symbolIcon)
+        }
 
         startRotation(star, 15000f)
         startCounterRotation(invertedStar, 15000f)

@@ -22,7 +22,6 @@ class LibraryFocusedItemFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fragmentContainer = view.findViewById<FragmentContainerView>(R.id.fragmentContainer)
         val tvZodiacFocusedItemName = view.findViewById<TextView>(R.id.tvZodiacFocusedItemName)
         val tvZodiacFocusedItemTitle = view.findViewById<TextView>(R.id.tvZodiacFocusedItemTitle)
 
@@ -35,24 +34,5 @@ class LibraryFocusedItemFragment : Fragment() {
         if (zodiac != null) {
             tvZodiacFocusedItemTitle.text = zodiac.representation
         }
-
-
-
-//        val bundle = Bundle()
-//        bundle.putString("key", key)
-//        bundle.putString("MODE", "library")
-//
-//        val secondFragment = RotatingStarFragment()
-//        secondFragment.arguments = bundle
-//
-//        parentFragmentManager.beginTransaction()
-//            .replace(R.id.fragment_container, secondFragment)
-//            .addToBackStack(null)
-//            .commit()
-
-//        val result = Bundle().apply {
-//            putString("key", key)
-//        }
-//        parentFragmentManager.setFragmentResult("passDataKey", result)
     }
 }
