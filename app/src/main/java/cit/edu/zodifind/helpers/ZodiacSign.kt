@@ -1,26 +1,24 @@
 package cit.edu.zodifind.helpers
 
 import android.os.Build
-import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import cit.edu.zodifind.R
 import java.time.LocalDate
-import java.util.Date
 
 @Suppress("DEPRECATION")
-enum class ZodiacSign(val icon: Int, val representation: String, val startDate: String, val endDate: String) {
-    ARIES(R.drawable.aries_icon, "The Ram","MAR 21", "APR 19"),
-    TAURUS(R.drawable.taurus_icon, "The Bull","APR 20", "MAY 20"),
-    GEMINI(R.drawable.gemini_icon, "The Twins","MAY 21", "JUN 20"),
-    CANCER(R.drawable.cancer_icon, "The Crab","JUN 21", "JUL 22"),
-    LEO(R.drawable.leo_icon, "The Lion","JUL 23", "AUG 22"),
-    VIRGO(R.drawable.virgo_icon, "The Maiden","AUG 23", "SEPT 22"),
-    LIBRA(R.drawable.libra_icon, "The Scales","SEPT 23","OCT 22"),
-    SCORPIO(R.drawable.scorpio_icon, "The Scorpion","OCT 23", "NOV 21"),
-    SAGITTARIUS(R.drawable.sagittarius_icon, "The Archer","NOV 22", "DEC 21"),
-    CAPRICORN(R.drawable.capricorn_icon, "The Goat","DEC 22", "JAN 19"),
-    AQUARIUS(R.drawable.aquarius_icon, "The Water Bearer","JAN 20", "FEB 18"),
-    PISCES(R.drawable.pisces_icon, "The Fish","FEB 19", "MAR 20");
+enum class ZodiacSign(val symbolIcon: Int, val starIcon: Int, val representation: String, val startDate: String, val endDate: String) {
+    ARIES(R.drawable.aries_icon, R.drawable.aries_cons, "The Ram","MAR 21", "APR 19"),
+    TAURUS(R.drawable.taurus_icon, R.drawable.taurus_cons,"The Bull","APR 20", "MAY 20"),
+    GEMINI(R.drawable.gemini_icon, R.drawable.gemini_cons,"The Twins","MAY 21", "JUN 20"),
+    CANCER(R.drawable.cancer_icon, R.drawable.cancer_cons,"The Crab","JUN 21", "JUL 22"),
+    LEO(R.drawable.leo_icon, R.drawable.leo_cons,"The Lion","JUL 23", "AUG 22"),
+    VIRGO(R.drawable.virgo_icon,R.drawable.virgo_cons, "The Maiden","AUG 23", "SEPT 22"),
+    LIBRA(R.drawable.libra_icon, R.drawable.libra_cons,"The Scales","SEPT 23","OCT 22"),
+    SCORPIO(R.drawable.scorpio_icon, R.drawable.scorpio_cons,"The Scorpion","OCT 23", "NOV 21"),
+    SAGITTARIUS(R.drawable.sagittarius_icon, R.drawable.sagittarius_cons,"The Archer","NOV 22", "DEC 21"),
+    CAPRICORN(R.drawable.capricorn_icon, R.drawable.capricorn_cons,"The Goat","DEC 22", "JAN 19"),
+    AQUARIUS(R.drawable.aquarius_icon, R.drawable.aquarius_cons,"The Water Bearer","JAN 20", "FEB 18"),
+    PISCES(R.drawable.pisces_icon, R.drawable.pisces_cons,"The Fish","FEB 19", "MAR 20");
 
     fun concatStartEndDates(): String {
         return "$startDate - $endDate"
