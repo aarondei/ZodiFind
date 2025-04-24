@@ -11,7 +11,7 @@ import cit.edu.zodifind.R
 import android.content.Context
 import android.content.Intent
 import cit.edu.zodifind.LibraryFocusedItemActivity
-import cit.edu.zodifind.data.CapturedBirthdate
+import cit.edu.zodifind.data.CapturedZodiacTempObject
 import cit.edu.zodifind.helpers.ZodiacSign
 
 class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val context: Context) :
@@ -33,7 +33,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
                 val intent = Intent(context, LibraryFocusedItemActivity::class.java)
                 intent.putExtra("zodiac", selectedZodiac.name)
 
-                CapturedBirthdate.capturedSign = selectedZodiac
+                CapturedZodiacTempObject.capturedSign = selectedZodiac
 
                 context.startActivity(intent)
             }
