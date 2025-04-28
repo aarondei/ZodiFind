@@ -27,7 +27,7 @@
     <!-- title card -->
 
     <string name="empress_title">The Empress</string>
-    <string name="judgement_title">The Judgement</string>
+    <string name="judgement_title">Judgement</string>
     <string name="strength_title">Strength</string>
     <string name="lovers_title">The Lovers</string>
     <string name="fool_title">The Fool</string>
@@ -35,5 +35,24 @@
     <string name="death_title">Death</string>
     <string name="sun_title">The Sun</string>
     <string name="chariot_title">The Chariot</string>
+
+    <string name="priestess_title">The High Priestess</string>
+    <string name="emperor">The Emperor</string>
+    <string name="hierophant_title">The Hierophant</string>
+    <string name="hermit_title">The Hermit</string>
+    <string name="wheel_title">Wheel of Fortune</string>
+    <string name="justice_title">Justice</string>
+    <string name="hangedman_title">The Hanged Man</string>
+    <string name="temperance_title">Temperance</string>
+    <string name="devil_title">The Devil</string>
+    <string name="tower_title">The Tower</string>
+    <string name="star_title">The Star</string>
+    <string name="moon_title">The Moon</string>
+    <string name="world_title">The World</string>
+
+    <string name="wands_title">Ace of Wands</string>
+    <string name="cups_title">Ace of Cups</string>
+    <string name="swords_title">Ace of Swords</string>
+    <string name="pentacles_title">Ace of Pentacles</string>
 
 </resources>
