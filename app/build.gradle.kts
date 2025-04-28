@@ -37,6 +37,10 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+    buildFeatures {
         compose = true
     }
     composeOptions {
@@ -51,7 +55,16 @@ android {
 
 dependencies {
 
+    //Camera X
+    val cameraVersion = "1.2.3"
+    implementation("androidx.camera:camera-core:${cameraVersion}")
+    implementation("androidx.camera:camera-camera2:${cameraVersion}")
+    implementation("androidx.camera:camera-lifecycle:${cameraVersion}")
+    implementation("androidx.camera:camera-view:${cameraVersion}")
+    implementation("androidx.camera:camera-extensions:${cameraVersion}")
+
     implementation("com.github.commandiron:WheelPickerCompose:1.1.11")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
