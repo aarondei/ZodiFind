@@ -85,6 +85,48 @@
         app:layout_constraintVertical_bias="0.025"
         />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/buttonGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.75"
+        android:orientation="horizontal" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTarot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        style="@style/RoundedButton"
+        app:backgroundTint="@color/midnightBlue"
+        android:fontFamily="@font/josefinsans_light"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/white"
+
+        android:text="Read Tarot"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@id/bottom_nav_fragment_container"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toTopOf="@+id/buttonGuide"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/navbarBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="btnProceed" />
+
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/bottom_nav_fragment_container"
         android:name="cit.edu.zodifind.fragments.BottomNavFragment"

@@ -1,11 +1,9 @@
-package cit.edu.zodifind.helpers
+package cit.edu.zodifind.data
 
 import android.os.Build
-import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import cit.edu.zodifind.R
 import java.time.LocalDate
-import java.util.Date
 
 @Suppress("DEPRECATION")
 enum class ZodiacSign(val symbolIcon: Int, val starIcon: Int, val representation: String, val startDate: String, val endDate: String) {

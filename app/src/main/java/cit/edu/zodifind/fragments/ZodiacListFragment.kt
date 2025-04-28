@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cit.edu.zodifind.R
 import cit.edu.zodifind.adapters.ZodiacAdapter
-import cit.edu.zodifind.helpers.ZodiacSign
+import cit.edu.zodifind.data.ZodiacSign
 
 class ZodiacListFragment : Fragment() {
 

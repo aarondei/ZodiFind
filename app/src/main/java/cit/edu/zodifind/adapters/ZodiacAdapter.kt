@@ -12,7 +12,7 @@ import android.content.Context
 import android.content.Intent
 import cit.edu.zodifind.LibraryFocusedItemActivity
 import cit.edu.zodifind.data.CapturedZodiacTempObject
-import cit.edu.zodifind.helpers.ZodiacSign
+import cit.edu.zodifind.data.ZodiacSign
 
 class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val context: Context) :
     RecyclerView.Adapter<ZodiacAdapter.ZodiacViewHolder>() {
