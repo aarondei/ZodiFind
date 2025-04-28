@@ -9,4 +9,31 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+    <!-- description card -->
+
+    <string name="empress">A potentially terrifying aspect of this archetype manifests itself whenever karmic mood swings wipe out our plans, like a storm that has come upon us.</string>
+    <string name="judgement">Freedom from inner conflicts, and so clear a channel, that the buried talents and gifts of past incarnations can come through an individual in this lifetime.</string>
+    <string name="strength">The wild and passion of our instinctive nature does not need to be broken, but refined and brought to consciousness, so that all levels of creation may come into harmony.</string>
+    <string name="lovers">The choice of evolution over perfection, or the choice of personal growth through relationships-rather than a fantasy in which everything falls perfectly into place and is taken care of effortlessly.</string>
+    <string name="fool">Reminds us to recognize the path of personal development within ourselves — and the stage upon that path where we find ourselves — in order to energize our movement toward deeper self-realization.</string>
+    <string name="magician">Visualize yourself manifesting something unique, guided by evolutionary forces that emerge spontaneously from within your soul.</string>
+    <string name="death">This card points to a time of harvest, symbolized in classical decks by the reaping skeleton. Unless the fruits of summer are harvested, they are lost to winters harshness, and the people do not eat.</string>
+    <string name="sun">Human incarnation of the divine. When two humans are shown, the image is portraying a resolution of the tension between opposites at all levels. Its as if this card is saying "You can do no wrong — its all to the good!"</string>
+    <string name="chariot">There is danger in this feeling of freedom, because of the increased rate of change and its power to magnify mistakes in judgment.</string>
+
+    <!-- title card -->
+
+    <string name="empress_title">The Empress</string>
+    <string name="judgement_title">The Judgement</string>
+    <string name="strength_title">Strength</string>
+    <string name="lovers_title">The Lovers</string>
+    <string name="fool_title">The Fool</string>
+    <string name="magician_title">The Magician</string>
+    <string name="death_title">Death</string>
+    <string name="sun_title">The Sun</string>
+    <string name="chariot_title">The Chariot</string>
+
 </resources>
