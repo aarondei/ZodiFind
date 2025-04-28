@@ -14,15 +14,50 @@
 
     <!-- description card -->
 
-    <string name="empress">A potentially terrifying aspect of this archetype manifests itself whenever karmic mood swings wipe out our plans, like a storm that has come upon us.</string>
-    <string name="judgement">Freedom from inner conflicts, and so clear a channel, that the buried talents and gifts of past incarnations can come through an individual in this lifetime.</string>
-    <string name="strength">The wild and passion of our instinctive nature does not need to be broken, but refined and brought to consciousness, so that all levels of creation may come into harmony.</string>
-    <string name="lovers">The choice of evolution over perfection, or the choice of personal growth through relationships-rather than a fantasy in which everything falls perfectly into place and is taken care of effortlessly.</string>
-    <string name="fool">Reminds us to recognize the path of personal development within ourselves — and the stage upon that path where we find ourselves — in order to energize our movement toward deeper self-realization.</string>
-    <string name="magician">Visualize yourself manifesting something unique, guided by evolutionary forces that emerge spontaneously from within your soul.</string>
-    <string name="death">This card points to a time of harvest, symbolized in classical decks by the reaping skeleton. Unless the fruits of summer are harvested, they are lost to winters harshness, and the people do not eat.</string>
-    <string name="sun">Human incarnation of the divine. When two humans are shown, the image is portraying a resolution of the tension between opposites at all levels. Its as if this card is saying "You can do no wrong — its all to the good!"</string>
-    <string name="chariot">There is danger in this feeling of freedom, because of the increased rate of change and its power to magnify mistakes in judgment.</string>
+    <string name="empress_past">You blossomed from soil both rich and bitter, carrying echoes of both in your breath.</string>
+    <string name="empress_present">Creation flows through you, yet unchecked growth can strangle as much as it feeds.</string>
+    <string name="empress_future">A garden of plenty awaits, but so does the burden of all that grows without pruning.</string>
+
+
+    <string name="judgement_past">An old call stirred your soul awake, whether you answered or turned away.</string>
+    <string name="judgement_present">You are summoned now to rise, but ignoring destiny has its cost.</string>
+    <string name="judgement_future">A new life knocks; choose to open the door or stay dreaming in the old house.</string>
+
+
+    <string name="strength_past">Once you tamed beasts within, yet some still roar quietly behind your smile.</string>
+    <string name="strength_present">You hold mighty forces in gentle hands, but pride can slip a leash unseen.</string>
+    <string name="strength_future"> Courage will shape the next chapter, though gentle strength must not turn to stubbornness.</string>
+
+
+    <string name="lovers_past">A choice of the heart once stirred storms that still whisper in your ears.</string>
+    <string name="lovers_present">You stand where passions cross, but what binds you now may later bind too tight.</string>
+    <string name="lovers_future">A union waits, beautiful and terrible in its power to remake you.</string>
+
+
+    <string name="fool_past">A restless spirit once leaped forward, leaving caution behind like dust.</string>
+    <string name="fool_present">You are dancing on the edge, where mistakes can sparkle like miracles or shatter like glass.</string>
+    <string name="fool_future">A wild road lies ahead, where the brave heart wins and the careless foot slips.</string>
+
+
+    <string name="magician_past">You once held the world in your hands, though not every trick ended in triumph.</string>
+    <string name="magician_present">You weave the invisible into the real, but beware illusions you yourself create.</string>
+    <string name="magician_future">Power waits, but so does the temptation to fake it before you truly make it.</string>
+
+
+    <string name="death_past">An ending once left you breathless, but not all deaths are final.</string>
+    <string name="death_present">Something falls away even now, painful yet oddly freeing.</string>
+    <string name="death_future">Transformation comes like a tide; fight it, and you drown — flow with it, and you rise.</string>
+
+
+    <string name="sun_past">Joy once crowned you, though even sunshine casts shadows you forget to notice.</string>
+    <string name="sun_present">You blaze with life now, yet unchecked pride may turn gold to dust.</string>
+    <string name="sun_future">A great happiness awaits, but remember: every golden day still ends in twilight.</string>
+
+
+    <string name="chariot_past">You once raced forward fueled by fierce will, but not all victories wore crowns.</string>
+    <string name="chariot_present">You drive the wheel, but a wrong turn taken fast is still a wrong turn.</string>
+    <string name="chariot_future">Triumph can be yours, but only if the horses inside you pull as one</string>
+
 
     <!-- title card -->
 

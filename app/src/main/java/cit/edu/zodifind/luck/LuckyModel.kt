@@ -4,6 +4,10 @@ import androidx.annotation.StringRes
 
 data class LuckyModel (
     @DrawableRes val image: Int,
-    @StringRes val text: Int,
-    @StringRes val description: Int
+    @StringRes val title: Int,
+    @StringRes val pastMeaning: Int,
+
+    @StringRes val presentMeaning: Int,
+    @StringRes val futureMeaning: Int
+
 )
