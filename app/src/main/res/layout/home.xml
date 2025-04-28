@@ -85,10 +85,10 @@
         app:layout_constraintVertical_bias="0.025"
         />
 
-<!--    sample-->
+<!--    change here -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/luck_fragment"
-        android:name="cit.edu.zodifind.fragments.LuckFragment"
+        android:name="cit.edu.zodifind.fragments.PalmistryFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

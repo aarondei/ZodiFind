@@ -15,7 +15,7 @@ import android.view.animation.DecelerateInterpolator
 import androidx.core.animation.doOnEnd
 import androidx.core.view.isVisible
 import cit.edu.zodifind.R
-import cit.edu.zodifind.data.RandomCardProvider
+import cit.edu.zodifind.data.TarotCards
 import cit.edu.zodifind.databinding.FragmentLuckBinding
 import cit.edu.zodifind.luck.LuckyModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,7 +38,7 @@ class LuckFragment : Fragment() {
     private lateinit var futureCard: LuckyModel
 
     @Inject
-    lateinit var randomCardProvider: RandomCardProvider
+    lateinit var tarotCards: TarotCards
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,7 +51,7 @@ class LuckFragment : Fragment() {
     }
 
     private fun preparePrediction() {
-        val drawnCards = randomCardProvider.getLuckyList().shuffled().take(3)
+        val drawnCards = tarotCards.getLuckyList().shuffled().take(3)
         pastCard = drawnCards[0]
         presentCard = drawnCards[1]
         futureCard = drawnCards[2]
@@ -148,7 +148,6 @@ class LuckFragment : Fragment() {
             override fun onAnimationStart(animation: Animation?) {}
 
             override fun onAnimationEnd(animation: Animation?) {
-                mediaPlayer.start()
                 binding.preview.isVisible = false
                 binding.prediction.isVisible = true
 
@@ -196,34 +195,41 @@ class LuckFragment : Fragment() {
     }
 
     private fun showCurrentStep() {
+
+        mediaPlayer.start();
+
         when (currentStep) {
             0 -> {
-                // Past Card
-                binding.tvLucky.text = getString(pastCard.title)  // Set title for the past card
-                binding.tvLuckyDescription.text = getString(pastCard.pastMeaning)  // Set past meaning
-                binding.ivLuckyCard.setImageResource(pastCard.image)
+                // Past card
+                binding.tvCardHeader.text = "Past" // Set the header to "Past"
+                binding.tvLucky.text = getString(pastCard.title) // Set title for past card
+                binding.tvLuckyDescription.text = getString(pastCard.pastMeaning) // Set meaning for past
+                binding.ivLuckyCard.setImageResource(pastCard.image) // Set image for past card
             }
             1 -> {
-                // Present Card
-                binding.tvLucky.text = getString(presentCard.title)  // Set title for the present card
-                binding.tvLuckyDescription.text = getString(presentCard.presentMeaning)  // Set present meaning
-                binding.ivLuckyCard.setImageResource(presentCard.image)
+                // Present card
+                binding.tvCardHeader.text = "Present" // Set the header to "Present"
+                binding.tvLucky.text = getString(presentCard.title) // Set title for present card
+                binding.tvLuckyDescription.text = getString(presentCard.presentMeaning) // Set meaning for present
+                binding.ivLuckyCard.setImageResource(presentCard.image) // Set image for present card
             }
             2 -> {
-                // Future Card
-                binding.tvLucky.text = getString(futureCard.title)  // Set title for the future card
-                binding.tvLuckyDescription.text = getString(futureCard.futureMeaning)  // Set future meaning
-                binding.ivLuckyCard.setImageResource(futureCard.image)
+                // Future card
+                binding.tvCardHeader.text = "Future" // Set the header to "Future"
+                binding.tvLucky.text = getString(futureCard.title) // Set title for future card
+                binding.tvLuckyDescription.text = getString(futureCard.futureMeaning) // Set meaning for future
+                binding.ivLuckyCard.setImageResource(futureCard.image) // Set image for future card
             }
         }
     }
 
+
     private fun nextStep() {
         if (currentStep < 2) {
             currentStep++
-            showCurrentStep()
+            showCurrentStep() // Show the next card and update the header
         } else {
-            // Optional: maybe show a "Done" or disable clicking
+            // Optional: maybe show a "Done" or disable clicking after the last card
         }
     }
 

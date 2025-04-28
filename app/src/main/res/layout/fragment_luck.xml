@@ -7,6 +7,7 @@
     android:padding="40dp"
     tools:context=".fragments.LuckFragment">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/preview"
         android:layout_width="0dp"
@@ -70,7 +71,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/share"
+            app:layout_constraintBottom_toTopOf="@+id/tvCardHeader"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivLuckyCard">
@@ -82,7 +83,7 @@
                 android:gravity="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="24sp"
+                android:textSize="28sp"
                 android:textColor="@color/tr"
                 android:fontFamily="@font/cinzel_black"
                 android:textAlignment="center"
@@ -101,22 +102,23 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="13sp"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLuckyTexts" />
         </LinearLayout>
 
-
-
-
         <TextView
-            android:id="@+id/share"
+            android:id="@+id/tvCardHeader"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Share Card"
+            android:text=""
             android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/cinzel_semibold"
+            android:textAllCaps="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
