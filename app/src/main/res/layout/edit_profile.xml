@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/settingsbg">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.04"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.96"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.06"
+        android:orientation="vertical" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.94"
+        android:orientation="vertical" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05608755" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerSymmetricalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.11"
+        android:orientation="horizontal" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/EditNameSectionGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="223dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/BioSectionGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="396dp" />
+
+<!-- views -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/MarginTop"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintBottom_toTopOf="@id/headerSymmetricalStart"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <TextView
+        android:id="@+id/tvEditProfileLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Edit Profile"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:fontFamily="@font/josefinsans_regular"
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintBottom_toTopOf="@id/headerStart"
+        app:layout_constraintTop_toBottomOf="@id/MarginTop"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPfp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/pfp_default"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FFFFFF"
+        app:civ_fill_color="#FFFFFF"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintTop_toBottomOf="@id/headerSymmetricalStart"
+        app:layout_constraintBottom_toTopOf="@id/EditNameSectionGuide"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPfpCam"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/change_picture"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FFFFFF"
+        app:civ_fill_color="#FFFFFF"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintTop_toBottomOf="@id/headerSymmetricalStart"
+        app:layout_constraintBottom_toTopOf="@id/EditNameSectionGuide"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"/>
+
+
+
+    <ImageView
+        android:id="@+id/imgEditPfp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+
+        app:layout_constraintTop_toBottomOf="@id/headerSymmetricalStart"
+        app:layout_constraintBottom_toTopOf="@id/imgPfp"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.65"
+        />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/white"
+        android:text="Name"
+        android:textSize="20sp"
+        android:fontFamily="@font/josefinsans_regular"
+
+        app:layout_constraintTop_toBottomOf="@id/EditNameSectionGuide"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.05"
+        />
+
+    <EditText
+        android:id="@+id/etEditName"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+
+        android:background="@drawable/border_input_field"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintBottom_toTopOf="@id/BioSectionGuide"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintVertical_bias="0.5"
+        />
+
+    <TextView
+        android:id="@+id/tvBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/white"
+        android:text="Bio"
+        android:textSize="20sp"
+        android:fontFamily="@font/josefinsans_regular"
+
+        app:layout_constraintTop_toBottomOf="@id/BioSectionGuide"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.05"
+        />
+
+    <EditText
+        android:id="@+id/etEditBio"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+
+        android:background="@drawable/border_input_field2"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@id/tvBio"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintVertical_bias="0.1"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Cancel"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+
+        style="@style/RoundedButton"
+        app:backgroundTint="@color/midnightBlue"
+        android:fontFamily="@font/josefinsans_light"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/white"
+
+        android:text="SAVE"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+
+        app:layout_constraintTop_toBottomOf="@id/etEditBio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintVertical_bias="0.2"
+        />
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_edit"
+
+    app:layout_constraintStart_toEndOf="@id/tvName"
+    app:layout_constraintEnd_toEndOf="@id/marginEnd"
+    app:layout_constraintTop_toBottomOf="@id/EditNameSectionGuide"
+    app:layout_constraintBottom_toTopOf="@id/BioSectionGuide"
+    app:layout_constraintHorizontal_bias="0.03"
+    app:layout_constraintVertical_bias="0.3"
+    />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+
+        app:layout_constraintStart_toEndOf="@id/tvBio"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/BioSectionGuide"
+        app:layout_constraintBottom_toTopOf="@id/etEditBio"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintVertical_bias="0.6"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
