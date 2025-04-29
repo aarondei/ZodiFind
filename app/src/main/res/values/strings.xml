@@ -12,55 +12,413 @@
 
 
 
-    <!-- description card -->
-
-    <string name="empress_past">You blossomed from soil both rich and bitter, carrying echoes of both in your breath.</string>
-    <string name="empress_present">Creation flows through you, yet unchecked growth can strangle as much as it feeds.</string>
-    <string name="empress_future">A garden of plenty awaits, but so does the burden of all that grows without pruning.</string>
-
-
-    <string name="judgement_past">An old call stirred your soul awake, whether you answered or turned away.</string>
-    <string name="judgement_present">You are summoned now to rise, but ignoring destiny has its cost.</string>
-    <string name="judgement_future">A new life knocks; choose to open the door or stay dreaming in the old house.</string>
-
-
-    <string name="strength_past">Once you tamed beasts within, yet some still roar quietly behind your smile.</string>
-    <string name="strength_present">You hold mighty forces in gentle hands, but pride can slip a leash unseen.</string>
-    <string name="strength_future"> Courage will shape the next chapter, though gentle strength must not turn to stubbornness.</string>
-
-
-    <string name="lovers_past">A choice of the heart once stirred storms that still whisper in your ears.</string>
-    <string name="lovers_present">You stand where passions cross, but what binds you now may later bind too tight.</string>
-    <string name="lovers_future">A union waits, beautiful and terrible in its power to remake you.</string>
-
-
+    <!-- description meaning -->
+    <!-- The Fool -->
     <string name="fool_past">A restless spirit once leaped forward, leaving caution behind like dust.</string>
     <string name="fool_present">You are dancing on the edge, where mistakes can sparkle like miracles or shatter like glass.</string>
     <string name="fool_future">A wild road lies ahead, where the brave heart wins and the careless foot slips.</string>
 
-
+    <!-- The Magician -->
     <string name="magician_past">You once held the world in your hands, though not every trick ended in triumph.</string>
     <string name="magician_present">You weave the invisible into the real, but beware illusions you yourself create.</string>
     <string name="magician_future">Power waits, but so does the temptation to fake it before you truly make it.</string>
 
+    <!-- The High Priestess -->
+    <string name="high_priestess_past">You once knew secrets too deep for words, locked away in the silence of your soul.</string>
+    <string name="high_priestess_present">The veil lifts only for those who listen closely to the whispers within.</string>
+    <string name="high_priestess_future">The truth calls softly, but only to those brave enough to hear it in the dark.</string>
 
+    <!-- The Empress -->
+    <string name="empress_past">You blossomed from soil both rich and bitter, carrying echoes of both in your breath.</string>
+    <string name="empress_present">Creation flows through you, yet unchecked growth can strangle as much as it feeds.</string>
+    <string name="empress_future">A garden of plenty awaits, but so does the burden of all that grows without pruning.</string>
+
+    <!-- The Emperor -->
+    <string name="emperor_past">A kingdom built on will and stone, though the throne felt cold beneath your touch.</string>
+    <string name="emperor_present">Order bends to your command, but even a ruler must face the weight of their crown.</string>
+    <string name="emperor_future">A time will come when the walls you\'ve built must either stand strong or crumble away.</string>
+
+    <!-- The Hierophant -->
+    <string name="hierophant_past">You followed the path set before you, bound by beliefs too ancient to question.</string>
+    <string name="hierophant_present">The teachings call, but now you must ask: do they guide you or limit you?</string>
+    <string name="hierophant_future">A new understanding will rise, but it will not come from tradition alone.</string>
+
+    <!-- The Lovers -->
+    <string name="lovers_past">A choice of the heart once stirred storms that still whisper in your ears.</string>
+    <string name="lovers_present">You stand where passions cross, but what binds you now may later bind too tight.</string>
+    <string name="lovers_future">A union waits, beautiful and terrible in its power to remake you.</string>
+
+    <!-- The Chariot -->
+    <string name="chariot_past">You once raced forward fueled by fierce will, but not all victories wore crowns.</string>
+    <string name="chariot_present">You drive the wheel, but a wrong turn taken fast is still a wrong turn.</string>
+    <string name="chariot_future">Triumph can be yours, but only if the horses inside you pull as one.</string>
+
+    <!-- Strength -->
+    <string name="strength_past">Once you tamed beasts within, yet some still roar quietly behind your smile.</string>
+    <string name="strength_present">You hold mighty forces in gentle hands, but pride can slip a leash unseen.</string>
+    <string name="strength_future">Courage will shape the next chapter, though gentle strength must not turn to stubbornness.</string>
+
+    <!-- The Hermit -->
+    <string name="hermit_past">You sought the answers in silence, though the path left your soul heavy.</string>
+    <string name="hermit_present">Now, you walk alone, but this solitude holds wisdom only the stillness can give.</string>
+    <string name="hermit_future">A time will come when your light will shine brighter, but it first must be kindled in the dark.</string>
+
+    <!-- Wheel of Fortune -->
+    <string name="wheel_past">The wheel turned, and you were caught in its spin, whether you welcomed it or not.</string>
+    <string name="wheel_present">The turning comes again—what was once out of your hands is now yours to guide.</string>
+    <string name="wheel_future">Destiny spins once more, but this time, you may find yourself at the center of the wheel.</string>
+
+    <!-- Justice -->
+    <string name="justice_past">The scales tipped once, and what you did in the dark is now brought to light.</string>
+    <string name="justice_present">Truth stands before you, but its weight will ask for balance in return.</string>
+    <string name="justice_future">A reckoning will come, where right and wrong are measured by your own hands.</string>
+
+    <!-- The Hanged Man -->
+    <string name="hanged_man_past">Once, you hung in suspension, waiting for a truth you could not reach.</string>
+    <string name="hanged_man_present">Now, the world turns upside down—only by letting go will you see it anew.</string>
+    <string name="hanged_man_future">The choice will come to surrender, for only in stillness can you move forward.</string>
+
+    <!-- Death -->
     <string name="death_past">An ending once left you breathless, but not all deaths are final.</string>
     <string name="death_present">Something falls away even now, painful yet oddly freeing.</string>
     <string name="death_future">Transformation comes like a tide; fight it, and you drown — flow with it, and you rise.</string>
 
+    <!-- Temperance -->
+    <string name="temperance_past">Balance was learned through trial and fire, where extremes once burned you.</string>
+    <string name="temperance_present">The time has come to blend what is broken into something whole.</string>
+    <string name="temperance_future">A new harmony is coming, but it must be tempered by patience and care.</string>
 
+    <!-- The Devil -->
+    <string name="devil_past">You were once bound by chains made of desire, though freedom wore the same face.</string>
+    <string name="devil_present">Temptation whispers, and the price of indulgence calls like a lover’s song.</string>
+    <string name="devil_future">A shadow lurks ahead—resist its pull, or you will lose yourself in the depths.</string>
+
+    <!-- The Tower -->
+    <string name="tower_past">The ground broke beneath you, and your world crumbled in an instant.</string>
+    <string name="tower_present">The walls around you fall now; what seemed safe is no longer certain.</string>
+    <string name="tower_future">A sudden shift will come, shaking everything you’ve built, but from it, truth will rise.</string>
+
+    <!-- The Star -->
+    <string name="star_past">Once, hope flickered faintly, a distant light you could barely see but never forgot.</string>
+    <string name="star_present">Now, the heavens part, and the light shines clearer—guiding, healing, endless.</string>
+    <string name="star_future">A wish may come true, but its answer will not be what you expect.</string>
+
+    <!-- The Moon -->
+    <string name="moon_past">Shadows danced on the edges of your mind, but you followed them all the same.</string>
+    <string name="moon_present">Now, the night is full of illusion, but truth hides beneath its veil.</string>
+    <string name="moon_future">What is hidden will soon surface—face the darkness before it fades into light.</string>
+
+    <!-- The Sun -->
     <string name="sun_past">Joy once crowned you, though even sunshine casts shadows you forget to notice.</string>
     <string name="sun_present">You blaze with life now, yet unchecked pride may turn gold to dust.</string>
     <string name="sun_future">A great happiness awaits, but remember: every golden day still ends in twilight.</string>
 
+    <!-- Judgement -->
+    <string name="judgement_past">An old call stirred your soul awake, whether you answered or turned away.</string>
+    <string name="judgement_present">You are summoned now to rise, but ignoring destiny has its cost.</string>
+    <string name="judgement_future">A new life knocks; choose to open the door or stay dreaming in the old house.</string>
 
-    <string name="chariot_past">You once raced forward fueled by fierce will, but not all victories wore crowns.</string>
-    <string name="chariot_present">You drive the wheel, but a wrong turn taken fast is still a wrong turn.</string>
-    <string name="chariot_future">Triumph can be yours, but only if the horses inside you pull as one</string>
+    <!-- The World -->
+    <string name="world_past">A cycle once completed, though its ending felt more like a breath than a victory.</string>
+    <string name="world_present">Now, the world spins full circle, and every piece finds its place.</string>
+    <string name="world_future">Completion awaits, but to finish, you must embrace the journey to the end.</string>
+
+
+<!--    description meanings-->
+<!--pentacles-->
+    <!-- Ace of Pentacles -->
+    <string name="pentacles_ace_past">A seed was planted once, full of promise, though it lay dormant in the soil of your past.</string>
+    <string name="pentacles_ace_present">Now, opportunity knocks—an earthly gift that may grow roots if tended carefully.</string>
+    <string name="pentacles_ace_future">A new beginning stirs, its foundation firm, but its future depends on what you build upon it.</string>
+
+    <!-- Two of Pentacles -->
+    <string name="pentacles_2_past">Once, you danced between balance and chaos, your hands full, your feet unsure.</string>
+    <string name="pentacles_2_present">Now, the tide shifts, pulling at your feet—only through harmony will you stay afloat.</string>
+    <string name="pentacles_2_future">A choice approaches, one that requires you to balance the scales or risk being overwhelmed.</string>
+
+    <!-- Three of Pentacles -->
+    <string name="pentacles_3_past">You once crafted with skill and effort, but your work was unseen by others.</string>
+    <string name="pentacles_3_present">Now, your labor is acknowledged, and collaboration breathes life into your creations.</string>
+    <string name="pentacles_3_future">A masterpiece awaits, built from many hands, but only with shared vision will it thrive.</string>
+
+    <!-- Four of Pentacles -->
+    <string name="pentacles_4_past">You once clutched tightly to what you had, fear whispering that letting go would mean loss.</string>
+    <string name="pentacles_4_present">Now, you stand guarded, holding tightly to your wealth, yet wonder if the price of safety is too high.</string>
+    <string name="pentacles_4_future">A time will come when your grip will loosen—either by choice or by necessity.</string>
+
+    <!-- Five of Pentacles -->
+    <string name="pentacles_5_past">Cold winds once swept you away, leaving you in need, yet even in darkness, you found a spark.</string>
+    <string name="pentacles_5_present">Now, you walk through hardship, but there is a shelter just beyond the cold, if you seek it.</string>
+    <string name="pentacles_5_future">An unexpected ally may appear, or a change will come that lifts you from the shadows.</string>
+
+    <!-- Six of Pentacles -->
+    <string name="pentacles_6_past">Once, you gave freely, yet the weight of what you lost lingered long after you had given.</string>
+    <string name="pentacles_6_present">Now, you stand at a crossroads—what you give returns to you, but the scale is ever shifting.</string>
+    <string name="pentacles_6_future">Generosity will find you, but it will ask you to share in return, keeping the circle of abundance spinning.</string>
+
+    <!-- Seven of Pentacles -->
+    <string name="pentacles_7_past">Patience was your teacher, yet the fruits of your labor seemed slow to ripen.</string>
+    <string name="pentacles_7_present">Now, you wait again, your efforts building, but only time will tell if they bear fruit.</string>
+    <string name="pentacles_7_future">A harvest draws near, but whether it will fill your hands or slip through your fingers remains uncertain.</string>
+
+    <!-- Eight of Pentacles -->
+    <string name="pentacles_8_past">You once labored without rest, carving your path with dedication and skill.</string>
+    <string name="pentacles_8_present">Now, you refine your craft, your hands working tirelessly to perfect what was once raw.</string>
+    <string name="pentacles_8_future">Mastery is near, but it requires your full attention and an eye for the finest details.</string>
+
+    <!-- Nine of Pentacles -->
+    <string name="pentacles_9_past">You once stood in the quiet of your own success, your efforts paying off in ways you never imagined.</string>
+    <string name="pentacles_9_present">Now, you bask in the fruits of your labor, but find that true peace comes not just in what you have, but in how you enjoy it.</string>
+    <string name="pentacles_9_future">A time of plenty awaits, but the wealth will not solely be measured in gold, but in contentment.</string>
+
+    <!-- Ten of Pentacles -->
+    <string name="pentacles_10_past">A legacy was born from the roots of your ancestors, though you once struggled to honor it.</string>
+    <string name="pentacles_10_present">Now, the wealth of generations stands before you, offering stability and security like a steady river.</string>
+    <string name="pentacles_10_future">A legacy will be passed down, its fruits far beyond your own reach, but your role in it is not yet finished.</string>
+
+    <!-- Page of Pentacles -->
+    <string name="pentacles_page_past">Once, you dreamed of what could be, and the ground beneath you whispered of possibilities.</string>
+    <string name="pentacles_page_present">Now, curiosity calls you to study what is before you, for learning will lead you to new beginnings.</string>
+    <string name="pentacles_page_future">An offer awaits, small but full of potential—will you embrace it and begin anew?</string>
+
+    <!-- Knight of Pentacles -->
+    <string name="pentacles_knight_past">Once, you charged forward, your ambition clear, though the road was slower than you imagined.</string>
+    <string name="pentacles_knight_present">Now, your focus is unwavering, but remember: even the strongest steed requires rest.</string>
+    <string name="pentacles_knight_future">A steady pace will bring rewards, but the journey will ask for persistence and unwavering dedication.</string>
+
+    <!-- Queen of Pentacles -->
+    <string name="pentacles_queen_past">You once nurtured with grace, turning what was barren into a flourishing garden.</string>
+    <string name="pentacles_queen_present">Now, your warmth wraps all who come near, and your touch brings comfort and abundance.</string>
+    <string name="pentacles_queen_future">Your wisdom will guide the next steps—keep the hearth burning, for those around you rely on your steady light.</string>
+
+    <!-- King of Pentacles -->
+    <string name="pentacles_king_past">Once, you stood at the pinnacle of your achievements, but the weight of the crown was not always a blessing.</string>
+    <string name="pentacles_king_present">Now, your hands are steady, your wealth abundant, but what you hold must be shared with those who build alongside you.</string>
+    <string name="pentacles_king_future">The foundation you have set will endure, but remember that true power lies in how you use what you’ve built.</string>
+
+
+<!--    descriptions meaning-->
+<!--cups-->
+    <!-- Ace of Cups -->
+    <string name="cups_ace_past">A wellspring of emotion once stirred deep within, yet its waters remained untasted.</string>
+    <string name="cups_ace_present">Now, the cup overflows with potential, its sweetness waiting for you to drink deeply.</string>
+    <string name="cups_ace_future">A new emotional journey begins, its waters clear and full of promise, but they may run deeper than you expect.</string>
+
+    <!-- Two of Cups -->
+    <string name="cups_2_past">Once, your heart and another’s beat in harmony, though shadows of doubt whispered between you.</string>
+    <string name="cups_2_present">Now, unity flows between you and another—two hearts meeting as one, if only for a fleeting moment.</string>
+    <string name="cups_2_future">A deep connection awaits, but it may ask for balance—a give and take that is both beautiful and fragile.</string>
+
+    <!-- Three of Cups -->
+    <string name="cups_3_past">Joy once filled your cup, shared with those who sang in the chorus of your happiness.</string>
+    <string name="cups_3_present">Now, the celebration continues, your heart lifted by the love of friends, yet not all joy is without its price.</string>
+    <string name="cups_3_future">A gathering of souls awaits, but remember, the cost of joy can sometimes be more than you anticipated.</string>
+
+    <!-- Four of Cups -->
+    <string name="cups_4_past">Once, you sat in discontent, your cup full yet your heart empty, longing for something more.</string>
+    <string name="cups_4_present">Now, your heart remains closed, unable to see the gifts being offered in the quiet of your soul.</string>
+    <string name="cups_4_future">A moment will come when your dissatisfaction turns into gratitude, but only if you are ready to see it.</string>
+
+    <!-- Five of Cups -->
+    <string name="cups_5_past">Regret once weighed heavy on your heart, its shadow clouding the beauty of what was left behind.</string>
+    <string name="cups_5_present">Now, you focus on loss, yet two cups remain standing, full of what could still be saved.</string>
+    <string name="cups_5_future">Grief will fade, but only when you learn to lift your eyes to what still remains, rather than what’s gone.</string>
+
+    <!-- Six of Cups -->
+    <string name="cups_6_past">The past once called to you, a simpler time when joy was found in small, familiar things.</string>
+    <string name="cups_6_present">Now, memories weave their magic, reminding you of a gentler world, but beware of nostalgia’s hold.</string>
+    <string name="cups_6_future">A gift from the past will come, but it may be more about what you’ve learned than what you’ve lost.</string>
+
+    <!-- Seven of Cups -->
+    <string name="cups_7_past">Once, your dreams were many, their colors vivid and illusions sweet, but not all were real.</string>
+    <string name="cups_7_present">Now, choices cloud your mind—each cup promises something different, but none are clear in their truth.</string>
+    <string name="cups_7_future">The future will ask you to choose wisely, for not every dream is meant to come true, nor every illusion worth chasing.</string>
+
+    <!-- Eight of Cups -->
+    <string name="cups_8_past">You walked away from something once, your heart heavy with the weight of what was left behind.</string>
+    <string name="cups_8_present">Now, you stand at a crossroads, torn between the familiar and the promise of something greater ahead.</string>
+    <string name="cups_8_future">A journey awaits, one that will lead you away from the past and into the unknown, where healing may find you.</string>
+
+    <!-- Nine of Cups -->
+    <string name="cups_9_past">Once, your heart felt full, your desires satisfied, yet you knew that true contentment was fleeting.</string>
+    <string name="cups_9_present">Now, the wish you’ve longed for is granted, but beware: fulfillment may hide a yearning you did not expect.</string>
+    <string name="cups_9_future">True satisfaction awaits, but only if you realize it’s not the quantity of wishes fulfilled, but the depth of your contentment.</string>
+
+    <!-- Ten of Cups -->
+    <string name="cups_10_past">Once, love surrounded you, its warmth filling every corner, but even the brightest sun has its setting.</string>
+    <string name="cups_10_present">Now, you stand in the glow of joy, your heart and home full, yet peace comes at a quiet cost.</string>
+    <string name="cups_10_future">A future of happiness awaits, but remember that true harmony requires constant tending and trust in what you’ve built.</string>
+
+    <!-- Page of Cups -->
+    <string name="cups_page_past">Once, innocence filled your heart, and the world seemed full of magic and possibility.</string>
+    <string name="cups_page_present">Now, a new emotional chapter unfolds, where intuition leads you, though you walk with wonder still.</string>
+    <string name="cups_page_future">A messenger of the heart will arrive, offering a new emotional truth that may surprise you with its depth.</string>
+
+    <!-- Knight of Cups -->
+    <string name="cups_knight_past">Once, your heart was a flame, rushing toward love’s calling, though not every pursuit led to peace.</string>
+    <string name="cups_knight_present">Now, you seek something deeper, but remember that chasing desires too recklessly may burn the heart.</string>
+    <string name="cups_knight_future">A quest for the soul awaits, but be mindful—passion must not blind you to the cost of the chase.</string>
+
+    <!-- Queen of Cups -->
+    <string name="cups_queen_past">You once held your heart close, guarding its depths with a calm that only you truly understood.</string>
+    <string name="cups_queen_present">Now, your compassion flows like a river, but even the calmest waters can carry hidden currents.</string>
+    <string name="cups_queen_future">A time of emotional clarity approaches, but your nurturing nature may be tested by those who ask too much.</string>
+
+    <!-- King of Cups -->
+    <string name="cups_king_past">Once, you ruled your emotions with a steady hand, though your heart may have remained hidden beneath your calm exterior.</string>
+    <string name="cups_king_present">Now, your emotions are a force of balance and wisdom, yet beware the temptation to become too detached.</string>
+    <string name="cups_king_future">Mastery of the heart is near, but it will ask you to balance your inner tides without losing touch with your humanity.</string>
+
+
+<!--    descriptions meaning-->
+<!--swords-->
+    <!-- Ace of Swords -->
+    <string name="swords_ace_past">A truth once cut through the fog, sharp and sudden, awakening a clarity that shook your soul.</string>
+    <string name="swords_ace_present">Now, the blade of insight is in your hand—its edge is keen, but it may wound if not wielded carefully.</string>
+    <string name="swords_ace_future">A new idea will strike, clear and powerful, yet its path may not be as straightforward as you believe.</string>
+
+    <!-- Two of Swords -->
+    <string name="swords_2_past">Once, you stood at a crossroads, torn between two truths, each promising freedom yet binding you in its own way.</string>
+    <string name="swords_2_present">Now, you face a choice, each option veiled in uncertainty, but inaction will carry its own weight.</string>
+    <string name="swords_2_future">A decision looms ahead, its resolution necessary, but it will demand your inner balance and clarity.</string>
+
+    <!-- Three of Swords -->
+    <string name="swords_3_past">Once, a piercing truth broke your heart, its sting a lesson in loss and the fragility of trust.</string>
+    <string name="swords_3_present">Now, sorrow remains, its edges cutting deep, but healing begins when the wound is acknowledged.</string>
+    <string name="swords_3_future">A heart once broken will find peace, but only through facing the pain that’s been left behind.</string>
+
+    <!-- Four of Swords -->
+    <string name="swords_4_past">Once, rest was needed but avoided, for your mind demanded more than your body could bear.</string>
+    <string name="swords_4_present">Now, stillness calls, asking you to rest and rebuild the strength that’s been spent in battle.</string>
+    <string name="swords_4_future">A time of healing and quiet contemplation awaits, but only if you surrender to the calm before the storm.</string>
+
+    <!-- Five of Swords -->
+    <string name="swords_5_past">Once, victory was claimed at a high cost, a win that left you standing alone, questioning the price of triumph.</string>
+    <string name="swords_5_present">Now, conflict surrounds you, its bitter taste lingering in the air. Not every battle is worth the fight.</string>
+    <string name="swords_5_future">Defeat may be on the horizon, but it will teach you the value of choosing your battles wisely.</string>
+
+    <!-- Six of Swords -->
+    <string name="swords_6_past">Once, you sailed away from pain, seeking peace, but the waters were not as calm as you’d hoped.</string>
+    <string name="swords_6_present">Now, you journey toward something better, though the past’s shadow still lingers on the horizon.</string>
+    <string name="swords_6_future">A transition lies ahead, a departure from old troubles, but new challenges will require strength and clarity.</string>
+
+    <!-- Seven of Swords -->
+    <string name="swords_7_past">Once, you moved in secrecy, your plans hidden from view, but deception leaves its own marks on the soul.</string>
+    <string name="swords_7_present">Now, you walk a thin line, and not all your choices are as transparent as you believe.</string>
+    <string name="swords_7_future">A hidden truth will surface, but its revelation may bring both freedom and consequences.</string>
+
+    <!-- Eight of Swords -->
+    <string name="swords_8_past">Once, your mind was imprisoned by fear, its walls built of thoughts that bound you more tightly than you realized.</string>
+    <string name="swords_8_present">Now, you feel trapped by your own thoughts, but remember—freedom is only a shift in perspective away.</string>
+    <string name="swords_8_future">A release is coming, but only when you free yourself from the chains you’ve wrapped around your mind.</string>
+
+    <!-- Nine of Swords -->
+    <string name="swords_9_past">Once, nightmares plagued your sleep, each thought a darkened shadow that whispered of your deepest fears.</string>
+    <string name="swords_9_present">Now, anxiety takes hold, a storm in the night that seems endless, though its end is closer than you think.</string>
+    <string name="swords_9_future">The weight of worry will pass, but only if you confront the darkness inside and let go of its grip on you.</string>
+
+    <!-- Ten of Swords -->
+    <string name="swords_10_past">Once, betrayal struck you deep, leaving scars that will remain even after the wounds have healed.</string>
+    <string name="swords_10_present">Now, you lie at the end of a painful road, but this is not the end—it’s the beginning of release.</string>
+    <string name="swords_10_future">An ending is coming, but it will bring the freedom you need to rise again from the ashes of the past.</string>
+
+    <!-- Page of Swords -->
+    <string name="swords_page_past">Once, curiosity pushed you forward, your mind sharp and restless, but not all truths were meant to be found.</string>
+    <string name="swords_page_present">Now, your intellect guides you, but beware of speaking too soon before the whole truth is revealed.</string>
+    <string name="swords_page_future">A message of clarity will arrive, but it will come with challenges—ready yourself to face the truth as it unfolds.</string>
+
+    <!-- Knight of Swords -->
+    <string name="swords_knight_past">Once, you charged ahead with purpose, your ambition a storm that could not be stopped.</string>
+    <string name="swords_knight_present">Now, you race toward a goal, but swift action may bring unintended consequences.</string>
+    <string name="swords_knight_future">A battle looms ahead, but it will require more than speed—it will need wisdom to win.</string>
+
+    <!-- Queen of Swords -->
+    <string name="swords_queen_past">Once, you cut through lies with a clear mind, yet some truths still brought a quiet sorrow to your heart.</string>
+    <string name="swords_queen_present">Now, your clarity is unmatched, but remember—your sharp wit can wound as easily as it can cut through confusion.</string>
+    <string name="swords_queen_future">A time of intellect and logic awaits, but your emotional balance will be tested as you make decisions with your mind over your heart.</string>
+
+    <!-- King of Swords -->
+    <string name="swords_king_past">Once, you ruled with clarity and cold precision, yet your heart sometimes whispered of the warmth you’d left behind.</string>
+    <string name="swords_king_present">Now, your wisdom is sought by others, but remember—the weight of your intellect can sometimes isolate you from those around you.</string>
+    <string name="swords_king_future">A time of leadership awaits, where your intellect will guide others, but it will be your wisdom, not just your mind, that brings success.</string>
+
+
+<!--    descriptions meaning-->
+<!--wands-->
+    <!-- Ace of Wands -->
+    <string name="wands_ace_past">Once, a spark of inspiration ignited your soul, a fire that burned bright but brief.</string>
+    <string name="wands_ace_present">Now, a new creative force awakens, full of potential, waiting for your hand to guide its flame.</string>
+    <string name="wands_ace_future">A new beginning calls, where passion will lead you forward, but the fire must be tended, lest it burn out too soon.</string>
+
+    <!-- Two of Wands -->
+    <string name="wands_2_past">Once, you stood at the edge, looking out over the horizon, caught between comfort and the thrill of adventure.</string>
+    <string name="wands_2_present">Now, you hold the world in your hands, but the decision to act lies within your grasp.</string>
+    <string name="wands_2_future">The future awaits, but it will demand courage to step beyond the known into what could be.</string>
+
+    <!-- Three of Wands -->
+    <string name="wands_3_past">Once, your plans were set in motion, their roots stretching deep, though the winds were not always in your favor.</string>
+    <string name="wands_3_present">Now, you watch as your efforts begin to bear fruit, yet there is still much to be done before the harvest.</string>
+    <string name="wands_3_future">A new horizon calls, where your hard work will pay off, but expansion brings both promise and risk.</string>
+
+    <!-- Four of Wands -->
+    <string name="wands_4_past">Once, you celebrated triumph with those who walked beside you, the foundation strong beneath your feet.</string>
+    <string name="wands_4_present">Now, joy and stability fill the air—your efforts have created a solid foundation to build on.</string>
+    <string name="wands_4_future">A time of completion approaches, bringing harmony and celebration, but it will be up to you to maintain its peace.</string>
+
+    <!-- Five of Wands -->
+    <string name="wands_5_past">Once, you fought for recognition, each clash leaving its mark, yet growth often comes through conflict.</string>
+    <string name="wands_5_present">Now, you stand in the heat of competition, where the struggle is real, but victory is not guaranteed.</string>
+    <string name="wands_5_future">A challenge awaits, but it is in the fire of conflict that your true strength will be forged.</string>
+
+    <!-- Six of Wands -->
+    <string name="wands_6_past">Once, you rode high on victory’s wings, the applause ringing in your ears, though you knew it wouldn’t last forever.</string>
+    <string name="wands_6_present">Now, you stand in the light of recognition, but remember—success is fleeting and must be earned again.</string>
+    <string name="wands_6_future">A triumph is on the horizon, but you will need to prove that you can handle the pressure that comes with it.</string>
+
+    <!-- Seven of Wands -->
+    <string name="wands_7_past">Once, you defended your ground against opposition, but standing firm brought both strength and strain.</string>
+    <string name="wands_7_present">Now, you fight to maintain your position, but remember, persistence is your ally in the face of challenge.</string>
+    <string name="wands_7_future">The fight will continue, but your resolve will carry you forward, if you hold fast to your beliefs and strength.</string>
+
+    <!-- Eight of Wands -->
+    <string name="wands_8_past">Once, swift action carried you forward, but not every hasty decision led to the destination you sought.</string>
+    <string name="wands_8_present">Now, speed is of the essence—things are moving fast, and you must keep up or risk losing the momentum.</string>
+    <string name="wands_8_future">A burst of energy will propel you, but only if you stay grounded and focused on where you\'re truly headed.</string>
+
+    <!-- Nine of Wands -->
+    <string name="wands_9_past">Once, you fought long and hard, each wound a reminder of the battles you’ve endured and survived.</string>
+    <string name="wands_9_present">Now, weariness settles in, but you stand at the threshold, where victory is within reach if you can push through.</string>
+    <string name="wands_9_future">The final stretch of your journey will be the hardest, but your resilience will see you through to the end.</string>
+
+    <!-- Ten of Wands -->
+    <string name="wands_10_past">Once, you carried the weight of the world on your shoulders, each burden heavier than the last.</string>
+    <string name="wands_10_present">Now, exhaustion weighs you down, but remember: it is not the load, but how you carry it that defines your strength.</string>
+    <string name="wands_10_future">The end of the road is near, but the weight of your responsibilities will push you to your limits before you reach release.</string>
+
+    <!-- Page of Wands -->
+    <string name="wands_page_past">Once, your heart burned with curiosity and the promise of adventure, but your ideas were just whispers in the wind.</string>
+    <string name="wands_page_present">Now, a new creative spark flickers within you, urging you to chase that which calls you with fiery enthusiasm.</string>
+    <string name="wands_page_future">A new adventure awaits, and it will ignite your passion, but only if you follow the fire where it leads.</string>
+
+    <!-- Knight of Wands -->
+    <string name="wands_knight_past">Once, you charged forward with reckless abandon, your passion blazing a trail that few could follow.</string>
+    <string name="wands_knight_present">Now, you move with purpose and speed, but remember that your drive can sometimes leave destruction in its wake.</string>
+    <string name="wands_knight_future">A journey lies ahead, filled with excitement and danger, but only if you channel your energy wisely.</string>
+
+    <!-- Queen of Wands -->
+    <string name="wands_queen_past">Once, your energy was a flame, both inspiring and intimidating, yet it was your warmth that drew others in.</string>
+    <string name="wands_queen_present">Now, your creative force flows freely, but remember: the queen does not burn others with her fire, but uses it to lead.</string>
+    <string name="wands_queen_future">A time of great creativity and leadership awaits, but it will ask you to balance your passion with patience and poise.</string>
+
+    <!-- King of Wands -->
+    <string name="wands_king_past">Once, you stood as a leader, your vision clear, but the weight of responsibility sometimes clouded your judgment.</string>
+    <string name="wands_king_present">Now, your will is strong, and your actions decisive, but remember, leadership requires both vision and humility.</string>
+    <string name="wands_king_future">A time of great authority awaits, but the crown you wear will only shine if you continue to lead with passion and wisdom.</string>
+
 
 
     <!-- title card -->
-<!--    major arcanas-->
+<!--    major arcana-->
     <string name="fool_title">The Fool</string>
     <string name="magician_title">The Magician</string>
     <string name="priestess_title">The High Priestess</string>

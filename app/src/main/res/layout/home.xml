@@ -88,7 +88,7 @@
 <!--    change here -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/luck_fragment"
-        android:name="cit.edu.zodifind.fragments.PalmistryFragment"
+        android:name="cit.edu.zodifind.fragments.LuckFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
