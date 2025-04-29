@@ -504,9 +504,23 @@
     <string name="wands_page_title">Page of Wands</string>
     <string name="wands_knight_title">Knight of Wands</string>
     <string name="wands_queen_title">Queen of Wands</string>
-    <string name="wands_king_title">King of Wands</string>
+
+    
 
 
+
+<!--    astrology element-->
+    <string name="element_fire">Bold and dynamic, Fire signs blaze through life with passion and purpose. They’re driven, courageous, and often the spark that lights up any room or challenge. But their intensity can sometimes turn to impatience or recklessness. They burn bright, but can also burn out if they don’t pace themselves.</string>
+    <string name="element_earth">Steady, grounded, and practical, Earth signs are the rock of any situation. They thrive on stability, loyalty, and hard work. While they may seem slow to act, their approach is thorough and reliable. But, sometimes their fixed nature makes it hard for them to adapt or take risks.</string>
+    <string name="element_air">Free-spirited and intellectually curious, Air signs are the thinkers and communicators of the zodiac. They excel at seeing things from multiple angles and can effortlessly adapt to new ideas and situations. Their weakness? They can be too detached or indecisive, struggling to stay grounded when things get too complex.</string>
+    <string name="element_water">Deep, emotional, and intuitive, Water signs navigate the world with their feelings. They possess a unique empathy and understanding, often sensing things others miss. But their emotional depth can sometimes lead them to be overly sensitive or retreat into their own world when overwhelmed.</string>
+
+<!--    astrology quality-->
+    <string name="quality_cardinal">These signs are initiators, full of action, leadership, and new beginnings. They set things in motion and take charge. They’re natural leaders but can sometimes be impatient or impulsive.</string>
+    <string name="quality_fixed">These signs are steady, reliable, and determined. They prefer stability and consistency, sticking to plans and working towards long-term goals. They can be stubborn or resistant to change, but they are dependable.</string>
+    <string name="quality_mutable">These signs are adaptable, flexible, and versatile. They are open to change and able to go with the flow. They thrive in situations that require change but might struggle with commitment or consistency.</string>
+
+<!--    astrology ruling house-->
 
 
 </resources>
