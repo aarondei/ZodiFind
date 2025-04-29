@@ -1,0 +1,225 @@
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    alias(libs.plugins.androidApplication)\r\n    alias(libs.plugins.jetbrainsKotlinAndroid)\r\n}\r\n\r\nandroid {\r\n    namespace = \"cit.edu.zodifind\"\r\n    compileSdk = 35\r\n\r\n    defaultConfig {\r\n        applicationId = \"cit.edu.zodifind\"\r\n        minSdk = 24\r\n        targetSdk = 34\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n        vectorDrawables {\r\n            useSupportLibrary = true\r\n        }\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_1_8\r\n        targetCompatibility = JavaVersion.VERSION_1_8\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = \"1.8\"\r\n    }\r\n    buildFeatures {\r\n        compose = true\r\n    }\r\n    composeOptions {\r\n        kotlinCompilerExtensionVersion = \"1.5.1\"\r\n    }\r\n    packaging {\r\n        resources {\r\n            excludes += \"/META-INF/{AL2.0,LGPL2.1}\"\r\n        }\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation(\"com.github.commandiron:WheelPickerCompose:1.1.11\")\r\n    implementation(libs.androidx.core.ktx)\r\n    implementation(libs.androidx.lifecycle.runtime.ktx)\r\n    implementation(libs.androidx.activity.compose)\r\n    implementation(platform(libs.androidx.compose.bom))\r\n    implementation(libs.androidx.ui)\r\n    implementation(libs.androidx.ui.graphics)\r\n    implementation(libs.androidx.ui.tooling.preview)\r\n    implementation(libs.androidx.material3)\r\n    implementation(libs.androidx.appcompat)\r\n    implementation(libs.material)\r\n    implementation(libs.androidx.activity)\r\n    implementation(libs.androidx.legacy.support.v4)\r\n    implementation(libs.androidx.lifecycle.livedata.ktx)\r\n    implementation(libs.androidx.lifecycle.viewmodel.ktx)\r\n    implementation(libs.androidx.fragment.ktx)\r\n    testImplementation(libs.junit)\r\n    androidTestImplementation(libs.androidx.junit)\r\n    androidTestImplementation(libs.androidx.espresso.core)\r\n    androidTestImplementation(platform(libs.androidx.compose.bom))\r\n    androidTestImplementation(libs.androidx.ui.test.junit4)\r\n    debugImplementation(libs.androidx.ui.tooling)\r\n    debugImplementation(libs.androidx.ui.test.manifest)\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	(revision c9688f36e447f4ea853a3d8f8f180e0a65c47611)
++++ b/app/build.gradle.kts	(date 1745852672921)
+@@ -51,6 +51,7 @@
+ 
+ dependencies {
+ 
++    implementation("de.hdodenhof:circleimageview:3.1.0")
+     implementation("com.github.commandiron:WheelPickerCompose:1.1.11")
+     implementation(libs.androidx.core.ktx)
+     implementation(libs.androidx.lifecycle.runtime.ktx)
+@@ -74,4 +75,5 @@
+     androidTestImplementation(libs.androidx.ui.test.junit4)
+     debugImplementation(libs.androidx.ui.tooling)
+     debugImplementation(libs.androidx.ui.test.manifest)
++
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/profile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:background=\"@drawable/calculatorbg\">\r\n\r\n<!--guidelines-->\r\n    <androidx.constraintlayout.widget.Guideline\r\n        android:id=\"@+id/MarginTop\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        app:layout_constraintGuide_begin=\"0dp\"\r\n        app:layout_constraintGuide_percent=\"0.04\"\r\n        android:orientation=\"horizontal\" />\r\n    <androidx.constraintlayout.widget.Guideline\r\n        android:id=\"@+id/MarginBottom\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        app:layout_constraintGuide_begin=\"0dp\"\r\n        app:layout_constraintGuide_percent=\"0.96\"\r\n        android:orientation=\"horizontal\" />\r\n\r\n\r\n    <androidx.constraintlayout.widget.Guideline\r\n        android:id=\"@+id/marginStart\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        app:layout_constraintGuide_begin=\"0dp\"\r\n        app:layout_constraintGuide_percent=\"0.06\"\r\n        android:orientation=\"vertical\" />\r\n    <androidx.constraintlayout.widget.Guideline\r\n        android:id=\"@+id/marginEnd\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        app:layout_constraintGuide_begin=\"0dp\"\r\n        app:layout_constraintGuide_percent=\"0.94\"\r\n        android:orientation=\"vertical\" />\r\n\r\n\r\n    <androidx.constraintlayout.widget.Guideline\r\n        android:id=\"@+id/headerStart\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        app:layout_constraintGuide_begin=\"0dp\"\r\n        app:layout_constraintGuide_percent=\"0.055\"\r\n        android:orientation=\"horizontal\" />\r\n    <androidx.constraintlayout.widget.Guideline\r\n        android:id=\"@+id/headerSymmetricalStart\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        app:layout_constraintGuide_begin=\"0dp\"\r\n        app:layout_constraintGuide_percent=\"0.11\"\r\n        android:orientation=\"horizontal\" />\r\n\r\n    <androidx.constraintlayout.widget.Guideline\r\n        android:id=\"@+id/headerEndGuide\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\"\r\n        app:layout_constraintGuide_end=\"526dp\" />\r\n\r\n    <androidx.constraintlayout.widget.Guideline\r\n        android:id=\"@+id/BioSectionGuide\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\"\r\n        app:layout_constraintGuide_end=\"400dp\" />\r\n\r\n\r\n    <!--views-->\r\n\r\n    <ImageView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:src=\"@drawable/back\"\r\n        android:id=\"@+id/btnBack\"\r\n\r\n        app:layout_constraintStart_toStartOf=\"@id/marginStart\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/MarginTop\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintHorizontal_bias=\"0.05\"\r\n        />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imgProfile\"\r\n        android:layout_width=\"117dp\"\r\n        android:layout_height=\"125dp\"\r\n        android:src=\"@drawable/profileicon\"\r\n\r\n        app:layout_constraintStart_toEndOf=\"@id/marginStart\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/headerStart\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/headerEndGuide\"\r\n        />\r\n\r\n    <ImageView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:src=\"@drawable/ic_edit\"\r\n\r\n        app:layout_constraintStart_toEndOf=\"@id/marginStart\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintTop_toTopOf=\"@id/imgProfile\"\r\n        app:layout_constraintHorizontal_bias=\"0.65\"\r\n\r\n        />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvName\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n\r\n        android:text=\"NAME\"\r\n        android:textColor=\"@color/white\"\r\n        android:textSize=\"35sp\"\r\n        android:fontFamily=\"@font/cinzel_black\"\r\n\r\n        app:layout_constraintStart_toEndOf=\"@id/marginStart\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/imgProfile\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0\"\r\n        />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvUsername\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n\r\n        android:text=\"username\"\r\n        android:textColor=\"@color/white\"\r\n        android:textSize=\"15sp\"\r\n        android:fontFamily=\"@font/josefinsans_regular\"\r\n\r\n        app:layout_constraintStart_toEndOf=\"@id/marginStart\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/tvName\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0\"\r\n        />\r\n\r\n    <View\r\n        android:id=\"@+id/BioSection\"\r\n        android:layout_width=\"449dp\"\r\n        android:layout_height=\"724dp\"\r\n        android:alpha=\"0.5\"\r\n\r\n        android:background=\"@drawable/border_tinted\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/BioSectionGuide\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0\"\r\n        tools:layout_editor_absoluteX=\"-27dp\"\r\n        />\r\n    \r\n    <View\r\n        android:id=\"@+id/detail_sec\"\r\n        android:layout_width=\"337dp\"\r\n        android:layout_height=\"99dp\"\r\n        android:background=\"@drawable/details_container\"\r\n\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/headerEndGuide\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.18\"\r\n        />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imgBday\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:src=\"@drawable/ic_bday\"\r\n\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/detail_line\"\r\n        app:layout_constraintTop_toTopOf=\"@id/detail_sec\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/detail_sec\"\r\n        app:layout_constraintVertical_bias=\"0.3\"\r\n        app:layout_constraintHorizontal_bias=\"0.6\"\r\n        />\r\n\r\n    <View\r\n        android:id=\"@+id/detail_line\"\r\n        android:layout_width=\"72dp\"\r\n        android:layout_height=\"1dp\"\r\n        android:background=\"@color/black\"\r\n        android:rotation=\"90\"\r\n\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@id/detail_sec\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/detail_sec\"\r\n        app:layout_constraintVertical_bias=\"0.5\"\r\n        />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/imgSign\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:src=\"@drawable/ic_sign\"\r\n\r\n        app:layout_constraintStart_toStartOf=\"@id/detail_line\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@id/detail_sec\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/detail_sec\"\r\n        app:layout_constraintVertical_bias=\"0.3\"\r\n        app:layout_constraintHorizontal_bias=\"0.4\"\r\n        />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvBday\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n\r\n        android:text=\"APR 10, 2003\"\r\n        android:textColor=\"@color/black\"\r\n        android:fontFamily=\"@font/josefinsans_regular\"\r\n\r\n        app:layout_constraintStart_toStartOf=\"@id/detail_sec\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"@id/imgBday\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/detail_sec\"\r\n        app:layout_constraintHorizontal_bias=\"0.22\"\r\n        app:layout_constraintVertical_bias=\"0.8\"\r\n        />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvSign\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n\r\n        android:text=\"ARIES\"\r\n        android:textColor=\"@color/black\"\r\n        android:fontFamily=\"@font/josefinsans_regular\"\r\n\r\n        app:layout_constraintStart_toEndOf=\"@id/detail_line\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/detail_sec\"\r\n        app:layout_constraintTop_toTopOf=\"@id/imgSign\"\r\n        app:layout_constraintBottom_toBottomOf=\"@id/detail_sec\"\r\n        app:layout_constraintHorizontal_bias=\"0.1\"\r\n        app:layout_constraintVertical_bias=\"0.8\"\r\n        />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvAboutMe\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n\r\n        android:text=\"ABOUT ME\"\r\n        android:textColor=\"@color/white\"\r\n        android:fontFamily=\"@font/josefinsans_regular\"\r\n\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintStart_toStartOf=\"@id/marginStart\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/line1\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0.05\"\r\n        />\r\n\r\n    <ImageView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:src=\"@drawable/ic_edit\"\r\n\r\n        app:layout_constraintStart_toEndOf=\"@id/tvAboutMe\"\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/line1\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/line2\"\r\n        app:layout_constraintHorizontal_bias=\"0.13\"\r\n        app:layout_constraintVertical_bias=\"0.12\"\r\n\r\n        />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvBio\"\r\n        android:layout_width=\"280dp\"\r\n        android:layout_height=\"wrap_content\"\r\n\r\n        android:text=\"@string/lorem\"\r\n        android:textColor=\"@color/white\"\r\n        android:fontFamily=\"@font/josefinsans_regular\"\r\n\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintStart_toStartOf=\"@id/marginStart\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/tvAboutMe\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0.09\"\r\n        />\r\n\r\n    <View\r\n        android:id=\"@+id/line1\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"1dp\"\r\n        android:background=\"@android:color/white\"\r\n\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintStart_toStartOf=\"@id/marginStart\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/BioSectionGuide\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0.2\"\r\n        />\r\n\r\n    <View\r\n        android:id=\"@+id/line2\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"1dp\"\r\n        android:background=\"@android:color/white\"\r\n\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintStart_toStartOf=\"@id/marginStart\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/tvBio\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0.2\"\r\n        />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvEditProfile\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:textSize=\"20sp\"\r\n        android:text=\"Edit Profile\"\r\n        android:textColor=\"@color/white\"\r\n\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintStart_toStartOf=\"@id/marginStart\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/line2\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0.2\"\r\n        app:layout_constraintHorizontal_bias=\"0.08\"\r\n        />\r\n\r\n    <TextView\r\n        android:id=\"@+id/tvChange\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:textSize=\"20sp\"\r\n        android:text=\"Change Password\"\r\n        android:textColor=\"@color/white\"\r\n\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintStart_toStartOf=\"@id/marginStart\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/tvEditProfile\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0.2\"\r\n        app:layout_constraintHorizontal_bias=\"0.1\"\r\n        />\r\n\r\n<!--    arrows-->\r\n\r\n    <ImageView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:src=\"@drawable/next\"\r\n\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintStart_toEndOf=\"@id/tvEditProfile\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/line2\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0.23\"\r\n        app:layout_constraintHorizontal_bias=\"0.93\"\r\n        />\r\n\r\n    <ImageView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:src=\"@drawable/next\"\r\n\r\n        app:layout_constraintEnd_toEndOf=\"@id/marginEnd\"\r\n        app:layout_constraintStart_toEndOf=\"@id/tvChange\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/tvEditProfile\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/MarginBottom\"\r\n        app:layout_constraintVertical_bias=\"0.23\"\r\n        app:layout_constraintHorizontal_bias=\"0.9\"\r\n        />\r\n\r\n    <!--    nav bar-->\r\n    <FrameLayout\r\n        android:id=\"@+id/fragment_container\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_above=\"@+id/bottom_nav_fragment_container\"\r\n        app:layout_constraintStart_toStartOf=\"parent\" />\r\n\r\n    <androidx.fragment.app.FragmentContainerView\r\n        android:id=\"@+id/bottom_nav_fragment_container\"\r\n        android:name=\"cit.edu.zodifind.fragments.BottomNavFragment\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\" />\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/profile.xml b/app/src/main/res/layout/profile.xml
+--- a/app/src/main/res/layout/profile.xml	(revision c9688f36e447f4ea853a3d8f8f180e0a65c47611)
++++ b/app/src/main/res/layout/profile.xml	(date 1745854667984)
+@@ -83,17 +83,21 @@
+         app:layout_constraintHorizontal_bias="0.05"
+         />
+ 
+-    <ImageView
+-        android:id="@+id/imgProfile"
+-        android:layout_width="117dp"
+-        android:layout_height="125dp"
+-        android:src="@drawable/profileicon"
++    <de.hdodenhof.circleimageview.CircleImageView
++        android:id="@+id/imgPfp"
++        android:layout_width="120dp"
++        android:layout_height="120dp"
++        android:src="@drawable/pfp_default"
++        app:civ_border_width="1dp"
++        app:civ_border_color="#FFFFFF"
++        app:civ_fill_color="#FFFFFF"
++        android:scaleType="centerCrop"
+ 
+-        app:layout_constraintStart_toEndOf="@id/marginStart"
+-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+-        app:layout_constraintTop_toBottomOf="@id/headerStart"
++        app:layout_constraintTop_toBottomOf="@id/headerSymmetricalStart"
+         app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
+-        />
++        app:layout_constraintStart_toStartOf="@id/marginStart"
++        app:layout_constraintEnd_toEndOf="@id/marginEnd"/>
++
+ 
+     <ImageView
+         android:layout_width="wrap_content"
+@@ -102,7 +106,7 @@
+ 
+         app:layout_constraintStart_toEndOf="@id/marginStart"
+         app:layout_constraintEnd_toEndOf="@id/marginEnd"
+-        app:layout_constraintTop_toTopOf="@id/imgProfile"
++        app:layout_constraintTop_toTopOf="@id/imgPfp"
+         app:layout_constraintHorizontal_bias="0.65"
+ 
+         />
+@@ -119,7 +123,7 @@
+ 
+         app:layout_constraintStart_toEndOf="@id/marginStart"
+         app:layout_constraintEnd_toEndOf="@id/marginEnd"
+-        app:layout_constraintTop_toBottomOf="@id/imgProfile"
++        app:layout_constraintTop_toBottomOf="@id/imgPfp"
+         app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+         app:layout_constraintVertical_bias="0"
+         />
+Index: app/src/main/res/layout/edit_profile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/edit_profile.xml b/app/src/main/res/layout/edit_profile.xml
+new file mode 100644
+--- /dev/null	(date 1745853315397)
++++ b/app/src/main/res/layout/edit_profile.xml	(date 1745853315397)
+@@ -0,0 +1,112 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:background="@drawable/settingsbg">
++
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/MarginTop"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintGuide_begin="0dp"
++        app:layout_constraintGuide_percent="0.04"
++        android:orientation="horizontal" />
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/MarginBottom"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintGuide_begin="0dp"
++        app:layout_constraintGuide_percent="0.96"
++        android:orientation="horizontal" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/marginStart"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintGuide_begin="0dp"
++        app:layout_constraintGuide_percent="0.06"
++        android:orientation="vertical" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/marginEnd"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintGuide_begin="0dp"
++        app:layout_constraintGuide_percent="0.94"
++        android:orientation="vertical" />
++
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/headerStart"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_percent="0.05608755" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/headerSymmetricalStart"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        app:layout_constraintGuide_begin="0dp"
++        app:layout_constraintGuide_percent="0.11"
++        android:orientation="horizontal" />
++
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/EditNameSectionGuide"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_begin="223dp" />
++
++    <androidx.constraintlayout.widget.Guideline
++        android:id="@+id/BioSectionGuide"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:orientation="horizontal"
++        app:layout_constraintGuide_begin="397dp" />
++
++<!-- views -->
++    <ImageView
++        android:id="@+id/btnBack"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:src="@drawable/back"
++
++        app:layout_constraintStart_toStartOf="@id/marginStart"
++        app:layout_constraintTop_toBottomOf="@id/MarginTop"
++        app:layout_constraintEnd_toEndOf="@id/marginEnd"
++        app:layout_constraintHorizontal_bias="0.05"
++        />
++
++
++    <de.hdodenhof.circleimageview.CircleImageView
++        android:id="@+id/imgPfp"
++        android:layout_width="120dp"
++        android:layout_height="120dp"
++        android:src="@drawable/pfp_default"
++        app:civ_border_width="1dp"
++        app:civ_border_color="#FFFFFF"
++        app:civ_fill_color="#FFFFFF"
++        android:scaleType="centerCrop"
++
++        app:layout_constraintTop_toBottomOf="@id/headerSymmetricalStart"
++        app:layout_constraintBottom_toTopOf="@id/EditNameSectionGuide"
++        app:layout_constraintStart_toStartOf="@id/marginStart"
++        app:layout_constraintEnd_toEndOf="@id/marginEnd"/>
++
++    <TextView
++        android:id="@+id/tvName"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++
++        android:textColor="@color/white"
++        android:text="Name"
++        />
++
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
++
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <value>\r\n      <entry key=\"SplashScreenActivity\">\r\n        <State />\r\n      </entry>\r\n    </value>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	(revision c9688f36e447f4ea853a3d8f8f180e0a65c47611)
++++ b/.idea/deploymentTargetDropDown.xml	(date 1745851119667)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="deploymentTargetDropDown">
+     <value>
+-      <entry key="SplashScreenActivity">
++      <entry key="app">
+         <State />
+       </entry>
+     </value>
