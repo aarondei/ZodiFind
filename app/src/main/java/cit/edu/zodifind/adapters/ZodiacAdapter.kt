@@ -10,8 +10,11 @@ import cit.edu.zodifind.R
 
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.LibraryFocusedItemActivity
 import cit.edu.zodifind.data.CapturedZodiacTempObject
+import cit.edu.zodifind.fragments.ViewPagerFragment
 import cit.edu.zodifind.helpers.ZodiacSign
 
 class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val context: Context) :
@@ -29,15 +32,32 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
         override fun onClick(view: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION && view != null) {
-                val selectedZodiac = zodiacList[position] // TODO CLEAN
-                val intent = Intent(context, LibraryFocusedItemActivity::class.java)
-                intent.putExtra("zodiac", selectedZodiac.name)
+                val selectedZodiac = zodiacList[position]
 
-                CapturedZodiacTempObject.capturedSign = selectedZodiac
+                val activity = view.context as AppCompatActivity
+                val fragment = ViewPagerFragment().apply {
+                    arguments = Bundle().apply {
+                        putString("zodiac_sign", selectedZodiac.name)
+                    }
+                }
 
-                context.startActivity(intent)
+                activity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .addToBackStack(null)
+                    .commit()
             }
         }
+//            val position = adapterPosition
+//            if (position != RecyclerView.NO_POSITION && view != null) {
+//                val selectedZodiac = zodiacList[position] // TODO CLEAN
+//                val intent = Intent(context, LibraryFocusedItemActivity::class.java)
+//                intent.putExtra("zodiac", selectedZodiac.name)
+//
+//                CapturedZodiacTempObject.capturedSign = selectedZodiac
+//
+//                context.startActivity(intent)
+//            }
+//        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ZodiacViewHolder {
