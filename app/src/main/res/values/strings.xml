@@ -520,7 +520,33 @@
     <string name="quality_fixed">These signs are steady, reliable, and determined. They prefer stability and consistency, sticking to plans and working towards long-term goals. They can be stubborn or resistant to change, but they are dependable.</string>
     <string name="quality_mutable">These signs are adaptable, flexible, and versatile. They are open to change and able to go with the flow. They thrive in situations that require change but might struggle with commitment or consistency.</string>
 
+<!--    astrology ruling planet-->
+    <string name="rulingplanet_mars">Aries is ruled by Mars, which brings strong drive, impulsiveness, and a need to take action quickly.</string>
+    <string name="rulingplanet_venus_taurus">Taurus is ruled by Venus, making it drawn to comfort, stability, and the pleasures of the senses.</string>
+    <string name="rulingplanet_mercury_gemini">Gemini is ruled by Mercury, which gives it quick thinking, curiosity, and a love for communication.</string>
+    <string name="rulingplanet_moon">Cancer is ruled by the Moon, making it deeply emotional, nurturing, and sensitive to its surroundings.</string>
+    <string name="rulingplanet_sun">Leo is ruled by the Sun, giving it confidence, a strong sense of identity, and a desire to be noticed.</string>
+    <string name="rulingplanet_mercury_virgo">Virgo is ruled by Mercury, which makes it analytical, detail-focused, and practical in solving problems.</string>
+    <string name="rulingplanet_venus_libra">Libra is ruled by Venus, bringing a love for peace, beauty, and fairness in all relationships.</string>
+    <string name="rulingplanet_pluto">Scorpio is ruled by Pluto, giving it depth, intensity, and a tendency to keep emotions hidden.</string>
+    <string name="rulingplanet_jupiter">Sagittarius is ruled by Jupiter, which inspires a love for freedom, exploration, and learning new ideas.</string>
+    <string name="rulingplanet_saturn">Capricorn is ruled by Saturn, making it disciplined, responsible, and focused on long-term goals.</string>
+    <string name="rulingplanet_uranus">Aquarius is ruled by Uranus, giving it originality, independence, and a desire to challenge the norm.</string>
+    <string name="rulingplanet_neptune">Pisces is ruled by Neptune, which makes it imaginative, sensitive, and drawn to dreams and deeper emotions.</string>
+
 <!--    astrology ruling house-->
+    <string name="rulinghouse_first">This house represents one\'s self-image, how they present themselves to the world, and their initial approach to life.</string>
+    <string name="rulinghouse_second">This house focuses on personal values, money, material possessions, and the need for financial security.</string>
+    <string name="rulinghouse_third">This house governs communication, learning, interactions with siblings, and short trips.</string>
+    <string name="rulinghouse_fourth">This house is related to home, family, emotional foundations, and one’s sense of belonging.</string>
+    <string name="rulinghouse_fifth">This house represents creativity, self-expression, romantic love, and the joy of children.</string>
+    <string name="rulinghouse_sixth">This house covers health, daily work routines, and how one serves others in their environment.</string>
+    <string name="rulinghouse_seventh">This house governs partnerships, marriage, and how one relates to others in close relationships.</string>
+    <string name="rulinghouse_eighth">This house is linked to transformation, shared resources, intimacy, and deep psychological matters.</string>
+    <string name="rulinghouse_ninth">This house focuses on higher education, travel, philosophy, and spiritual beliefs.</string>
+    <string name="rulinghouse_tenth">This house represents career, social status, public life, and one’s long-term goals.</string>
+    <string name="rulinghouse_eleventh">This house governs friendships, social groups, future aspirations, and humanitarian causes.</string>
+    <string name="rulinghouse_twelfth">This house relates to the subconscious mind, hidden secrets, isolation, and spiritual growth.</string>
 
 
 </resources>
