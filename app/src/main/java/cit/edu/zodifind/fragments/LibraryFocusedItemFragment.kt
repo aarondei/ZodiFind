@@ -6,10 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.FragmentContainerView
 import cit.edu.zodifind.R
-import cit.edu.zodifind.helpers.ZodiacSign
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import cit.edu.zodifind.data.astrology.ZodiacSign
 
 class LibraryFocusedItemFragment : Fragment() {
 

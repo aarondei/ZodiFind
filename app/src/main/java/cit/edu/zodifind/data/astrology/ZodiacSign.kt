@@ -1,12 +1,8 @@
-package cit.edu.zodifind.helpers
+package cit.edu.zodifind.data.astrology
 
 import android.os.Build
 import androidx.annotation.RequiresApi
 import cit.edu.zodifind.R
-import cit.edu.zodifind.data.astrology.Element
-import cit.edu.zodifind.data.astrology.Quality
-import cit.edu.zodifind.data.astrology.RulingHouse
-import cit.edu.zodifind.data.astrology.RulingPlanet
 import java.time.LocalDate
 
 @Suppress("DEPRECATION")

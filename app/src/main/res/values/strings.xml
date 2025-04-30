@@ -550,5 +550,41 @@
     <string name="rulinghouse_eleventh">This house governs friendships, social groups, future aspirations, and humanitarian causes.</string>
     <string name="rulinghouse_twelfth">This house relates to the subconscious mind, hidden secrets, isolation, and spiritual growth.</string>
 
+<!--    palmistry titles-->
+    <string name="girdleofvenus_title">Girdle of Venus</string>
+    <string name="marriageline_title">Marriage Line</string>
+    <string name="lineofintuition_title">Line of Intuition</string>
+    <string name="lineofsun_title">Line of Sun</string>
+    <string name="lineofdestiny_title">Line of Destiny</string>
+    <string name="lineofhealth_title">Line of Health</string>
+    <string name="lineofheart_title">Line of Heart</string>
+    <string name="lineofhead_title">Line of Head</string>
+    <string name="lineoflife_title">Line of Life</string>
+    <string name="lineofmars_title">Line of Mars</string>
+
+<!--    palmistry domains-->
+    <string name="girdleofvenus_domain">Emotion • Sensitivity • Intensity</string>
+    <string name="marriageline_domain">Relationships • Love • Commitment</string>
+    <string name="lineofintuition_domain">Instinct • Insight • Psychic</string>
+    <string name="lineofsun_domain">Purpose • Career • Direction</string>
+    <string name="lineofdestiny_domain">Purpose • Career • Direction</string>
+    <string name="lineofhealth_domain">Wellness • Stress • Vitality</string>
+    <string name="lineofheart_domain">Love • Emotions • Affection</string>
+    <string name="lineofhead_domain">Intellect • Focus • Logic</string>
+    <string name="lineoflife_domain">Vitality • Journey • Strength</string>
+    <string name="lineofmars_domain">Courage • Defense • Resilience</string>
+
+    <!--    palmistry content-->
+    <string name="girdleofvenus_content"></string>
+    <string name="marriageline_content"></string>
+    <string name="lineofintuition_content"></string>
+    <string name="lineofsun_content"></string>
+    <string name="lineofdestiny_content"></string>
+    <string name="lineofhealth_content"></string>
+    <string name="lineofheart_content"></string>
+    <string name="lineofhead_content"></string>
+    <string name="lineoflife_content"></string>
+    <string name="lineofmars_content"></string>
+
 
 </resources>

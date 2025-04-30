@@ -1,13 +1,11 @@
 package cit.edu.zodifind.luck
+
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 
-data class LuckyModel (
+data class PalmModel(
     @DrawableRes val image: Int,
     @StringRes val title: Int,
-    @StringRes val pastMeaning: Int,
-
-    @StringRes val presentMeaning: Int,
-    @StringRes val futureMeaning: Int
-
+    @StringRes val domain: Int,
+    @StringRes val content: Int
 )

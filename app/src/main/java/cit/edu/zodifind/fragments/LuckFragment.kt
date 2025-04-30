@@ -15,9 +15,9 @@ import android.view.animation.DecelerateInterpolator
 import androidx.core.animation.doOnEnd
 import androidx.core.view.isVisible
 import cit.edu.zodifind.R
-import cit.edu.zodifind.data.TarotCards
+import cit.edu.zodifind.data.tarot.TarotCards
 import cit.edu.zodifind.databinding.FragmentLuckBinding
-import cit.edu.zodifind.luck.LuckyModel
+import cit.edu.zodifind.luck.TarotModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -33,9 +33,9 @@ class LuckFragment : Fragment() {
 
     private var currentStep = 0
 
-    private lateinit var pastCard: LuckyModel
-    private lateinit var presentCard: LuckyModel
-    private lateinit var futureCard: LuckyModel
+    private lateinit var pastCard: TarotModel
+    private lateinit var presentCard: TarotModel
+    private lateinit var futureCard: TarotModel
 
     @Inject
     lateinit var tarotCards: TarotCards

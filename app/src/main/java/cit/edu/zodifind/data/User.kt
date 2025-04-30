@@ -1,6 +1,6 @@
 package cit.edu.zodifind.data
 
-import cit.edu.zodifind.helpers.ZodiacSign
+import cit.edu.zodifind.data.astrology.ZodiacSign
 import java.time.LocalDate
 
 data class User(
