@@ -504,6 +504,7 @@
     <string name="wands_page_title">Page of Wands</string>
     <string name="wands_knight_title">Knight of Wands</string>
     <string name="wands_queen_title">Queen of Wands</string>
+    <string name="wands_king_title">King of Wands</string>
 
 
 <!--    astrology element-->
@@ -514,13 +515,13 @@
     <string name="element_water">Deep, emotional, and intuitive, Water signs navigate the world with their feelings. They possess a unique empathy and understanding, often sensing things others miss. But their emotional depth can sometimes lead them to be overly sensitive or retreat into their own world when overwhelmed.</string>
 
 <!--    astrology quality-->
-    <string name="quality_description">Quality is your energy expression</string>
+    <string name="quality_description">Quality is your expression of energy.</string>
     <string name="quality_cardinal">These signs are initiators, full of action, leadership, and new beginnings. They set things in motion and take charge. They’re natural leaders but can sometimes be impatient or impulsive.</string>
     <string name="quality_fixed">These signs are steady, reliable, and determined. They prefer stability and consistency, sticking to plans and working towards long-term goals. They can be stubborn or resistant to change, but they are dependable.</string>
     <string name="quality_mutable">These signs are adaptable, flexible, and versatile. They are open to change and able to go with the flow. They thrive in situations that require change but might struggle with commitment or consistency.</string>
 
 <!--    astrology ruling planet-->
-    <string name="rulingplanet_description">Ruling Planets are the forces in life.</string>
+    <string name="rulingplanet_description">Ruling Planets are your expression of true self.</string>
     <string name="rulingplanet_mars">Aries is ruled by Mars, which brings strong drive, impulsiveness, and a need to take action quickly.</string>
     <string name="rulingplanet_venus_taurus">Taurus is ruled by Venus, making it drawn to comfort, stability, and the pleasures of the senses.</string>
     <string name="rulingplanet_mercury_gemini">Gemini is ruled by Mercury, which gives it quick thinking, curiosity, and a love for communication.</string>
@@ -535,7 +536,7 @@
     <string name="rulingplanet_neptune">Pisces is ruled by Neptune, which makes it imaginative, sensitive, and drawn to dreams and deeper emotions.</string>
 
 <!--    astrology ruling house-->
-    <string name="rulinghouse_description">Ruling Houses are the aspects of life.</string>
+    <string name="rulinghouse_description">Ruling Houses are life aspects where you focus into.</string>
     <string name="rulinghouse_first">This house represents one\'s self-image, how they present themselves to the world, and their initial approach to life.</string>
     <string name="rulinghouse_second">This house focuses on personal values, money, material possessions, and the need for financial security.</string>
     <string name="rulinghouse_third">This house governs communication, learning, interactions with siblings, and short trips.</string>
