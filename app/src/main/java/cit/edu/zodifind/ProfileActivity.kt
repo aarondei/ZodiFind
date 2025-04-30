@@ -4,9 +4,10 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class ProfileActivity : Activity() {
+class ProfileActivity : AppCompatActivity() {
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,19 +21,6 @@ class ProfileActivity : Activity() {
             }
         }
 
-        //nav bar intents i dont think need pani
-//        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-//
-//        bottomNav.setOnItemSelectedListener {
-//            when (it.itemId) {
-//                R.id.nav_home -> startActivity(Intent(this, HomeActivity::class.java))
-//                R.id.nav_library -> startActivity(Intent(this, LibraryActivity::class.java))
-//                R.id.nav_finder -> startActivity(Intent(this, CalculatorActivity::class.java))
-//                R.id.nav_calendar -> startActivity(Intent(this, CalendarActivity::class.java))
-//            }
-//            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-//            true
-//        }
     }
 
 
