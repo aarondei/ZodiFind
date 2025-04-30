@@ -1,26 +1,28 @@
 package cit.edu.zodifind.helpers
 
 import android.os.Build
-import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import cit.edu.zodifind.R
+import cit.edu.zodifind.data.astrology.Element
+import cit.edu.zodifind.data.astrology.Quality
+import cit.edu.zodifind.data.astrology.RulingHouse
+import cit.edu.zodifind.data.astrology.RulingPlanet
 import java.time.LocalDate
-import java.util.Date
 
 @Suppress("DEPRECATION")
-enum class ZodiacSign(val symbolIcon: Int, val starIcon: Int, val representation: String, val startDate: String, val endDate: String) {
-    ARIES(R.drawable.aries_icon, R.drawable.aries_cons, "The Ram","MAR 21", "APR 19"),
-    TAURUS(R.drawable.taurus_icon, R.drawable.taurus_cons,"The Bull","APR 20", "MAY 20"),
-    GEMINI(R.drawable.gemini_icon, R.drawable.gemini_cons,"The Twins","MAY 21", "JUN 20"),
-    CANCER(R.drawable.cancer_icon, R.drawable.cancer_cons,"The Crab","JUN 21", "JUL 22"),
-    LEO(R.drawable.leo_icon, R.drawable.leo_cons,"The Lion","JUL 23", "AUG 22"),
-    VIRGO(R.drawable.virgo_icon, R.drawable.virgo_cons,"The Maiden","AUG 23", "SEPT 22"),
-    LIBRA(R.drawable.libra_icon, R.drawable.leo_cons,"The Scales","SEPT 23","OCT 22"),
-    SCORPIO(R.drawable.scorpio_icon, R.drawable.scorpio_cons,"The Scorpion","OCT 23", "NOV 21"),
-    SAGITTARIUS(R.drawable.sagittarius_icon, R.drawable.sagittarius_cons,"The Archer","NOV 22", "DEC 21"),
-    CAPRICORN(R.drawable.capricorn_icon, R.drawable.capricorn_cons,"The Goat","DEC 22", "JAN 19"),
-    AQUARIUS(R.drawable.aquarius_icon, R.drawable.aquarius_cons,"The Water Bearer","JAN 20", "FEB 18"),
-    PISCES(R.drawable.pisces_icon, R.drawable.pisces_cons,"The Fish","FEB 19", "MAR 20");
+enum class ZodiacSign(val faceIcon: Int, val starIcon: Int, val representation: String, val startDate: String, val endDate: String, val sketchIcon: Int, val symbolIcon: Int, val element: Element, val quality: Quality, val rulingPlanet: RulingPlanet, val rulingHouse: RulingHouse, val compatibility: String) {
+    ARIES(R.drawable.aries_icon, R.drawable.aries_cons, "The Ram","MAR 21", "APR 19", R.drawable.star, R.drawable.star, Element.FIRE, Quality.CARDINAL, RulingPlanet.MARS, RulingHouse.FIRST, "LEO"),
+    TAURUS(R.drawable.taurus_icon, R.drawable.taurus_cons,"The Bull","APR 20", "MAY 20",  R.drawable.star, R.drawable.star, Element.EARTH, Quality.FIXED, RulingPlanet.VENUS_TAURUS, RulingHouse.SECOND, "CAPRICORN"),
+    GEMINI(R.drawable.gemini_icon, R.drawable.gemini_cons,"The Twins","MAY 21", "JUN 20",  R.drawable.star, R.drawable.star, Element.AIR, Quality.MUTABLE, RulingPlanet.MERCURY_GEMINI, RulingHouse.THIRD, "LIBRA"),
+    CANCER(R.drawable.cancer_icon, R.drawable.cancer_cons,"The Crab","JUN 21", "JUL 22",  R.drawable.star, R.drawable.star, Element.WATER, Quality.CARDINAL, RulingPlanet.MOON, RulingHouse.FOURTH, "SCORPIO"),
+    LEO(R.drawable.leo_icon, R.drawable.leo_cons,"The Lion","JUL 23", "AUG 22",  R.drawable.star, R.drawable.star, Element.FIRE, Quality.FIXED, RulingPlanet.SUN, RulingHouse.FIFTH, "SAGITTARIUS"),
+    VIRGO(R.drawable.virgo_icon, R.drawable.virgo_cons,"The Maiden","AUG 23", "SEPT 22",  R.drawable.star, R.drawable.star, Element.EARTH, Quality.MUTABLE, RulingPlanet.MERCURY_VIRGO, RulingHouse.SIXTH,"TAURUS" ),
+    LIBRA(R.drawable.libra_icon, R.drawable.libra_cons,"The Scales","SEPT 23","OCT 22",  R.drawable.star, R.drawable.star, Element.AIR, Quality.CARDINAL, RulingPlanet.VENUS_LIBRA, RulingHouse.SEVENTH, "AQUARIUS"),
+    SCORPIO(R.drawable.scorpio_icon, R.drawable.scorpio_cons,"The Scorpion","OCT 23", "NOV 21",  R.drawable.star, R.drawable.star, Element.WATER, Quality.FIXED, RulingPlanet.PLUTO, RulingHouse.EIGHTH, "PISCES"),
+    SAGITTARIUS(R.drawable.sagittarius_icon, R.drawable.sagittarius_cons,"The Archer","NOV 22", "DEC 21",  R.drawable.star, R.drawable.star, Element.FIRE, Quality.MUTABLE, RulingPlanet.JUPITER, RulingHouse.NINTH, "ARIES"),
+    CAPRICORN(R.drawable.capricorn_icon, R.drawable.capricorn_cons,"The Goat","DEC 22", "JAN 19",  R.drawable.star, R.drawable.star, Element.EARTH, Quality.CARDINAL, RulingPlanet.SATURN, RulingHouse.TENTH, "TAURUS"),
+    AQUARIUS(R.drawable.aquarius_icon, R.drawable.aquarius_cons,"The Water Bearer","JAN 20", "FEB 18",  R.drawable.star, R.drawable.star, Element.AIR, Quality.FIXED, RulingPlanet.URANUS, RulingHouse.ELEVENTH, "GEMINI"),
+    PISCES(R.drawable.pisces_icon, R.drawable.pisces_cons,"The Fish","FEB 19", "MAR 20",  R.drawable.star, R.drawable.star, Element.WATER, Quality.MUTABLE, RulingPlanet.NEPTUNE, RulingHouse.TWELFTH, "CANCER");
 
     fun concatStartEndDates(): String {
         return "$startDate - $endDate"
