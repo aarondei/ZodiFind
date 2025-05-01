@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/starsonlybg">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/burgerButtonGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.0175"
+            android:orientation="horizontal" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/MarginTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/MarginBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.96" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/marginEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/headerStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.055" />
+
+        <TextView
+            android:id="@+id/mainLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAROT READING"
+            android:textColor="@color/white"
+
+            android:textSize="30sp"
+            android:fontFamily="@font/cinzel_black"
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+            app:layout_constraintTop_toBottomOf="@id/headerStart"
+            app:layout_constraintVertical_bias="0.04"
+            />
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/logoBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="mainLogo" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="0.75dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toTopOf="@id/logoBarrier"
+            app:layout_constraintVertical_bias="0.025" />
+
+        <TextView
+            android:id="@+id/tvInstruction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="Select a realm to be read:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toTopOf="@id/dropdown"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <AutoCompleteTextView
+            android:id="@+id/dropdown"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="Choose one"
+
+            android:textColor="@color/white"
+            android:fontFamily="@font/josefinsans_regular"
+
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintBottom_toTopOf="@id/buttonGuide"
+
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintWidth_percent="0.6"
+
+            app:layout_constraintVertical_bias="0.1"
+
+            android:paddingStart="20dp"
+            android:background="@drawable/spinner_background"
+            />
+
+
+        <TextView
+            android:id="@+id/breathe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/cinzel_bold"
+            android:text="breathe."
+
+            android:textColor="@color/white"
+
+            android:textSize="40sp"
+
+            app:layout_constraintBottom_toTopOf="@id/buttonGuide"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@id/dropdown"
+            app:layout_constraintVertical_bias="0.1175"
+            app:layout_constraintWidth_percent="0.5" />
+        <TextView
+            android:id="@+id/breatheSub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/josefinsans_light"
+            android:text="Calm your mind."
+
+            android:textColor="@color/white"
+
+            app:layout_constraintWidth_percent="0.5"
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+            app:layout_constraintEnd_toEndOf="@id/breathe"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/breathe"
+            app:layout_constraintTop_toBottomOf="@id/breathe"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/feel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/cinzel_bold"
+            android:text="feel."
+
+            android:textColor="@color/white"
+
+            android:textSize="40sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@id/breatheSub"
+            app:layout_constraintVertical_bias="0.1175"
+            app:layout_constraintWidth_percent="0.5" />
+        <TextView
+            android:id="@+id/feelSub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/josefinsans_light"
+            android:text="What do you feel inside?"
+
+            android:textColor="@color/white"
+
+            app:layout_constraintWidth_percent="0.5"
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+            app:layout_constraintEnd_toEndOf="@id/breathe"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/breathe"
+            app:layout_constraintTop_toBottomOf="@id/feel"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/ask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/cinzel_bold"
+            android:text="ask."
+
+            android:textColor="@color/white"
+
+            android:textSize="40sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@id/feelSub"
+            app:layout_constraintVertical_bias="0.1175"
+            app:layout_constraintWidth_percent="0.5" />
+        <TextView
+            android:id="@+id/askSub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/josefinsans_light"
+            android:text="Turn it into a question."
+
+            android:textColor="@color/white"
+
+            app:layout_constraintWidth_percent="0.5"
+
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+            app:layout_constraintEnd_toEndOf="@id/breathe"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/breathe"
+            app:layout_constraintTop_toBottomOf="@id/ask"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bottom_nav_fragment_container"
+            android:name="cit.edu.zodifind.fragments.BottomNavFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/burgerMenuIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/burgerButtonGuide" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/buttonGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.83"
+            android:orientation="horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReveal"
+            style="@style/RoundedButton"
+            android:layout_width="0dp"
+
+            android:layout_height="0dp"
+            android:fontFamily="@font/josefinsans_light"
+            android:text="Reveal"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+
+            android:textSize="20sp"
+            app:backgroundTint="@color/midnightBlue"
+            app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+
+            app:layout_constraintHeight_percent="0.075"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toTopOf="@+id/buttonGuide"
+
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintWidth_percent="0.70"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/navigationDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/black" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

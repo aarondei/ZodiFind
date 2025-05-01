@@ -15,9 +15,7 @@ class SplashTarotActivity : BaseActivity() {
 
         val splashscreen = findViewById<ConstraintLayout>(R.id.splash_tarot)
         splashscreen.setOnClickListener(){
-            val intent = Intent(this, SplashPalmistryActivity:: class.java) //TODO CHANGE
-            startActivity(intent)
-            finish()
+            startActivity(Intent(this, TarotHomeActivity:: class.java))
         }
     }
 }
