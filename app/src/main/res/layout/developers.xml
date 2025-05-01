@@ -1,188 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/developersbg">
 
-</RelativeLayout>
-<!--    &lt;!&ndash; transparent container &ndash;&gt;-->
-<!--    <ImageView-->
-<!--        android:id="@+id/border"-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.04"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.96"
+        android:orientation="horizontal" />
 
-<!--        android:layout_width="500dp"-->
-<!--        android:layout_height="400dp"-->
-<!--        android:background="@drawable/border2"-->
-<!--        android:backgroundTint="@color/white"-->
-<!--        android:alpha="0.0"-->
-<!--        />-->
 
-<!--    &lt;!&ndash; meet us banner &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/txtMeetUs"-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.06"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.94"
+        android:orientation="vertical" />
 
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
 
-<!--        android:text="Meet Us"-->
-<!--        android:textSize="50sp"-->
-<!--        android:textColor="@color/white"-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.055"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerSymmetricalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.11"
+        android:orientation="horizontal" />
 
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:fontFamily="@font/righteous"-->
-<!--        />-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/aaronSecGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="599dp" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/back"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/back"-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vjSecGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="327dp" />
 
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:layout_marginLeft="30dp"-->
-<!--        />-->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
 
-<!--    &lt;!&ndash; vj pic &ndash;&gt;-->
-<!--    <ImageView-->
-<!--        android:id="@+id/imgPicOne"-->
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/MarginTop"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.05"
+        />
 
-<!--        android:layout_below="@+id/txtMeetUs"-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="100dp"-->
+        android:text="MEET US"
+        android:textColor="@color/white"
+        android:fontFamily="@font/cinzel_black"
+        android:textSize="30sp"
 
-<!--        android:layout_marginTop="70dp"-->
-<!--        android:layout_marginLeft="50dp"-->
-<!--        android:src="@drawable/profileicon"-->
-<!--        />-->
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/headerSymmetricalStart"
+        app:layout_constraintBottom_toBottomOf="@id/headerSymmetricalStart"
+        />
 
-<!--    &lt;!&ndash; vj name &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/txtNameOne"-->
 
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
+<!--    aaron section-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgAaron"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/pic_aaron"
+        app:civ_border_width="1dp"
+        android:scaleType="centerCrop"
 
-<!--        android:text="Venice Juarez"-->
-<!--        android:textSize="30sp"-->
-<!--        android:textColor="@color/white"-->
+        app:layout_constraintTop_toBottomOf="@id/aaronSecGuide"
+        app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0"
+        />
 
-<!--        android:layout_toRightOf="@+id/imgPicOne"-->
-<!--        android:layout_below="@+id/txtMeetUs"-->
+    <TextView
+        android:id="@+id/tvAaron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:layout_marginTop="55dp"-->
-<!--        android:layout_marginLeft="50dp"-->
-<!--        />-->
+        android:text="@string/aaron"
+        android:textColor="@color/dandelion"
+        android:fontFamily="@font/cinzel_bold"
+        android:textSize="20sp"
 
-<!--    &lt;!&ndash; vj bio &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/txtBioOne"-->
+        app:layout_constraintStart_toEndOf="@id/imgAaron"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/aaronSecGuide"
+        app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
+        app:layout_constraintVertical_bias="0"
+        />
 
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
+    <View
+        android:id="@+id/line"
+        android:layout_width="150dp"
+        android:layout_height="2dp"
+        android:background="@android:color/white"
 
-<!--        android:text="Tech-savvy and design-driven, she loves coding and creating sleek UIs."-->
-<!--        android:textSize="13sp"-->
-<!--        android:textColor="@color/white"-->
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toEndOf="@id/imgAaron"
+        app:layout_constraintTop_toBottomOf="@id/tvAaron"
+        app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
+        app:layout_constraintVertical_bias="0.05"
+        />
 
-<!--        android:layout_toRightOf="@+id/imgPicOne"-->
-<!--        android:layout_below="@+id/txtNameOne"-->
+    <TextView
+        android:id="@+id/tvAaronBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginLeft="53dp"-->
-<!--        android:layout_marginRight="48dp"-->
-<!--        />-->
+        android:text="• Dec 9"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
+        android:textSize="15sp"
 
-<!--    &lt;!&ndash; vj details &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/txtDetailsOne"-->
+        app:layout_constraintStart_toEndOf="@id/imgAaron"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0.2"
+        />
 
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
+    <TextView
+        android:id="@+id/tvAaronSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:text="August 9  •  Leo"-->
-<!--        android:textSize="12sp"-->
-<!--        android:textColor="@color/white"-->
+        android:text="• Sagittarius"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
+        android:textSize="15sp"
 
-<!--        android:layout_toRightOf="@+id/imgPicOne"-->
-<!--        android:layout_below="@+id/txtBioOne"-->
+        app:layout_constraintStart_toEndOf="@id/imgAaron"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvAaronBirth"
+        app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0.25"
+        />
 
-<!--        android:layout_marginTop="18dp"-->
-<!--        android:layout_marginLeft="53dp"-->
-<!--        />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--    &lt;!&ndash; Developer 2 &ndash;&gt;-->
+        android:text="@string/aarondesc"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
+        android:textSize="15sp"
 
-<!--    &lt;!&ndash; aaron pic &ndash;&gt;-->
-<!--    <ImageView-->
-<!--        android:id="@+id/imgPicTwo"-->
+        app:layout_constraintTop_toBottomOf="@id/imgAaron"
+        app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
+        app:layout_constraintStart_toEndOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        />
 
-<!--        android:layout_below="@+id/border"-->
+<!--    vj section-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgVenice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/pic_venice"
+        app:civ_border_width="1dp"
+        android:scaleType="centerCrop"
 
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="100dp"-->
+        app:layout_constraintTop_toBottomOf="@id/vjSecGuide"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0"
+        />
 
-<!--        android:layout_marginTop="70dp"-->
-<!--        android:layout_marginRight="50dp"-->
-<!--        android:layout_alignParentEnd="true"-->
+    <TextView
+        android:id="@+id/tvVenice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:src="@drawable/profileicon"-->
-<!--        />-->
+        android:text="@string/venice"
+        android:textColor="@color/dandelion"
+        android:fontFamily="@font/cinzel_bold"
+        android:textSize="20sp"
 
-<!--    &lt;!&ndash; aaron name &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/txtNameTwo"-->
+        app:layout_constraintStart_toEndOf="@id/imgVenice"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/vjSecGuide"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0"
+        />
 
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
+    <View
+        android:id="@+id/line2"
+        android:layout_width="150dp"
+        android:layout_height="2dp"
+        android:background="@android:color/white"
 
-<!--        android:text="Aaron Jatayna"-->
-<!--        android:textSize="30sp"-->
-<!--        android:textColor="@color/white"-->
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toEndOf="@id/imgVenice"
+        app:layout_constraintTop_toBottomOf="@id/tvVenice"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.05"
+        />
+    <TextView
+        android:id="@+id/tvVeniceBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:layout_toLeftOf="@+id/imgPicTwo"-->
-<!--        android:layout_below="@+id/border"-->
+        android:text="• Aug 9"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
+        android:textSize="15sp"
 
-<!--        android:layout_marginTop="80dp"-->
-<!--        android:layout_marginRight="45dp"-->
-<!--        />-->
+        app:layout_constraintStart_toEndOf="@id/imgVenice"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0.2"
+        />
 
-<!--    &lt;!&ndash; aaron bio &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/txtBioTwo"-->
+    <TextView
+        android:id="@+id/tvVeniceSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
+        android:text="• Leo"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
+        android:textSize="15sp"
 
-<!--        android:text="Logic-lover who enjoys coding-->
-<!--challenges and debugging puzzles."-->
-<!--        android:textSize="13sp"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textAlignment="viewEnd"-->
+        app:layout_constraintStart_toEndOf="@id/imgVenice"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvVeniceBirth"
+        app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0.18"
+        />
 
-<!--        android:layout_toLeftOf="@+id/imgPicTwo"-->
-<!--        android:layout_below="@+id/txtNameTwo"-->
+    <TextView
+        android:id="@+id/tvVeniceDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginRight="48dp"-->
-<!--        android:layout_marginLeft="48dp"-->
-<!--        />-->
+        android:text="@string/venicedesc"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
+        android:textSize="15sp"
 
-<!--    &lt;!&ndash; aaron details &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/txtDetailsTwo"-->
 
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
+        app:layout_constraintTop_toBottomOf="@id/imgVenice"
+        app:layout_constraintBottom_toTopOf="@id/tvCopyright"
+        app:layout_constraintStart_toEndOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        />
 
-<!--        android:text="December 9  •  Sagittarius"-->
-<!--        android:textSize="12sp"-->
-<!--        android:textColor="@color/white"-->
+<!--    misc-->
+    <TextView
+        android:id="@+id/tvCopyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-<!--        android:layout_toLeftOf="@+id/imgPicTwo"-->
-<!--        android:layout_below="@+id/txtBioTwo"-->
+        android:text="@string/zd_copyright"
+        android:textColor="@color/white"
 
-<!--        android:layout_marginTop="18dp"-->
-<!--        android:layout_marginRight="48dp"-->
-<!--        />-->
+        app:layout_constraintTop_toBottomOf="@id/tvVeniceDesc"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="3"
+        />
 
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,9 +5,10 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.R
 
-class DeveloperActivity : Activity() {
+class DeveloperActivity : AppCompatActivity() {
     @Suppress("DEPRECATION")
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,11 +16,10 @@ class DeveloperActivity : Activity() {
         setContentView(R.layout.developers)
 
 
-//        val btnBack = findViewById<ImageView>(R.id.btnBack)
-//        btnBack.setOnClickListener(){
-//            val intent = Intent(this, SettingsActivity:: class.java)
-//            startActivity(intent)
-//            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
-//        }
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+        btnBack.setOnClickListener(){
+            finish()
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+        }
     }
 }

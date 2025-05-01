@@ -98,6 +98,7 @@
 
 
     <ImageView
+        android:id="@+id/imgEditPic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_edit"
@@ -105,7 +106,7 @@
         app:layout_constraintStart_toEndOf="@id/marginStart"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintTop_toTopOf="@id/imgPfp"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.7"
 
         />
 
@@ -157,7 +158,7 @@
         app:layout_constraintVertical_bias="0"
         tools:layout_editor_absoluteX="-27dp"
         />
-    
+
     <View
         android:id="@+id/detail_sec"
         android:layout_width="337dp"
@@ -264,7 +265,7 @@
         />
 
     <ImageView
-        android:id="@+id/editAbout"
+        android:id="@+id/imgEditBio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_edit"
@@ -283,7 +284,7 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
 
-        android:text="@string/lorem"
+        android:text="Edit profile to add bio."
         android:textColor="@color/white"
         android:fontFamily="@font/josefinsans_regular"
 
@@ -355,6 +356,7 @@
 <!--    arrows-->
 
     <ImageView
+        android:id="@+id/imgToEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/next"
