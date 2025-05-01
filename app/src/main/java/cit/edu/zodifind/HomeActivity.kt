@@ -40,11 +40,23 @@ class HomeActivity : BaseActivity() {
             }
         }
 
+
+        // features
+        val btnAstrology = findViewById<ImageView>(R.id.rhombusAstrology)
+        val btnTarot = findViewById<ImageView>(R.id.rhombusTarot)
         val btnPalmistry = findViewById<ImageView>(R.id.rhombusPalm)
-            btnPalmistry.setOnClickListener(){
-                val intent = Intent(this, SplashPalmistryActivity:: class.java)
-                startActivity(intent)
-            }
+
+        btnAstrology.setOnClickListener {
+            startActivity(Intent(this, SplashAstrologyActivity:: class.java))
+        }
+        btnTarot.setOnClickListener {
+            startActivity(Intent(this, SplashTarotActivity:: class.java))
+        }
+        btnPalmistry.setOnClickListener {
+            startActivity(Intent(this, SplashPalmistryActivity:: class.java))
+        }
+
+
     }
 
     // Override onBackPressed to handle closing the drawer with the back button

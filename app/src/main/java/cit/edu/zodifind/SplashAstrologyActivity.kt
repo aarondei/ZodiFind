@@ -15,7 +15,7 @@ class SplashAstrologyActivity : BaseActivity() {
         splashscreen.setOnClickListener(){
             val intent = Intent(this, SplashTarotActivity:: class.java) //TODO CHANGE
             startActivity(intent)
-            finish()
+
         }
 
     }

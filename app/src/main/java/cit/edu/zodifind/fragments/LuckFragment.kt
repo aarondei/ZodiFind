@@ -67,16 +67,16 @@ class LuckFragment : Fragment() {
         binding.tvLuckyDescription.text = getString(pastCard.pastMeaning) // Display past meaning
     }
 
-    private fun shareResult(prediction:String) {
-        val sendIntent:Intent = Intent().apply {
-            action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, prediction)
-            type = "text/plain"
-        }
-
-        val shareIntent = Intent.createChooser(sendIntent, null)
-        startActivity(sendIntent)
-    }
+//    private fun shareResult(prediction:String) {
+//        val sendIntent:Intent = Intent().apply {
+//            action = Intent.ACTION_SEND
+//            putExtra(Intent.EXTRA_TEXT, prediction)
+//            type = "text/plain"
+//        }
+//
+//        val shareIntent = Intent.createChooser(sendIntent, null)
+//        startActivity(sendIntent)
+//    }
 
     private fun initListeners() {
         binding.ivRoulette.setOnClickListener { spinRoulette() }
@@ -229,7 +229,7 @@ class LuckFragment : Fragment() {
             currentStep++
             showCurrentStep() // Show the next card and update the header
         } else {
-            // Optional: maybe show a "Done" or disable clicking after the last card
+            requireActivity().onBackPressed()
         }
     }
 

@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import cit.edu.zodifind.DeveloperActivity
 import cit.edu.zodifind.HomeActivity
+import cit.edu.zodifind.LoginActivity
 import cit.edu.zodifind.ProfileActivity
 import cit.edu.zodifind.R
 import cit.edu.zodifind.SettingsActivity
+import cit.edu.zodifind.app.ZodiFindApplication
 
 class MenuFragment : Fragment() {
 
@@ -23,6 +25,9 @@ class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val app = requireActivity().application as ZodiFindApplication
+
         view.findViewById<View>(R.id.menuProfile)?.setOnClickListener {
             val intent = Intent(requireContext(), ProfileActivity::class.java)
             startActivity(intent)
@@ -39,7 +44,9 @@ class MenuFragment : Fragment() {
             true
         }
         view.findViewById<View>(R.id.menuLogout)?.setOnClickListener {
-            // TODO Handle logout click
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            app.logout()
+            startActivity(intent)
         }
     }
 
