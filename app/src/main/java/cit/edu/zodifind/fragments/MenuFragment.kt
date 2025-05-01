@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import cit.edu.zodifind.DeveloperActivity
 import cit.edu.zodifind.HomeActivity
 import cit.edu.zodifind.ProfileActivity
 import cit.edu.zodifind.R
@@ -28,7 +29,9 @@ class MenuFragment : Fragment() {
             true
         }
         view.findViewById<View>(R.id.menuDevelopers)?.setOnClickListener {
-            // TODO Handle developers click
+            val intent = Intent(requireContext(), DeveloperActivity::class.java)
+            startActivity(intent)
+            true
         }
         view.findViewById<View>(R.id.menuSettings)?.setOnClickListener {
             val intent = Intent(requireContext(), SettingsActivity::class.java)

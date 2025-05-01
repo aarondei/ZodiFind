@@ -29,16 +29,23 @@ class SettingsActivity : Activity() {
         }
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
-        btnBack.setOnClickListener(){
-            val intent = Intent(this, ProfileActivity:: class.java)
-            intent.putExtra("username", tvName.text.toString())
-            startActivity(intent)
+        btnBack.setOnClickListener {
+            val resultIntent = Intent()
+            resultIntent.putExtra("username", tvName.text.toString())
+            setResult(RESULT_OK, resultIntent)
+            finish()
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
         val btnAbout = findViewById<ImageView>(R.id.btnToAbout)
         btnAbout.setOnClickListener(){
             val intent = Intent(this, AboutZodifindActivity:: class.java)
+            startActivity(intent)
+        }
+
+        val btnDev = findViewById<ImageView>(R.id.btnToDev)
+        btnDev.setOnClickListener(){
+            val intent = Intent(this, DeveloperActivity:: class.java)
             startActivity(intent)
         }
     }
