@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 
-class SettingsActivity : Activity() {
+class SettingsActivity : BaseActivity() {
     @SuppressLint("MissingInflatedId")
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {

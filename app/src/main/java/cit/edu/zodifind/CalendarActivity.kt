@@ -11,7 +11,7 @@ import androidx.fragment.app.commit
 import cit.edu.zodifind.fragments.MenuFragment
 import java.util.Calendar
 
-class CalendarActivity : AppCompatActivity() {
+class CalendarActivity : BaseActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var burgerMenuIcon: ImageView

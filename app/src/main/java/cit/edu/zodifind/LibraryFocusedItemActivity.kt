@@ -8,7 +8,7 @@ import cit.edu.zodifind.data.CapturedZodiacTempObject
 import cit.edu.zodifind.data.astrology.ZodiacSign
 import cit.edu.zodifind.fragments.LibraryFocusedItemFragment
 
-class LibraryFocusedItemActivity : AppCompatActivity() {
+class LibraryFocusedItemActivity : BaseActivity() {
 
     private lateinit var key: String
     override fun onCreate(savedInstanceState: Bundle?) {

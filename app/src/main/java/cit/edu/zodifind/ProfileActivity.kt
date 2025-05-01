@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.io.IOException
 
-class ProfileActivity : AppCompatActivity() {
+class ProfileActivity : BaseActivity() {
     private lateinit var tvName: TextView
     private lateinit var tvBio: TextView
     private lateinit var imgPfp: ImageView

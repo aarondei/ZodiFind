@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.app.ZodiFindApplication
 import cit.edu.zodifind.fragments.RotatingStarFragment
 
-class VerificationSecondActivity : AppCompatActivity() {
+class VerificationSecondActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.verification_second)

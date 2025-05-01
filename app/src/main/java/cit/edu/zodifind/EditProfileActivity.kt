@@ -21,7 +21,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import java.io.IOException
 
-class EditProfileActivity : AppCompatActivity() {
+class EditProfileActivity : BaseActivity() {
 
     private lateinit var etEditName: EditText
     private lateinit var etEditBio: EditText
