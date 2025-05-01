@@ -7,26 +7,89 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_marginTop="18dp">
 
         <TextView
-            android:id="@+id/factsTitle"
+            android:id="@+id/factsAstronomicalTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/josefinsans_semibold"
             android:text="Astronomical Facts"
             android:textColor="@android:color/white"
             android:textSize="20sp"
+            android:textAlignment="center"
             android:layout_marginBottom="16dp" />
 
         <TextView
-            android:id="@+id/factsList"
+            android:id="@+id/factsAstronomicalList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/josefinsans_light"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:lineSpacingExtra="12dp" />
+            android:textSize="17sp"
+            android:lineSpacingExtra="12dp"
+            android:layout_marginBottom="40dp"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="25dp"
+           />
+
+        <TextView
+            android:id="@+id/factsSymbolismsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefinsans_semibold"
+            android:text="Symbolisms"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/factsSymbolismsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefinsans_light"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:lineSpacingExtra="12dp"
+            android:layout_marginBottom="40dp"/>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="25dp"
+            />
+
+        <TextView
+            android:id="@+id/factsPersonalityTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefinsans_semibold"
+            android:text="Personality Traits"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/factsPersonalityList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefinsans_light"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:lineSpacingExtra="12dp"
+            android:layout_marginBottom="25dp"/>
 
     </LinearLayout>
+
+
 </ScrollView>

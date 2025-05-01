@@ -31,11 +31,13 @@ class FactsFragment : Fragment() {
             }
         }
 
-        val factsTitle = view.findViewById<TextView>(R.id.factsTitle)
-        val factsList = view.findViewById<TextView>(R.id.factsList)
+        val factsAstronomicalList = view.findViewById<TextView>(R.id.factsAstronomicalList)
+        val factsSymbolismsList = view.findViewById<TextView>(R.id.factsSymbolismsList)
+        val factsPersonalityList = view.findViewById<TextView>(R.id.factsPersonalityList)
 
-        factsTitle.text = "Astronomical Facts"
-        factsList.text = getZodiacFacts(zodiacSign)
+        factsAstronomicalList.text = getString(zodiacSign.astronomicalFacts)
+        factsSymbolismsList.text = getString(zodiacSign.symbolismsFacts)
+        factsPersonalityList.text = getString(zodiacSign.personalityFacts)
     }
 
     private fun getZodiacFacts(sign: ZodiacSign): String {
