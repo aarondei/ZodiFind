@@ -31,10 +31,9 @@ class LibraryFocusedItemFragment : Fragment() {
         val zodiac = key?.let { ZodiacSign.valueOf(it) }
 
         if (zodiac != null) {
-            tvZodiacFocusedItemName.text = zodiac.name
-        }
-        if (zodiac != null) {
+            tvZodiacFocusedItemName.text = "HELLO"
             tvZodiacFocusedItemTitle.text = zodiac.representation
         }
+
     }
 }
