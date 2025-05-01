@@ -15,7 +15,7 @@ import cit.edu.zodifind.fragments.MenuFragment
 import cit.edu.zodifind.fragments.ZodiacListFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class LibraryActivity : AppCompatActivity() {
+class LibraryActivity : BaseActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var burgerMenuIcon: ImageView

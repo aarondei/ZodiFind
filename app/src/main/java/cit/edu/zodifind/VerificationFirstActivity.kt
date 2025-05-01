@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.app.ZodiFindApplication
 import cit.edu.zodifind.fragments.DatePickerFragment
 
-class VerificationFirstActivity : AppCompatActivity() {
+class VerificationFirstActivity : BaseActivity() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("SetTextI18n")

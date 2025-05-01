@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var burgerMenuIcon: ImageView
 
