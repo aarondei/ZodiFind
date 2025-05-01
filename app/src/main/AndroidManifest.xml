@@ -27,6 +27,12 @@
         <activity
             android:name=".TarotHomeActivity"
             android:exported="false" />
+      <activity
+            android:name=".PalmistryCameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PalmistryLibraryActivity"
+            android:exported="false" />
         <activity
             android:name=".FaqActivity"
             android:exported="false" />

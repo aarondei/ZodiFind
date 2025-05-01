@@ -15,7 +15,7 @@ class SplashPalmistryActivity : BaseActivity() {
 
         val splashscreen = findViewById<ConstraintLayout>(R.id.splash_palmistry)
         splashscreen.setOnClickListener(){
-            val intent = Intent(this, HomeActivity:: class.java) //TODO CHANGE
+            val intent = Intent(this, PalmistryLibraryActivity:: class.java) //TODO CHANGE
             startActivity(intent)
             finish()
         }

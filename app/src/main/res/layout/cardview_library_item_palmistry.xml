@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="25dp"
+    android:background="@android:color/transparent"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="25dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/cardview">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/tvPalmName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GIRDLE OF VENUS"
+                android:fontFamily="@font/cinzel_bold"
+                android:textSize="20sp"
+                android:textColor="#FFA500"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgPalm"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/girdleofvenus_domain"
+            android:contentDescription="Zodiac Image"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center_vertical|end" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
