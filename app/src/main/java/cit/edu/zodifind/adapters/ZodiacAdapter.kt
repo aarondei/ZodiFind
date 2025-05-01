@@ -9,11 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import cit.edu.zodifind.R
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import cit.edu.zodifind.LibraryFocusedItemActivity
-import cit.edu.zodifind.data.CapturedZodiacTempObject
 
 import cit.edu.zodifind.data.astrology.ZodiacSign
 
@@ -46,7 +43,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
                 }
 
                 activity.supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
+                    .replace(R.id.drawerLayout, fragment)
                     .addToBackStack(null)
                     .commit()
             }
@@ -74,7 +71,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
         val item = zodiacList[position]
         holder.imageZodiac.setImageResource(item.faceIcon)
         holder.tvZodiacName.text = item.name
-        holder.tvZodiacDate.text = item.concatStartEndDates()
+        holder.tvZodiacDate.text = item.concatStartEndDatesCapsCase()
     }
 
     override fun getItemCount(): Int = zodiacList.size

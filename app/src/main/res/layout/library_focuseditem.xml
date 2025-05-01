@@ -60,19 +60,20 @@
         app:layout_constraintGuide_percent="0.22"
         android:orientation="horizontal" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/rotatingStarFragmentContainer"
-        android:name="cit.edu.zodifind.fragments.RotatingStarFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
 
-        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHeight_percent="0.4"
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/rotatingStarFragmentContainer"-->
+<!--        android:name="cit.edu.zodifind.fragments.RotatingStarFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
 
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toTopOf="@+id/MarginTop"
-        app:layout_constraintVertical_bias="0" />
+<!--        app:layout_constraintBottom_toBottomOf="@id/MarginBottom"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/marginEnd"-->
+<!--        app:layout_constraintHeight_percent="0.4"-->
+
+<!--        app:layout_constraintStart_toStartOf="@id/marginStart"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/MarginTop"-->
+<!--        app:layout_constraintVertical_bias="0" />-->
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/libraryFocusedItemFragment"
@@ -82,7 +83,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rotatingStarFragmentContainer"/>
+       />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/bottom_nav_fragment_container"

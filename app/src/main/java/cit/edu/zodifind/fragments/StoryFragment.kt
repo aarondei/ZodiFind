@@ -34,8 +34,8 @@ class StoryFragment : Fragment() {
         val storyTitle = view.findViewById<TextView>(R.id.storyTitle)
         val storyContent = view.findViewById<TextView>(R.id.storyContent)
 
-        storyTitle.text = "The Story of ${zodiacSign.name}"
-        storyContent.text = getZodiacStory(zodiacSign)
+        storyTitle.text = getString(zodiacSign.storyTitle)
+        storyContent.text = getString(zodiacSign.storyContent)
     }
 
     private fun getZodiacStory(sign: ZodiacSign): String {

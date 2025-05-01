@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_palmistry"
+    android:background="@drawable/calculatorbg">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/burgerButtonGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.0175"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.04"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/MarginBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.96"
+        android:orientation="horizontal" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.06"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.94"
+        android:orientation="vertical" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.055"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerSymmetricalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.11"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerEndGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.22"
+        android:orientation="horizontal" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/headerSymmetricalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.92"
+        android:orientation="horizontal" />
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/burgerButtonGuide" />
+
+    <View
+        android:id="@+id/splash_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/splash_card"
+
+        app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
+        app:layout_constraintBottom_toBottomOf="@id/headerSymmetricalEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        />
+
+    <ImageView
+        android:id="@+id/splash_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:src="@drawable/palmistry_icon"
+
+        app:layout_constraintBottom_toTopOf="@id/headerSymmetricalEnd"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHeight_percent="0.36"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.6"
+
+
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+
+        app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/splash_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/cinzel_bold"
+        android:text="PALMISTRY"
+        android:textAlignment="center"
+        android:textColor="@color/dandelion"
+
+        android:textSize="37sp"
+
+        app:layout_constraintBottom_toBottomOf="@id/headerSymmetricalEnd"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/splash_icon"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="0.75dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/splash_title"
+        app:layout_constraintVertical_bias="0.05"
+
+        app:layout_constraintWidth_percent="0.6"
+        />
+
+    <TextView
+        android:id="@+id/splash_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toBottomOf="@id/headerSymmetricalEnd"
+        app:layout_constraintStart_toStartOf="@id/line"
+        app:layout_constraintEnd_toEndOf="@id/line"
+
+        app:layout_constraintVertical_bias="0.25"
+
+        android:text="@string/splash_palmistry_content"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_light"
+        android:textAlignment="center"
+        android:lineSpacingExtra="6dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

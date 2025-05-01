@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
@@ -20,6 +21,7 @@ class ViewPagerFragment : Fragment() {
     private lateinit var zodiacName: TextView
     private lateinit var zodiacTitle: TextView
     private lateinit var zodiacSign: ZodiacSign
+    private lateinit var zodiacImgSketch: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,10 +51,12 @@ class ViewPagerFragment : Fragment() {
         tabFacts = view.findViewById(R.id.tab_facts)
         zodiacName = view.findViewById(R.id.tvZodiacFocusedItemName)
         zodiacTitle = view.findViewById(R.id.tvZodiacFocusedItemTitle)
+        zodiacImgSketch = view.findViewById(R.id.imgSketch)
 
         // Set zodiac info
         zodiacName.text = zodiacSign.name
         zodiacTitle.text = zodiacSign.representation
+        zodiacImgSketch.setImageResource(zodiacSign.sketchIcon)
 
         // Setup ViewPager
         setupViewPager()

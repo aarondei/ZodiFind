@@ -22,10 +22,20 @@
         android:theme="@style/Theme.ZodiFind"
         tools:targetApi="31">
         <activity
+
             android:name=".FaqActivity"
             android:exported="false" />
         <activity
             android:name=".ui.theme.FaqActivity"
+
+            android:name=".SplashPalmistryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashTarotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashAstrologyActivity"
+
             android:exported="false" />
         <activity
             android:name=".EditProfileActivity"
