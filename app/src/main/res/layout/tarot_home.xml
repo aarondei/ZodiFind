@@ -66,7 +66,7 @@
             android:text="TAROT READING"
             android:textColor="@color/white"
 
-            android:textSize="30sp"
+            android:textSize="36sp"
             android:fontFamily="@font/cinzel_black"
             app:layout_constraintStart_toEndOf="@id/marginStart"
             app:layout_constraintEnd_toEndOf="@id/marginEnd"
@@ -109,31 +109,32 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/marginStart"
             app:layout_constraintTop_toBottomOf="@+id/line"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.6" />
+
 
         <AutoCompleteTextView
             android:id="@+id/dropdown"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:hint="Choose one"
+            android:background="@drawable/spinner_background"
 
-            android:textColor="@color/white"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+
             android:fontFamily="@font/josefinsans_regular"
+            android:hint="Choose one"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
 
-            app:layout_constraintStart_toStartOf="@id/marginStart"
-            app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintTop_toBottomOf="@id/line"
             app:layout_constraintBottom_toTopOf="@id/buttonGuide"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
 
             app:layout_constraintHeight_percent="0.06"
-            app:layout_constraintWidth_percent="0.6"
-
-            app:layout_constraintVertical_bias="0.1"
-
-            android:paddingStart="20dp"
-            android:background="@drawable/spinner_background"
-            />
-
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintVertical_bias="0.133"
+            app:layout_constraintWidth_percent="0.7" />
 
         <TextView
             android:id="@+id/breathe"
@@ -274,9 +275,8 @@
             android:id="@+id/buttonGuide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_begin="0dp"
-            app:layout_constraintGuide_percent="0.83"
-            android:orientation="horizontal" />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.81" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnReveal"

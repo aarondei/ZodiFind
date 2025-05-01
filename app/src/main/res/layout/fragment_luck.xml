@@ -48,7 +48,7 @@
         android:id="@+id/prediction"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="40dp"
+
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="0.75dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/tvLuckyTexts"
+            app:layout_constraintEnd_toEndOf="@id/ivLuckyCard"
+            app:layout_constraintStart_toStartOf="@id/ivLuckyCard"
+            app:layout_constraintTop_toBottomOf="@id/ivLuckyCard"
+            app:layout_constraintVertical_bias="0.5"
+            />
 
         <LinearLayout
             android:id="@+id/tvLuckyTexts"
@@ -93,6 +106,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivLuckyCard" />
 
+
             <TextView
                 android:id="@+id/tvLuckyDescription"
                 android:fontFamily="@font/josefinsans_light"
@@ -103,11 +117,13 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="18sp"
+                android:lineSpacingExtra="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvLuckyTexts" />
         </LinearLayout>
+
 
         <TextView
             android:id="@+id/tvCardHeader"
@@ -115,7 +131,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/tr"
             android:textSize="14sp"
             android:fontFamily="@font/cinzel_semibold"
             android:textAllCaps="true"
