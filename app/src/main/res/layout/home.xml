@@ -182,7 +182,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:fontFamily="@font/josefinsans_regular"
+            android:fontFamily="@font/josefinsans_light"
             android:padding="1dp"
             android:text="@string/astrology"
             android:textColor="@color/white"
@@ -246,7 +246,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:fontFamily="@font/josefinsans_regular"
+            android:fontFamily="@font/josefinsans_light"
             android:text="@string/tarot"
             android:textColor="@color/white"
             android:textSize="15sp"
@@ -312,7 +312,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:fontFamily="@font/josefinsans_regular"
+            android:fontFamily="@font/josefinsans_light"
             android:padding="1dp"
             android:text="@string/palmistry"
             android:textColor="@color/white"
@@ -336,6 +336,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/black" />
-    
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
