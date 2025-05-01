@@ -11,7 +11,7 @@ import android.widget.Toast
 import cit.edu.zodifind.app.ZodiFindApplication
 import cit.edu.zodifind.data.User
 
-class LoginActivity : Activity() {
+class LoginActivity : BaseActivity() {
 
     @Suppress("DEPRECATION")
     @SuppressLint("MissingInflatedId")
