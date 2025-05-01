@@ -1,5 +1,6 @@
 package cit.edu.zodifind
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class SettingsActivity : Activity() {
+    @SuppressLint("MissingInflatedId")
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,12 @@ class SettingsActivity : Activity() {
             intent.putExtra("username", tvName.text.toString())
             startActivity(intent)
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+        }
+
+        val btnAbout = findViewById<ImageView>(R.id.btnToAbout)
+        btnAbout.setOnClickListener(){
+            val intent = Intent(this, AboutZodifindActivity:: class.java)
+            startActivity(intent)
         }
     }
 }

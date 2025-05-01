@@ -1,21 +1,43 @@
 package cit.edu.zodifind
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.widget.CalendarView
+import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.commit
+import cit.edu.zodifind.fragments.MenuFragment
 import java.util.Calendar
 
 class CalendarActivity : AppCompatActivity() {
+
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var burgerMenuIcon: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.calendar)
+        setContentView(R.layout.calendar) // Use the layout with DrawerLayout
+
+        // Initialize DrawerLayout and burger menu icon
+        drawerLayout = findViewById(R.id.drawerLayout)
+        burgerMenuIcon = findViewById(R.id.burgerMenuIcon)
+
+        // Add the MenuDrawerFragment to the navigationDrawer FrameLayout
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                add(R.id.navigationDrawer, MenuFragment.newInstance())
+            }
+        }
+
+        burgerMenuIcon.setOnClickListener {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START)
+            }
+        }
 
         val calendarView = findViewById<CalendarView>(R.id.calendarView)
         val zodiacText = findViewById<TextView>(R.id.tvZodiacSeason)
@@ -23,23 +45,28 @@ class CalendarActivity : AppCompatActivity() {
         //setting calendar to current date
         calendarView.date = System.currentTimeMillis()
 
-
         //updates what zodiac season based on current date
         val calendar = Calendar.getInstance()
         val todayMonth = calendar.get(Calendar.MONTH) + 1
         val todayDay = calendar.get(Calendar.DAY_OF_MONTH)
         zodiacText.text = getZodiacSign(todayMonth, todayDay)
 
-        calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
+        calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val season = getZodiacSign(month + 1, dayOfMonth) // month is 0-based
             zodiacText.text = season
         }
+    }
 
-
+    override fun onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
     }
 
     //function to get season
-    fun getZodiacSign(month: Int, day: Int): String {
+    private fun getZodiacSign(month: Int, day: Int): String {
         return when {
             month == 3 && day >= 21 || month == 4 && day <= 19 -> "ARIES SEASON"
             month == 4 && day >= 20 || month == 5 && day <= 20 -> "TAURUS SEASON"

@@ -58,6 +58,7 @@ android {
 
 dependencies {
 
+
     //Camera X
     val cameraVersion = "1.2.3"
     implementation("androidx.camera:camera-core:${cameraVersion}")
@@ -65,6 +66,9 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:${cameraVersion}")
     implementation("androidx.camera:camera-view:${cameraVersion}")
     implementation("androidx.camera:camera-extensions:${cameraVersion}")
+
+
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 
     implementation("com.github.commandiron:WheelPickerCompose:1.1.11")
 
@@ -94,4 +98,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 }
