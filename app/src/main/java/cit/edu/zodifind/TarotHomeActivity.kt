@@ -45,11 +45,5 @@ class TarotHomeActivity : AppCompatActivity() {
             }
         }
 
-
-//        val items = listOf("Option 1", "Option 2", "Option 3")
-//        val adapter = ArrayAdapter(this, R.layout.dropdown_item, items)
-//        val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.dropdownField)
-//        autoCompleteTextView.setAdapter(adapter)
-
     }
 }
