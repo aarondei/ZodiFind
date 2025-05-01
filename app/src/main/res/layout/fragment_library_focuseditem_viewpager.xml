@@ -7,6 +7,14 @@
     android:background="@drawable/starsonlybg">
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/burgerButtonGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.0175"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/MarginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,6 +47,15 @@
         android:orientation="vertical" />
 
     <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/burgerButtonGuide" />
+
+    <ImageView
         android:id="@+id/imgSketch"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -59,93 +76,109 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/cinzel_bold"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
+        android:textColor="@color/dandelion"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/imgSketch"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0"
         tools:text="ZODIAC" />
 
     <TextView
         android:id="@+id/tvZodiacFocusedItemTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
+        android:textColor="@color/dandelion"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@+id/tvZodiacFocusedItemName"
+        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
+        app:layout_constraintVertical_bias="0"
         tools:text="The Title"
         android:fontFamily="@font/josefinsans_regular"/>
 
-    <View
-        android:id="@+id/lineTop"
-        android:layout_width="0dp"
-        android:layout_height="0.75dp"
-        android:background="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@id/tvZodiacFocusedItemTitle"
-        app:layout_constraintBottom_toTopOf="@id/tabLayout"
-        app:layout_constraintVertical_bias="1" />
+
+
 
     <LinearLayout
         android:id="@+id/tabLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:weightSum="3"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvZodiacFocusedItemTitle"
-        app:layout_constraintBottom_toTopOf="@id/lineBottom"
-        app:layout_constraintVertical_bias="0.075">
+        app:layout_constraintTop_toBottomOf="@+id/tvZodiacFocusedItemName"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.175">
 
-        <TextView
-            android:id="@+id/tab_story"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingVertical="16dp"
-            android:text="Story"
-            android:textColor="@android:color/white"
-            android:fontFamily="@font/josefinsans_light"
-            android:textSize="16sp" />
+        <View
+            android:id="@+id/lineTop"
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@android:color/white"
+            />
 
-        <TextView
-            android:id="@+id/tab_details"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingVertical="16dp"
-            android:text="Details"
-            android:textColor="@color/white"
-            android:fontFamily="@font/josefinsans_light"
-            android:textSize="16sp" />
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
 
-        <TextView
-            android:id="@+id/tab_facts"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:paddingVertical="16dp"
-            android:text="Facts"
-            android:textColor="@color/white"
-            android:fontFamily="@font/josefinsans_light"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tab_story"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="Story"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/josefinsans_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tab_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="Details"
+                android:textColor="@color/white"
+                android:fontFamily="@font/josefinsans_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tab_facts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="Facts"
+                android:textColor="@color/white"
+                android:fontFamily="@font/josefinsans_light"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lineBottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
     </LinearLayout>
 
-    <View
-        android:id="@+id/lineBottom"
-        android:layout_width="0dp"
-        android:layout_height="0.75dp"
-        android:background="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/zodiacViewPager"

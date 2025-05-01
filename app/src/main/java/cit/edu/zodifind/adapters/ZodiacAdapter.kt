@@ -9,11 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import cit.edu.zodifind.R
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import cit.edu.zodifind.LibraryFocusedItemActivity
-import cit.edu.zodifind.data.CapturedZodiacTempObject
 
 import cit.edu.zodifind.data.astrology.ZodiacSign
 
@@ -39,6 +36,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
                 val selectedZodiac = zodiacList[position]
 
                 val activity = view.context as AppCompatActivity
+
                 val fragment = ViewPagerFragment().apply {
                     arguments = Bundle().apply {
                         putString("zodiac_sign", selectedZodiac.name)
@@ -46,7 +44,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
                 }
 
                 activity.supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
+                    .replace(R.id.drawerLayout, fragment)
                     .addToBackStack(null)
                     .commit()
             }
