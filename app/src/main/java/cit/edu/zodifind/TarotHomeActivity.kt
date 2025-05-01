@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class TarotHomeActivity : AppCompatActivity() {
+class TarotHomeActivity : BaseActivity() {
 
     private var selectedItem: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
