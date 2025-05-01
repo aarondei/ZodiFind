@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="250dp"
+    android:layout_width="300dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/black"> <View
     android:layout_width="match_parent"
     android:layout_height="1dp"
     android:background="#1AFFFFFF"
-    android:layout_marginBottom="24dp" />
+    android:layout_marginBottom="24dp"
+    />
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:layout_marginTop="40dp" />
 
     <LinearLayout
         android:id="@+id/menuProfile"
@@ -15,6 +23,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
+        android:paddingStart="25dp"
+        android:layout_marginTop="15dp"
         android:gravity="center_vertical">
         <ImageView
             android:layout_width="wrap_content"
@@ -27,6 +37,8 @@
             android:layout_weight="1"
             android:text="Profile"
             android:textColor="@android:color/white"
+            android:fontFamily="@font/josefinsans_regular"
+            android:paddingStart="10dp"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -36,6 +48,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
+        android:paddingStart="25dp"
         android:gravity="center_vertical">
         <ImageView
             android:layout_width="wrap_content"
@@ -47,7 +60,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Developers"
+            android:paddingStart="10dp"
             android:textColor="@android:color/white"
+            android:fontFamily="@font/josefinsans_regular"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -57,6 +72,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
+        android:paddingStart="25dp"
         android:gravity="center_vertical">
         <ImageView
             android:layout_width="wrap_content"
@@ -69,12 +85,15 @@
             android:layout_weight="1"
             android:text="Settings"
             android:textColor="@android:color/white"
+            android:fontFamily="@font/josefinsans_regular"
+            android:paddingStart="10dp"
             android:textSize="18sp" />
     </LinearLayout>
 
     <View
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="1dp"
+        android:layout_gravity="center"
         android:background="#FFFFFF"
         android:layout_marginTop="350dp" />
 
@@ -84,6 +103,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
+        android:paddingStart="25dp"
+        android:layout_marginTop="15dp"
         android:gravity="center_vertical">
 
         <ImageView
@@ -97,6 +118,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Log Out"
+            android:paddingStart="10dp"
+            android:fontFamily="@font/josefinsans_regular"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             />
