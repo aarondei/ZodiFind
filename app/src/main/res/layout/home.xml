@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +9,7 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+    
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -143,8 +145,8 @@
 
             app:layout_constraintStart_toEndOf="@id/marginStart"
             app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintTop_toBottomOf="@id/astrologyGuide"
-            app:layout_constraintBottom_toTopOf="@id/tarotGuide"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:layout_constraintBottom_toTopOf="@id/rhombusTarot"
             />
 
         <ImageView
@@ -153,12 +155,12 @@
             android:layout_height="122dp"
             android:src="@drawable/card_astrology"
 
-            app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintStart_toEndOf="@id/tvAstrologyDesc"
-            app:layout_constraintTop_toBottomOf="@id/astrologyGuide"
-            app:layout_constraintBottom_toTopOf="@id/tarotGuide"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintVertical_bias="0.99"
+            app:layout_constraintEnd_toEndOf="@id/rhombusAstrology"
+
+            app:layout_constraintTop_toTopOf="@id/rhombusAstrology"
+            app:layout_constraintBottom_toBottomOf="@id/rhombusAstrology"
+
+
             />
 
         <TextView
@@ -171,10 +173,10 @@
             android:fontFamily="@font/cinzel_black"
             android:textSize="20sp"
 
-            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintStart_toStartOf="@id/rhombusAstrology"
             app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintTop_toBottomOf="@id/astrologyGuide"
-            app:layout_constraintBottom_toTopOf="@id/tarotGuide"
+            app:layout_constraintTop_toTopOf="@id/rhombusAstrology"
+            app:layout_constraintBottom_toBottomOf="@id/rhombusAstrology"
             app:layout_constraintVertical_bias="0.3"
             app:layout_constraintHorizontal_bias="0.1"
             />
@@ -190,12 +192,11 @@
             android:textColor="@color/white"
             android:textSize="15sp"
 
-            app:layout_constraintBottom_toTopOf="@id/tarotGuide"
-            app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintStart_toEndOf="@id/marginStart"
+
+
+            app:layout_constraintStart_toStartOf="@id/tvAstrology"
             app:layout_constraintTop_toBottomOf="@id/tvAstrology"
-            app:layout_constraintVertical_bias="0"
-            app:layout_constraintHorizontal_bias="0.1"
+
             />
 
 <!--tarot card-->
@@ -207,8 +208,8 @@
 
             app:layout_constraintStart_toEndOf="@id/marginStart"
             app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintTop_toBottomOf="@id/tarotGuide"
-            app:layout_constraintBottom_toTopOf="@id/palmistryGuide"
+            app:layout_constraintTop_toBottomOf="@id/rhombusAstrology"
+            app:layout_constraintBottom_toTopOf="@id/rhombusPalm"
             />
 
         <ImageView
@@ -218,11 +219,11 @@
             android:src="@drawable/card_tarot"
 
             app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintStart_toStartOf="@id/rhombusTarot"
             app:layout_constraintTop_toBottomOf="@id/tarotGuide"
-            app:layout_constraintBottom_toTopOf="@id/palmistryGuide"
+            app:layout_constraintBottom_toBottomOf="@id/rhombusTarot"
             app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintVertical_bias="0.55"
+            app:layout_constraintVertical_bias="1"
             />
 
         <TextView
@@ -236,9 +237,9 @@
             android:textSize="20sp"
 
             app:layout_constraintStart_toEndOf="@id/marginStart"
-            app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintTop_toBottomOf="@id/tarotGuide"
-            app:layout_constraintBottom_toTopOf="@id/palmistryGuide"
+            app:layout_constraintEnd_toEndOf="@id/rhombusTarot"
+            app:layout_constraintTop_toTopOf="@id/rhombusTarot"
+            app:layout_constraintBottom_toBottomOf="@id/rhombusTarot"
             app:layout_constraintVertical_bias="0.3"
             app:layout_constraintHorizontal_bias=".9"
             />
@@ -253,12 +254,10 @@
             android:textColor="@color/white"
             android:textSize="15sp"
 
-            app:layout_constraintBottom_toTopOf="@id/palmistryGuide"
-            app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintHorizontal_bias="0.6"
-            app:layout_constraintStart_toEndOf="@id/imgTarot"
+
+            app:layout_constraintEnd_toEndOf="@id/tvTarot"
             app:layout_constraintTop_toBottomOf="@id/tvTarot"
-            app:layout_constraintVertical_bias="0"
+
             />
 
 
@@ -272,7 +271,7 @@
 
             app:layout_constraintStart_toEndOf="@id/marginStart"
             app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintTop_toBottomOf="@id/palmistryGuide"
+            app:layout_constraintTop_toBottomOf="@id/rhombusTarot"
             app:layout_constraintBottom_toTopOf="@id/MarginBottom"
             app:layout_constraintVertical_bias="0.1"
             />
@@ -283,12 +282,12 @@
             android:layout_height="120dp"
             android:src="@drawable/card_palmistry"
 
-            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintEnd_toEndOf="@id/rhombusPalm"
             app:layout_constraintStart_toEndOf="@id/tvPalmistryDesc"
             app:layout_constraintTop_toBottomOf="@id/palmistryGuide"
-            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+            app:layout_constraintBottom_toBottomOf="@id/rhombusPalm"
             app:layout_constraintHorizontal_bias="0.99"
-            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintVertical_bias="1"
             />
 
         <TextView
@@ -301,10 +300,10 @@
             android:fontFamily="@font/cinzel_black"
             android:textSize="20sp"
 
-            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintStart_toStartOf="@id/rhombusPalm"
             app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintTop_toBottomOf="@id/palmistryGuide"
-            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+            app:layout_constraintTop_toTopOf="@id/rhombusPalm"
+            app:layout_constraintBottom_toBottomOf="@id/rhombusPalm"
             app:layout_constraintVertical_bias="0.2"
             app:layout_constraintHorizontal_bias="0.1"
             />
@@ -320,12 +319,9 @@
             android:textColor="@color/white"
             android:textSize="15sp"
 
-            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
-            app:layout_constraintEnd_toEndOf="@id/marginEnd"
-            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintStart_toStartOf="@id/tvPalmistry"
             app:layout_constraintTop_toBottomOf="@id/tvPalmistry"
-            app:layout_constraintVertical_bias="0"
-            app:layout_constraintHorizontal_bias="0.1"
+
             />
 
 

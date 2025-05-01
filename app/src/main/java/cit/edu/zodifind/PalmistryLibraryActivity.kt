@@ -12,7 +12,7 @@ import cit.edu.zodifind.fragments.MenuFragment
 import cit.edu.zodifind.fragments.PalmistryListFragment
 import cit.edu.zodifind.fragments.ZodiacListFragment
 
-class PalmistryLibraryActivity : AppCompatActivity() {
+class PalmistryLibraryActivity : BaseActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var burgerMenuIcon: ImageView

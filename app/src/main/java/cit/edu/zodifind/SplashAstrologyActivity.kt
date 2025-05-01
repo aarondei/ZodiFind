@@ -13,7 +13,7 @@ class SplashAstrologyActivity : BaseActivity() {
 
         val splashscreen = findViewById<ConstraintLayout>(R.id.splash_astrology)
         splashscreen.setOnClickListener(){
-            val intent = Intent(this, SplashTarotActivity:: class.java) //TODO CHANGE
+            val intent = Intent(this, AstrologyHomeActivity:: class.java) //TODO CHANGE
             startActivity(intent)
 
         }

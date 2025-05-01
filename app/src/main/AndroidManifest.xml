@@ -22,12 +22,15 @@
         android:theme="@style/Theme.ZodiFind"
         tools:targetApi="31">
         <activity
+            android:name=".AstrologyHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".TarotDeckActivity"
             android:exported="false" />
         <activity
             android:name=".TarotHomeActivity"
             android:exported="false" />
-      <activity
+        <activity
             android:name=".PalmistryCameraActivity"
             android:exported="false" />
         <activity
@@ -50,9 +53,6 @@
             android:exported="false" />
         <activity
             android:name=".AboutZodifindActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LibraryFocusedItemActivity"
             android:exported="false" />
         <activity
             android:name=".CalculatorResultActivity"
