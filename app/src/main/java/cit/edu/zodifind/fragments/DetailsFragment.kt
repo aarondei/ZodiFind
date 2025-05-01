@@ -1,9 +1,11 @@
 package cit.edu.zodifind.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import cit.edu.zodifind.R
@@ -19,6 +21,7 @@ class DetailsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_details, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -37,69 +40,89 @@ class DetailsFragment : Fragment() {
         val detailsElement = view.findViewById<TextView>(R.id.detailsElement)
         val detailsQuality = view.findViewById<TextView>(R.id.detailsQuality)
         val detailsRulingPlanet = view.findViewById<TextView>(R.id.detailsRulingPlanet)
+        val detailsRulingHouse = view.findViewById<TextView>(R.id.detailsRulingHouse)
+        val detailsCompatibility = view.findViewById<TextView>(R.id.detailsCompatibility)
 
-        detailsDateRange.text = zodiacSign.concatStartEndDates()
-        detailsSymbol.text = "Symbol • ${getZodiacSymbol(zodiacSign)}"
-        detailsElement.text = "Element • ${getZodiacElement(zodiacSign)}"
-        detailsQuality.text = "Quality • ${getZodiacQuality(zodiacSign)}"
-        detailsRulingPlanet.text = "Ruling Planet • ${getZodiacRulingPlanet(zodiacSign)}"
+        // setup images to display
+        val imgSymbol = view.findViewById<ImageView>(R.id.imgSymbol)
+        val imgElement = view.findViewById<ImageView>(R.id.imgElement)
+        val imgQuality = view.findViewById<ImageView>(R.id.imgQuality)
+        val imgRulingPlanet = view.findViewById<ImageView>(R.id.imgRulingPlanet)
+        val imgRulingHouse = view.findViewById<ImageView>(R.id.imgRulingHouse)
+
+        // setup details
+        detailsDateRange.text = zodiacSign.concatStartEndDatesCamelCase()
+        detailsSymbol.text = "Symbol • ${zodiacSign.representation}"
+        detailsElement.text = "Element • ${zodiacSign.element.name.lowercase().replaceFirstChar { it.uppercase() }}"
+        detailsQuality.text = "Quality • ${zodiacSign.quality.name.lowercase().replaceFirstChar { it.uppercase() }}"
+        detailsRulingPlanet.text = "Ruling Planet • ${zodiacSign.rulingPlanet.title.lowercase().replaceFirstChar { it.uppercase() }}"
+        detailsRulingHouse.text = "Ruling House • ${zodiacSign.rulingHouse.name.lowercase().replaceFirstChar { it.uppercase() }}"
+        detailsCompatibility.text = "Compatible • ${zodiacSign.compatibility.lowercase().replaceFirstChar { it.uppercase() }}"
+
+
+        // set up images
+        imgSymbol.setImageResource(zodiacSign.symbolIcon)
+        imgElement.setImageResource(zodiacSign.element.symbolIcon)
+        imgQuality.setImageResource(zodiacSign.quality.symbolIcon)
+        imgRulingPlanet.setImageResource(zodiacSign.rulingPlanet.symbolIcon)
+        imgRulingHouse.setImageResource(zodiacSign.rulingHouse.symbolIcon)
     }
 
-    // These methods would return the appropriate attributes for each sign
-    private fun getZodiacSymbol(sign: ZodiacSign): String {
-        return when (sign) {
-            ZodiacSign.ARIES -> "The Ram"
-            ZodiacSign.TAURUS -> "The Bull"
-            ZodiacSign.GEMINI -> "The Twins"
-            ZodiacSign.CANCER -> "The Crab"
-            ZodiacSign.LEO -> "The Lion"
-            ZodiacSign.VIRGO -> "The Maiden"
-            ZodiacSign.LIBRA -> "The Scales"
-            ZodiacSign.SCORPIO -> "The Scorpion"
-            ZodiacSign.SAGITTARIUS-> "The Archer"
-            ZodiacSign.CAPRICORN -> "The Goat"
-            ZodiacSign.AQUARIUS -> "The Water Bearer"
-            ZodiacSign.PISCES -> "The Fish"
-            else -> ""
-        }
-    }
-
-    private fun getZodiacElement(sign: ZodiacSign): String {
-        return when (sign) {
-            ZodiacSign.ARIES, ZodiacSign.LEO, ZodiacSign.SAGITTARIUS -> "Fire"
-            ZodiacSign.TAURUS, ZodiacSign.VIRGO, ZodiacSign.CAPRICORN -> "Earth"
-            ZodiacSign.GEMINI, ZodiacSign.LIBRA, ZodiacSign.AQUARIUS -> "Air"
-            ZodiacSign.CANCER, ZodiacSign.SCORPIO, ZodiacSign.PISCES -> "Water"
-            else -> ""
-        }
-    }
-
-    private fun getZodiacQuality(sign: ZodiacSign): String {
-        return when (sign) {
-            ZodiacSign.ARIES, ZodiacSign.CANCER, ZodiacSign.LIBRA, ZodiacSign.CAPRICORN -> "Cardinal"
-            ZodiacSign.TAURUS, ZodiacSign.LEO, ZodiacSign.SCORPIO, ZodiacSign.AQUARIUS -> "Fixed"
-            ZodiacSign.GEMINI, ZodiacSign.VIRGO, ZodiacSign.SAGITTARIUS, ZodiacSign.PISCES -> "Mutable"
-            else -> ""
-        }
-    }
-
-    private fun getZodiacRulingPlanet(sign: ZodiacSign): String {
-        return when (sign) {
-            ZodiacSign.ARIES -> "Mars"
-            ZodiacSign.TAURUS -> "Venus"
-            ZodiacSign.GEMINI -> "Mercury"
-            ZodiacSign.CANCER -> "Moon"
-            ZodiacSign.LEO -> "Sun"
-            ZodiacSign.VIRGO -> "Mercury"
-            ZodiacSign.LIBRA -> "Venus"
-            ZodiacSign.SCORPIO -> "Pluto"
-            ZodiacSign.SAGITTARIUS -> "Jupiter"
-            ZodiacSign.CAPRICORN -> "Saturn"
-            ZodiacSign.AQUARIUS -> "Uranus"
-            ZodiacSign.PISCES -> "Neptune"
-            else -> ""
-        }
-    }
+//    // These methods would return the appropriate attributes for each sign
+//    private fun getZodiacSymbol(sign: ZodiacSign): String {
+//        return when (sign) {
+//            ZodiacSign.ARIES -> "The Ram"
+//            ZodiacSign.TAURUS -> "The Bull"
+//            ZodiacSign.GEMINI -> "The Twins"
+//            ZodiacSign.CANCER -> "The Crab"
+//            ZodiacSign.LEO -> "The Lion"
+//            ZodiacSign.VIRGO -> "The Maiden"
+//            ZodiacSign.LIBRA -> "The Scales"
+//            ZodiacSign.SCORPIO -> "The Scorpion"
+//            ZodiacSign.SAGITTARIUS-> "The Archer"
+//            ZodiacSign.CAPRICORN -> "The Goat"
+//            ZodiacSign.AQUARIUS -> "The Water Bearer"
+//            ZodiacSign.PISCES -> "The Fish"
+//            else -> ""
+//        }
+//    }
+//
+//    private fun getZodiacElement(sign: ZodiacSign): String {
+//        return when (sign) {
+//            ZodiacSign.ARIES, ZodiacSign.LEO, ZodiacSign.SAGITTARIUS -> "Fire"
+//            ZodiacSign.TAURUS, ZodiacSign.VIRGO, ZodiacSign.CAPRICORN -> "Earth"
+//            ZodiacSign.GEMINI, ZodiacSign.LIBRA, ZodiacSign.AQUARIUS -> "Air"
+//            ZodiacSign.CANCER, ZodiacSign.SCORPIO, ZodiacSign.PISCES -> "Water"
+//            else -> ""
+//        }
+//    }
+//
+//    private fun getZodiacQuality(sign: ZodiacSign): String {
+//        return when (sign) {
+//            ZodiacSign.ARIES, ZodiacSign.CANCER, ZodiacSign.LIBRA, ZodiacSign.CAPRICORN -> "Cardinal"
+//            ZodiacSign.TAURUS, ZodiacSign.LEO, ZodiacSign.SCORPIO, ZodiacSign.AQUARIUS -> "Fixed"
+//            ZodiacSign.GEMINI, ZodiacSign.VIRGO, ZodiacSign.SAGITTARIUS, ZodiacSign.PISCES -> "Mutable"
+//            else -> ""
+//        }
+//    }
+//
+//    private fun getZodiacRulingPlanet(sign: ZodiacSign): String {
+//        return when (sign) {
+//            ZodiacSign.ARIES -> "Mars"
+//            ZodiacSign.TAURUS -> "Venus"
+//            ZodiacSign.GEMINI -> "Mercury"
+//            ZodiacSign.CANCER -> "Moon"
+//            ZodiacSign.LEO -> "Sun"
+//            ZodiacSign.VIRGO -> "Mercury"
+//            ZodiacSign.LIBRA -> "Venus"
+//            ZodiacSign.SCORPIO -> "Pluto"
+//            ZodiacSign.SAGITTARIUS -> "Jupiter"
+//            ZodiacSign.CAPRICORN -> "Saturn"
+//            ZodiacSign.AQUARIUS -> "Uranus"
+//            ZodiacSign.PISCES -> "Neptune"
+//            else -> ""
+//        }
+//    }
 
     companion object {
         private const val ARG_ZODIAC_SIGN = "zodiac_sign"

@@ -20,9 +20,14 @@ enum class ZodiacSign(val faceIcon: Int, val starIcon: Int, val representation: 
     AQUARIUS(R.drawable.aquarius_icon, R.drawable.aquarius_cons,"The Water Bearer","JAN 20", "FEB 18",  R.drawable.sketch_aquarius, R.drawable.symbol_aquarius, Element.AIR, Quality.FIXED, RulingPlanet.URANUS, RulingHouse.ELEVENTH, "GEMINI"),
     PISCES(R.drawable.pisces_icon, R.drawable.pisces_cons,"The Fish","FEB 19", "MAR 20",  R.drawable.sketch_pisces, R.drawable.symbol_pisces, Element.WATER, Quality.MUTABLE, RulingPlanet.NEPTUNE, RulingHouse.TWELFTH, "CANCER");
 
-    fun concatStartEndDates(): String {
+    fun concatStartEndDatesCapsCase(): String {
         return "$startDate - $endDate"
     }
+
+    fun concatStartEndDatesCamelCase(): String {
+        return "${startDate.lowercase().replaceFirstChar { it.uppercase() }} - ${endDate.lowercase().replaceFirstChar { it.uppercase() }}"
+    }
+
 
     companion object { // makes this method static
 

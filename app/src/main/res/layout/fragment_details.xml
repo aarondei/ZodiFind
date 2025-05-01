@@ -4,69 +4,215 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:id="@+id/detailsDateRange"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_border"
-            android:fontFamily="@font/josefinsans_light"
-            android:gravity="center"
-            android:padding="16dp"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginBottom="20dp">
 
-        <TextView
-            android:id="@+id/detailsSymbol"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:fontFamily="@font/josefinsans_light"
-            android:gravity="center"
-            android:padding="16dp"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/symbol_bday"
+                android:padding="9dp"
+                />
 
-        <TextView
-            android:id="@+id/detailsElement"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:fontFamily="@font/josefinsans_light"
-            android:gravity="center"
-            android:padding="16dp"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
+            <TextView
+                android:id="@+id/detailsDateRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_light"
+                android:gravity="end"
+                android:padding="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                 />
 
-        <TextView
-            android:id="@+id/detailsQuality"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:fontFamily="@font/josefinsans_light"
-            android:gravity="center"
-            android:padding="16dp"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/detailsRulingPlanet"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_border"
-            android:fontFamily="@font/josefinsans_light"
-            android:gravity="center"
-            android:padding="16dp"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            />
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgSymbol"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+
+                android:padding="9dp"
+                />
+
+            <TextView
+                android:id="@+id/detailsSymbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_light"
+                android:gravity="end"
+                android:padding="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgElement"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+
+                android:padding="9dp"
+                />
+
+            <TextView
+                android:id="@+id/detailsElement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/josefinsans_light"
+                android:gravity="end"
+                android:padding="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgQuality"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+
+                android:padding="9dp"
+                />
+
+            <TextView
+                android:id="@+id/detailsQuality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefinsans_light"
+                android:gravity="end"
+                android:padding="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+               />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgRulingPlanet"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+
+                android:padding="9dp"
+                />
+
+            <TextView
+                android:id="@+id/detailsRulingPlanet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefinsans_light"
+                android:gravity="end"
+                android:padding="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgRulingHouse"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+
+                android:padding="9dp"
+                />
+
+            <TextView
+                android:id="@+id/detailsRulingHouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefinsans_light"
+                android:gravity="end"
+                android:padding="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/symbol_compat"
+                android:padding="9dp"
+                />
+
+            <TextView
+                android:id="@+id/detailsCompatibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/josefinsans_light"
+                android:gravity="end"
+                android:padding="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
