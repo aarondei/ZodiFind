@@ -55,9 +55,6 @@
             android:name=".AboutZodifindActivity"
             android:exported="false" />
         <activity
-            android:name=".LibraryFocusedItemActivity"
-            android:exported="false" />
-        <activity
             android:name=".CalculatorResultActivity"
             android:exported="false" />
         <activity

@@ -42,7 +42,7 @@ class PalmLineDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        backButton = view.findViewById(R.id.backButton)
+        backButton = view.findViewById(R.id.btnBack)
         palmLineImage = view.findViewById(R.id.palmLineImage)
         tvPalmTitle = view.findViewById(R.id.tvPalmTitle)
         tvPalmDomain = view.findViewById(R.id.tvPalmDomain)
