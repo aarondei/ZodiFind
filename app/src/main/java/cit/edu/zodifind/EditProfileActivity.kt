@@ -90,7 +90,7 @@ class EditProfileActivity : AppCompatActivity() {
         imgPfpCam = findViewById(R.id.imgPfpCam)
         btnSave = findViewById(R.id.Cancel)
 
-        // Load existing data (if any)
+        // Load existing data
         intent?.let {
             it.getStringExtra("username")?.let { username ->
                 etEditName.setText(username)
@@ -157,7 +157,6 @@ class EditProfileActivity : AppCompatActivity() {
 
     private fun checkPermissionsAndLoadImage() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            // Android 13+ uses more granular READ_MEDIA_IMAGES permission
             loadProfileImage() // No permission needed for previously selected URIs
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(
@@ -170,7 +169,6 @@ class EditProfileActivity : AppCompatActivity() {
                 requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
             }
         } else {
-            // Below Android 6, permissions are granted at install time
             loadProfileImage()
         }
     }
@@ -185,7 +183,7 @@ class EditProfileActivity : AppCompatActivity() {
         if (uri == null) return
 
         try {
-            // Use try/catch for potential SecurityException
+            //potential SecurityException
             contentResolver.openInputStream(uri).use { inputStream ->
                 if (inputStream != null) {
                     val bitmap = android.graphics.BitmapFactory.decodeStream(inputStream)

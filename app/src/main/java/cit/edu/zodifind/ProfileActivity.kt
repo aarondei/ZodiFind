@@ -43,7 +43,7 @@ class ProfileActivity : AppCompatActivity() {
 
         val btnEditProfile = findViewById<ImageView>(R.id.imgToEdit)
         btnEditProfile.setOnClickListener {
-            // Start EditProfileActivity, pass current data
+            // pass current data
             val intent = Intent(this, EditProfileActivity::class.java)
             intent.putExtra("username", tvName.text.toString())
             intent.putExtra("bio", tvBio.text.toString())
@@ -100,8 +100,7 @@ class ProfileActivity : AppCompatActivity() {
                 } catch (e: IOException) {
                     e.printStackTrace()
                     Toast.makeText(this, "Failed to load new profile picture", Toast.LENGTH_SHORT).show()
-                    // Consider setting a default image here to indicate failure
-                    // imgPfp.setImageResource(R.drawable.default_profile_image)
+
                 }
             }
         }
