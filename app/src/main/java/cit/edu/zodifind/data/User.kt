@@ -4,9 +4,11 @@ import cit.edu.zodifind.data.astrology.ZodiacSign
 import java.time.LocalDate
 
 data class User(
-    val name: String,
+    var name: String,
     val username: String,
     val password: String,
     var birthdate: LocalDate? = null,
+    var bio: String? = null,
+    var profileImageUri: String? = null,
     var zodiacSign: ZodiacSign? = null
 )
