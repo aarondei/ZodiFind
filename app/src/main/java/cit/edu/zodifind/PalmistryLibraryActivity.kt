@@ -1,7 +1,6 @@
 package cit.edu.zodifind
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
@@ -10,18 +9,20 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.commit
 import cit.edu.zodifind.fragments.MenuFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import dagger.hilt.android.AndroidEntryPoint
+import cit.edu.zodifind.fragments.PalmistryListFragment
+import cit.edu.zodifind.fragments.ZodiacListFragment
 
-@AndroidEntryPoint
-class HomeActivity : BaseActivity() {
+class PalmistryLibraryActivity : AppCompatActivity() {
+
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var burgerMenuIcon: ImageView
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home) // Make sure this matches your layout file name
+        setContentView(R.layout.palmistry_library) // Use the layout with DrawerLayout
 
+        // Initialize DrawerLayout and burger menu icon
         drawerLayout = findViewById(R.id.drawerLayout)
         burgerMenuIcon = findViewById(R.id.burgerMenuIcon)
 
@@ -40,14 +41,17 @@ class HomeActivity : BaseActivity() {
             }
         }
 
-        val btnPalmistry = findViewById<ImageView>(R.id.rhombusPalm)
-            btnPalmistry.setOnClickListener(){
-                val intent = Intent(this, SplashPalmistryActivity:: class.java)
-                startActivity(intent)
-            }
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, PalmistryListFragment())
+            .commit()
+
+        val btnCam = findViewById<ImageView>(R.id.btnCam)
+        btnCam.setOnClickListener(){
+            val intent = Intent(this, PalmistryCameraActivity:: class.java)
+            startActivity(intent)
+        }
     }
 
-    // Override onBackPressed to handle closing the drawer with the back button
     override fun onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
