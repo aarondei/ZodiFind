@@ -360,6 +360,7 @@
 <!--    arrows-->
 
     <ImageView
+        android:id="@+id/imgToEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/next"
@@ -400,6 +401,7 @@
         />
 
     <ImageView
+        android:id="@+id/btnToFaq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/next"

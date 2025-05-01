@@ -30,10 +30,13 @@ class SettingsActivity : Activity() {
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
-            val resultIntent = Intent()
-            resultIntent.putExtra("username", tvName.text.toString())
-            setResult(RESULT_OK, resultIntent)
-            finish()
+
+            val intent = Intent(this, HomeActivity:: class.java)
+            startActivity(intent)
+//            val resultIntent = Intent()
+//            resultIntent.putExtra("username", tvName.text.toString())
+//            setResult(RESULT_OK, resultIntent)
+//            finish()
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
@@ -48,5 +51,13 @@ class SettingsActivity : Activity() {
             val intent = Intent(this, DeveloperActivity:: class.java)
             startActivity(intent)
         }
+
+        val btnFAQ = findViewById<ImageView>(R.id.btnToFaq)
+        btnFAQ.setOnClickListener(){
+            val intent = Intent(this, FaqActivity:: class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
