@@ -5,6 +5,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import cit.edu.zodifind.data.CapturedZodiacTempObject
+import cit.edu.zodifind.data.astrology.ZodiacSign
 import cit.edu.zodifind.fragments.LibraryFocusedItemFragment
 
 class LibraryFocusedItemActivity : AppCompatActivity() {
@@ -18,8 +19,9 @@ class LibraryFocusedItemActivity : AppCompatActivity() {
             key = it.getStringExtra("zodiac").toString()
         }
 
-        val imgSketch = findViewById<ImageView>(R.id.imgSketch)
-        CapturedZodiacTempObject.capturedSign?.let { imgSketch.setImageResource(it.sketchIcon) }
+        val zodiacSign = ZodiacSign.valueOf(key)
+
+        //CapturedZodiacTempObject.capturedSign?.let { imgSketch.setImageResource(it.sketchIcon) }
 
         val fragment = LibraryFocusedItemFragment()
         val bundle = Bundle()

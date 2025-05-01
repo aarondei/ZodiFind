@@ -29,20 +29,7 @@ class ZodiacListFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerZodiac)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val zodiacList = listOf(
-            ZodiacSign.AQUARIUS,
-            ZodiacSign.PISCES,
-            ZodiacSign.ARIES,
-            ZodiacSign.TAURUS,
-            ZodiacSign.GEMINI,
-            ZodiacSign.CANCER,
-            ZodiacSign.LEO,
-            ZodiacSign.VIRGO,
-            ZodiacSign.LIBRA,
-            ZodiacSign.SCORPIO,
-            ZodiacSign.SAGITTARIUS,
-            ZodiacSign.CAPRICORN
-        )
+        val zodiacList = ZodiacSign.getAllZodiacSigns()
 
         zodiacAdapter = ZodiacAdapter(zodiacList, requireContext())
         recyclerView.adapter = zodiacAdapter

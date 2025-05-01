@@ -26,6 +26,10 @@ enum class ZodiacSign(val faceIcon: Int, val starIcon: Int, val representation: 
 
     companion object { // makes this method static
 
+        fun getAllZodiacSigns(): List<ZodiacSign> {
+            return entries
+        }
+
         @RequiresApi(Build.VERSION_CODES.O)
         fun parseDate(date: LocalDate): ZodiacSign {
 
