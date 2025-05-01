@@ -69,7 +69,7 @@
             android:src="@drawable/zodifind_textlogo_glow"
             app:layout_constraintEnd_toEndOf="@id/marginEnd"
             app:layout_constraintStart_toStartOf="@id/marginStart"
-            app:layout_constraintTop_toTopOf="@id/headerStart" />
+            app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart" />
 
         <View
             android:id="@+id/line"
@@ -97,8 +97,8 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:src="@drawable/ic_menu"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toTopOf="@id/MarginTop" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

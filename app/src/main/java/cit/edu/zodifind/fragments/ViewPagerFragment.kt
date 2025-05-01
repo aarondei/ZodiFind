@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import cit.edu.zodifind.R
 import cit.edu.zodifind.adapters.ViewPagerAdapter
-import cit.edu.zodifind.helpers.ZodiacSign
+import cit.edu.zodifind.data.astrology.ZodiacSign
 
 class ViewPagerFragment : Fragment() {
 

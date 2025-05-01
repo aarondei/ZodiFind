@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import cit.edu.zodifind.R
-import cit.edu.zodifind.helpers.ZodiacSign
+import cit.edu.zodifind.data.astrology.ZodiacSign
 
 class DetailsFragment : Fragment() {
     private lateinit var zodiacSign: ZodiacSign
