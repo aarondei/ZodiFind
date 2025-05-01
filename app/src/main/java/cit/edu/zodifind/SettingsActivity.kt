@@ -48,5 +48,13 @@ class SettingsActivity : Activity() {
             val intent = Intent(this, DeveloperActivity:: class.java)
             startActivity(intent)
         }
+
+        val btnFAQ = findViewById<ImageView>(R.id.btnToFaq)
+        btnFAQ.setOnClickListener(){
+            val intent = Intent(this, FaqActivity:: class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

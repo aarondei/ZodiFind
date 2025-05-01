@@ -9,6 +9,8 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</string>
     <!-- TODO: Remove or change this placeholder text -->
 
+    <!--    developers page-->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="aaron">JATAYNA,\n AARON DEI</string>
     <string name="venice">JUAREZ,\n VENICE JONAH</string>
@@ -17,6 +19,31 @@
     <string name="palmistry">Hands whisper your\ntruth.</string>
     <string name="aarondesc">Focused on the backend development and the core\n functionalities of the app, ensuring smooth feature\n performance.</string>
     <string name="venicedesc">Worked mainly on the navigation experience of the\n application, bringing the visual layout and user \n interface to life.</string>
+
+    <!--    faq-->
+    <string name="faq_text"><![CDATA[
+<b>Q1: How do I find out my zodiac sign in Zodifind?</b><br>
+Zodifind\'s Zodiac Season Calculator uses your birth date to determine your sun sign and gives you detailed insights into your astrological profile, including traits and compatibility.<br><br>
+
+<b>Q2: What is included in the zodiac sign descriptions?</b><br>
+You’ll find personality traits, ruling planets, elements, compatibility details, mythological origins, and cultural significance for each zodiac sign.<br><br>
+
+<b>Q3: How do the tarot card readings work?</b><br>
+Zodifind provides symbolic, classic tarot interpretations based on your question or a general draw, offering clarity on your life path.<br><br>
+
+<b>Q4: What is the palm reading feature and how do I use it?</b><br>
+You can analyze the lines, shapes, and mounts on your hand to uncover hidden aspects of your personality, emotions, and future.<br><br>
+
+<b>Q5: Is Zodifind suitable for astrology beginners?</b><br>
+Yes! Zodifind is intuitive and designed to guide beginners while offering depth for more advanced astrology enthusiasts.<br><br>
+
+<b>Q6: Do I need internet access to use the app?</b><br>
+Some features work offline, but an internet connection is needed for full tarot readings and updates.<br><br>
+
+<b>Q7: Is my personal information safe with Zodifind?</b><br>
+Absolutely. Your data is kept private and only used for personalizing your experience.
+]]></string>
+
 
 
     <!-- description meaning -->
