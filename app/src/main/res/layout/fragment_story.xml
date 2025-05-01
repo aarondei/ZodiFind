@@ -8,17 +8,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="20dp"
         android:padding="16dp">
 
         <TextView
             android:id="@+id/storyTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/josefinsans_semibold"
-            android:text="The Story"
+            android:fontFamily="@font/cinzel_bold"
+            android:text="The Title"
             android:textColor="@android:color/white"
             android:textSize="20sp"
-            android:layout_marginBottom="16dp" />
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp" />
 
         <TextView
             android:id="@+id/storyContent"
@@ -26,7 +28,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/josefinsans_light"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:lineSpacingExtra="6dp" />
 
     </LinearLayout>
