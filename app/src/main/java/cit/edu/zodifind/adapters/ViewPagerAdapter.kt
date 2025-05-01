@@ -5,7 +5,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import cit.edu.zodifind.fragments.StoryFragment
 import cit.edu.zodifind.fragments.DetailsFragment
 import cit.edu.zodifind.fragments.FactsFragment
-import cit.edu.zodifind.helpers.ZodiacSign
+import cit.edu.zodifind.data.astrology.ZodiacSign
 
 class ViewPagerAdapter(fragment: Fragment, private val zodiacSign: ZodiacSign) :
     FragmentStateAdapter(fragment) {
