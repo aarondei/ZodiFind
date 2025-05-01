@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">/
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/MarginTop"
@@ -72,19 +72,17 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="385dp" />
 
-    <!-- views -->
     <ImageView
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/back"
-        android:tint="@color/black"
 
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/MarginTop"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHorizontal_bias="0.05"
-        />
+        app:tint="@color/black" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -113,36 +111,29 @@
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.05"
         />
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
 
-    app:layout_constraintTop_toBottomOf="@+id/line"
-    app:layout_constraintBottom_toTopOf="@id/MarginBottom"
-    app:layout_constraintStart_toStartOf="@id/marginStart"
-    app:layout_constraintEnd_toEndOf="@id/marginEnd"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-    app:layout_constraintVertical_bias="0">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="@string/about_zodifind"
-        android:textColor="@color/black"
-        android:fontFamily="@font/josefinsans_regular"
-        android:textSize="15sp"
-        android:padding="25dp"
-
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintTop_toBottomOf="@+id/line"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
-        app:layout_constraintVertical_bias="0.3"
-        />
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintVertical_bias="0">
 
-</ScrollView>
+        <TextView
+            android:id="@+id/tvAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
+            android:text="@string/about_zodifind"
+            android:textColor="@color/black"
+            android:fontFamily="@font/josefinsans_regular"
+            android:textSize="15sp"
+            android:padding="25dp"
+            />
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
