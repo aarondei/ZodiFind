@@ -96,6 +96,8 @@
         app:layout_constraintBottom_toBottomOf="@id/headerSymmetricalStart"
         />
 
+
+<!--    aaron section-->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgAaron"
         android:layout_width="150dp"
@@ -140,5 +142,85 @@
         app:layout_constraintTop_toBottomOf="@id/tvAaron"
         app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
         app:layout_constraintVertical_bias="0.05"
+        />
+
+    <TextView
+        android:id="@+id/tvAaronBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="• Dec 9"
+        android:textColor="@color/white"
+        android:fontFamily="@font/josefinsans_regular"
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toEndOf="@id/imgAaron"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
+        app:layout_constraintVertical_bias="0"
+        />
+
+<!--    vj section-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgVenice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/pic_venice"
+        app:civ_border_width="1dp"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintTop_toBottomOf="@id/vjSecGuide"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <TextView
+        android:id="@+id/tvVenice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/venice"
+        android:textColor="@color/dandelion"
+        android:fontFamily="@font/cinzel_bold"
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toEndOf="@id/imgVenice"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintTop_toBottomOf="@id/vjSecGuide"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="150dp"
+        android:layout_height="2dp"
+        android:background="@android:color/white"
+
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toEndOf="@id/imgVenice"
+        app:layout_constraintTop_toBottomOf="@id/tvVenice"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="0.05"
+        />
+
+<!--    misc-->
+    <TextView
+        android:id="@+id/tvCopyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/zd_copyright"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@id/imgDeveloper"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+        app:layout_constraintVertical_bias="3"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
