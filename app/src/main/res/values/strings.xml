@@ -19,7 +19,6 @@
     <string name="venicedesc">Worked mainly on the navigation experience of the\n application, bringing the visual layout and user \n interface to life.</string>
 
 
-
     <!-- description meaning -->
     <!-- The Fool -->
     <string name="fool_past">A restless spirit once leaped forward, leaving caution behind like dust.</string>
@@ -132,8 +131,8 @@
     <string name="world_future">Completion awaits, but to finish, you must embrace the journey to the end.</string>
 
 
-<!--    description meanings-->
-<!--pentacles-->
+    <!--    description meanings-->
+    <!--pentacles-->
     <!-- Ace of Pentacles -->
     <string name="pentacles_ace_past">A seed was planted once, full of promise, though it lay dormant in the soil of your past.</string>
     <string name="pentacles_ace_present">Now, opportunity knocks—an earthly gift that may grow roots if tended carefully.</string>
@@ -205,8 +204,8 @@
     <string name="pentacles_king_future">The foundation you have set will endure, but remember that true power lies in how you use what you’ve built.</string>
 
 
-<!--    descriptions meaning-->
-<!--cups-->
+    <!--    descriptions meaning-->
+    <!--cups-->
     <!-- Ace of Cups -->
     <string name="cups_ace_past">A wellspring of emotion once stirred deep within, yet its waters remained untasted.</string>
     <string name="cups_ace_present">Now, the cup overflows with potential, its sweetness waiting for you to drink deeply.</string>
@@ -278,8 +277,8 @@
     <string name="cups_king_future">Mastery of the heart is near, but it will ask you to balance your inner tides without losing touch with your humanity.</string>
 
 
-<!--    descriptions meaning-->
-<!--swords-->
+    <!--    descriptions meaning-->
+    <!--swords-->
     <!-- Ace of Swords -->
     <string name="swords_ace_past">A truth once cut through the fog, sharp and sudden, awakening a clarity that shook your soul.</string>
     <string name="swords_ace_present">Now, the blade of insight is in your hand—its edge is keen, but it may wound if not wielded carefully.</string>
@@ -351,8 +350,8 @@
     <string name="swords_king_future">A time of leadership awaits, where your intellect will guide others, but it will be your wisdom, not just your mind, that brings success.</string>
 
 
-<!--    descriptions meaning-->
-<!--wands-->
+    <!--    descriptions meaning-->
+    <!--wands-->
     <!-- Ace of Wands -->
     <string name="wands_ace_past">Once, a spark of inspiration ignited your soul, a fire that burned bright but brief.</string>
     <string name="wands_ace_present">Now, a new creative force awakens, full of potential, waiting for your hand to guide its flame.</string>
@@ -424,9 +423,8 @@
     <string name="wands_king_future">A time of great authority awaits, but the crown you wear will only shine if you continue to lead with passion and wisdom.</string>
 
 
-
     <!-- title card -->
-<!--    major arcana-->
+    <!--    major arcana-->
     <string name="fool_title">The Fool</string>
     <string name="magician_title">The Magician</string>
     <string name="priestess_title">The High Priestess</string>
@@ -450,7 +448,7 @@
     <string name="judgement_title">Judgement</string>
     <string name="world_title">The World</string>
 
-<!--    pentacles suite-->
+    <!--    pentacles suite-->
     <string name="pentacles_ace_title">Ace of Pentacles</string>
     <string name="pentacles_two_title">Two of Pentacles</string>
     <string name="pentacles_three_title">Three of Pentacles</string>
@@ -466,7 +464,7 @@
     <string name="pentacles_queen_title">Queen of Pentacles</string>
     <string name="pentacles_king_title">King of Pentacles</string>
 
-<!--    cups-->
+    <!--    cups-->
     <string name="cups_ace_title">Ace of Cups</string>
     <string name="cups_two_title">Two of Cups</string>
     <string name="cups_three_title">Three of Cups</string>
@@ -482,7 +480,7 @@
     <string name="cups_queen_title">Queen of Cups</string>
     <string name="cups_king_title">King of Cups</string>
 
-<!--swords-->
+    <!--swords-->
     <string name="swords_ace_title">Ace of Swords</string>
     <string name="swords_two_title">Two of Swords</string>
     <string name="swords_three_title">Three of Swords</string>
@@ -498,7 +496,7 @@
     <string name="swords_queen_title">Queen of Swords</string>
     <string name="swords_king_title">King of Swords</string>
 
-<!--    wands-->
+    <!--    wands-->
     <string name="wands_ace_title">Ace of Wands</string>
     <string name="wands_two_title">Two of Wands</string>
     <string name="wands_three_title">Three of Wands</string>
@@ -515,20 +513,20 @@
     <string name="wands_king_title">King of Wands</string>
 
 
-<!--    astrology element-->
+    <!--    astrology element-->
     <string name="element_description">Element is your core energy.</string>
     <string name="element_fire">Bold and dynamic, Fire signs blaze through life with passion and purpose. They’re driven, courageous, and often the spark that lights up any room or challenge. But their intensity can sometimes turn to impatience or recklessness. They burn bright, but can also burn out if they don’t pace themselves.</string>
     <string name="element_earth">Steady, grounded, and practical, Earth signs are the rock of any situation. They thrive on stability, loyalty, and hard work. While they may seem slow to act, their approach is thorough and reliable. But, sometimes their fixed nature makes it hard for them to adapt or take risks.</string>
     <string name="element_air">Free-spirited and intellectually curious, Air signs are the thinkers and communicators of the zodiac. They excel at seeing things from multiple angles and can effortlessly adapt to new ideas and situations. Their weakness? They can be too detached or indecisive, struggling to stay grounded when things get too complex.</string>
     <string name="element_water">Deep, emotional, and intuitive, Water signs navigate the world with their feelings. They possess a unique empathy and understanding, often sensing things others miss. But their emotional depth can sometimes lead them to be overly sensitive or retreat into their own world when overwhelmed.</string>
 
-<!--    astrology quality-->
+    <!--    astrology quality-->
     <string name="quality_description">Quality is your expression of energy.</string>
     <string name="quality_cardinal">These signs are initiators, full of action, leadership, and new beginnings. They set things in motion and take charge. They’re natural leaders but can sometimes be impatient or impulsive.</string>
     <string name="quality_fixed">These signs are steady, reliable, and determined. They prefer stability and consistency, sticking to plans and working towards long-term goals. They can be stubborn or resistant to change, but they are dependable.</string>
     <string name="quality_mutable">These signs are adaptable, flexible, and versatile. They are open to change and able to go with the flow. They thrive in situations that require change but might struggle with commitment or consistency.</string>
 
-<!--    astrology ruling planet-->
+    <!--    astrology ruling planet-->
     <string name="rulingplanet_description">Ruling Planets are your expression of true self.</string>
     <string name="rulingplanet_mars">Aries is ruled by Mars, which brings strong drive, impulsiveness, and a need to take action quickly.</string>
     <string name="rulingplanet_venus_taurus">Taurus is ruled by Venus, making it drawn to comfort, stability, and the pleasures of the senses.</string>
@@ -543,7 +541,7 @@
     <string name="rulingplanet_uranus">Aquarius is ruled by Uranus, giving it originality, independence, and a desire to challenge the norm.</string>
     <string name="rulingplanet_neptune">Pisces is ruled by Neptune, which makes it imaginative, sensitive, and drawn to dreams and deeper emotions.</string>
 
-<!--    astrology ruling house-->
+    <!--    astrology ruling house-->
     <string name="rulinghouse_description">Ruling Houses are life aspects where you focus into.</string>
     <string name="rulinghouse_first">This house represents one\'s self-image, how they present themselves to the world, and their initial approach to life.</string>
     <string name="rulinghouse_second">This house focuses on personal values, money, material possessions, and the need for financial security.</string>
@@ -558,7 +556,7 @@
     <string name="rulinghouse_eleventh">This house governs friendships, social groups, future aspirations, and humanitarian causes.</string>
     <string name="rulinghouse_twelfth">This house relates to the subconscious mind, hidden secrets, isolation, and spiritual growth.</string>
 
-<!--    palmistry titles-->
+    <!--    palmistry titles-->
     <string name="girdleofvenus_title">Girdle of Venus</string>
     <string name="marriageline_title">Marriage Line</string>
     <string name="lineofintuition_title">Line of Intuition</string>
@@ -570,7 +568,7 @@
     <string name="lineoflife_title">Line of Life</string>
     <string name="lineofmars_title">Line of Mars</string>
 
-<!--    palmistry domains-->
+    <!--    palmistry domains-->
     <string name="girdleofvenus_domain">Emotion • Sensitivity • Intensity</string>
     <string name="marriageline_domain">Relationships • Love • Commitment</string>
     <string name="lineofintuition_domain">Instinct • Insight • Psychic</string>
@@ -593,7 +591,7 @@
     <string name="lineofhead_content"></string>
     <string name="lineoflife_content"></string>
     <string name="lineofmars_content"></string>
-   
+
     <string name="about_zodifind"><b>Zodifind</b> is a comprehensive astrology and divination app designed to help users uncover deeper insights about themselves through ancient celestial and mystical traditions. Whether you\'re a longtime astrology enthusiast or just beginning your journey into the zodiac world, Zodifind offers an enriching and personalized experience that blends cosmic wisdom with intuitive design.\n\nAt the heart of Zodifind is our <b>Zodiac Season Calculator</b>, which allows users to accurately determine their zodiac sign based on their birth date. From there, the app provides detailed interpretations of your astrological profile, including personality traits, compatibility insights, elemental influences, and ruling planets. Users can also explore the <b>origins, mythology, and historical significance</b> behind each zodiac sign—bringing context and cultural depth to their cosmic identity.\n\nZodifind goes beyond traditional astrology by offering powerful <b>tarot card readings</b>. Whether you\'re seeking daily guidance, answers to specific life questions, or a glimpse into the future, our tarot feature provides insightful and symbolic interpretations drawn from classic tarot traditions.\n\nTo further expand your self-discovery, Zodifind includes an interactive <b>palm reading feature</b>. By analyzing the lines, shapes, and mounts of your hand, this tool reveals unique aspects of your personality, emotional tendencies, and life path. Our palm reading system is designed to be both accessible and informative, offering clarity in the areas of love, career, and health.\n\n<b>Zodifind</b> is more than just an astrology app—it’s a digital companion for spiritual growth, introspection, and empowerment. Let the stars, cards, and your own hands help you understand the unique path that lies ahead.
 </string>
 
