@@ -336,7 +336,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/black" />
-
-
+    
 
 </androidx.drawerlayout.widget.DrawerLayout>
