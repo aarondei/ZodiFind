@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/raisinBlack"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -79,6 +80,17 @@
 <!--        android:layout_height="wrap_content"-->
 <!--        app:barrierDirection="bottom"-->
 <!--        app:constraint_referenced_ids="fragmentContainer" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgSketch"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+
+<!--        app:layout_constraintTop_toTopOf="@id/MarginTop"-->
+<!--        app:layout_constraintStart_toStartOf="@id/marginStart"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/marginEnd"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/tvZodiacFocusedItemName"-->
+<!--        />-->
 
 
     <TextView
