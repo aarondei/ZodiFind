@@ -11,8 +11,9 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.commit
 import cit.edu.zodifind.fragments.MenuFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var burgerMenuIcon: ImageView
