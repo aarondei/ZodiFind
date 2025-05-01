@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,8 @@ class ProfileActivity : BaseActivity() {
     private lateinit var imgPfp: CircleImageView
     private var selectedImageUri: Uri? = null
     private val EDIT_PROFILE_REQUEST_CODE = 123
+
+    private val pickImageRequest = 100
 
     @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,6 +67,13 @@ class ProfileActivity : BaseActivity() {
         findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
         findViewById<ImageView>(R.id.imgEditBio).setOnClickListener { launchEdit(user) }
         findViewById<ImageView>(R.id.imgToEdit).setOnClickListener { launchEdit(user) }
+
+        val toEditPic = findViewById<ImageView>(R.id.imgEditPic)
+        toEditPic.setOnClickListener {
+            // Create an intent to open the gallery
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(intent, pickImageRequest)
+        }
     }
 
     private fun launchEdit(user: cit.edu.zodifind.data.User) {
@@ -116,6 +126,11 @@ class ProfileActivity : BaseActivity() {
                 selectedImageUri = Uri.parse(it)
                 user.profileImageUri = it
                 imgPfp.setImageURI(selectedImageUri)
+            }
+        }
+        if (resultCode == RESULT_OK && requestCode == pickImageRequest) {
+            data?.data?.let { imageUri ->
+                imgPfp.setImageURI(imageUri)  // Set the selected image to the ImageView
             }
         }
     }
