@@ -28,6 +28,9 @@
             android:name=".PalmistryLibraryActivity"
             android:exported="false" />
         <activity
+            android:name=".FaqActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashPalmistryActivity"
             android:exported="false" />
         <activity

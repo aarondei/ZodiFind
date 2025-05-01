@@ -8,7 +8,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.R
 
-class DeveloperActivity : AppCompatActivity() {
+class DeveloperActivity : BaseActivity() {
     @Suppress("DEPRECATION")
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {

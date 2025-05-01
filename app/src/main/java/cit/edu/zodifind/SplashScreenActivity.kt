@@ -9,7 +9,7 @@ import android.widget.VideoView
 import androidx.constraintlayout.widget.ConstraintLayout
 
 @SuppressLint("CustomSplashScreen")
-class SplashScreenActivity : Activity() {
+class SplashScreenActivity : BaseActivity() {
 
     private lateinit var videoView: VideoView
     @SuppressLint("MissingInflatedId")

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.data.CapturedZodiacTempObject
 import cit.edu.zodifind.fragments.RotatingStarFragment
 
-class CalculatorResultActivity : AppCompatActivity() {
+class CalculatorResultActivity : BaseActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

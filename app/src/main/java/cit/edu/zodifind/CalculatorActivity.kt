@@ -14,7 +14,7 @@ import cit.edu.zodifind.app.ZodiFindApplication
 import cit.edu.zodifind.fragments.DatePickerFragment
 import cit.edu.zodifind.fragments.MenuFragment
 
-class CalculatorActivity : AppCompatActivity() {
+class CalculatorActivity : BaseActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var burgerMenuIcon: ImageView
