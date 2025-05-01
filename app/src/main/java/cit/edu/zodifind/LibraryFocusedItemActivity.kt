@@ -3,7 +3,6 @@ package cit.edu.zodifind
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.fragments.LibraryFocusedItemFragment
-import cit.edu.zodifind.helpers.ZodiacSign
 
 class LibraryFocusedItemActivity : AppCompatActivity() {
 

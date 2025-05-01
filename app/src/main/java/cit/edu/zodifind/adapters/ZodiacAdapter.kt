@@ -14,8 +14,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.LibraryFocusedItemActivity
 import cit.edu.zodifind.data.CapturedZodiacTempObject
+
+import cit.edu.zodifind.data.astrology.ZodiacSign
+
 import cit.edu.zodifind.fragments.ViewPagerFragment
-import cit.edu.zodifind.helpers.ZodiacSign
+
+
 
 class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val context: Context) :
     RecyclerView.Adapter<ZodiacAdapter.ZodiacViewHolder>() {
@@ -68,7 +72,7 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
 
     override fun onBindViewHolder(holder: ZodiacViewHolder, position: Int) {
         val item = zodiacList[position]
-        holder.imageZodiac.setImageResource(item.symbolIcon)
+        holder.imageZodiac.setImageResource(item.faceIcon)
         holder.tvZodiacName.text = item.name
         holder.tvZodiacDate.text = item.concatStartEndDates()
     }
