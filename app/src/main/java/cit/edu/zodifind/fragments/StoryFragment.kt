@@ -39,7 +39,6 @@ class StoryFragment : Fragment() {
     }
 
     private fun getZodiacStory(sign: ZodiacSign): String {
-        // You would implement this to return the appropriate story for each sign
         return when (sign) {
             ZodiacSign.AQUARIUS -> "The story of Aquarius begins with..."
             ZodiacSign.PISCES -> "In ancient mythology, Pisces represents..."

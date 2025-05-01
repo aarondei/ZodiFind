@@ -62,6 +62,36 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.22" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/burgerButtonGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.0175"
+            android:orientation="horizontal" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/astrologyGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/tarotGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/palmistryGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67" />
+
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="0dp"
@@ -82,6 +112,7 @@
             app:layout_constraintTop_toBottomOf="@id/imgLogo"
             app:layout_constraintVertical_bias="0.025" />
 
+
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/bottom_nav_fragment_container"
             android:name="cit.edu.zodifind.fragments.BottomNavFragment"
@@ -97,8 +128,205 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:src="@drawable/ic_menu"
-            app:layout_constraintStart_toStartOf="@id/marginStart"
-            app:layout_constraintTop_toTopOf="@id/MarginTop" />
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/burgerButtonGuide"/>
+
+<!--        astrology card-->
+        <ImageView
+            android:id="@+id/rhombusAstrology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rhombus"
+
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintTop_toBottomOf="@id/astrologyGuide"
+            app:layout_constraintBottom_toTopOf="@id/tarotGuide"
+            />
+
+        <ImageView
+            android:id="@+id/imgAstrology"
+            android:layout_width="112dp"
+            android:layout_height="122dp"
+            android:src="@drawable/card_astrology"
+
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toEndOf="@id/tvAstrologyDesc"
+            app:layout_constraintTop_toBottomOf="@id/astrologyGuide"
+            app:layout_constraintBottom_toTopOf="@id/tarotGuide"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintVertical_bias="0.99"
+            />
+
+        <TextView
+            android:id="@+id/tvAstrology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="ASTROLOGY"
+            android:textColor="@color/dandelion"
+            android:fontFamily="@font/cinzel_black"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintTop_toBottomOf="@id/astrologyGuide"
+            app:layout_constraintBottom_toTopOf="@id/tarotGuide"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/tvAstrologyDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/josefinsans_regular"
+            android:padding="1dp"
+            android:text="@string/astrology"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+
+            app:layout_constraintBottom_toTopOf="@id/tarotGuide"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@id/tvAstrology"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+<!--tarot card-->
+        <ImageView
+            android:id="@+id/rhombusTarot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rhombus"
+
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintTop_toBottomOf="@id/tarotGuide"
+            app:layout_constraintBottom_toTopOf="@id/palmistryGuide"
+            />
+
+        <ImageView
+            android:id="@+id/imgTarot"
+            android:layout_width="168dp"
+            android:layout_height="116dp"
+            android:src="@drawable/card_tarot"
+
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@id/tarotGuide"
+            app:layout_constraintBottom_toTopOf="@id/palmistryGuide"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0.55"
+            />
+
+        <TextView
+            android:id="@+id/tvTarot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="TAROT"
+            android:textColor="@color/dandelion"
+            android:fontFamily="@font/cinzel_black"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintTop_toBottomOf="@id/tarotGuide"
+            app:layout_constraintBottom_toTopOf="@id/palmistryGuide"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintHorizontal_bias=".9"
+            />
+
+        <TextView
+            android:id="@+id/tvTarotDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="@string/tarot"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+
+            app:layout_constraintBottom_toTopOf="@id/palmistryGuide"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toEndOf="@id/imgTarot"
+            app:layout_constraintTop_toBottomOf="@id/tvTarot"
+            app:layout_constraintVertical_bias="0"
+            />
+
+
+        <!--palmistry card-->
+
+        <ImageView
+            android:id="@+id/rhombusPalm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rhombus"
+
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintTop_toBottomOf="@id/palmistryGuide"
+            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+            app:layout_constraintVertical_bias="0.1"
+            />
+
+        <ImageView
+            android:id="@+id/imgPalmistry"
+            android:layout_width="149dp"
+            android:layout_height="120dp"
+            android:src="@drawable/card_palmistry"
+
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toEndOf="@id/tvPalmistryDesc"
+            app:layout_constraintTop_toBottomOf="@id/palmistryGuide"
+            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintVertical_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/tvPalmistry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="PALMISTRY"
+            android:textColor="@color/dandelion"
+            android:fontFamily="@font/cinzel_black"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintTop_toBottomOf="@id/palmistryGuide"
+            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+        <TextView
+            android:id="@+id/tvPalmistryDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/josefinsans_regular"
+            android:padding="1dp"
+            android:text="@string/palmistry"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+
+            app:layout_constraintBottom_toTopOf="@id/MarginBottom"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toEndOf="@id/marginStart"
+            app:layout_constraintTop_toBottomOf="@id/tvPalmistry"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0.1"
+            />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -108,5 +336,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/black" />
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

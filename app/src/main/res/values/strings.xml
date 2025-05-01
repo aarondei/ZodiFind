@@ -9,6 +9,14 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</string>
     <!-- TODO: Remove or change this placeholder text -->
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aaron">JATAYNA,\n AARON DEI</string>
+    <string name="venice">JUAREZ,\n VENICE JONAH</string>
+    <string name="tarot">Cards weave your\ndestiny.</string>
+    <string name="astrology">Fate bleeds from the\nstars.</string>
+    <string name="palmistry">Hands whisper your\ntruth.</string>
+
+
 
     <!-- description meaning -->
     <!-- The Fool -->
