@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import cit.edu.zodifind.app.ZodiFindApplication
 
 class SettingsActivity : BaseActivity() {
     @SuppressLint("MissingInflatedId")
@@ -17,15 +18,24 @@ class SettingsActivity : BaseActivity() {
         val tvName = findViewById<TextView>(R.id.tvName)
 
         intent?.let {
-            it.getStringExtra("username")?.let{username ->
-                tvName.text = username
+            it.getStringExtra("name")?.let{name ->
+                tvName.text = name
             }
         }
 
-        val tvDeveloper = findViewById<TextView>(R.id.tvDeveloper)
-        tvDeveloper.setOnClickListener(){
-            val intent = Intent(this, DeveloperActivity:: class.java)
-            startActivity(intent)
+        val btnEdit = findViewById<ImageView>(R.id.btnToEdit)
+        btnEdit.setOnClickListener {
+            val app = application as ZodiFindApplication
+            app.currentUser?.let { currentUser ->
+                val intent = Intent(this, EditProfileActivity::class.java)
+                intent.putExtra("name", currentUser.name)
+                intent.putExtra("bio", currentUser.bio ?: "")
+                intent.putExtra("username", currentUser.username)
+                currentUser.profileImageUri?.let {
+                    intent.putExtra("profileImageUri", it)
+                }
+                startActivity(intent)
+            }
         }
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)

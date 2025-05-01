@@ -5,105 +5,118 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import java.io.IOException
+import cit.edu.zodifind.app.ZodiFindApplication
+import de.hdodenhof.circleimageview.CircleImageView
+import java.io.File
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class ProfileActivity : BaseActivity() {
     private lateinit var tvName: TextView
+    private lateinit var tvUsername: TextView
     private lateinit var tvBio: TextView
-    private lateinit var imgPfp: ImageView
-    private val EDIT_PROFILE_REQUEST_CODE = 123
+    private lateinit var tvBirth: TextView
+    private lateinit var tvSign: TextView
+    private lateinit var imgPfp: CircleImageView
     private var selectedImageUri: Uri? = null
+    private val EDIT_PROFILE_REQUEST_CODE = 123
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile)
 
-        // Initialize UI elements
+        // Initialize views
         tvName = findViewById(R.id.tvName)
+        tvUsername = findViewById(R.id.tvUsername)
         tvBio = findViewById(R.id.tvBio)
+        tvBirth = findViewById(R.id.tvBday)
+        tvSign = findViewById(R.id.tvSign)
         imgPfp = findViewById(R.id.imgPfp)
 
-        // Get initial username from intent
-        intent?.let {
-            it.getStringExtra("username")?.let { username ->
-                tvName.text = username
+        val app = application as ZodiFindApplication
+        val user = app.currentUser ?: return
+
+        // Set user info
+        tvName.text = user.name
+        tvUsername.text = "@${user.username}"
+        tvBio.text = user.bio ?: ""
+        tvSign.text = user.zodiacSign?.name ?: ""
+
+        // Format and show birthdate
+        user.birthdate?.let {
+            try {
+                val parsedDate = LocalDate.parse(it.toString()) // Format: "yyyy-MM-dd"
+                val formatter = DateTimeFormatter.ofPattern("MMM dd, yyyy", Locale.getDefault())
+                tvBirth.text = parsedDate.format(formatter)
+            } catch (e: Exception) {
+                tvBirth.text = ""
             }
         }
 
-        val btnBack = findViewById<ImageView>(R.id.btnBack)
-        btnBack.setOnClickListener {
-            finish()
-        }
+        loadProfilePicture(user)
 
-        val btnEditProfile = findViewById<ImageView>(R.id.imgToEdit)
-        btnEditProfile.setOnClickListener {
-            // pass current data
-            val intent = Intent(this, EditProfileActivity::class.java)
-            intent.putExtra("username", tvName.text.toString())
-            intent.putExtra("bio", tvBio.text.toString())
-            // Pass the image URI string if it exists
-            if (selectedImageUri != null) {
-                intent.putExtra("profileImageUri", selectedImageUri.toString())
-            }
-            startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE)
-        }
-
-        val btnEditPfp = findViewById<ImageView>(R.id.imgEditPic)
-        btnEditPfp.setOnClickListener {
-            val intent = Intent(this, EditProfileActivity::class.java)
-            intent.putExtra("username", tvName.text.toString())
-            intent.putExtra("bio", tvBio.text.toString())
-            if (selectedImageUri != null) {
-                intent.putExtra("profileImageUri", selectedImageUri.toString())
-            }
-            startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE)
-        }
-
-        val btnEditBio = findViewById<ImageView>(R.id.imgEditBio)
-        btnEditBio.setOnClickListener {
-            val intent = Intent(this, EditProfileActivity::class.java)
-            intent.putExtra("username", tvName.text.toString())
-            intent.putExtra("bio", tvBio.text.toString())
-            if (selectedImageUri != null) {
-                intent.putExtra("profileImageUri", selectedImageUri.toString())
-            }
-            startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE)
-        }
+        // Button click listeners
+        findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
+        findViewById<ImageView>(R.id.imgEditBio).setOnClickListener { launchEdit(user) }
+        findViewById<ImageView>(R.id.imgToEdit).setOnClickListener { launchEdit(user) }
     }
 
+    private fun launchEdit(user: cit.edu.zodifind.data.User) {
+        val intent = Intent(this, EditProfileActivity::class.java).apply {
+            putExtra("name", user.name)
+            putExtra("bio", user.bio)
+            putExtra("username", user.username)
+            putExtra("profileImageUri", user.profileImageUri)
+        }
+        startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE)
+    }
 
-    @Deprecated("Deprecated in Java")
+    private fun loadProfilePicture(user: cit.edu.zodifind.data.User) {
+        user.profileImageUri?.let {
+            try {
+                selectedImageUri = Uri.parse(it)
+                val file = File(selectedImageUri!!.path!!)
+                if (file.exists()) {
+                    imgPfp.setImageURI(selectedImageUri)
+                } else {
+                    imgPfp.setImageResource(R.drawable.pfp_default)
+                }
+            } catch (e: Exception) {
+                imgPfp.setImageResource(R.drawable.pfp_default)
+            }
+        } ?: imgPfp.setImageResource(R.drawable.pfp_default)
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
         if (requestCode == EDIT_PROFILE_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            // Get the updated data from the intent
             val newName = data?.getStringExtra("newName")
             val newBio = data?.getStringExtra("newBio")
-            val imageUriString = data?.getStringExtra("profileImageUri")
+            val imageUriStr = data?.getStringExtra("profileImageUri")
 
-            // Update the views with the new data
-            newName?.let { tvName.text = it }
-            newBio?.let { tvBio.text = it }
+            val user = (application as ZodiFindApplication).currentUser ?: return
 
-            // Load the new profile picture if a new one was selected
-            if (imageUriString != null) {
-                selectedImageUri = Uri.parse(imageUriString)
-                try {
-                    val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, selectedImageUri)
-                    imgPfp.setImageBitmap(bitmap)
-                } catch (e: IOException) {
-                    e.printStackTrace()
-                    Toast.makeText(this, "Failed to load new profile picture", Toast.LENGTH_SHORT).show()
+            newName?.let {
+                user.name = it
+                tvName.text = it
+            }
 
-                }
+            newBio?.let {
+                user.bio = it
+                tvBio.text = it
+            }
+
+            imageUriStr?.let {
+                selectedImageUri = Uri.parse(it)
+                user.profileImageUri = it
+                imgPfp.setImageURI(selectedImageUri)
             }
         }
     }
 }
-
