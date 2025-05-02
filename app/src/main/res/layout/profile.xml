@@ -328,7 +328,7 @@
         android:textSize="20sp"
         android:text="Edit Profile"
         android:textColor="@color/white"
-
+        android:fontFamily="@font/josefinsans_regular"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/line2"
@@ -344,7 +344,7 @@
         android:textSize="20sp"
         android:text="Change Password"
         android:textColor="@color/white"
-
+        android:fontFamily="@font/josefinsans_regular"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/tvEditProfile"
