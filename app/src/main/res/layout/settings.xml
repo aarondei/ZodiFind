@@ -108,9 +108,9 @@
             android:layout_height="wrap_content"
 
             android:text="Jane Doe"
-            android:textSize="23sp"
+            android:textSize="30sp"
             android:textColor="@color/white"
-            android:fontFamily="@font/cinzel_bold"
+            android:fontFamily="@font/cinzel_black"
 
             app:layout_constraintStart_toEndOf="@id/profilepic"
             app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
@@ -127,7 +127,7 @@
         android:layout_height="wrap_content"
 
         android:text="April 10"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textColor="@color/white"
         android:fontFamily="@font/josefinsans_regular"
 
@@ -145,18 +145,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Account"
-        android:textSize="30sp"
-        android:textColor="@color/white"
         android:fontFamily="@font/josefinsans_regular"
+        android:text="Account"
+        android:textColor="@color/white"
+        android:textSize="26sp"
 
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@id/AccountSectionGuide"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintEnd_toStartOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintVertical_bias="0"
-        />
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/AccountSectionGuide"
+        app:layout_constraintVertical_bias="0.028" />
 
     <View
         android:id="@+id/line"
@@ -164,12 +163,12 @@
         android:layout_height="1dp"
         android:background="@android:color/white"
 
-        app:layout_constraintBottom_toTopOf="@id/AccountSectionGuide"
+        app:layout_constraintBottom_toTopOf="@id/tvAccount"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@id/headerEndGuide"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@id/profilepic"
+        app:layout_constraintVertical_bias="0.9" />
 
     <View
         android:id="@+id/line2"
@@ -177,8 +176,8 @@
         android:layout_height="1dp"
         android:background="@android:color/white"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/tvAccount"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.025"
@@ -191,6 +190,8 @@
         android:textSize="20sp"
         android:text="Edit Profile"
         android:textColor="@color/white"
+
+        android:fontFamily="@font/josefinsans_light"
 
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
@@ -206,7 +207,12 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:text="Change Password"
+
+  
+        android:fontFamily="@font/josefinsans_light"
+
         android:textColor="@color/red"
+
 
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
@@ -222,18 +228,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="General"
-        android:textSize="30sp"
-        android:textColor="@color/white"
         android:fontFamily="@font/josefinsans_regular"
+        android:text="General"
+        android:textColor="@color/white"
+        android:textSize="26sp"
 
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@id/GeneralSectionGuide"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintEnd_toStartOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintVertical_bias="0"
-        />
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/GeneralSectionGuide"
+        app:layout_constraintVertical_bias="0.087" />
 
     <View
         android:id="@+id/line3"
@@ -241,11 +246,11 @@
         android:layout_height="1dp"
         android:background="@android:color/white"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/tvGeneral"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.03"
         />
 
     <ImageView
@@ -322,6 +327,7 @@
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.16"
         app:layout_constraintHorizontal_bias="0.1"
+        android:fontFamily="@font/josefinsans_light"
         />
 
     <TextView
@@ -338,6 +344,7 @@
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.18"
         app:layout_constraintHorizontal_bias="0"
+        android:fontFamily="@font/josefinsans_light"
         />
 
     <TextView
@@ -354,6 +361,7 @@
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.20"
         app:layout_constraintHorizontal_bias="0"
+        android:fontFamily="@font/josefinsans_light"
         />
 
 <!--    arrows-->

@@ -64,7 +64,7 @@
 
         app:layout_constraintBottom_toBottomOf="@id/MarginBottom"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintHeight_percent="0.3"
 
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/marginStart"
@@ -80,6 +80,7 @@
         android:textAlignment="center"
         android:textColor="@color/dandelion"
         android:textSize="40sp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/palmLineImage"
@@ -118,8 +119,8 @@
             android:gravity="center"
             android:paddingVertical="20dp"
             android:text="Domain"
-            android:textColor="@android:color/white"
-            android:fontFamily="@font/josefinsans_light"
+            android:textColor="@color/dandelion"
+            android:fontFamily="@font/josefinsans_regular"
             android:textSize="18sp" />
 
     </LinearLayout>

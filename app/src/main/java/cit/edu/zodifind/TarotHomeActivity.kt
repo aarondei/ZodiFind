@@ -10,8 +10,10 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.drawerlayout.widget.DrawerLayout
 
 class TarotHomeActivity : BaseActivity() {
 
@@ -50,6 +52,16 @@ class TarotHomeActivity : BaseActivity() {
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Please select a reading first", Toast.LENGTH_LONG).show()
+            }
+        }
+
+        val burgerMenuIcon = findViewById<ImageView>(R.id.burgerMenuIcon)
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
+        burgerMenuIcon.setOnClickListener {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START)
             }
         }
 

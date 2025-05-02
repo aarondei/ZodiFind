@@ -15,6 +15,8 @@ import kotlin.math.hypot
 import android.os.Handler
 import android.os.Looper
 import android.widget.OverScroller
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 
 class AstrologyHomeActivity : BaseActivity() {
 
@@ -71,6 +73,16 @@ class AstrologyHomeActivity : BaseActivity() {
 
         scroller = OverScroller(this, DecelerateInterpolator())
         setupSmartSpin(zodiacWheel)
+
+        val burgerMenuIcon = findViewById<ImageView>(R.id.burgerMenuIcon)
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
+        burgerMenuIcon.setOnClickListener {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START)
+            }
+        }
     }
 
     @SuppressLint("ClickableViewAccessibility")

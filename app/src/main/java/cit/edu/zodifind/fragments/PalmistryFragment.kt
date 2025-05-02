@@ -44,6 +44,8 @@ class PalmistryFragment : Fragment() {
         } else {
             requestPermissionLauncher.launch(android.Manifest.permission.CAMERA)
         }
+
+
     }
 
     private fun startCamera() {

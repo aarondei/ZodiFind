@@ -63,6 +63,12 @@ class ViewPagerFragment : Fragment() {
 
         // Setup tabs
         setupTabs()
+
+        val btnBack = view.findViewById<ImageView>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            requireActivity().finish()
+            requireActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        }
     }
 
     private fun setupViewPager() {

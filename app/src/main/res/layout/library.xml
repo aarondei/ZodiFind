@@ -43,6 +43,14 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.94" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/burgerButtonGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.0175"
+            android:orientation="horizontal" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/headerStart"
@@ -118,7 +126,7 @@
             android:padding="16dp"
             android:src="@drawable/ic_menu"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/burgerButtonGuide" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

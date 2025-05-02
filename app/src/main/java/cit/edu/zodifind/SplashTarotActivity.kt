@@ -18,10 +18,13 @@ class SplashTarotActivity : BaseActivity() {
         splashscreen.setOnClickListener(){
             startActivity(Intent(this, TarotHomeActivity:: class.java))
         }
+
+
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+            finish()
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+
         }
     }
 }
