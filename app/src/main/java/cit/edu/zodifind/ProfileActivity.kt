@@ -73,7 +73,6 @@ class ProfileActivity : BaseActivity() {
         findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
         findViewById<ImageView>(R.id.imgEditBio).setOnClickListener { launchEdit(user) }
 
-        findViewById<ImageView>(R.id.imgToEdit).setOnClickListener { launchEdit(user) }
 
 
         var btnToSettings = findViewById<ImageView>(R.id.btnToSettings)

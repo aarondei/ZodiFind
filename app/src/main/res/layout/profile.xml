@@ -344,24 +344,23 @@
         />
 
 
+    <!--    arrows-->
+
     <TextView
         android:id="@+id/tvChange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:layout_marginBottom="68dp"
+        android:fontFamily="@font/josefinsans_regular"
         android:text="Change Password"
         android:textColor="@color/white"
-        android:fontFamily="@font/josefinsans_regular"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
-        app:layout_constraintTop_toBottomOf="@id/tvEditProfile"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
-        app:layout_constraintVertical_bias="0.2"
-        app:layout_constraintHorizontal_bias="0.1"
-        />
-
-
-<!--    arrows-->
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/tvSettings"
+        app:layout_constraintVertical_bias="0.833" />
 
     <ImageView
         android:id="@+id/btnToSettings"
@@ -376,6 +375,8 @@
         app:layout_constraintVertical_bias="0.23"
         app:layout_constraintHorizontal_bias="0.93"
         />
+
+
 
     <!--    nav bar-->
 <!--    <FrameLayout-->
