@@ -102,13 +102,12 @@ class ProfileActivity : BaseActivity() {
         user.profileImageUri?.let {
             try {
                 selectedImageUri = Uri.parse(it)
-                val file = File(selectedImageUri!!.path!!)
-                if (file.exists()) {
-                    imgPfp.setImageURI(selectedImageUri)
-                } else {
-                    imgPfp.setImageResource(R.drawable.pfp_default)
-                }
+                contentResolver.openInputStream(selectedImageUri!!)?.use { inputStream ->
+                    val bitmap = android.graphics.BitmapFactory.decodeStream(inputStream)
+                    imgPfp.setImageBitmap(bitmap)
+                } ?: imgPfp.setImageResource(R.drawable.pfp_default)
             } catch (e: Exception) {
+                e.printStackTrace()
                 imgPfp.setImageResource(R.drawable.pfp_default)
             }
         } ?: imgPfp.setImageResource(R.drawable.pfp_default)
@@ -142,7 +141,10 @@ class ProfileActivity : BaseActivity() {
         }
         if (resultCode == RESULT_OK && requestCode == pickImageRequest) {
             data?.data?.let { imageUri ->
-                imgPfp.setImageURI(imageUri)  // Set the selected image to the ImageView
+                val user = (application as ZodiFindApplication).currentUser ?: return
+                user.profileImageUri = imageUri.toString()
+                selectedImageUri = imageUri
+                imgPfp.setImageURI(imageUri)
             }
         }
     }

@@ -22,11 +22,32 @@ class SettingsActivity : BaseActivity() {
         val profilePic = findViewById<de.hdodenhof.circleimageview.CircleImageView>(R.id.profilepic)
 
         val app = application as ZodiFindApplication
-        app.currentUser?.let { currentUser ->
-            tvName.text = currentUser.name
-            tvBirth.text = currentUser.birthdate.toString() // Ensure this is properly formatted
 
-            currentUser.profileImageUri?.let { uriString ->
+        // Try getting data from Intent extras first
+        val intentName = intent.getStringExtra("name")
+        val intentBday = intent.getStringExtra("bday")
+        val intentImageUri = intent.getStringExtra("profileImageUri")
+
+        // Display name
+        tvName.text = intentName ?: app.currentUser?.name ?: ""
+
+        // Display birthdate
+        tvBirth.text = intentBday ?: app.currentUser?.birthdate?.toString() ?: ""
+
+        // Load image from Intent URI if available, fallback to app.currentUser
+        if (!intentImageUri.isNullOrEmpty()) {
+            try {
+                val uri = Uri.parse(intentImageUri)
+                contentResolver.openInputStream(uri)?.use { inputStream ->
+                    val bitmap = BitmapFactory.decodeStream(inputStream)
+                    profilePic.setImageBitmap(bitmap)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                profilePic.setImageResource(R.drawable.pfp_default)
+            }
+        } else {
+            app.currentUser?.profileImageUri?.let { uriString ->
                 try {
                     val uri = Uri.parse(uriString)
                     contentResolver.openInputStream(uri)?.use { inputStream ->
