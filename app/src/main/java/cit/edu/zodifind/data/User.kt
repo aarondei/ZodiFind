@@ -5,7 +5,7 @@ import java.time.LocalDate
 
 data class User(
     var name: String,
-    val username: String,
+    var username: String,
     val password: String,
     var birthdate: LocalDate? = null,
     var bio: String? = null,
