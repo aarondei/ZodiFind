@@ -1,12 +1,16 @@
 package cit.edu.zodifind
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.text.InputType
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import cit.edu.zodifind.app.ZodiFindApplication
 
 class SettingsActivity : BaseActivity() {
@@ -91,5 +95,49 @@ class SettingsActivity : BaseActivity() {
         findViewById<ImageView>(R.id.btnToFaq).setOnClickListener {
             startActivity(Intent(this, FaqActivity::class.java))
         }
+//        changing password
+
+        val tvChangePassword = findViewById<TextView>(R.id.tvChange)
+        tvChangePassword.setOnClickListener {
+            showChangePasswordDialog()
+        }
+    }
+
+    private fun showChangePasswordDialog() {
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setTitle("Change Password")
+
+
+        val input = EditText(this)
+        input.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        dialogBuilder.setView(input)
+
+
+        dialogBuilder.setPositiveButton("Change") { _, _ ->
+            val newPassword = input.text.toString().trim()
+            if (newPassword.isNotEmpty()) {
+                changePassword(newPassword)
+            } else {
+                Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show()
+            }
+        }
+        dialogBuilder.setNegativeButton("Cancel") { dialog, _ ->
+            dialog.dismiss()
+        }
+        
+        dialogBuilder.show()
+    }
+
+    private fun changePassword(newPassword: String) {
+
+        val app = application as ZodiFindApplication
+        val user = app.currentUser ?: return
+
+        // Update the password
+        user.password = newPassword // Save this new password
+
+        // Show confirmation message
+        Toast.makeText(this, "Password changed successfully", Toast.LENGTH_SHORT).show()
+
     }
 }
