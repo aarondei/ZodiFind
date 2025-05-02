@@ -28,7 +28,7 @@ class ProfileActivity : BaseActivity() {
 
     private val pickImageRequest = 100
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile)
@@ -72,7 +72,25 @@ class ProfileActivity : BaseActivity() {
         // Button click listeners
         findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
         findViewById<ImageView>(R.id.imgEditBio).setOnClickListener { launchEdit(user) }
+
         findViewById<ImageView>(R.id.imgToEdit).setOnClickListener { launchEdit(user) }
+
+
+        var btnToSettings = findViewById<ImageView>(R.id.btnToSettings)
+        btnToSettings.setOnClickListener(){
+            val intent = Intent(this, SettingsActivity::class.java).apply {
+                putExtra("name", user.name)
+                putExtra("bio", user.bio)
+                putExtra("username", user.username)
+                putExtra("bday", user.birthdate?.toString())
+                putExtra("profileImageUri", user.profileImageUri)
+            }
+            startActivity(intent)
+        }
+
+
+      
+
     }
 
     private fun launchEdit(user: cit.edu.zodifind.data.User) {
@@ -89,13 +107,12 @@ class ProfileActivity : BaseActivity() {
         user.profileImageUri?.let {
             try {
                 selectedImageUri = Uri.parse(it)
-                val file = File(selectedImageUri!!.path!!)
-                if (file.exists()) {
-                    imgPfp.setImageURI(selectedImageUri)
-                } else {
-                    imgPfp.setImageResource(R.drawable.pfp_default)
-                }
+                contentResolver.openInputStream(selectedImageUri!!)?.use { inputStream ->
+                    val bitmap = android.graphics.BitmapFactory.decodeStream(inputStream)
+                    imgPfp.setImageBitmap(bitmap)
+                } ?: imgPfp.setImageResource(R.drawable.pfp_default)
             } catch (e: Exception) {
+                e.printStackTrace()
                 imgPfp.setImageResource(R.drawable.pfp_default)
             }
         } ?: imgPfp.setImageResource(R.drawable.pfp_default)
@@ -129,7 +146,10 @@ class ProfileActivity : BaseActivity() {
         }
         if (resultCode == RESULT_OK && requestCode == pickImageRequest) {
             data?.data?.let { imageUri ->
-                imgPfp.setImageURI(imageUri)  // Set the selected image to the ImageView
+                val user = (application as ZodiFindApplication).currentUser ?: return
+                user.profileImageUri = imageUri.toString()
+                selectedImageUri = imageUri
+                imgPfp.setImageURI(imageUri)
             }
         }
     }

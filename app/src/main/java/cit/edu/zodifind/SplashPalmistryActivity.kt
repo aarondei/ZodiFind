@@ -21,10 +21,12 @@ class SplashPalmistryActivity : BaseActivity() {
             finish()
         }
 
+
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
             finish()
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+
         }
     }
 }

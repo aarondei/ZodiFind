@@ -328,11 +328,11 @@
         />
 
     <TextView
-        android:id="@+id/tvEditProfile"
+        android:id="@+id/tvSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Edit Profile"
+        android:text="Settings"
         android:textColor="@color/white"
         android:fontFamily="@font/josefinsans_regular"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
@@ -342,6 +342,7 @@
         app:layout_constraintVertical_bias="0.2"
         app:layout_constraintHorizontal_bias="0.08"
         />
+
 
     <TextView
         android:id="@+id/tvChange"
@@ -359,33 +360,21 @@
         app:layout_constraintHorizontal_bias="0.1"
         />
 
+
 <!--    arrows-->
 
     <ImageView
-        android:id="@+id/imgToEdit"
+        android:id="@+id/btnToSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/next"
 
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintStart_toEndOf="@id/tvEditProfile"
+        app:layout_constraintStart_toEndOf="@id/tvSettings"
         app:layout_constraintTop_toBottomOf="@id/line2"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.23"
         app:layout_constraintHorizontal_bias="0.93"
-        />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/next"
-
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintStart_toEndOf="@id/tvChange"
-        app:layout_constraintTop_toBottomOf="@id/tvEditProfile"
-        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
-        app:layout_constraintVertical_bias="0.23"
-        app:layout_constraintHorizontal_bias="0.9"
         />
 
     <!--    nav bar-->
