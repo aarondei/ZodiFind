@@ -2,6 +2,7 @@ package cit.edu.zodifind
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -16,6 +17,11 @@ class SplashTarotActivity : BaseActivity() {
         val splashscreen = findViewById<ConstraintLayout>(R.id.splash_tarot)
         splashscreen.setOnClickListener(){
             startActivity(Intent(this, TarotHomeActivity:: class.java))
+        }
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
     }
 }

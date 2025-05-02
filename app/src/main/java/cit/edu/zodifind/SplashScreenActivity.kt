@@ -20,6 +20,7 @@ class SplashScreenActivity : BaseActivity() {
 
         playVideoView()
 
+
         val constraintLayoutSplashScreen = findViewById<ConstraintLayout>(R.id.constraintLayoutSplashScreen)
         constraintLayoutSplashScreen.setOnClickListener(){
             val intent = Intent(this, LoginActivity:: class.java) // TODO REVERT BACK AFTER TEST

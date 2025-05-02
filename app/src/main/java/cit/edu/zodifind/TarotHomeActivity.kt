@@ -1,10 +1,12 @@
 package cit.edu.zodifind
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,9 +16,15 @@ import androidx.core.view.WindowInsetsCompat
 class TarotHomeActivity : BaseActivity() {
 
     private var selectedItem: String? = null
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tarot_home)
+
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
 
         val items = listOf("Love", "Career", "Money", "Personal Growth", "Health", "Life Purpose", "Spiritual Guidance", "Decision", "Family", "Friendship")
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, items)

@@ -1,14 +1,16 @@
 package cit.edu.zodifind
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import cit.edu.zodifind.app.ZodiFindApplication
 
 class SettingsActivity : BaseActivity() {
+
     @SuppressLint("MissingInflatedId")
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,58 +18,57 @@ class SettingsActivity : BaseActivity() {
         setContentView(R.layout.settings)
 
         val tvName = findViewById<TextView>(R.id.tvName)
+        val tvBirth = findViewById<TextView>(R.id.tvBirth)
+        val profilePic = findViewById<de.hdodenhof.circleimageview.CircleImageView>(R.id.profilepic)
 
-        intent?.let {
-            it.getStringExtra("name")?.let{name ->
-                tvName.text = name
-            }
+        val app = application as ZodiFindApplication
+        app.currentUser?.let { currentUser ->
+            tvName.text = currentUser.name
+            tvBirth.text = currentUser.birthdate.toString() // Ensure this is properly formatted
+
+            currentUser.profileImageUri?.let { uriString ->
+                try {
+                    val uri = Uri.parse(uriString)
+                    contentResolver.openInputStream(uri)?.use { inputStream ->
+                        val bitmap = BitmapFactory.decodeStream(inputStream)
+                        profilePic.setImageBitmap(bitmap)
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    profilePic.setImageResource(R.drawable.pfp_default)
+                }
+            } ?: profilePic.setImageResource(R.drawable.pfp_default)
         }
 
-        val btnEdit = findViewById<ImageView>(R.id.btnToEdit)
-        btnEdit.setOnClickListener {
-            val app = application as ZodiFindApplication
+        findViewById<ImageView>(R.id.btnToEdit).setOnClickListener {
             app.currentUser?.let { currentUser ->
-                val intent = Intent(this, EditProfileActivity::class.java)
-                intent.putExtra("name", currentUser.name)
-                intent.putExtra("bio", currentUser.bio ?: "")
-                intent.putExtra("username", currentUser.username)
-                currentUser.profileImageUri?.let {
-                    intent.putExtra("profileImageUri", it)
+                val intent = Intent(this, EditProfileActivity::class.java).apply {
+                    putExtra("name", currentUser.name)
+                    putExtra("bio", currentUser.bio ?: "")
+                    putExtra("username", currentUser.username)
+                    currentUser.profileImageUri?.let {
+                        putExtra("profileImageUri", it)
+                    }
                 }
                 startActivity(intent)
             }
         }
 
-        val btnBack = findViewById<ImageView>(R.id.btnBack)
-        btnBack.setOnClickListener {
-
-            val intent = Intent(this, HomeActivity:: class.java)
-            startActivity(intent)
-//            val resultIntent = Intent()
-//            resultIntent.putExtra("username", tvName.text.toString())
-//            setResult(RESULT_OK, resultIntent)
-//            finish()
+        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
+            finish()
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
-        val btnAbout = findViewById<ImageView>(R.id.btnToAbout)
-        btnAbout.setOnClickListener(){
-            val intent = Intent(this, AboutZodifindActivity:: class.java)
-            startActivity(intent)
+        findViewById<ImageView>(R.id.btnToAbout).setOnClickListener {
+            startActivity(Intent(this, AboutZodifindActivity::class.java))
         }
 
-        val btnDev = findViewById<ImageView>(R.id.btnToDev)
-        btnDev.setOnClickListener(){
-            val intent = Intent(this, DeveloperActivity:: class.java)
-            startActivity(intent)
+        findViewById<ImageView>(R.id.btnToDev).setOnClickListener {
+            startActivity(Intent(this, DeveloperActivity::class.java))
         }
 
-        val btnFAQ = findViewById<ImageView>(R.id.btnToFaq)
-        btnFAQ.setOnClickListener(){
-            val intent = Intent(this, FaqActivity:: class.java)
-            startActivity(intent)
+        findViewById<ImageView>(R.id.btnToFaq).setOnClickListener {
+            startActivity(Intent(this, FaqActivity::class.java))
         }
-
-
     }
 }

@@ -27,6 +27,7 @@ class MenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val app = requireActivity().application as ZodiFindApplication
+        val user = app.currentUser ?: return
 
         view.findViewById<View>(R.id.menuProfile)?.setOnClickListener {
             val intent = Intent(requireContext(), ProfileActivity::class.java)
@@ -39,7 +40,13 @@ class MenuFragment : Fragment() {
             true
         }
         view.findViewById<View>(R.id.menuSettings)?.setOnClickListener {
-            val intent = Intent(requireContext(), SettingsActivity::class.java)
+            val intent = Intent(requireContext(), SettingsActivity::class.java).apply {
+                putExtra("name", user.name)
+                putExtra("bio", user.bio)
+                putExtra("username", user.username)
+                putExtra("bday", user.birthdate?.toString())
+                putExtra("profileImageUri", user.profileImageUri)
+            }
             startActivity(intent)
             true
         }

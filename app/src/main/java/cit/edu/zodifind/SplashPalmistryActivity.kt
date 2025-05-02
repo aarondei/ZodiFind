@@ -2,6 +2,7 @@ package cit.edu.zodifind
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -18,6 +19,11 @@ class SplashPalmistryActivity : BaseActivity() {
             val intent = Intent(this, PalmistryLibraryActivity:: class.java)
             startActivity(intent)
             finish()
+        }
+
+        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
     }
 }

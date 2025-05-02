@@ -28,7 +28,7 @@ class ProfileActivity : BaseActivity() {
 
     private val pickImageRequest = 100
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile)
@@ -66,7 +66,19 @@ class ProfileActivity : BaseActivity() {
         // Button click listeners
         findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
         findViewById<ImageView>(R.id.imgEditBio).setOnClickListener { launchEdit(user) }
-        findViewById<ImageView>(R.id.imgToEdit).setOnClickListener { launchEdit(user) }
+
+        var btnToSettings = findViewById<ImageView>(R.id.btnToSettings)
+        btnToSettings.setOnClickListener(){
+            val intent = Intent(this, SettingsActivity::class.java).apply {
+                putExtra("name", user.name)
+                putExtra("bio", user.bio)
+                putExtra("username", user.username)
+                putExtra("bday", user.birthdate?.toString())
+                putExtra("profileImageUri", user.profileImageUri)
+            }
+            startActivity(intent)
+        }
+
 
         val toEditPic = findViewById<ImageView>(R.id.imgEditPic)
         toEditPic.setOnClickListener {

@@ -14,6 +14,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
+import cit.edu.zodifind.app.ZodiFindApplication
 import java.io.IOException
 
 class EditProfileActivity : BaseActivity() {
@@ -28,6 +29,7 @@ class EditProfileActivity : BaseActivity() {
     private var selectedImageUri: Uri? = null
     private val MAX_NAME_LENGTH = 15
     private val MAX_BIO_LENGTH = 150
+
 
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
