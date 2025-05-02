@@ -27,7 +27,8 @@ class TarotDeckActivity : BaseActivity() {
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
         }
     }
 }

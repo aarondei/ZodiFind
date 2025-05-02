@@ -81,13 +81,14 @@
         />
 
     <TextView
+        android:id="@+id/meetus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:text="MEET US"
         android:textColor="@color/white"
         android:fontFamily="@font/cinzel_black"
-        android:textSize="30sp"
+        android:textSize="42sp"
 
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
@@ -97,43 +98,43 @@
 
 
 <!--    aaron section-->
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgAaron"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/pic_aaron"
         app:civ_border_width="1dp"
-        android:scaleType="centerCrop"
 
-        app:layout_constraintTop_toBottomOf="@id/aaronSecGuide"
         app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintVertical_bias="0"
-        />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/meetus"
+        app:layout_constraintVertical_bias="0.188" />
 
     <TextView
         android:id="@+id/tvAaron"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:fontFamily="@font/cinzel_black"
         android:text="@string/aaron"
         android:textColor="@color/dandelion"
-        android:fontFamily="@font/cinzel_bold"
         android:textSize="20sp"
 
-        app:layout_constraintStart_toEndOf="@id/imgAaron"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintTop_toBottomOf="@id/aaronSecGuide"
         app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
-        app:layout_constraintVertical_bias="0"
-        />
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toEndOf="@id/imgAaron"
+        app:layout_constraintTop_toBottomOf="@id/meetus"
+        app:layout_constraintVertical_bias="0.116" />
 
     <View
         android:id="@+id/line"
         android:layout_width="150dp"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@android:color/white"
 
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
@@ -148,18 +149,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:fontFamily="@font/josefinsans_regular"
         android:text="• Dec 9"
         android:textColor="@color/white"
-        android:fontFamily="@font/josefinsans_regular"
         android:textSize="15sp"
 
-        app:layout_constraintStart_toEndOf="@id/imgAaron"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintTop_toBottomOf="@id/line"
         app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="0.2"
-        />
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toEndOf="@id/imgAaron"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintVertical_bias="0.081" />
 
     <TextView
         android:id="@+id/tvAaronSign"
@@ -179,22 +179,42 @@
         app:layout_constraintHorizontal_bias="0.25"
         />
 
+    <!--    vj section-->
     <TextView
+        android:id="@+id/aarondesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:fontFamily="@font/josefinsans_regular"
         android:text="@string/aarondesc"
         android:textColor="@color/white"
-        android:fontFamily="@font/josefinsans_regular"
         android:textSize="15sp"
 
-        app:layout_constraintTop_toBottomOf="@id/imgAaron"
+        android:lineSpacingExtra="4dp"
+
+
+        android:textAlignment="center"
+
         app:layout_constraintBottom_toTopOf="@id/vjSecGuide"
-        app:layout_constraintStart_toEndOf="@id/marginStart"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toEndOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/imgAaron"
+        app:layout_constraintVertical_bias="0.256" />
+
+    <View
+        android:id="@+id/linediv"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@android:color/white"
+
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/aarondesc"
+        app:layout_constraintBottom_toTopOf="@id/imgVenice"
+        app:layout_constraintVertical_bias="0.5"
         />
 
-<!--    vj section-->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgVenice"
         android:layout_width="150dp"
@@ -218,7 +238,7 @@
 
         android:text="@string/venice"
         android:textColor="@color/dandelion"
-        android:fontFamily="@font/cinzel_bold"
+        android:fontFamily="@font/cinzel_black"
         android:textSize="20sp"
 
         app:layout_constraintStart_toEndOf="@id/imgVenice"
@@ -231,7 +251,7 @@
     <View
         android:id="@+id/line2"
         android:layout_width="150dp"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@android:color/white"
 
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
@@ -240,23 +260,23 @@
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.05"
         />
+
     <TextView
         android:id="@+id/tvVeniceBirth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:fontFamily="@font/josefinsans_regular"
         android:text="• Aug 9"
         android:textColor="@color/white"
-        android:fontFamily="@font/josefinsans_regular"
         android:textSize="15sp"
 
-        app:layout_constraintStart_toEndOf="@id/imgVenice"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintTop_toBottomOf="@id/line2"
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="0.2"
-        />
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toEndOf="@id/imgVenice"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintVertical_bias="0.063" />
 
     <TextView
         android:id="@+id/tvVeniceSign"
@@ -285,6 +305,8 @@
         android:textColor="@color/white"
         android:fontFamily="@font/josefinsans_regular"
         android:textSize="15sp"
+        android:textAlignment="center"
+        android:lineSpacingExtra="4dp"
 
 
         app:layout_constraintTop_toBottomOf="@id/imgVenice"

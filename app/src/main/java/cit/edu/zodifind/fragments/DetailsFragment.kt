@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import cit.edu.zodifind.R
@@ -66,6 +67,71 @@ class DetailsFragment : Fragment() {
         imgQuality.setImageResource(zodiacSign.quality.symbolIcon)
         imgRulingPlanet.setImageResource(zodiacSign.rulingPlanet.symbolIcon)
         imgRulingHouse.setImageResource(zodiacSign.rulingHouse.symbolIcon)
+
+
+        // element
+        val tabElement = view.findViewById<LinearLayout>(R.id.tabElement)
+        val tabElementToggle = view.findViewById<LinearLayout>(R.id.tabElementToggle)
+        val contentElement = view.findViewById<TextView>(R.id.contentElement)
+
+        tabElement.setOnClickListener {
+            if (tabElementToggle.visibility == View.VISIBLE) {
+                tabElementToggle.visibility = View.GONE
+                tabElement.setBackgroundResource(R.drawable.rounded_border)
+            } else {
+                tabElementToggle.visibility = View.VISIBLE
+                tabElement.setBackgroundResource(R.drawable.rounded_border_selected)
+                contentElement.text = getString(zodiacSign.element.description)
+            }
+        }
+
+        // quality
+        val tabQuality = view.findViewById<LinearLayout>(R.id.tabQuality)
+        val tabQualityToggle = view.findViewById<LinearLayout>(R.id.tabQualityToggle)
+        val contentQuality = view.findViewById<TextView>(R.id.contentQuality)
+
+        tabQuality.setOnClickListener {
+            if (tabQualityToggle.visibility == View.VISIBLE) {
+                tabQualityToggle.visibility = View.GONE
+                tabQuality.setBackgroundResource(R.drawable.rounded_border)
+            } else {
+                tabQualityToggle.visibility = View.VISIBLE
+                tabQuality.setBackgroundResource(R.drawable.rounded_border_selected)
+                contentQuality.text = getString(zodiacSign.quality.description)
+            }
+        }
+
+        // ruling house
+        val tabRulingHouse = view.findViewById<LinearLayout>(R.id.tabRulingHouse)
+        val tabRulingHouseToggle = view.findViewById<LinearLayout>(R.id.tabRulingHouseToggle)
+        val contentRulingHouse = view.findViewById<TextView>(R.id.contentRulingHouse)
+
+        tabRulingHouse.setOnClickListener {
+            if (tabRulingHouseToggle.visibility == View.VISIBLE) {
+                tabRulingHouseToggle.visibility = View.GONE
+                tabRulingHouse.setBackgroundResource(R.drawable.rounded_border)
+            } else {
+                tabRulingHouseToggle.visibility = View.VISIBLE
+                tabRulingHouse.setBackgroundResource(R.drawable.rounded_border_selected)
+                contentRulingHouse.text = getString(zodiacSign.rulingHouse.description)
+            }
+        }
+
+        // ruling planet
+        val tabRulingPlanet = view.findViewById<LinearLayout>(R.id.tabRulingPlanet)
+        val tabRulingPlanetToggle = view.findViewById<LinearLayout>(R.id.tabRulingPlanetToggle)
+        val contentRulingPlanet = view.findViewById<TextView>(R.id.contentRulingPlanet)
+
+        tabRulingPlanet.setOnClickListener {
+            if (tabRulingPlanetToggle.visibility == View.VISIBLE) {
+                tabRulingPlanetToggle.visibility = View.GONE
+                tabRulingPlanet.setBackgroundResource(R.drawable.rounded_border)
+            } else {
+                tabRulingPlanetToggle.visibility = View.VISIBLE
+                tabRulingPlanet.setBackgroundResource(R.drawable.rounded_border_selected)
+                contentRulingPlanet.text = getString(zodiacSign.rulingPlanet.description)
+            }
+        }
     }
 
 //    // These methods would return the appropriate attributes for each sign

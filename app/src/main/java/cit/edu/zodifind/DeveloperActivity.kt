@@ -17,9 +17,9 @@ class DeveloperActivity : BaseActivity() {
 
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
-        btnBack.setOnClickListener(){
+        btnBack.setOnClickListener {
             finish()
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
         }
     }
 }

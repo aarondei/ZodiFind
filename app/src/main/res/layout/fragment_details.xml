@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+>
 
     <LinearLayout
         android:layout_marginTop="20dp"
@@ -11,6 +12,7 @@
         android:padding="16dp">
 
         <LinearLayout
+            android:id="@+id/tabBirthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_border"
@@ -34,11 +36,12 @@
                 android:padding="20dp"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                 />
+                />
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/tabSymbol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_border"
@@ -66,126 +69,388 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:orientation="horizontal"
-            android:padding="5dp"
-            android:layout_marginBottom="20dp">
 
-            <ImageView
-                android:id="@+id/imgElement"
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
-
-                android:padding="9dp"
-                />
-
-            <TextView
-                android:id="@+id/detailsElement"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/josefinsans_light"
-                android:gravity="end"
-                android:padding="20dp"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:padding="5dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:orientation="vertical"
+            >
 
-            <ImageView
-                android:id="@+id/imgQuality"
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
-
-                android:padding="9dp"
-                />
-
-            <TextView
-                android:id="@+id/detailsQuality"
+            <LinearLayout
+                android:id="@+id/tabElement"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_marginBottom="20dp">
 
-                android:fontFamily="@font/josefinsans_light"
-                android:gravity="end"
-                android:padding="20dp"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-               />
+                <ImageView
+                    android:id="@+id/imgElement"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+
+                    android:padding="9dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detailsElement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_light"
+                    android:gravity="end"
+                    android:padding="20dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/tabElementToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/headerElement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/element_description"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cinzel_semibold"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/contentElement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lorem ipsum"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/josefinsans_light"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="8dp"
+
+                    />
+            </LinearLayout>
 
         </LinearLayout>
 
+
+        <!--        quality-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:padding="5dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:orientation="vertical"
+            >
 
-            <ImageView
-                android:id="@+id/imgRulingPlanet"
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
 
-                android:padding="9dp"
-                />
-
-            <TextView
-                android:id="@+id/detailsRulingPlanet"
+            <LinearLayout
+                android:id="@+id/tabQuality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
 
-                android:fontFamily="@font/josefinsans_light"
-                android:gravity="end"
-                android:padding="20dp"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                />
+                <ImageView
+                    android:id="@+id/imgQuality"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
 
+                    android:padding="9dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detailsQuality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/josefinsans_light"
+                    android:gravity="end"
+                    android:padding="20dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabQualityToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/headerQuality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quality_description"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cinzel_semibold"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/contentQuality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lorem ipsum"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/josefinsans_light"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="8dp"
+
+                    />
+
+            </LinearLayout>
         </LinearLayout>
 
+
+        <!--        ruling planet-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:padding="5dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
+            android:orientation="vertical"
+            >
 
-            <ImageView
-                android:id="@+id/imgRulingHouse"
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
 
-                android:padding="9dp"
-                />
-
-            <TextView
-                android:id="@+id/detailsRulingHouse"
+            <LinearLayout
+                android:id="@+id/tabRulingPlanet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
 
-                android:fontFamily="@font/josefinsans_light"
-                android:gravity="end"
-                android:padding="20dp"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                />
+                <ImageView
+                    android:id="@+id/imgRulingPlanet"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+
+                    android:padding="9dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detailsRulingPlanet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/josefinsans_light"
+                    android:gravity="end"
+                    android:padding="20dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabRulingPlanetToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/headerRulingPlanet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rulingplanet_description"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cinzel_semibold"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/contentRulingPlanet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lorem ipsum"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/josefinsans_light"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="8dp"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!--        ruling house-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+            <LinearLayout
+                android:id="@+id/tabRulingHouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/imgRulingHouse"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+
+                    android:padding="9dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detailsRulingHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/josefinsans_light"
+                    android:gravity="end"
+                    android:padding="20dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabRulingHouseToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="30dp"
+                android:visibility="gone">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/headerRulingHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rulinghouse_description"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cinzel_semibold"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/contentRulingHouse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lorem ipsum"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/josefinsans_light"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="8dp"
+
+                    />
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/tabCompatibility"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_border"
@@ -197,22 +462,20 @@
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/symbol_compat"
-                android:padding="9dp"
-                />
+                android:padding="9dp" />
 
             <TextView
                 android:id="@+id/detailsCompatibility"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:fontFamily="@font/josefinsans_light"
                 android:gravity="end"
                 android:padding="20dp"
                 android:textColor="@android:color/white"
-                android:textSize="18sp"
-                />
-
+                android:textSize="18sp" />
         </LinearLayout>
+
+
 
     </LinearLayout>
 </ScrollView>

@@ -27,6 +27,14 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.96" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/burgerButtonGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="0dp"
+            app:layout_constraintGuide_percent="0.0175"
+            android:orientation="horizontal" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/marginStart"
@@ -50,6 +58,48 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.055" />
 
+
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/headerSymmetricalStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/headerEndGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/astrologyGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/tarotGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/palmistryGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67" />
+
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
@@ -69,28 +119,28 @@
             android:id="@+id/tvZodiacSeason"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/cinzel_medium"
+            android:fontFamily="@font/cinzel_black"
             android:text="ARIES SEASON"
             android:textColor="#FFA500"
-            android:textSize="25sp"
+            android:textSize="36sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="58dp" />
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
+            app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
+            android:layout_marginTop="30dp" />
 
 
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+
             android:theme="@style/CustomCalendarTheme"
             android:weekDayTextAppearance="@style/CustomDateText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/marginEnd"
+            app:layout_constraintStart_toStartOf="@id/marginStart"
             app:layout_constraintTop_toBottomOf="@id/tvZodiacSeason" />
 
         <ImageView
@@ -100,7 +150,7 @@
             android:padding="16dp"
             android:src="@drawable/ic_menu"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/burgerButtonGuide" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -61,19 +61,18 @@ class ProfileActivity : BaseActivity() {
             }
         }
 
+        val toEditPic = findViewById<ImageView>(R.id.imgEditPic)
+        toEditPic.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(intent, pickImageRequest)
+        }
+
         loadProfilePicture(user)
 
         // Button click listeners
         findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
         findViewById<ImageView>(R.id.imgEditBio).setOnClickListener { launchEdit(user) }
         findViewById<ImageView>(R.id.imgToEdit).setOnClickListener { launchEdit(user) }
-
-        val toEditPic = findViewById<ImageView>(R.id.imgEditPic)
-        toEditPic.setOnClickListener {
-            // Create an intent to open the gallery
-            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-            startActivityForResult(intent, pickImageRequest)
-        }
     }
 
     private fun launchEdit(user: cit.edu.zodifind.data.User) {
