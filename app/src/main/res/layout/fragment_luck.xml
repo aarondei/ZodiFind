@@ -82,7 +82,7 @@
             android:id="@+id/line"
             android:layout_width="0dp"
             android:layout_height="0.75dp"
-            android:background="@android:color/white"
+            android:background="@color/tr"
             app:layout_constraintBottom_toTopOf="@id/tvLuckyTexts"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
