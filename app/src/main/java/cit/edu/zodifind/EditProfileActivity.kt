@@ -5,11 +5,11 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.widget.*
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -26,10 +26,11 @@ class EditProfileActivity : BaseActivity() {
     private lateinit var imgPfp: ImageView
     private lateinit var imgPfpCam: ImageView
     private lateinit var btnSave: Button
+    private lateinit var btnBack: ImageView
     private var selectedImageUri: Uri? = null
+
     private val MAX_NAME_LENGTH = 15
     private val MAX_BIO_LENGTH = 150
-
 
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -43,7 +44,22 @@ class EditProfileActivity : BaseActivity() {
     ) { uri ->
         if (uri != null) {
             selectedImageUri = uri
+            try {
+                // Persist permission for future access
+                contentResolver.takePersistableUriPermission(
+                    uri,
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION
+                )
+            } catch (e: SecurityException) {
+                e.printStackTrace()
+                Toast.makeText(this, "Can't persist URI permission", Toast.LENGTH_SHORT).show()
+            }
+            // Load image into ImageView
             loadImageFromUri(uri)
+
+            // Save image URI to currentUser for consistency
+            val user = (application as ZodiFindApplication).currentUser
+            user?.profileImageUri = uri.toString()
         }
     }
 
@@ -58,7 +74,8 @@ class EditProfileActivity : BaseActivity() {
         tvBioCharCount = findViewById(R.id.tvBioCharCount)
         imgPfp = findViewById(R.id.imgPfp)
         imgPfpCam = findViewById(R.id.imgPfpCam)
-        btnSave = findViewById(R.id.btnSave) // FIXED ID!
+        btnSave = findViewById(R.id.btnSave)
+        btnBack = findViewById(R.id.btnBack)
 
         val name = intent.getStringExtra("name") ?: ""
         val bio = intent.getStringExtra("bio") ?: ""
@@ -70,8 +87,14 @@ class EditProfileActivity : BaseActivity() {
         tvBioCharCount.text = "${bio.length}/$MAX_BIO_LENGTH"
 
         imageUriString?.let {
-            selectedImageUri = Uri.parse(it)
-            loadImageFromUri(selectedImageUri)
+            try {
+                val uri = Uri.parse(it)
+                selectedImageUri = uri
+                loadImageFromUri(uri)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this, "Cannot load saved image", Toast.LENGTH_SHORT).show()
+            }
         }
 
         etEditName.addTextChangedListener {
@@ -84,20 +107,40 @@ class EditProfileActivity : BaseActivity() {
             tvBioCharCount.text = "$count/$MAX_BIO_LENGTH"
         }
 
-        imgPfp.setOnClickListener { openImagePicker() }
-        imgPfpCam.setOnClickListener { openImagePicker() }
+        imgPfp.setOnClickListener {
+            openImagePicker()
+        }
+        imgPfpCam.setOnClickListener {
+            openImagePicker()
+        }
 
-        btnSave.setOnClickListener { saveChanges() }
+        btnSave.setOnClickListener {
+            saveChanges()
+        }
 
-        findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
+        btnBack.setOnClickListener {
+            startActivity(Intent(this, HomeActivity:: class.java))
+        }
     }
 
     private fun openImagePicker() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            pickImageLauncher.launch(androidx.activity.result.PickVisualMediaRequest(androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia.ImageOnly))
+            pickImageLauncher.launch(
+                androidx.activity.result.PickVisualMediaRequest(
+                    androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia.ImageOnly
+                )
+            )
         } else {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                pickImageLauncher.launch(androidx.activity.result.PickVisualMediaRequest(androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia.ImageOnly))
+            if (ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                ) == PackageManager.PERMISSION_GRANTED
+            ) {
+                pickImageLauncher.launch(
+                    androidx.activity.result.PickVisualMediaRequest(
+                        androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia.ImageOnly
+                    )
+                )
             } else {
                 requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
             }
@@ -108,12 +151,16 @@ class EditProfileActivity : BaseActivity() {
         if (uri == null) return
         try {
             contentResolver.openInputStream(uri)?.use {
-                val bitmap = android.graphics.BitmapFactory.decodeStream(it)
+                val bitmap = BitmapFactory.decodeStream(it)
                 imgPfp.setImageBitmap(bitmap)
                 imgPfpCam.visibility = ImageView.GONE
             }
+        } catch (e: SecurityException) {
+            e.printStackTrace()
+            Toast.makeText(this, "Image access denied. Please re-select.", Toast.LENGTH_SHORT).show()
         } catch (e: IOException) {
             e.printStackTrace()
+            Toast.makeText(this, "Error loading image", Toast.LENGTH_SHORT).show()
         }
     }
 

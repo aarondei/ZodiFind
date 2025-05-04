@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="205dp" />
+        app:layout_constraintGuide_begin="184dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/GeneralSectionGuide"
@@ -99,7 +99,8 @@
         app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="0.1"/>
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0.8"/>
 
         <TextView
             android:id="@+id/tvName"
@@ -116,7 +117,7 @@
             app:layout_constraintTop_toTopOf="@id/headerSymmetricalStart"
             app:layout_constraintBottom_toTopOf="@id/headerEndGuide"
             app:layout_constraintEnd_toStartOf="@id/marginEnd"
-            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintVertical_bias="0"
             />
 
@@ -168,7 +169,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/marginStart"
         app:layout_constraintTop_toBottomOf="@id/profilepic"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <View
         android:id="@+id/line2"

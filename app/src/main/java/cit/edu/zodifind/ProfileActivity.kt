@@ -2,21 +2,26 @@ package cit.edu.zodifind
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.text.InputType
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import cit.edu.zodifind.app.ZodiFindApplication
 import de.hdodenhof.circleimageview.CircleImageView
-import java.io.File
+import java.io.IOException
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
 
 class ProfileActivity : BaseActivity() {
+
     private lateinit var tvName: TextView
     private lateinit var tvUsername: TextView
     private lateinit var tvBio: TextView
@@ -24,11 +29,11 @@ class ProfileActivity : BaseActivity() {
     private lateinit var tvSign: TextView
     private lateinit var imgPfp: CircleImageView
     private var selectedImageUri: Uri? = null
-    private val EDIT_PROFILE_REQUEST_CODE = 123
 
+    private val EDIT_PROFILE_REQUEST_CODE = 123
     private val pickImageRequest = 100
 
-    @SuppressLint("NewApi", "MissingInflatedId")
+    @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile)
@@ -45,6 +50,31 @@ class ProfileActivity : BaseActivity() {
         val user = app.currentUser ?: return
 
         // Set user info
+        updateUserInfo(user)
+
+        // Edit profile picture
+        findViewById<ImageView>(R.id.imgEditPic).setOnClickListener {
+            openImagePicker()
+        }
+
+        // Edit bio
+        findViewById<ImageView>(R.id.imgEditBio).setOnClickListener {
+            launchEdit(user)
+        }
+
+        // Go to settings
+        findViewById<ImageView>(R.id.btnToSettings).setOnClickListener {
+            navigateToSettings(user)
+        }
+
+        // Change password
+        findViewById<TextView>(R.id.tvChange).setOnClickListener {
+            showChangePasswordDialog()
+        }
+    }
+
+    @SuppressLint("NewApi")
+    private fun updateUserInfo(user: cit.edu.zodifind.data.User) {
         tvName.text = user.name
         tvUsername.text = "@${user.username}"
         tvBio.text = user.bio ?: ""
@@ -61,35 +91,12 @@ class ProfileActivity : BaseActivity() {
             }
         }
 
-        val toEditPic = findViewById<ImageView>(R.id.imgEditPic)
-        toEditPic.setOnClickListener {
-            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-            startActivityForResult(intent, pickImageRequest)
-        }
-
         loadProfilePicture(user)
+    }
 
-        // Button click listeners
-        findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
-        findViewById<ImageView>(R.id.imgEditBio).setOnClickListener { launchEdit(user) }
-
-
-
-        var btnToSettings = findViewById<ImageView>(R.id.btnToSettings)
-        btnToSettings.setOnClickListener(){
-            val intent = Intent(this, SettingsActivity::class.java).apply {
-                putExtra("name", user.name)
-                putExtra("bio", user.bio)
-                putExtra("username", user.username)
-                putExtra("bday", user.birthdate?.toString())
-                putExtra("profileImageUri", user.profileImageUri)
-            }
-            startActivity(intent)
-        }
-
-
-      
-
+    private fun openImagePicker() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        startActivityForResult(intent, pickImageRequest)
     }
 
     private fun launchEdit(user: cit.edu.zodifind.data.User) {
@@ -110,13 +117,59 @@ class ProfileActivity : BaseActivity() {
                     val bitmap = android.graphics.BitmapFactory.decodeStream(inputStream)
                     imgPfp.setImageBitmap(bitmap)
                 } ?: imgPfp.setImageResource(R.drawable.pfp_default)
-            } catch (e: Exception) {
+            } catch (e: IOException) {
                 e.printStackTrace()
                 imgPfp.setImageResource(R.drawable.pfp_default)
             }
         } ?: imgPfp.setImageResource(R.drawable.pfp_default)
     }
 
+    private fun navigateToSettings(user: cit.edu.zodifind.data.User) {
+        val intent = Intent(this, SettingsActivity::class.java).apply {
+            putExtra("name", user.name)
+            putExtra("bio", user.bio)
+            putExtra("username", user.username)
+            putExtra("bday", user.birthdate?.toString())
+            putExtra("profileImageUri", user.profileImageUri)
+        }
+        startActivity(intent)
+    }
+
+    private fun showChangePasswordDialog() {
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setTitle("Change Password")
+
+        val input = EditText(this)
+        input.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+        dialogBuilder.setView(input)
+
+        dialogBuilder.setPositiveButton("Change") { _, _ ->
+            val newPassword = input.text.toString().trim()
+            if (newPassword.isNotEmpty()) {
+                changePassword(newPassword)
+            } else {
+                Toast.makeText(this, "Password cannot be empty", Toast.LENGTH_SHORT).show()
+            }
+        }
+        dialogBuilder.setNegativeButton("Cancel") { dialog, _ ->
+            dialog.dismiss()
+        }
+
+        dialogBuilder.show()
+    }
+
+    private fun changePassword(newPassword: String) {
+        val app = application as ZodiFindApplication
+        val user = app.currentUser ?: return
+
+        // Update the password
+        user.password = newPassword // Save this new password
+
+        // Show confirmation message
+        Toast.makeText(this, "Password changed successfully", Toast.LENGTH_SHORT).show()
+    }
+
+    @SuppressLint("WrongConstant")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -143,12 +196,16 @@ class ProfileActivity : BaseActivity() {
                 imgPfp.setImageURI(selectedImageUri)
             }
         }
+
         if (resultCode == RESULT_OK && requestCode == pickImageRequest) {
             data?.data?.let { imageUri ->
                 val user = (application as ZodiFindApplication).currentUser ?: return
                 user.profileImageUri = imageUri.toString()
                 selectedImageUri = imageUri
                 imgPfp.setImageURI(imageUri)
+
+                val flags = data.flags and (Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+                contentResolver.takePersistableUriPermission(imageUri, flags)
             }
         }
     }
