@@ -89,7 +89,7 @@ class SettingsActivity : BaseActivity() {
 
         findViewById<ImageView>(R.id.btnBack).setOnClickListener {
             finish()
-            startActivity(Intent(this, AboutZodifindActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
         }
 
         findViewById<ImageView>(R.id.btnToAbout).setOnClickListener {
