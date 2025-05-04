@@ -344,7 +344,6 @@
         />
 
 
-    <!--    arrows-->
 
     <TextView
         android:id="@+id/tvChange"

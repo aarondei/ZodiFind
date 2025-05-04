@@ -1,6 +1,7 @@
 package cit.edu.zodifind
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.BitmapFactory
@@ -11,9 +12,15 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import cit.edu.zodifind.app.ZodiFindApplication
+import java.io.IOException
 
 class SettingsActivity : BaseActivity() {
+    var selectedImageUri: Uri? = null
+    val pickImageRequest = 100
+    val EDIT_PROFILE_REQUEST_CODE = 123
+
 
     @SuppressLint("MissingInflatedId")
     @Suppress("DEPRECATION")
@@ -24,6 +31,7 @@ class SettingsActivity : BaseActivity() {
         val tvName = findViewById<TextView>(R.id.tvName)
         val tvBirth = findViewById<TextView>(R.id.tvBirth)
         val profilePic = findViewById<de.hdodenhof.circleimageview.CircleImageView>(R.id.profilepic)
+
 
         val app = application as ZodiFindApplication
 
@@ -75,13 +83,13 @@ class SettingsActivity : BaseActivity() {
                         putExtra("profileImageUri", it)
                     }
                 }
-                startActivity(intent)
+                startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE)
             }
         }
 
         findViewById<ImageView>(R.id.btnBack).setOnClickListener {
             finish()
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+            startActivity(Intent(this, AboutZodifindActivity::class.java))
         }
 
         findViewById<ImageView>(R.id.btnToAbout).setOnClickListener {
@@ -124,7 +132,7 @@ class SettingsActivity : BaseActivity() {
         dialogBuilder.setNegativeButton("Cancel") { dialog, _ ->
             dialog.dismiss()
         }
-        
+
         dialogBuilder.show()
     }
 
@@ -138,6 +146,52 @@ class SettingsActivity : BaseActivity() {
 
         // Show confirmation message
         Toast.makeText(this, "Password changed successfully", Toast.LENGTH_SHORT).show()
+    }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+
+        if (requestCode == EDIT_PROFILE_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            val newName = data?.getStringExtra("newName")
+            val newBio = data?.getStringExtra("newBio")
+            val imageUriStr = data?.getStringExtra("profileImageUri")
+
+            val user = (application as ZodiFindApplication).currentUser ?: return
+
+            newName?.let {
+                user.name = it
+                findViewById<TextView>(R.id.tvName).text = it
+            }
+
+            newBio?.let {
+                user.bio = it
+            }
+
+            imageUriStr?.let {
+                val uri = Uri.parse(it)
+                user.profileImageUri = it
+                val profilePic = findViewById<de.hdodenhof.circleimageview.CircleImageView>(R.id.profilepic)
+                try {
+                    contentResolver.openInputStream(uri)?.use { stream ->
+                        val bitmap = BitmapFactory.decodeStream(stream)
+                        profilePic.setImageBitmap(bitmap)
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    profilePic.setImageResource(R.drawable.pfp_default)
+                }
+            }
+        }
+
+        if (resultCode == RESULT_OK && requestCode == pickImageRequest) {
+            data?.data?.let { imageUri ->
+                val user = (application as ZodiFindApplication).currentUser ?: return
+                user.profileImageUri = imageUri.toString()
+
+                val flags = data.flags and (Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+                contentResolver.takePersistableUriPermission(imageUri, flags)
+            }
+        }
     }
 }
