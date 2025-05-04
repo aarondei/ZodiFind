@@ -23,11 +23,6 @@ class TarotHomeActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tarot_home)
 
-        val btnBack = findViewById<ImageView>(R.id.btnBack)
-        btnBack.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
-        }
-
         val items = listOf("Love", "Career", "Money", "Personal Growth", "Health", "Life Purpose", "Spiritual Guidance", "Decision", "Family", "Friendship")
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, items)
         val dropdown = findViewById<AutoCompleteTextView>(R.id.dropdown)
