@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/midnightBlue"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.Guideline
@@ -82,14 +83,14 @@
         app:layout_constraintTop_toBottomOf="@id/MarginTop"
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintHorizontal_bias="0.05"
-        app:tint="@color/black" />
+        app:tint="@color/white" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:text="ABOUT ZODIFIND"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:fontFamily="@font/cinzel_black"
         android:textSize="30sp"
 
@@ -103,7 +104,7 @@
         android:id="@+id/line"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="@android:color/black"
+        android:background="@android:color/white"
 
         app:layout_constraintEnd_toEndOf="@id/marginEnd"
         app:layout_constraintStart_toStartOf="@id/marginStart"
@@ -128,7 +129,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/about_zodifind"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:fontFamily="@font/josefinsans_regular"
             android:textSize="15sp"
             android:padding="25dp"
