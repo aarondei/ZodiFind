@@ -68,9 +68,15 @@ class ProfileActivity : BaseActivity() {
         findViewById<ImageView>(R.id.btnToSettings).setOnClickListener {
             navigateToSettings(user)
         }
+        findViewById<TextView>(R.id.tvSettings).setOnClickListener {
+            navigateToSettings(user)
+        }
 
         // Change password
         findViewById<TextView>(R.id.tvChange).setOnClickListener {
+            showChangePasswordDialog()
+        }
+        findViewById<ImageView>(R.id.btnToChangePassword).setOnClickListener {
             showChangePasswordDialog()
         }
 
@@ -83,7 +89,7 @@ class ProfileActivity : BaseActivity() {
     private fun updateUserInfo(user: cit.edu.zodifind.data.User) {
         tvName.text = user.name
         tvUsername.text = "@${user.username}"
-        tvBio.text = user.bio ?: ""
+        tvBio.text = user.bio ?: "Edit profile to add bio."
         tvSign.text = user.zodiacSign?.name ?: ""
 
         // Format and show birthdate

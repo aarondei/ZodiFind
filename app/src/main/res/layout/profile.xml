@@ -190,7 +190,7 @@
         app:layout_constraintTop_toTopOf="@id/detail_sec"
         app:layout_constraintBottom_toBottomOf="@id/detail_sec"
         app:layout_constraintVertical_bias="0.3"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.5"
         />
 
     <View
@@ -218,7 +218,7 @@
         app:layout_constraintTop_toTopOf="@id/detail_sec"
         app:layout_constraintBottom_toBottomOf="@id/detail_sec"
         app:layout_constraintVertical_bias="0.3"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.5"
         />
 
     <TextView
@@ -234,8 +234,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/imgBday"
         app:layout_constraintBottom_toBottomOf="@id/detail_sec"
-        app:layout_constraintHorizontal_bias="0.22"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintVertical_bias="0.6"
         />
 
     <TextView
@@ -251,8 +251,8 @@
         app:layout_constraintEnd_toEndOf="@id/detail_sec"
         app:layout_constraintTop_toTopOf="@id/imgSign"
         app:layout_constraintBottom_toBottomOf="@id/detail_sec"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintVertical_bias="0.6"
         />
 
     <TextView
@@ -308,8 +308,8 @@
         android:layout_height="1dp"
         android:background="@android:color/white"
 
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detail_sec"
         android:layout_marginTop="20dp"
         />
@@ -331,7 +331,7 @@
         android:id="@+id/tvSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:text="Settings"
         android:textColor="@color/white"
         android:fontFamily="@font/josefinsans_regular"
@@ -353,13 +353,13 @@
         android:fontFamily="@font/josefinsans_regular"
         android:text="Change Password"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/MarginBottom"
-        app:layout_constraintEnd_toEndOf="@id/marginEnd"
-        app:layout_constraintHorizontal_bias="0.085"
-        app:layout_constraintStart_toStartOf="@id/marginStart"
+        android:textSize="18sp"
+
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintStart_toStartOf="@id/tvSettings"
         app:layout_constraintTop_toBottomOf="@id/tvSettings"
-        app:layout_constraintVertical_bias="0.833" />
+     />
 
     <ImageView
         android:id="@+id/btnToSettings"
@@ -373,6 +373,19 @@
         app:layout_constraintBottom_toTopOf="@id/MarginBottom"
         app:layout_constraintVertical_bias="0.23"
         app:layout_constraintHorizontal_bias="0.93"
+        />
+    <ImageView
+        android:id="@+id/btnToChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next"
+
+
+        app:layout_constraintStart_toStartOf="@id/btnToSettings"
+        app:layout_constraintTop_toBottomOf="@id/btnToSettings"
+
+
+        android:layout_marginTop="20dp"
         />
 
 
