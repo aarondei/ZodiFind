@@ -75,7 +75,7 @@ class EditProfileActivity : BaseActivity() {
         imgPfp = findViewById(R.id.imgPfp)
         imgPfpCam = findViewById(R.id.imgPfpCam)
         btnSave = findViewById(R.id.btnSave)
-        btnBack = findViewById(R.id.btnBack)
+        btnBack = findViewById<ImageView>(R.id.btnBack)
 
         val name = intent.getStringExtra("name") ?: ""
         val bio = intent.getStringExtra("bio") ?: ""
@@ -167,6 +167,12 @@ class EditProfileActivity : BaseActivity() {
     private fun saveChanges() {
         val newName = etEditName.text.toString().trim()
         val newBio = etEditBio.text.toString().trim()
+
+        val app = application as ZodiFindApplication
+        val user = app.currentUser ?: return
+
+        user.bio = newBio
+        user.name = newName
 
         if (newName.length > MAX_NAME_LENGTH || newBio.length > MAX_BIO_LENGTH) {
             Toast.makeText(this, "Name or bio too long", Toast.LENGTH_SHORT).show()

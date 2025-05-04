@@ -46,6 +46,8 @@ class ProfileActivity : BaseActivity() {
         tvSign = findViewById(R.id.tvSign)
         imgPfp = findViewById(R.id.imgPfp)
 
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+
         val app = application as ZodiFindApplication
         val user = app.currentUser ?: return
 
@@ -71,6 +73,10 @@ class ProfileActivity : BaseActivity() {
         findViewById<TextView>(R.id.tvChange).setOnClickListener {
             showChangePasswordDialog()
         }
+
+        btnBack.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
     }
 
     @SuppressLint("NewApi")
@@ -95,8 +101,14 @@ class ProfileActivity : BaseActivity() {
     }
 
     private fun openImagePicker() {
-        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "image/*"
+            flags = Intent.FLAG_GRANT_READ_URI_PERMISSION or
+                    Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION
+        }
         startActivityForResult(intent, pickImageRequest)
+
     }
 
     private fun launchEdit(user: cit.edu.zodifind.data.User) {
@@ -172,6 +184,16 @@ class ProfileActivity : BaseActivity() {
     @SuppressLint("WrongConstant")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        val uri = data?.data // URI of the selected image
+        if (uri != null) {
+            try {
+                contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            } catch (e: SecurityException) {
+                e.printStackTrace()
+                Toast.makeText(this, "Permission denied to access the image", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         if (requestCode == EDIT_PROFILE_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             val newName = data?.getStringExtra("newName")
