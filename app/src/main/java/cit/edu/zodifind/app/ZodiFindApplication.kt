@@ -1,8 +1,8 @@
 package cit.edu.zodifind.app
 
 import android.app.Application
-import cit.edu.zodifind.data.CapturedZodiacTempObject
-import cit.edu.zodifind.data.User
+import cit.edu.zodifind.data.user.CapturedZodiacTempObject
+import cit.edu.zodifind.data.user.User
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

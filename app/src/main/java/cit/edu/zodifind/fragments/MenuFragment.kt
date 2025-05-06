@@ -7,12 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import cit.edu.zodifind.DeveloperActivity
-import cit.edu.zodifind.HomeActivity
-import cit.edu.zodifind.LoginActivity
-import cit.edu.zodifind.ProfileActivity
+import cit.edu.zodifind.activities.DeveloperActivity
+import cit.edu.zodifind.activities.LoginActivity
+import cit.edu.zodifind.activities.ProfileActivity
 import cit.edu.zodifind.R
-import cit.edu.zodifind.SettingsActivity
+import cit.edu.zodifind.activities.SettingsActivity
 import cit.edu.zodifind.app.ZodiFindApplication
 
 class MenuFragment : Fragment() {

@@ -1,7 +1,6 @@
 package cit.edu.zodifind.data.tarot
 
 import cit.edu.zodifind.R
-import cit.edu.zodifind.luck.TarotModel
 import javax.inject.Inject
 
 class TarotCards @Inject constructor() {

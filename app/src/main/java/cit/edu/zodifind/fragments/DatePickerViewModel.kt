@@ -6,7 +6,7 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import cit.edu.zodifind.app.ZodiFindApplication
-import cit.edu.zodifind.data.CapturedZodiacTempObject
+import cit.edu.zodifind.data.user.CapturedZodiacTempObject
 import cit.edu.zodifind.data.astrology.ZodiacSign
 import java.time.LocalDate
 

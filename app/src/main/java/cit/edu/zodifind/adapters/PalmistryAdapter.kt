@@ -11,8 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import cit.edu.zodifind.R
 import cit.edu.zodifind.fragments.PalmLineDetailFragment
-import cit.edu.zodifind.fragments.ViewPagerFragment
-import cit.edu.zodifind.luck.PalmModel
+import cit.edu.zodifind.data.tarot.PalmModel
 
 class PalmistryAdapter(private val palmList: List<PalmModel>, private val context: Context) :
     RecyclerView.Adapter<PalmistryAdapter.PalmViewHolder>() {

@@ -12,7 +12,7 @@ import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import cit.edu.zodifind.R
-import cit.edu.zodifind.data.CapturedZodiacTempObject
+import cit.edu.zodifind.data.user.CapturedZodiacTempObject
 
 class RotatingStarFragment : Fragment(R.layout.fragment_rotatingstar) {
 

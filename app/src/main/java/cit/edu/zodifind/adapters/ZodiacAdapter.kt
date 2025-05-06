@@ -7,13 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import cit.edu.zodifind.R
-
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-
 import cit.edu.zodifind.data.astrology.ZodiacSign
-
 import cit.edu.zodifind.fragments.ViewPagerFragment
 
 

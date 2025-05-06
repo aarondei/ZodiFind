@@ -1,7 +1,7 @@
 package cit.edu.zodifind.data.palmistry
 
 import cit.edu.zodifind.R
-import cit.edu.zodifind.luck.PalmModel
+import cit.edu.zodifind.data.tarot.PalmModel
 
 class PalmLines {
     companion object {

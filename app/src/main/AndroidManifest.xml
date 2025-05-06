@@ -24,78 +24,78 @@
         android:theme="@style/Theme.ZodiFind"
         tools:targetApi="31">
         <activity
-            android:name=".AstrologyHomeActivity"
+            android:name=".activities.astrology.AstrologyHomeActivity"
             android:exported="false" />
         <activity
-            android:name=".TarotDeckActivity"
+            android:name=".activities.tarot.TarotDeckActivity"
             android:exported="false" />
         <activity
-            android:name=".TarotHomeActivity"
+            android:name=".activities.tarot.TarotHomeActivity"
             android:exported="false" />
         <activity
-            android:name=".PalmistryCameraActivity"
+            android:name=".activities.palmistry.PalmistryCameraActivity"
             android:exported="false" />
         <activity
-            android:name=".PalmistryLibraryActivity"
+            android:name=".activities.palmistry.PalmistryLibraryActivity"
             android:exported="false" />
         <activity
-            android:name=".FaqActivity"
+            android:name=".activities.FAQActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashPalmistryActivity"
+            android:name=".activities.palmistry.SplashPalmistryActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashTarotActivity"
+            android:name=".activities.tarot.SplashTarotActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashAstrologyActivity"
+            android:name=".activities.astrology.SplashAstrologyActivity"
             android:exported="false" />
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".activities.EditProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".AboutZodifindActivity"
+            android:name=".activities.AboutZodifindActivity"
             android:exported="false" />
         <activity
-            android:name=".CalculatorResultActivity"
+            android:name=".activities.CalculatorResultActivity"
             android:exported="false" />
         <activity
-            android:name=".VerificationSecondActivity"
+            android:name=".activities.VerificationSecondActivity"
             android:exported="false" />
         <activity
-            android:name=".VerificationFirstActivity"
+            android:name=".activities.VerificationFirstActivity"
             android:exported="false"
             android:label="@string/title_activity_verification"
             android:theme="@style/Theme.ZodiFind" />
         <activity
-            android:name=".CalculatorActivity"
+            android:name=".activities.CalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".LibraryActivity"
+            android:name=".activities.astrology.AstrologyLibraryActivity"
             android:exported="false" />
         <activity
-            android:name=".CalendarActivity"
+            android:name=".activities.CalendarActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".activities.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".DeveloperActivity"
+            android:name=".activities.DeveloperActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".activities.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistrationActivity"
+            android:name=".activities.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".activities.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
