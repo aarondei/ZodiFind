@@ -92,7 +92,7 @@ class ProfileActivity : BaseActivity() {
         tvBio.text = user.bio ?: "Edit profile to add bio."
         tvSign.text = user.zodiacSign?.name ?: ""
 
-        // Format and show birthdate
+
         user.birthdate?.let {
             try {
                 val parsedDate = LocalDate.parse(it.toString()) // Format: "yyyy-MM-dd"
@@ -180,10 +180,8 @@ class ProfileActivity : BaseActivity() {
         val app = application as ZodiFindApplication
         val user = app.currentUser ?: return
 
-        // Update the password
-        user.password = newPassword // Save this new password
+        user.password = newPassword
 
-        // Show confirmation message
         Toast.makeText(this, "Password changed successfully", Toast.LENGTH_SHORT).show()
     }
 

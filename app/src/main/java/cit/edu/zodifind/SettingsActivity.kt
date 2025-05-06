@@ -35,18 +35,14 @@ class SettingsActivity : BaseActivity() {
 
         val app = application as ZodiFindApplication
 
-        // Try getting data from Intent extras first
         val intentName = intent.getStringExtra("name")
         val intentBday = intent.getStringExtra("bday")
         val intentImageUri = intent.getStringExtra("profileImageUri")
 
-        // Display name
         tvName.text = intentName ?: app.currentUser?.name ?: ""
 
-        // Display birthdate
         tvBirth.text = intentBday ?: app.currentUser?.birthdate?.toString() ?: ""
 
-        // Load image from Intent URI if available, fallback to app.currentUser
         if (!intentImageUri.isNullOrEmpty()) {
             try {
                 val uri = Uri.parse(intentImageUri)
@@ -141,10 +137,7 @@ class SettingsActivity : BaseActivity() {
         val app = application as ZodiFindApplication
         val user = app.currentUser ?: return
 
-        // Update the password
-        user.password = newPassword // Save this new password
-
-        // Show confirmation message
+        user.password = newPassword
         Toast.makeText(this, "Password changed successfully", Toast.LENGTH_SHORT).show()
     }
 

@@ -45,7 +45,6 @@ class EditProfileActivity : BaseActivity() {
         if (uri != null) {
             selectedImageUri = uri
             try {
-                // Persist permission for future access
                 contentResolver.takePersistableUriPermission(
                     uri,
                     Intent.FLAG_GRANT_READ_URI_PERMISSION
@@ -57,7 +56,7 @@ class EditProfileActivity : BaseActivity() {
             // Load image into ImageView
             loadImageFromUri(uri)
 
-            // Save image URI to currentUser for consistency
+
             val user = (application as ZodiFindApplication).currentUser
             user?.profileImageUri = uri.toString()
         }
