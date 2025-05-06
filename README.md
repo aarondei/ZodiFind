@@ -1,10 +1,19 @@
 # ZodiFind  
-This mobile application provides the user with insights about their personality based on their zodiac sign.
+A mobile app that reads your stars to reveal your past, guide your present, hint at your future, and uncovers hidden aspects you didn’t even know about yourself.
 
-## 🚀 Features  
-1. **Zodiac Sign Calculator** - Input your birthdate and discover your zodiac sign.  
+## 🚀 Main Features  
+1. **Astrology** - Reads your zodiac sign to reveal your core qualities.
+2. **Tarot Reading** - Reads your fortune to guide and warn you of what's to come.
+3. **Palmistry** - Reads your palm lines to reveal a secret map of your destiny.
+   
+## 🚀 In-Depth Features  
+1. **Zodiac Wheel** - Can be rotated for fun.
 2. **Zodiac Library** - Discover origin stories, facts, and trivia related to each zodiac sign.  
-3. **Calendar** - Plot your dates and get informed on what zodiac season the date aligns with.
+3. **Zodiac Sign Calculator** - Input your birthdate and discover your zodiac sign.  
+4. **Tarot Deck** - Draws 3 cards for your past, present, and future.
+5. **Palmistry Camera** - Scans your palm lines in real time to show you the palm map template.
+6. **Palm Lines Library** - Discover different characteristics of palm lines and what they mean.
+7. **Profile Page** - Allows full customization of user profile.
 
 ## 🛠️ Tech Stack  
 1. **Language** - Kotlin  
