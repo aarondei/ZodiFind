@@ -19,12 +19,8 @@ A mobile app that reads your stars to reveal your past, guide your present, hint
 1. **Language** - Kotlin  
 2. **Libraries**  
    - `commandiron.WheelPickerCompose`
-   - 'ArtielSry.KotlinAndroidApp_Horoscope'
-   - 'cocorrina - Divine Feminine Tarot Guide'
-
-## 📸 Screenshots  
-![Screenshot 1](url-to-image)  
-![Screenshot 2](url-to-image)
+   - `ArtielSry.KotlinAndroidApp_Horoscope`
+   - `cocorrina - Divine Feminine Tarot Guide`
 
 ## 🧠 Developers  
 1. Jatayna, Aaron Dei V.  
