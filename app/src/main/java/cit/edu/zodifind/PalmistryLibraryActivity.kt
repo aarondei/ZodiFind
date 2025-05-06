@@ -20,7 +20,7 @@ class PalmistryLibraryActivity : BaseActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.palmistry_library) // Use the layout with DrawerLayout
+        setContentView(R.layout.palmistry_library)
 
         // Initialize DrawerLayout and burger menu icon
         drawerLayout = findViewById(R.id.drawerLayout)

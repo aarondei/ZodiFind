@@ -20,11 +20,6 @@ class TarotDeckActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.empty_tarot_deck)
 
-//        intent?.let {
-//            selectedReading = it.getStringExtra("reading").toString()
-//        }
-
-
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {

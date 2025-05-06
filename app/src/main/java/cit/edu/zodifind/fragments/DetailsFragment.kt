@@ -134,62 +134,6 @@ class DetailsFragment : Fragment() {
         }
     }
 
-//    // These methods would return the appropriate attributes for each sign
-//    private fun getZodiacSymbol(sign: ZodiacSign): String {
-//        return when (sign) {
-//            ZodiacSign.ARIES -> "The Ram"
-//            ZodiacSign.TAURUS -> "The Bull"
-//            ZodiacSign.GEMINI -> "The Twins"
-//            ZodiacSign.CANCER -> "The Crab"
-//            ZodiacSign.LEO -> "The Lion"
-//            ZodiacSign.VIRGO -> "The Maiden"
-//            ZodiacSign.LIBRA -> "The Scales"
-//            ZodiacSign.SCORPIO -> "The Scorpion"
-//            ZodiacSign.SAGITTARIUS-> "The Archer"
-//            ZodiacSign.CAPRICORN -> "The Goat"
-//            ZodiacSign.AQUARIUS -> "The Water Bearer"
-//            ZodiacSign.PISCES -> "The Fish"
-//            else -> ""
-//        }
-//    }
-//
-//    private fun getZodiacElement(sign: ZodiacSign): String {
-//        return when (sign) {
-//            ZodiacSign.ARIES, ZodiacSign.LEO, ZodiacSign.SAGITTARIUS -> "Fire"
-//            ZodiacSign.TAURUS, ZodiacSign.VIRGO, ZodiacSign.CAPRICORN -> "Earth"
-//            ZodiacSign.GEMINI, ZodiacSign.LIBRA, ZodiacSign.AQUARIUS -> "Air"
-//            ZodiacSign.CANCER, ZodiacSign.SCORPIO, ZodiacSign.PISCES -> "Water"
-//            else -> ""
-//        }
-//    }
-//
-//    private fun getZodiacQuality(sign: ZodiacSign): String {
-//        return when (sign) {
-//            ZodiacSign.ARIES, ZodiacSign.CANCER, ZodiacSign.LIBRA, ZodiacSign.CAPRICORN -> "Cardinal"
-//            ZodiacSign.TAURUS, ZodiacSign.LEO, ZodiacSign.SCORPIO, ZodiacSign.AQUARIUS -> "Fixed"
-//            ZodiacSign.GEMINI, ZodiacSign.VIRGO, ZodiacSign.SAGITTARIUS, ZodiacSign.PISCES -> "Mutable"
-//            else -> ""
-//        }
-//    }
-//
-//    private fun getZodiacRulingPlanet(sign: ZodiacSign): String {
-//        return when (sign) {
-//            ZodiacSign.ARIES -> "Mars"
-//            ZodiacSign.TAURUS -> "Venus"
-//            ZodiacSign.GEMINI -> "Mercury"
-//            ZodiacSign.CANCER -> "Moon"
-//            ZodiacSign.LEO -> "Sun"
-//            ZodiacSign.VIRGO -> "Mercury"
-//            ZodiacSign.LIBRA -> "Venus"
-//            ZodiacSign.SCORPIO -> "Pluto"
-//            ZodiacSign.SAGITTARIUS -> "Jupiter"
-//            ZodiacSign.CAPRICORN -> "Saturn"
-//            ZodiacSign.AQUARIUS -> "Uranus"
-//            ZodiacSign.PISCES -> "Neptune"
-//            else -> ""
-//        }
-//    }
-
     companion object {
         private const val ARG_ZODIAC_SIGN = "zodiac_sign"
 

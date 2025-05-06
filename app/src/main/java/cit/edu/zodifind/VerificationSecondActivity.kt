@@ -16,7 +16,7 @@ class VerificationSecondActivity : BaseActivity() {
 
         val app = application as ZodiFindApplication
 
-        if (savedInstanceState == null) { // loads the fragment only once
+        if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainer, RotatingStarFragment())
                 .commit()

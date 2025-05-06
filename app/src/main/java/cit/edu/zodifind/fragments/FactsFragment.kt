@@ -40,17 +40,6 @@ class FactsFragment : Fragment() {
         factsPersonalityList.text = getString(zodiacSign.personalityFacts)
     }
 
-    private fun getZodiacFacts(sign: ZodiacSign): String {
-        // Return facts for the specific zodiac sign
-        return when (sign) {
-            ZodiacSign.VIRGO -> "• It is the 2nd largest constellation\n" +
-                    "• There are over 1200 galaxies in the Virgo Cluster\n" +
-                    "• Virgo Supercluster is where our galaxy belongs"
-            // Add facts for all signs
-            else -> "Facts coming soon..."
-        }
-    }
-
     companion object {
         private const val ARG_ZODIAC_SIGN = "zodiac_sign"
 

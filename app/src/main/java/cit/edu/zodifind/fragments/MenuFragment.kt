@@ -56,14 +56,14 @@ class MenuFragment : Fragment() {
                 .setTitle("Logout")
                 .setMessage("Are you sure you want to logout?")
                 .setPositiveButton("Yes") { dialog, _ ->
-                    // User confirmed logout
+
                     val intent = Intent(requireContext(), LoginActivity::class.java)
                     app.logout()
                     startActivity(intent)
                     dialog.dismiss()
                 }
                 .setNegativeButton("No") { dialog, _ ->
-                    // User canceled logout
+
                     dialog.dismiss()
                 }
                 .show()

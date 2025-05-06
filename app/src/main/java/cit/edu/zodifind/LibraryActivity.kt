@@ -23,7 +23,7 @@ class LibraryActivity : BaseActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.library) // Use the layout with DrawerLayout
+        setContentView(R.layout.library)
 
         // Initialize DrawerLayout and burger menu icon
         drawerLayout = findViewById(R.id.drawerLayout)

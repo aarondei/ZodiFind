@@ -29,7 +29,7 @@ class SplashScreenActivity : BaseActivity() {
         }
     }
     private fun playVideoView() {
-        // handles splashscreen background video
+
         videoView = findViewById(R.id.vvGalaxy)
         val videoUri = Uri.parse("android.resource://${packageName}/${R.raw.splashscreen_video}")
         videoView.setVideoURI(videoUri)

@@ -18,8 +18,8 @@ class PalmistryAdapter(private val palmList: List<PalmModel>, private val contex
     RecyclerView.Adapter<PalmistryAdapter.PalmViewHolder>() {
 
     inner class PalmViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        val imagePalm: ImageView = itemView.findViewById(R.id.imgPalm) // Correct ID
-        val tvPalmName: TextView = itemView.findViewById(R.id.tvPalmName) // Correct ID
+        val imagePalm: ImageView = itemView.findViewById(R.id.imgPalm)
+        val tvPalmName: TextView = itemView.findViewById(R.id.tvPalmName)
 
         init {
             itemView.setOnClickListener(this)

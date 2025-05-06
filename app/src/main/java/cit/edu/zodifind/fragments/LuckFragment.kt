@@ -57,26 +57,14 @@ class LuckFragment : Fragment() {
         futureCard = drawnCards[2]
 
         // Setup the screen in "waiting" state
-        binding.tvLucky.text = "Tap to reveal your past, present, and future ✨" // You can replace this with a string resource like "Tap to reveal your past, present, and future ✨"
-        binding.ivLuckyCard.setImageResource(R.drawable.card) // Default back image for the card
-        binding.prediction.isVisible = false // Hide prediction at first
-        binding.preview.isVisible = true // Show the preview screen
+        binding.tvLucky.text = "Tap to reveal your past, present, and future ✨"
+        binding.ivLuckyCard.setImageResource(R.drawable.card)
+        binding.prediction.isVisible = false
+        binding.preview.isVisible = true
 
-        // Optionally, you can show the past card's meaning initially
-        binding.tvLucky.text = getString(pastCard.title) // Display title
-        binding.tvLuckyDescription.text = getString(pastCard.pastMeaning) // Display past meaning
+        binding.tvLucky.text = getString(pastCard.title)
+        binding.tvLuckyDescription.text = getString(pastCard.pastMeaning)
     }
-
-//    private fun shareResult(prediction:String) {
-//        val sendIntent:Intent = Intent().apply {
-//            action = Intent.ACTION_SEND
-//            putExtra(Intent.EXTRA_TEXT, prediction)
-//            type = "text/plain"
-//        }
-//
-//        val shareIntent = Intent.createChooser(sendIntent, null)
-//        startActivity(sendIntent)
-//    }
 
     private fun initListeners() {
         binding.ivRoulette.setOnClickListener { spinRoulette() }
@@ -151,31 +139,12 @@ class LuckFragment : Fragment() {
                 binding.preview.isVisible = false
                 binding.prediction.isVisible = true
 
-                // 👉 Start showing first card
                 currentStep = 0
                 showCurrentStep()
             }
 
             override fun onAnimationRepeat(animation: Animation?) {}
 
-
-//        mediaPlayer = MediaPlayer.create(context, R.raw.showing_card)
-//
-//        val disappearAnimation = AlphaAnimation(1.0f, 0.0f)
-//        disappearAnimation.duration = 200
-//
-//        val appearAnimation = AlphaAnimation(0.0f, 1.0f)
-//        appearAnimation.duration = 1000
-//
-//        disappearAnimation.setAnimationListener(object : Animation.AnimationListener {
-//            override fun onAnimationStart(animation: Animation?) {}
-//            override fun onAnimationEnd(animation: Animation?) {
-//                mediaPlayer.start()
-//                binding.preview.isVisible = false
-//                binding.prediction.isVisible = true
-//            }
-//            override fun onAnimationRepeat(animation: Animation?) {}
-//
         })
         binding.preview.startAnimation(disappearAnimation)
         binding.prediction.startAnimation(appearAnimation)
@@ -201,33 +170,32 @@ class LuckFragment : Fragment() {
         when (currentStep) {
             0 -> {
                 // Past card
-                binding.tvCardHeader.text = "Past" // Set the header to "Past"
-                binding.tvLucky.text = getString(pastCard.title) // Set title for past card
-                binding.tvLuckyDescription.text = getString(pastCard.pastMeaning) // Set meaning for past
-                binding.ivLuckyCard.setImageResource(pastCard.image) // Set image for past card
+                binding.tvCardHeader.text = "Past"
+                binding.tvLucky.text = getString(pastCard.title)
+                binding.tvLuckyDescription.text = getString(pastCard.pastMeaning)
+                binding.ivLuckyCard.setImageResource(pastCard.image)
             }
             1 -> {
                 // Present card
-                binding.tvCardHeader.text = "Present" // Set the header to "Present"
-                binding.tvLucky.text = getString(presentCard.title) // Set title for present card
-                binding.tvLuckyDescription.text = getString(presentCard.presentMeaning) // Set meaning for present
-                binding.ivLuckyCard.setImageResource(presentCard.image) // Set image for present card
+                binding.tvCardHeader.text = "Present"
+                binding.tvLucky.text = getString(presentCard.title)
+                binding.tvLuckyDescription.text = getString(presentCard.presentMeaning)
+                binding.ivLuckyCard.setImageResource(presentCard.image)
             }
             2 -> {
                 // Future card
-                binding.tvCardHeader.text = "Future" // Set the header to "Future"
-                binding.tvLucky.text = getString(futureCard.title) // Set title for future card
-                binding.tvLuckyDescription.text = getString(futureCard.futureMeaning) // Set meaning for future
-                binding.ivLuckyCard.setImageResource(futureCard.image) // Set image for future card
+                binding.tvCardHeader.text = "Future"
+                binding.tvLucky.text = getString(futureCard.title)
+                binding.tvLuckyDescription.text = getString(futureCard.futureMeaning)
+                binding.ivLuckyCard.setImageResource(futureCard.image)
             }
         }
     }
 
-
     private fun nextStep() {
         if (currentStep < 2) {
             currentStep++
-            showCurrentStep() // Show the next card and update the header
+            showCurrentStep()
         } else {
             requireActivity().onBackPressed()
         }
@@ -235,4 +203,3 @@ class LuckFragment : Fragment() {
 
 
 }
-

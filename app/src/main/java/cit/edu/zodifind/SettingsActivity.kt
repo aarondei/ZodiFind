@@ -32,7 +32,6 @@ class SettingsActivity : BaseActivity() {
         val tvBirth = findViewById<TextView>(R.id.tvBirth)
         val profilePic = findViewById<de.hdodenhof.circleimageview.CircleImageView>(R.id.profilepic)
 
-
         val app = application as ZodiFindApplication
 
         val intentName = intent.getStringExtra("name")

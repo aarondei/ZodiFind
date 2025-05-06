@@ -29,7 +29,7 @@ enum class ZodiacSign(val faceIcon: Int, val starIcon: Int, val representation: 
     }
 
 
-    companion object { // makes this method static
+    companion object {
 
         fun getAllZodiacSigns(): List<ZodiacSign> {
             return entries

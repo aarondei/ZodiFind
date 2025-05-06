@@ -38,15 +38,6 @@ class StoryFragment : Fragment() {
         storyContent.text = getString(zodiacSign.storyContent)
     }
 
-    private fun getZodiacStory(sign: ZodiacSign): String {
-        return when (sign) {
-            ZodiacSign.AQUARIUS -> "The story of Aquarius begins with..."
-            ZodiacSign.PISCES -> "In ancient mythology, Pisces represents..."
-            // Add stories for all signs
-            else -> "Story coming soon..."
-        }
-    }
-
     companion object {
         private const val ARG_ZODIAC_SIGN = "zodiac_sign"
 

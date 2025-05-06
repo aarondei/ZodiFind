@@ -26,12 +26,12 @@ class HomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home) // Make sure this matches your layout file name
+        setContentView(R.layout.home)
 
         drawerLayout = findViewById(R.id.drawerLayout)
         burgerMenuIcon = findViewById(R.id.burgerMenuIcon)
 
-        // Add the MenuDrawerFragment to the navigationDrawer FrameLayout
+
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 add(R.id.navigationDrawer, MenuFragment.newInstance())
@@ -65,7 +65,7 @@ class HomeActivity : BaseActivity() {
 
     }
 
-    // Override onBackPressed to handle closing the drawer with the back button
+
     override fun onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)

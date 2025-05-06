@@ -33,13 +33,13 @@ class ViewPagerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Get zodiac sign from arguments
+
         arguments?.let {
             val zodiacSignName = it.getString("zodiac_sign") ?: ""
             try {
                 zodiacSign = ZodiacSign.valueOf(zodiacSignName)
             } catch (e: IllegalArgumentException) {
-                // Default to first zodiac if invalid
+
                 zodiacSign = ZodiacSign.AQUARIUS
             }
         }
@@ -104,7 +104,7 @@ class ViewPagerFragment : Fragment() {
     }
 
     private fun updateTabSelection(position: Int) {
-        // Reset all tabs to default style
+
         tabStory.alpha = 0.6f
         tabDetails.alpha = 0.6f
         tabFacts.alpha = 0.6f

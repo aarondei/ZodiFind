@@ -53,7 +53,7 @@ class EditProfileActivity : BaseActivity() {
                 e.printStackTrace()
                 Toast.makeText(this, "Can't persist URI permission", Toast.LENGTH_SHORT).show()
             }
-            // Load image into ImageView
+
             loadImageFromUri(uri)
 
 

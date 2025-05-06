@@ -29,8 +29,8 @@ class VerificationFirstActivity : BaseActivity() {
             putString("MODE", "USER")
         }
 
-        // to import DatePicker
-        if (savedInstanceState == null) { // loads the fragment only once
+
+        if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainer, fragment)
                 .commit()

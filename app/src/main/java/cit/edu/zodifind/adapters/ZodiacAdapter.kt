@@ -48,17 +48,6 @@ class ZodiacAdapter(private val zodiacList: List<ZodiacSign>, private val contex
                     .commit()
             }
         }
-//            val position = adapterPosition
-//            if (position != RecyclerView.NO_POSITION && view != null) {
-//                val selectedZodiac = zodiacList[position] // TODO CLEAN
-//                val intent = Intent(context, LibraryFocusedItemActivity::class.java)
-//                intent.putExtra("zodiac", selectedZodiac.name)
-//
-//                CapturedZodiacTempObject.capturedSign = selectedZodiac
-//
-//                context.startActivity(intent)
-//            }
-//        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ZodiacViewHolder {

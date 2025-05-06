@@ -94,7 +94,7 @@ class AstrologyHomeActivity : BaseActivity() {
                 velocityX: Float,
                 velocityY: Float
             ): Boolean {
-                // Stop current spin
+
                 scroller.forceFinished(true)
 
                 val velocity = hypot(velocityX, velocityY).toInt()
@@ -126,7 +126,7 @@ class AstrologyHomeActivity : BaseActivity() {
 
                 when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
-                        scroller.forceFinished(true) // stop spin if touched
+                        scroller.forceFinished(true)
                         isSpinning = false
                         prevAngle = angle
                     }
