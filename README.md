@@ -6,7 +6,7 @@ A mobile app that reads your stars to reveal your past, guide your present, hint
 2. **Tarot Reading** - Reads your fortune to guide and warn you of what's to come.
 3. **Palmistry** - Reads your palm lines to reveal a secret map of your destiny.
    
-## 🚀 In-Depth Features  
+## ✏️ In-Depth Features  
 1. **Zodiac Wheel** - Can be rotated for fun.
 2. **Zodiac Library** - Discover origin stories, facts, and trivia related to each zodiac sign.  
 3. **Zodiac Sign Calculator** - Input your birthdate and discover your zodiac sign.  
@@ -19,6 +19,8 @@ A mobile app that reads your stars to reveal your past, guide your present, hint
 1. **Language** - Kotlin  
 2. **Libraries**  
    - `commandiron.WheelPickerCompose`
+   - 'ArtielSry.KotlinAndroidApp_Horoscope'
+   - 'cocorrina - Divine Feminine Tarot Guide'
 
 ## 📸 Screenshots  
 ![Screenshot 1](url-to-image)  
