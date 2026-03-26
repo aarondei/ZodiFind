@@ -29,4 +29,4 @@ A mobile app that reads your stars to reveal your past, guide your present, hint
 ### CSIT 284 — PLATFORM-BASED DEVELOPMENT (MOBILE DEVELOPMENT)
 
 ## Demonstration
-!(screenshots/splash/splash.png)
+![SPLASH](screenshots/splash/splash.png)
