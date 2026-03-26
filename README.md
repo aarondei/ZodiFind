@@ -1,5 +1,5 @@
 # ZodiFind  
-A mobile app that reads your stars to reveal your past, guide your present, hint at your future, and uncovers hidden aspects you didn’t even know about yourself.
+A mobile app that displays personalized horoscope content. It reads your stars to reveal your past, guide your present, hint at your future, and uncovers hidden aspects you didn’t even know about yourself.
 
 ## 🚀 Main Features  
 1. **Astrology** - Reads your zodiac sign to reveal your core qualities.
